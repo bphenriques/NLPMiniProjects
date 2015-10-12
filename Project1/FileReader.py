@@ -1,25 +1,43 @@
 # -*- coding: utf-8 -*-
 
-import os
+import re
 
 def readFile(fileName):
-    #fileIn = open(fileName, 'rU')
-    #profset = getTriggersAndAnswers(fileIn)
-    #fileIn.close()
+    fileIn = open(fileName, 'rU')
+    map = getTriggersAndAnswers(fileIn)
+    fileIn.close()
+    return map
 
 # Stores T and A into a map
-def profNER(file):
-    numLinha = 0
-    myset = []
-    for line in file:
-        numLinha = numLinha + 1
-        results = re.findall(r"[^-?\.:.]\s[A-Z][\w]+[\s\?]", line)
-        i = 0
-        print(results)
-        while i < len(results):
-            nomePessoa = re.search(r"([A-Z][\w]+)", results[i])
-            m = str(numLinha), nomePessoa.group(1)
-            i = i + 1
-            myset.append(m)
-    print_list(myset)
-    return set(myset)
+def getTriggersAndAnswers(fileIn):
+
+    print "Here..."
+
+    while True:
+        # Look for "T - Something?"
+        possibleTrigger = fileIn.readline()
+        trigger = re.findall(r"[\s]*T[\s]*-[\s]*[\s\wÁ-ÿ]+[?\!.,]*", possibleTrigger)
+        print "possibleAnswer: ", possibleTrigger
+        print "trigger: ", trigger
+
+        possibleAnswer = fileIn.readline()
+        print "possibleAnswer: ", possibleAnswer
+        if not possibleAnswer: break  # EOF
+
+        print "I am here bitches"
+        answer = re.findall(r"[\s]*A[\s]*-[\s]*[\w\s]+[?\!.,]*", possibleTrigger)
+
+        if len(trigger) > 0 and len(answer) > 0:
+            print "Trigger: ", trigger
+            print "Answer: ", answer
+            print "\n"
+
+
+
+    return "Hello world"
+
+
+def PortugueseSentenceRE():
+    return ""
+
+readFile("../PerguntasPosSistema.txt")

@@ -16,8 +16,10 @@ def getTriggersAndAnswers(fileIn):
     while True:
         # Look for "T - Something?"
         possibleTrigger = fileIn.readline()
-        trigger = re.findall(r"[\s]*T[\s]*-[\s]*[\s\wÁ-ÿ]+[?\!.,]*", possibleTrigger)
-        print "possibleAnswer: ", possibleTrigger
+        trigger = re.findall(r"[\s]*T[\s]*-[\s]*[\s\wÁ-ÿ\?!.,]+", possibleTrigger)
+
+
+        print "possibleTrigger: ", possibleTrigger
         print "trigger: ", trigger
 
         possibleAnswer = fileIn.readline()
@@ -25,7 +27,7 @@ def getTriggersAndAnswers(fileIn):
         if not possibleAnswer: break  # EOF
 
         print "I am here bitches"
-        answer = re.findall(r"[\s]*A[\s]*-[\s]*[\w\s]+[?\!.,]*", possibleTrigger)
+        answer = re.findall(r"[\s]AT[\s]*-[\s]*[\s\wÁ-ÿ\?!.,]+", possibleTrigger)
 
         if len(trigger) > 0 and len(answer) > 0:
             print "Trigger: ", trigger
@@ -37,7 +39,32 @@ def getTriggersAndAnswers(fileIn):
     return "Hello world"
 
 
-def PortugueseSentenceRE():
-    return ""
+def readTrigger(possibleTrigger):
+    return re.findall(r"[\s]*T[\s]*-[\s]*[\s\wÀ-ÿ\?!.,-;\"()]+", possibleTrigger)
 
-readFile("../PerguntasPosSistema.txt")
+def readAnswer(possibleAnswer):
+    return re.findall(r"[\s]*A[\s]*-[\s]*[\s\wÀ-ÿ\?!.,-;\"()]+", possibleAnswer)
+
+
+if __name__ == '__main__':
+    frasesManhosas = [
+        " T - És mesmo parolo!",
+        " T - Eu vou à loja do mestra André. É mesmo aqui ao lado!"
+        " T - ÀÀÀÀÀAÀÀÀÀÀÀÀ. Derp. Não estou a dizer coisa com coisa (estou?)..."
+        " T - E então ele disse: \"Cenas engraçadas",
+        " T - E então ele disse: \"Dás me o teu número?"
+        " T - Estou preguiçoso. Vou escrever mal. Queres ìr alìh? È que...è que ? Sìgh!",
+    ]
+
+    count = 0
+    for frase in frasesManhosas:
+        result = readTrigger(frase)
+        if len(result) > 0:
+            count += 1
+
+    print "Got ", count, " correct out of ", len(frasesManhosas)
+
+
+#readFile("../PerguntasPosSistema.txt")
+
+#print "Cenas -> ", readTrigger(" T - Ena pá! Isto À não é bacÀno? - Diz o Amèdeu. Bem: temos ír que fazer \"isto\"... Atìra o pão ao gato. Cenas (que cenas?); Yap.")

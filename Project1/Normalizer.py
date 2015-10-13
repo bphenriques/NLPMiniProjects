@@ -7,7 +7,8 @@ def normalizestring(sentence):
 
     sentence = sentence.lower()
     sentence = removediacritics(sentence)
-    sentence = re.sub("[:;,\.\?!]", "", sentence)
+    sentence = re.sub("[:;,\.\?!]", '', sentence)
+    sentence = re.sub("[\"\(\)]", '', sentence)
     return sentence
 
 
@@ -41,6 +42,5 @@ def removediacritics(sentence):
     sentence = sentence.replace('ç', 'c')
     return sentence
 
-banana = "atiréi o páu ao çaçto, MAS o tróll não morrêu!"
-
-print normalizestring(banana)
+#banana = "atiréi o páu ao ç\"a\"çto, MA:S o t(ró)ll não morrêu!"
+#print normalizestring(banana)

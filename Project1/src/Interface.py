@@ -1,5 +1,5 @@
 from FileReader import QuestionsAnswerReader
-from AnnotatedCheck import your_avalia, accuracy
+from AnnotationCheck import AnnotationCheck
 
 def sss(fileName, question):
 
@@ -11,6 +11,7 @@ def myAvalia(annotationFile, questionsFile):
     #Todo: bad! bad hardcoding, down boy!
     questionsAnswersReader = QuestionsAnswerReader("../txt/PerguntasPosSistema.txt")
 
-    answerslist = your_avalia(annotationFile, questionsAnswersReader, questionsFile)
+    annotationCheck = AnnotationCheck(annotationFile)
+    answerslist = annotationCheck.your_avalia(annotationFile, questionsAnswersReader, questionsFile)
 
-    return accuracy(answerslist)
+    return annotationCheck.accuracy(answerslist)

@@ -8,7 +8,7 @@ class TriggersAnswerReader:
     __ANSWER_TAG = "A"
     __trigger_regex = ""
     __answer_regex = ""
-    __questions_answers_map = {}
+    __trigger_answers_dic = {}
 
     file_name = None
 
@@ -30,7 +30,7 @@ class TriggersAnswerReader:
 
     ''' Print internal representation of map of triggers and answers'''
     def dump_map(self):
-        print("Result: ", self.__questions_answers_map)
+        print("Result: ", self.__trigger_answers_dic)
 
 
     ''' Reads the file 2 lines at a time and processes the corresponding trigger and answer if exists using regex '''
@@ -61,13 +61,20 @@ class TriggersAnswerReader:
 
     '''Adds element to the map, if the key already exists, append the value to the existing ones'''
     def _put(self, trigger, response):
-        #if __debug__:
-        #    print "Adding ", response, " into ", " trigger ", trigger
+        if trigger not in self.__trigger_answers_dic:
+            self.__trigger_answers_dic[trigger] = []
 
-        if trigger not in self.__questions_answers_map:
-            self.__questions_answers_map[trigger] = []
+        list_tuples = self.__trigger_answers_dic[trigger]
 
-        self.__questions_answers_map[trigger] += [response]
+        tuple_found = self._find_answer(list_tuples, response)
+        if tuple_found is not None:
+            new_tuple = self._increment_count(tuple_found)
+            list_tuples.remove(tuple_found)
+            list_tuples.append(new_tuple)
+        else:
+            new_tuple = (response, 1)
+            list_tuples.append(new_tuple)
+
 
     def __trigger_normalizer(self, trigger):
         return trigger
@@ -80,15 +87,36 @@ class TriggersAnswerReader:
 
     '''Number of triggers'''
     def number_triggers(self):
-        return len(self.__questions_answers_map)
+        return len(self.__trigger_answers_dic)
 
-    '''Returns all answers given a question'''
-    def get_answers(self, question):
-        return self.__questions_answers_map[question]
+    '''Returns all answers given a trigger'''
+    def get_answers(self, trigger):
+        if trigger not in self.__trigger_answers_dic:
+            return None
+
+        return self.__trigger_answers_dic[trigger]
 
     '''Returns the most probable trigger'''
     def get_answer(self, trigger):
+        if trigger not in self.__trigger_answers_dic:
+            return None
+
+        list_responses = self.__trigger_answers_dic[trigger]
+
+
         return "Gosto de bananas"
+
+    def _find_answer(self, tuplist, name):
+        for tup in tuplist:
+            if tup[0] == name:
+                return tup
+        return None
+
+    '''Returns a new tuple with the same response but with incremented count'''
+    def _increment_count(self, tuple):
+        name = tuple[0]
+        count = tuple[1]
+        return (name, count+1)
 
 #For testing
 class TestTriggersAnswerReader(TriggersAnswerReader):
@@ -130,15 +158,44 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
         assert(len(self.__test_triggers) == count)
         print "Passed ", count, " tests reading triggers"
 
-    def test_put(self):
-        self.put("Question1", "Response1")
+    def test_data_structure(self):
+        #Test one addition
+        self._put("Question1", "Response1")
         assert(len(self.get_answers("Question1")) == 1)
 
-        self.put("Question2", "Response1")
-        self.put("Question2", "Response2")
+        #Test multiple responses for same question
+        self._put("Question2", "Response1")
+        self._put("Question2", "Response2")
         assert(len(self.get_answers("Question2")) == 2)
 
-        print("Passed Map of questions and responses")
+        #Test same response for same question and therefore should increment
+        self._put("Question2", "Response2")
+        assert(len(self.get_answers("Question2")) == 2)
+        answers = self.get_answers("Question2")
+        assert answers is not None
+        answer = self._find_answer(answers, "Response2")
+        assert answer is not None
+        assert answer[0] == "Response2"
+        assert answer[1] == 2
+
+        #Find non-existent trigger
+        non_existent_trigger = self.get_answers("Bla")
+        assert non_existent_trigger is None
+        non_existent_trigger = self.get_answer("Bla")
+        assert non_existent_trigger is None
+
+        print("Passed all tests regarding data structures")
+
+    def test_find_response_in_list_tuples(self):
+        list_tuples = [("Banana", 1), ("Morango", 3), ("Ananas", 5)]
+        found_tuple = self._find_answer(list_tuples, "Ananas")
+        list_tuples.remove(found_tuple)
+        new_tuple = (found_tuple[0], found_tuple[1]+1)
+        list_tuples.append(new_tuple)
+        print "New tuple ", new_tuple
+        print "New list ", list_tuples
+
+
 
     def test_process_file(self):
         self.process_file()
@@ -151,7 +208,9 @@ if __name__ == '__main__':
     questions_answer_reader = TestTriggersAnswerReader("src/TestResources/PerguntasPosSistema.txt")
 
     print "--- STARTING TESTS ---"
-    questions_answer_reader.test_trigger_regex()
-    questions_answer_reader.test_answer_regex()
-    questions_answer_reader.test_process_file()
+    #questions_answer_reader.test_trigger_regex()
+    #questions_answer_reader.test_answer_regex()
+    #questions_answer_reader.test_find_response_in_list_tuples()
+    questions_answer_reader.test_data_structure()
+    #questions_answer_reader.test_process_file()
     print "--- END OF TESTS ---"

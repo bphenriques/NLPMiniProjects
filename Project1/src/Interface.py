@@ -1,4 +1,4 @@
-from FileReader import QuestionsAnswerReader
+from TriggersAnswerReader import QuestionsAnswerReader
 from AnnotationCheck import AnnotationCheck
 
 def sss(fileName, question):

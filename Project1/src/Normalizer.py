@@ -3,16 +3,16 @@ import re
 
 # Lowercases a string and removes diacritics and punctuation from a portuguese sentence
 #
-def normalizestring(sentence):
+def normalize_string(sentence):
 
     sentence = sentence.lower()
-    sentence = removediacritics(sentence)
+    sentence = remove_diacritics(sentence)
     sentence = re.sub("[:;,\.\?!]", '', sentence)
     sentence = re.sub("[\"\(\)]", '', sentence)
     return sentence
 
 
-def removediacritics(sentence):
+def remove_diacritics(sentence):
     # a
     sentence = sentence.replace('á', 'a')
     sentence = sentence.replace('à', 'a')

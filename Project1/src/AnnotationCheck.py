@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -
 import re
 
-from Normalizer import normalizestring
-from FileReader import QuestionsAnswerReader
+from Normalizer import normalize_string
+from TriggersAnswerReader import QuestionsAnswerReader
 
 class AnnotationCheck:
 
@@ -28,11 +28,11 @@ class AnnotationCheck:
     def get_annotation(self, question, answer, nanswers):
         #Todo verificar filepath e nanswers
         file = open(self._annotationFilePath)
-        normalizedquestion = normalizestring(question)
+        normalizedquestion = normalize_string(question)
 
         line = file.readline()
         while (line):
-            normalizedline = normalizestring(line)
+            normalizedline = normalize_string(line)
             matchquestion = re.search("user input - " + normalizedquestion, normalizedline)
             if (matchquestion is not None):
                 for i in range(0, nanswers):

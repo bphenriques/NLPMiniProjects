@@ -38,27 +38,59 @@ def getTriggersAndAnswers(fileIn):
 
     return "Hello world"
 
+def readLine(possibleTrigger, trigger):
+    rew = RegexWrapper()
+    initial_tag = rew.multiple_white_space() + trigger + rew.multiple_white_space() + "-" + rew.multiple_white_space()
+    full_regex = initial_tag + rew.at_least_one(rew.diatric_sentence())
 
-def readTrigger(possibleTrigger):
-    return re.findall(r"[\s]*T[\s]*-[\s]*[\s\wÀ-ÿ\?!.,-;\"()]+", possibleTrigger)
+    return re.findall(full_regex, possibleTrigger)
 
-def readAnswer(possibleAnswer):
-    return re.findall(r"[\s]*A[\s]*-[\s]*[\s\wÀ-ÿ\?!.,-;\"()]+", possibleAnswer)
+
+
+class RegexWrapper:
+    white_space = "\s"
+    utf_letter = "À-ÿ\w"
+    letter = "\w"
+    diatric = "À-ÿ"
+    punctuation = "?!.,-;\"()"
+
+    def diatric_sentence(self):
+        return self.re_builder(self.white_space, self.utf_letter, self.punctuation)
+
+    def multiple_white_space(self):
+        return self.any(self.re_builder(self.white_space))
+
+    def at_least_one(self, re):
+        return re + r"+"
+
+    def any(self, re):
+        return re + r"*"
+
+    def optional(self, re):
+        return re + r"?"
+
+    def re_builder(self, *chars):
+        re_result = r"["
+        for char in chars:
+            re_result += char
+
+        return re_result + "]"
 
 
 if __name__ == '__main__':
     frasesManhosas = [
         " T - És mesmo parolo!",
-        " T - Eu vou à loja do mestra André. É mesmo aqui ao lado!"
-        " T - ÀÀÀÀÀAÀÀÀÀÀÀÀ. Derp. Não estou a dizer coisa com coisa (estou?)..."
+        " T - Eu vou à loja do mestra André. É mesmo aqui ao lado!",
+        " T - ÀàÁáÉéèÉÈíÍìÌÓóòÒãõôÔÀÀÀAÀÀÀÀÀÀÀ. Derp. Não estou a dizer coisa com coisa (estou?)...",
         " T - E então ele disse: \"Cenas engraçadas",
-        " T - E então ele disse: \"Dás me o teu número?"
-        " T - Estou preguiçoso. Vou escrever mal. Queres ìr alìh? È que...è que ? Sìgh!",
+        " T - E então ele disse: \"Dás me o teu número?",
+        " T - Estou preguiçoso. Vou escrever mal. Queres ìr alìh? È que...è que ? Sìgh!"
     ]
 
     count = 0
     for frase in frasesManhosas:
-        result = readTrigger(frase)
+        result = readLine(frase, "T")
+        print result
         if len(result) > 0:
             count += 1
 

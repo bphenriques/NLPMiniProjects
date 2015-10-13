@@ -2,6 +2,10 @@
 import re
 from Normalizer import normalizestring
 
+def myAvalia(annotationFile, questionsFile):
+
+    return accuracy(list())
+
 
 def getannotation(question, answer, filepath, nanswers):
     #Todo verificar filepath e nanswers
@@ -18,6 +22,7 @@ def getannotation(question, answer, filepath, nanswers):
                 matchanswer = re.search(answer + " : [ymn]", answerline)
                 if (matchanswer is not None):
                     annotation = re.sub("[\s]*A - " + answer + " : ", '', matchanswer.string)
+                    file.close()
                     return annotation
         line = file.readline()
 
@@ -36,4 +41,4 @@ def accuracy(answers):
     return 1 #accuracy perfeita ó
 
 
-print getannotation("És aluno do Técnico?", "Isso é a coisa mais burra que disse desde há algum tempo.", "../AnotadoAll.txt", 20)
+#print getannotation("És aluno do Técnico?", "Isso é a coisa mais burra que disse desde há algum tempo.", "../AnotadoAll.txt", 20)

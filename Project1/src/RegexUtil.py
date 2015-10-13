@@ -2,12 +2,13 @@
 
 import re
 
-class RegexWrapper:
+class RegexUtil:
     white_space = "\s"
     utf_letter = "À-ÿ\w"
     letter = "\w"
     diatric = "À-ÿ"
     punctuation = "?!.,-;\"()"
+    anything = "."
 
     def diatric_sentence(self):
         return self.re_builder(self.white_space, self.utf_letter, self.punctuation)
@@ -26,6 +27,7 @@ class RegexWrapper:
 
     def re_builder(self, *chars):
         re_result = r"["
+
         for char in chars:
             re_result += char
 

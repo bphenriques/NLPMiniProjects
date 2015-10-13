@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import re
-from RegexWrapper import RegexWrapper
+from RegexUtil import RegexUtil
 
 class QuestionsAnswerReader:
     __TRIGGER_TAG = "T"
@@ -14,11 +14,11 @@ class QuestionsAnswerReader:
     def __init__(self, fileName):
         self.fileName = fileName
 
-        rew = RegexWrapper()
+        rew = RegexUtil()
         self.trigger_tag = rew.multiple_white_space() + self.__TRIGGER_TAG + rew.multiple_white_space() + "-" + rew.multiple_white_space()
         self.answer_tag = rew.multiple_white_space() + self.__ANSWER_TAG + rew.multiple_white_space() + "-" + rew.multiple_white_space()
-        self.__trigger_regex = self.trigger_tag + rew.at_least_one(rew.diatric_sentence())
-        self.__answer_regex = self.answer_tag + rew.at_least_one(rew.diatric_sentence())
+        self.__trigger_regex = self.trigger_tag + rew.at_least_one(rew.anything)
+        self.__answer_regex = self.answer_tag + rew.at_least_one(rew.anything)
 
     def processFile(self):
         fileIn = open(self.fileName, 'rU')
@@ -49,6 +49,9 @@ class QuestionsAnswerReader:
     def _readLine(self, possibleTrigger, regex):
         return re.findall(regex, possibleTrigger)
 
+    def get_answer(self, question):
+        return "Gosto de bananas"
+
 
 #For testing
 class TestQuestionsAnswerReader(QuestionsAnswerReader):
@@ -58,35 +61,28 @@ class TestQuestionsAnswerReader(QuestionsAnswerReader):
     def testAnswerReader(self, possibleAnswer):
         return self.__readLine(possibleAnswer, self.__answer_regex)
 
+    def testTriggerRegex(self):
+        frasesManhosas = [
+            " T - És mesmo parolo!",
+            " T - Eu vou à loja do mestra André. É mesmo aqui ao lado!",
+            " T - ÀàÁáÉéèÉÈíÍìÌÓóòÒãõôÔÀÀÀAÀÀÀÀÀÀÀ. Derp. Não estou a dizer coisa com coisa (estou?)...",
+            " T - E então ele disse: \"Cenas engraçadas",
+            " T - E então ele disse: \"Dás me o teu número?",
+            " T - Estou preguiçoso. Vou escrever mal. Queres ìr alìh? È que...è que ? Sìgh!"
+        ]
 
+        qar = QuestionsAnswerReader("")
 
-def testTriggerRegex():
-    frasesManhosas = [
-        " T - És mesmo parolo!",
-        " T - Eu vou à loja do mestra André. É mesmo aqui ao lado!",
-        " T - ÀàÁáÉéèÉÈíÍìÌÓóòÒãõôÔÀÀÀAÀÀÀÀÀÀÀ. Derp. Não estou a dizer coisa com coisa (estou?)...",
-        " T - E então ele disse: \"Cenas engraçadas",
-        " T - E então ele disse: \"Dás me o teu número?",
-        " T - Estou preguiçoso. Vou escrever mal. Queres ìr alìh? È que...è que ? Sìgh!"
-    ]
+        count = 0
+        for frase in frasesManhosas:
+            result = qar.testTriggerReader(frase)
+            print result
+            if len(result) > 0:
+                count += 1
 
-    qar = QuestionsAnswerReader("")
-
-    count = 0
-    for frase in frasesManhosas:
-        result = qar.testTriggerReader(frase)
-        print result
-        if len(result) > 0:
-            count += 1
-
-    print "Got ", count, " correct out of ", len(frasesManhosas)
-
-def testReadFile(fileName):
-    questions_answer_reader = TestQuestionsAnswerReader(fileName)
-    questions_answer_reader.processFile()
-    print "Done"
+        print "Got ", count, " correct out of ", len(frasesManhosas)
 
 
 if __name__ == '__main__':
-    testReadFile("../PerguntasPosSistema.txt")
-    #testTriggerRegex()
+    questions_answer_reader = TestQuestionsAnswerReader("src/TestResources/PerguntasPosSistema.txt")
+    questions_answer_reader.processFile()

@@ -1,4 +1,4 @@
-from FileReader import profNER
+from Project1.src.FileReader import profNER
 
 def sss(fileName, question):
 

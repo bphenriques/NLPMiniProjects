@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import re
+import re, os.path
 from RegexUtil import RegexUtil
 
 class TriggersAnswerReader:
@@ -15,14 +15,12 @@ class TriggersAnswerReader:
 
     file_name = None
 
-    def __init__(self, file_name):
+    def __init__(self):
         """
         Init
 
-        :param file_name: File name of the file to be processed
         :return: instance of TriggersAnswerReader
         """
-        self.file_name = file_name
 
         rew = RegexUtil()
         self.trigger_tag = rew.multiple_white_space() + self.__TRIGGER_TAG + rew.multiple_white_space() + "-" + rew.multiple_white_space()
@@ -30,18 +28,27 @@ class TriggersAnswerReader:
         self.__trigger_regex = self.trigger_tag + rew.at_least_one(rew.anything)
         self.__answer_regex = self.answer_tag + rew.at_least_one(rew.anything)
 
-    def process_file(self):
+    def process_file(self, file_name):
         """
         Processes file given in the constructor. If the execution completes, the data is stored and accessible
-        using other methods (e.g. get_answer and get_answers). The triggers and answersmust happen on pairs
+        using other methods (e.g. get_answer and get_answers). The triggers and answers must happen on pairs
         in the following way:
 
         T - [Question]
         A - [Answer]
 
-        """
-        file_in = open(self.file_name, 'rU')
+        If the file does not exist, an exception is thrown
 
+        :param: file_name, the path to the file
+        """
+
+        if not os.path.exists(file_name):
+            print "Either file is missing or is not readable"
+            raise Exception
+
+        self.file_name = file_name
+
+        file_in = open(self.file_name, 'rU')
         while True:
             possible_trigger = file_in.readline()
             if not possible_trigger: break
@@ -81,7 +88,6 @@ class TriggersAnswerReader:
 
         list_tuples = self.__trigger_answers_dic[trigger]
 
-        print "1. ", answer
         tuple_found = self._find_answer(list_tuples, answer)
         if tuple_found is not None:
             new_tuple = (tuple_found[0], tuple_found[1] + 1)

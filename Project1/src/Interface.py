@@ -3,9 +3,12 @@ from TriggersAnswerReader import TriggersAnswerReader
 from AnnotationCheck import AnnotationCheck
 
 def sss(fileName, question):
+    trigger_answer_reader = TriggersAnswerReader()
+    trigger_answer_reader.process_file(fileName)
 
-    triggerAnswerReader = TriggersAnswerReader(fileName)
-    answer = triggerAnswerReader.get_answer(question)
+    answer = trigger_answer_reader.get_answer(question)
+
+    trigger_answer_reader.dump_map()
 
     if answer is None:
         return "Não sei responder"
@@ -21,3 +24,7 @@ def myAvalia(annotationFile, questionsFile):
     answerslist = annotationCheck.your_avalia(annotationFile, questionsAnswersReader, questionsFile)
 
     return annotationCheck.accuracy(answerslist)
+
+
+if __name__ == "__main__":
+    print sss("TestResources/PerguntasPosSistema.txt", "Kyle, a minha família é que me salvou.")

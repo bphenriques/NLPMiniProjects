@@ -186,24 +186,24 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
 
         print "Passed normalization test"
 
-    def test_process_file(self):
+    def test_process_file(self, file_name):
         """
         Tests if the file is processed correctly
         """
-        self.process_file()
+        self.process_file(file_name)
         assert self.number_triggers() > 0
         print "Passed reading file. Detected some triggers, the other tests covered the rest"
 
 
 if __name__ == '__main__':
-    questions_answer_reader = TestTriggersAnswerReader("TestResources/PerguntasPosSistema.txt")
+    questions_answer_reader = TestTriggersAnswerReader()
 
     print "--- STARTING TESTS ---"
-    #questions_answer_reader.test_trigger_regex()
-    #questions_answer_reader.test_answer_regex()
-    #questions_answer_reader.test_data_structure()
-    #questions_answer_reader.test_sort()
-    #questions_answer_reader.test_get_answer()
-    #questions_answer_reader.test_process_file()
+    questions_answer_reader.test_trigger_regex()
+    questions_answer_reader.test_answer_regex()
+    questions_answer_reader.test_data_structure()
+    questions_answer_reader.test_sort()
+    questions_answer_reader.test_get_answer()
+    questions_answer_reader.test_process_file("TestResources/PerguntasPosSistema.txt")
     questions_answer_reader.test_normalizer()
     print "--- END OF TESTS ---"

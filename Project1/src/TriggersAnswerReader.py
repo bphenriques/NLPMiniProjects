@@ -45,7 +45,7 @@ class TriggersAnswerReader:
         """
 
         if not os.path.exists(file_name):
-            print "Either file is missing or is not readable"
+            print "File not found"
             raise Exception
 
         self.file_name = file_name
@@ -138,7 +138,7 @@ class TriggersAnswerReader:
         rxutil = RegexUtil()
         return rxutil.normalize_string(user_input)
 
-    def normalize_answer(self, answer):
+    def normalize_answer(se_lf, answer):
         return answer
 
     # reads the trigger using regex

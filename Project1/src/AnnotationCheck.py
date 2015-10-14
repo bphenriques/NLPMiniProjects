@@ -22,7 +22,7 @@ class AnnotationCheck:
                     # Todo: not opening the file on every iteration
                     annotation = self.get_annotation(line, answer, maxnanswers)
                 else:
-                    annotation = ''
+                    annotation = 'n'
                 answerslist.append(annotation)
             questionFile.close()
 

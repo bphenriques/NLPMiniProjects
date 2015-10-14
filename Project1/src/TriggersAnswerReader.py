@@ -8,12 +8,14 @@ class TriggersAnswerReader:
     """
         Responsible for handling trigger and answers files and making queries over the data acquired.
     """
+    __USER_INPUT_TAG = "User Input: "
     __TRIGGER_TAG = "T"
     __ANSWER_TAG = "A"
     __trigger_regex = ""
     __answer_regex = ""
     __trigger_answers_dic = {}
 
+    __user_input_regex = None
     __trigger_tag_regex = None
     __answer_tag_regex = None
 
@@ -31,6 +33,8 @@ class TriggersAnswerReader:
         self.__answer_tag_regex = rew.multiple_white_space() + self.__ANSWER_TAG + rew.multiple_white_space() + "-" + rew.multiple_white_space()
         self.__trigger_regex = self.__trigger_tag_regex + rew.at_least_one(rew.anything)
         self.__answer_regex = self.__answer_tag_regex + rew.at_least_one(rew.anything)
+
+        self.__user_input_regex = rew.re_builder(self.__USER_INPUT_TAG) + rew.any(rew.anything)
 
     def process_file(self, file_name):
         """
@@ -54,6 +58,14 @@ class TriggersAnswerReader:
 
         file_in = open(self.file_name, 'rU')
         while True:
+            possible_user_input = file_in.readline()
+            if not possible_trigger: break
+
+            # Look for "User Input: ..."
+            user_input = self._read_trigger(possible_trigger)
+            if len(trigger) == 0:
+                continue
+
             possible_trigger = file_in.readline()
             if not possible_trigger: break
             possible_answer = file_in.readline()
@@ -61,19 +73,15 @@ class TriggersAnswerReader:
 
             # Look for "T - Something?"
             trigger = self._read_trigger(possible_trigger)
-            if len(trigger) == 0:
+            if trigger is None:
                 continue
 
             # Look for "A - Something..."
             answer = self._read_answer(possible_answer)
-            if len(answer) == 0:
+            if answer is None:
                 continue
 
-            #processing triggers and answers as strings and remove T and A tags
-            trigger_str = re.sub(self.__trigger_tag_regex, '', ''.join(trigger))
-            answer_str = re.sub(self.__answer_tag_regex, '', ''.join(answer))
-
-            self._process_trigger_answer(trigger_str, answer_str)
+            self._process_trigger_answer(trigger, answer)
 
         file_in.close()
 
@@ -121,11 +129,27 @@ class TriggersAnswerReader:
 
     # reads the trigger using regex
     def _read_trigger(self, possible_trigger):
-        return re.findall(self.__trigger_regex, possible_trigger)
+        found_regex = re.findall(self.__trigger_regex, possible_trigger)
+        if len(found_regex) == 0:
+            return None
+
+        return re.sub(self.__trigger_tag_regex, '', ''.join(found_regex))
 
     # reads the answer using regex
     def _read_answer(self, possible_answer):
-        return re.findall(self.__answer_regex, possible_answer)
+        found_regex = re.findall(self.__answer_regex, possible_answer)
+        if len(found_regex) == 0:
+            return None
+
+        return re.sub(self.__answer_tag_regex, '', ''.join(found_regex))
+
+    # Reads "User Input: [Text]"
+    def _read_user_input(self, possible_input):
+        found_regex = re.findall(self.__user_input_regex, possible_input)
+        if len(found_regex) == 0:
+            return None
+
+        return re.sub(self.__USER_INPUT_TAG, '', ''.join(found_regex))
 
     def number_triggers(self):
         """

@@ -43,6 +43,8 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
                 count += 1
 
         assert(len(self.__test_answers) == count)
+        assert "Stuff cute" == self._read_answer("A - Stuff cute")
+
         print "Passed ", count, " tests reading answers"
 
     def test_trigger_regex(self, lst=None):
@@ -61,6 +63,7 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
                 count += 1
 
         assert(len(self.__test_triggers) == count)
+        assert("Stuff cute" == self._read_trigger("T - Stuff cute"))
         print "Passed ", count, " tests reading triggers"
 
     def test_data_structure(self):
@@ -181,6 +184,11 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
 
         print "Passed normalization test"
 
+    def test_read_user_input(self):
+        assert "Bla bla bla" == self._read_user_input("User Input: Bla bla bla")
+        print "Success reading user input"
+
+
     def test_process_file(self, file_name):
         """
         Tests if the file is processed correctly
@@ -199,6 +207,7 @@ if __name__ == '__main__':
     questions_answer_reader.test_data_structure()
     questions_answer_reader.test_sort()
     questions_answer_reader.test_get_answer()
-    questions_answer_reader.test_process_file("TestResources/PerguntasPosSistema.txt")
+    #questions_answer_reader.test_process_file("TestResources/PerguntasPosSistema.txt")
     questions_answer_reader.test_normalizer()
+    questions_answer_reader.test_read_user_input()
     print "--- END OF TESTS ---"

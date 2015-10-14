@@ -35,8 +35,8 @@ class RegexUtil:
 
 
     def normalize_string(self, sentence):
-        sentence = sentence.lower()
         sentence = self.remove_diacritics(sentence)
+        sentence = sentence.lower()
         sentence = self.remove_punctuation(sentence)
         return sentence
 
@@ -74,4 +74,37 @@ class RegexUtil:
         sentence = sentence.replace('û', 'u')
         # c
         sentence = sentence.replace('ç', 'c')
+
+        # A
+        sentence = sentence.replace('Á', 'A')
+        sentence = sentence.replace('À', 'A')
+        sentence = sentence.replace('Ã', 'A')
+        sentence = sentence.replace('Â', 'A')
+
+        # E
+        sentence = sentence.replace('É', 'E')
+        sentence = sentence.replace('È', 'E')
+        sentence = sentence.replace('Ê', 'E')
+        sentence = sentence.replace('Ẽ', 'E')
+
+        # I
+        sentence = sentence.replace('Í', 'I')
+        sentence = sentence.replace('Ì', 'I')
+        sentence = sentence.replace('Î', 'I')
+        sentence = sentence.replace('Ĩ', 'I')
+
+        # O
+        sentence = sentence.replace('Ó', 'O')
+        sentence = sentence.replace('Ò', 'O')
+        sentence = sentence.replace('Õ', 'O')
+        sentence = sentence.replace('Ô', 'O')
+
+        # U
+        sentence = sentence.replace('Ú', 'U')
+        sentence = sentence.replace('Ù', 'U')
+        sentence = sentence.replace('Û', 'U')
+        sentence = sentence.replace('Ũ', 'U')
+
+        # C
+        sentence = sentence.replace('Ç', 'C')
         return sentence

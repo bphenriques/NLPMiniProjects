@@ -11,21 +11,25 @@ class AnnotationCheck:
     def __init__(self, annotationFilePath):
         self._annotationFilePath = annotationFilePath
 
-    def your_avalia(self, annotationFile, questionsAnswersReader, questionsFilePath):
+    def your_avalia(self, annotationFile, questionsAnswersReader, questionsFilePath, maxnanswers):
 
         answerslist = list()
         with open(questionsFilePath) as questionFile:
             for line in questionFile:
                 answer = questionsAnswersReader.get_answer(line)
-                # Todo: not opening the file on every iteration
-                annotation = self.get_annotation(line, answer, 20)
+
+                if answer is not None:
+                    # Todo: not opening the file on every iteration
+                    annotation = self.get_annotation(line, answer, maxnanswers)
+                else:
+                    annotation = ''
                 answerslist.append(annotation)
             questionFile.close()
 
         return answerslist
 
 
-    def get_annotation(self, question, answer, nanswers):
+    def get_annotation(self, question, answer, max_n_answers):
 
         rxutil = RegexUtil()
         #Todo verificar filepath e nanswers
@@ -37,7 +41,7 @@ class AnnotationCheck:
             normalizedline = rxutil.normalize_string(line)
             matchquestion = re.search("user input - " + normalizedquestion, normalizedline)
             if (matchquestion is not None):
-                for i in range(0, nanswers):
+                for i in range(0, max_n_answers):
                     answerline = file.readline()
                     matchanswer = re.search(answer + " : [ymn]", answerline)
                     if (matchanswer is not None):

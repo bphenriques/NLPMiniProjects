@@ -82,9 +82,9 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
         assert(len(self.get_answers("Question2")) == 2)
         answers = self.get_answers("Question2")
         assert answers is not None
-        answer = self._find_answer(answers, self.normalize_string("Response2"))
+        answer = self._find_answer(answers, self.normalize_answer("Response2"))
         assert answer is not None
-        assert answer[0] == self.normalize_string("Response2")
+        assert answer[0] == self.normalize_answer("Response2")
         assert answer[1] == 2
 
         #Find non-existent trigger
@@ -112,13 +112,13 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
         self._process_trigger_answer("TestQuestion2", "Response5") #Response5 : 1
 
         answers = self.get_answers("TestQuestion2")
-        assert answers[0][0] == self.normalize_string("Response3")
-        assert answers[1][0] == self.normalize_string("Response2")
-        assert answers[2][0] == self.normalize_string("Response1")
-        assert answers[3][0] == self.normalize_string("Response5") or \
-               answers[3][0] == self.normalize_string("Response4")
-        assert answers[4][0] == self.normalize_string("Response5") or \
-               answers[4][0] == self.normalize_string("Response4")
+        assert answers[0][0] == self.normalize_answer("Response3")
+        assert answers[1][0] == self.normalize_answer("Response2")
+        assert answers[2][0] == self.normalize_answer("Response1")
+        assert answers[3][0] == self.normalize_answer("Response5") or \
+               answers[3][0] == self.normalize_answer("Response4")
+        assert answers[4][0] == self.normalize_answer("Response5") or \
+               answers[4][0] == self.normalize_answer("Response4")
 
         print "Passed sort test"
 
@@ -139,19 +139,19 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
         self._process_trigger_answer("TestQuestion1", "Response5") #Response5 : 1
 
         #Response3 is most frequent: 4
-        assert self.get_answer("TestQuestion1") == self.normalize_string("Response3")
+        assert self.get_answer("TestQuestion1") == self.normalize_answer("Response3")
 
         #changing the leadership
         self._process_trigger_answer("TestQuestion1", "Response2") #Response2 : 4
         self._process_trigger_answer("TestQuestion1", "Response2") #Response2 : 5
 
         #Response2 is most frequent: 5
-        assert self.get_answer("TestQuestion1") == self.normalize_string("Response2")
+        assert self.get_answer("TestQuestion1") == self.normalize_answer("Response2")
 
         #Response3 and Response2 are 5 (draw)
         self._process_trigger_answer("TestQuestion1", "Response3") #Response3 : 5
-        assert self.get_answer("TestQuestion1") == self.normalize_string("Response2") or \
-               self.get_answer("TestQuestion1") == self.normalize_string("Response3")
+        assert self.get_answer("TestQuestion1") == self.normalize_answer("Response2") or \
+               self.get_answer("TestQuestion1") == self.normalize_answer("Response3")
 
         print "Passed get response test"
 
@@ -160,29 +160,24 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
         """
         Tests normalize string
         """
-        #self._process_trigger_answer("TestQuestion3", "Response1")
-        #self._process_trigger_answer("TéstQuestion3", "Response2")
-        #self._process_trigger_answer("TéstQuestion3.", "Response3")
-        #self._process_trigger_answer("Tést,Quèstíõn3.", "Response4")
-        #self._process_trigger_answer("Tèst,Questiôn3.", "Response5")
-        #self._process_trigger_answer("Tést,Question3.", "Response6")
-        #self._process_trigger_answer("Tést,QUESTION3.", "Response7")
-        #self._process_trigger_answer("Tést,QUESTION3.\n", "Response8")
-        #self._process_trigger_answer("Tést!,QUESTION3.\n", "Response9")
-        #self._process_trigger_answer("Tést!,QU:ES;TI,ON?3.\n", "Response10")
-        #self._process_trigger_answer("Tést!,QU:ES;TI,ON?3.\n", "Response11")
-        #self._process_trigger_answer("Tést!,\"QU:ES;TI,O\"N?3.\n", "Response12")
+        self._process_trigger_answer("TestQuestion3", "Response1")
+        self._process_trigger_answer("TéstQuestion3", "Response2")
+        self._process_trigger_answer("TéstQuestion3.", "Response3")
+        self._process_trigger_answer("Tést,Quèstíõn3.", "Response4")
+        self._process_trigger_answer("Tèst,Questiôn3.", "Response5")
+        self._process_trigger_answer("Tést,Question3.", "Response6")
+        self._process_trigger_answer("Tést,QUESTION3.", "Response7")
+        self._process_trigger_answer("Tést,QUESTION3.\n", "Response8")
+        self._process_trigger_answer("Tést!,QUESTION3.\n", "Response9")
+        self._process_trigger_answer("Tést!,QU:ES;TI,ON?3.\n", "Response10")
+        self._process_trigger_answer("Tést!,QU:ES;TI,ON?3.\n", "Response11")
+        self._process_trigger_answer("Tést!,\"QU:ES;TI,O\"N?3.\n", "Response12")
 
         self._process_trigger_answer("Té)s(t!,\"QU:E(S;TI,O\"N?3.\n", "Response13")
-        self._process_trigger_answer("Té)s(t!,\"QU:E(S;TÍ,Õ\"N?3.\n", "rÉ(spÓNsè13\n")
+        self._process_trigger_answer("Té)s(t!,\"QU:E(S;TÍ,Õ\"N?3.\n", "Response13")
 
-        self.dump_map()
 
         assert len(self.get_answers("TestQuestion3")) == 13
-
-        print self.get_answer("TestQuestion3")
-        print self.get_answer("TÈSTQUéSTíÔN3")
-        assert self.get_answer("TÈSTQUéSTíÔN3") == self.normalize_string("REspôNsè13")
 
         print "Passed normalization test"
 

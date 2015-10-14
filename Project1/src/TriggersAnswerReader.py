@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import re, os.path
+import re
+import os.path
 from RegexUtil import RegexUtil
 
 class TriggersAnswerReader:
@@ -13,6 +14,9 @@ class TriggersAnswerReader:
     __answer_regex = ""
     __trigger_answers_dic = {}
 
+    __trigger_tag_regex = None
+    __answer_tag_regex = None
+
     file_name = None
 
     def __init__(self):
@@ -23,10 +27,10 @@ class TriggersAnswerReader:
         """
 
         rew = RegexUtil()
-        self.trigger_tag = rew.multiple_white_space() + self.__TRIGGER_TAG + rew.multiple_white_space() + "-" + rew.multiple_white_space()
-        self.answer_tag = rew.multiple_white_space() + self.__ANSWER_TAG + rew.multiple_white_space() + "-" + rew.multiple_white_space()
-        self.__trigger_regex = self.trigger_tag + rew.at_least_one(rew.anything)
-        self.__answer_regex = self.answer_tag + rew.at_least_one(rew.anything)
+        self.__trigger_tag_regex = rew.multiple_white_space() + self.__TRIGGER_TAG + rew.multiple_white_space() + "-" + rew.multiple_white_space()
+        self.__answer_tag_regex = rew.multiple_white_space() + self.__ANSWER_TAG + rew.multiple_white_space() + "-" + rew.multiple_white_space()
+        self.__trigger_regex = self.__trigger_tag_regex + rew.at_least_one(rew.anything)
+        self.__answer_regex = self.__answer_tag_regex + rew.at_least_one(rew.anything)
 
     def process_file(self, file_name):
         """
@@ -65,8 +69,11 @@ class TriggersAnswerReader:
             if len(answer) == 0:
                 continue
 
-            #processing triggers and answers as strings
-            self._process_trigger_answer(''.join(trigger), ''.join(answer))
+            #processing triggers and answers as strings and remove T and A tags
+            trigger_str = re.sub(self.__trigger_tag_regex, '', ''.join(trigger))
+            answer_str = re.sub(self.__answer_tag_regex, '', ''.join(answer))
+
+            self._process_trigger_answer(trigger_str, answer_str)
 
         file_in.close()
 
@@ -74,11 +81,15 @@ class TriggersAnswerReader:
         """
         Prints the stored data about the triggers and the answers
         """
-        print("Result: ", self.__trigger_answers_dic)
+
+        for key, answers in self.__trigger_answers_dic.iteritems():
+            print "Trigger: ", key
+            for answer in answers:
+                print "\t[", answer[1], "] ", answer[0].decode("utf-8")
 
     # Update internal map of triggers and answers
     def _process_trigger_answer(self, trigger, answer):
-        self._put(self.normalize_string(trigger), self.normalize_string(answer))
+        self._put(self.normalize_trigger(trigger), self.normalize_answer(answer))
 
     # Adds element to the map, if the key already exists, append the value to the existing ones and updates the count
     # The list is always sorted by the most frequent to the least frequent
@@ -101,11 +112,12 @@ class TriggersAnswerReader:
         list_tuples.sort(key=lambda tup: tup[1], reverse=True)
 
     # trigger normalizer: lowercase, no punctuation and substituted the diacritics with the ascii equivalent character
-
-    def normalize_string(self, string):
+    def normalize_trigger(self, trigger):
         rxutil = RegexUtil()
-        return rxutil.normalize_string(string)
+        return rxutil.normalize_string(trigger)
 
+    def normalize_answer(self, answer):
+        return answer
 
     # reads the trigger using regex
     def _read_trigger(self, possible_trigger):
@@ -131,7 +143,7 @@ class TriggersAnswerReader:
                  if there is no answers, a empty list is returned
         """
 
-        normalized_trigger = self.normalize_string(trigger)
+        normalized_trigger = self.normalize_trigger(trigger)
         if normalized_trigger not in self.__trigger_answers_dic:
             return list()
 
@@ -144,7 +156,7 @@ class TriggersAnswerReader:
         :return: The answer (string)
         """
 
-        normalized_trigger = self.normalize_string(trigger)
+        normalized_trigger = self.normalize_trigger(trigger)
         if normalized_trigger not in self.__trigger_answers_dic:
             return None
 

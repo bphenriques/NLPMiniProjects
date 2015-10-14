@@ -7,9 +7,6 @@ def sss(fileName, question):
     trigger_answer_reader.process_file(fileName)
 
     answer = trigger_answer_reader.get_answer(question)
-
-    trigger_answer_reader.dump_map()
-
     if answer is None:
         return "Não sei responder"
     else:
@@ -27,4 +24,5 @@ def myAvalia(annotationFile, questionsFile):
 
 
 if __name__ == "__main__":
-    print sss("TestResources/PerguntasPosSistema.txt", "Kyle, a minha família é que me salvou.")
+    assert sss("TestResources/PerguntasPosSistema.txt", "E isso... salvou a tua família?") == "Kyle, a minha família é que me salvou."
+    print "Passed 1 sss test"

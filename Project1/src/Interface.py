@@ -5,7 +5,7 @@ from AnnotationCheck import AnnotationCheck
 def sss(fileName, question):
     trigger_answer_reader = TriggersAnswerReader()
     trigger_answer_reader.process_file(fileName)
-    trigger_answer_reader.dump_map()
+    #trigger_answer_reader.dump_map()
     answer = trigger_answer_reader.get_answer(question)
     if answer is None:
         answer = "Não sei responder"
@@ -24,5 +24,14 @@ def myAvalia(annotationFile, questionsFile):
 
 
 if __name__ == "__main__":
-    assert sss("TestResources/PerguntasPosSistema.txt", "E isso... salvou a tua família?") == u"Kyle, a minha família é que me salvou."
-    print "Passed 1 sss test"
+
+    # The following question has no triggers that are similar to the user input
+    assert sss("TestResources/PerguntasPosSistema.txt", "A tua familia é numerosa?") == u"Não sei responder"
+
+    #Non existent at all
+    assert sss("TestResources/PerguntasPosSistema.txt", "I DONT EXIST?") == u"Não sei responder"
+
+    #There are many similar triggers with this user_input
+    assert sss("TestResources/PerguntasPosSistema.txt", "Tens filhos?") == u"Não."
+
+    print "Passed sss tests"

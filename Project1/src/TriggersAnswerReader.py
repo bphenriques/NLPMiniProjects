@@ -91,7 +91,7 @@ class TriggersAnswerReader:
                     normalized_user_input = self.normalize_user_input(user_input)
                     normalized_trigger = self.normalize_user_input(trigger)
                     if normalized_trigger == normalized_user_input:
-                        self._process_user_input_answer(normalized_user_input, answer)
+                        self._process_user_input_answer(user_input, answer)
                 else:
                     user_input = potential_next_user_input
                     potential_next_user_input = None
@@ -111,7 +111,7 @@ class TriggersAnswerReader:
 
     # Update internal map of triggers and answers
     def _process_user_input_answer(self, user_input, answer):
-        self._put(self.normalize_user_input(user_input), self.normalize_answer(answer))
+        self._put(user_input, self.normalize_answer(answer))
 
     # Adds element to the map, if the key already exists, append the value to the existing ones and updates the count
     # The list is always sorted by the most frequent to the least frequent
@@ -177,11 +177,10 @@ class TriggersAnswerReader:
                  if there is no answers, a empty list is returned
         """
 
-        normalized_trigger = self.normalize_user_input(user_input)
-        if normalized_trigger not in self.__user_input_answers_dic:
+        if user_input not in self.__user_input_answers_dic:
             return list()
 
-        return self.__user_input_answers_dic[normalized_trigger]
+        return self.__user_input_answers_dic[user_input]
 
     def get_answer(self, user_input):
         """
@@ -191,12 +190,11 @@ class TriggersAnswerReader:
         :return: The answer (string)
         """
 
-        normalized_trigger = self.normalize_user_input(user_input)
-        if normalized_trigger not in self.__user_input_answers_dic:
+        if user_input not in self.__user_input_answers_dic:
             return None
 
         #first element of the returning tuple
-        return self.get_answers(normalized_trigger)[0][0]
+        return self.get_answers(user_input)[0][0]
 
 
 

@@ -156,6 +156,36 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
         print "Passed get response test"
 
 
+    def test_normalizer(self):
+        """
+        Tests normalize string
+        """
+        #self._process_trigger_answer("TestQuestion3", "Response1")
+        #self._process_trigger_answer("TéstQuestion3", "Response2")
+        #self._process_trigger_answer("TéstQuestion3.", "Response3")
+        #self._process_trigger_answer("Tést,Quèstíõn3.", "Response4")
+        #self._process_trigger_answer("Tèst,Questiôn3.", "Response5")
+        #self._process_trigger_answer("Tést,Question3.", "Response6")
+        #self._process_trigger_answer("Tést,QUESTION3.", "Response7")
+        #self._process_trigger_answer("Tést,QUESTION3.\n", "Response8")
+        #self._process_trigger_answer("Tést!,QUESTION3.\n", "Response9")
+        #self._process_trigger_answer("Tést!,QU:ES;TI,ON?3.\n", "Response10")
+        #self._process_trigger_answer("Tést!,QU:ES;TI,ON?3.\n", "Response11")
+        #self._process_trigger_answer("Tést!,\"QU:ES;TI,O\"N?3.\n", "Response12")
+
+        self._process_trigger_answer("Té)s(t!,\"QU:E(S;TI,O\"N?3.\n", "Response13")
+        self._process_trigger_answer("Té)s(t!,\"QU:E(S;TÍ,Õ\"N?3.\n", "rÉ(spÓNsè13\n")
+
+        self.dump_map()
+
+        assert len(self.get_answers("TestQuestion3")) == 13
+
+        print self.get_answer("TestQuestion3")
+        print self.get_answer("TÈSTQUéSTíÔN3")
+        assert self.get_answer("TÈSTQUéSTíÔN3") == self.normalize_string("REspôNsè13")
+
+        print "Passed normalization test"
+
     def test_process_file(self):
         """
         Tests if the file is processed correctly
@@ -169,10 +199,11 @@ if __name__ == '__main__':
     questions_answer_reader = TestTriggersAnswerReader("TestResources/PerguntasPosSistema.txt")
 
     print "--- STARTING TESTS ---"
-    questions_answer_reader.test_trigger_regex()
-    questions_answer_reader.test_answer_regex()
-    questions_answer_reader.test_data_structure()
-    questions_answer_reader.test_sort()
-    questions_answer_reader.test_get_answer()
-    questions_answer_reader.test_process_file()
+    #questions_answer_reader.test_trigger_regex()
+    #questions_answer_reader.test_answer_regex()
+    #questions_answer_reader.test_data_structure()
+    #questions_answer_reader.test_sort()
+    #questions_answer_reader.test_get_answer()
+    #questions_answer_reader.test_process_file()
+    questions_answer_reader.test_normalizer()
     print "--- END OF TESTS ---"

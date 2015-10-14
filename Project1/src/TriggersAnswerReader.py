@@ -81,6 +81,7 @@ class TriggersAnswerReader:
 
         list_tuples = self.__trigger_answers_dic[trigger]
 
+        print "1. ", answer
         tuple_found = self._find_answer(list_tuples, answer)
         if tuple_found is not None:
             new_tuple = (tuple_found[0], tuple_found[1] + 1)

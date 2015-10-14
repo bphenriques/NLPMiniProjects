@@ -43,7 +43,7 @@ class RegexUtil:
     def remove_punctuation(self, sentence):
         sentence = re.sub("[:;,\.\?!]", '', sentence)
         sentence = re.sub("[\"\(\)]", '', sentence)
-        sentence = re.sub("\r\n", '', sentence)
+        sentence = re.sub("[\r\n]", '', sentence)
         return sentence
 
     def remove_diacritics(self, sentence):

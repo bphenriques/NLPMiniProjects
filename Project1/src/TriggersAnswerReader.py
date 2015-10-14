@@ -71,30 +71,30 @@ class TriggersAnswerReader:
 
     # Update internal map of triggers and answers
     def _process_trigger_answer(self, trigger, answer):
-        self._put(self.__trigger_normalizer(trigger), answer)
+        self._put(self.normalize_string(trigger), self.normalize_string(answer))
 
     # Adds element to the map, if the key already exists, append the value to the existing ones and updates the count
     # The list is always sorted by the most frequent to the least frequent
-    def _put(self, trigger, response):
+    def _put(self, trigger, answer):
         if trigger not in self.__trigger_answers_dic:
             self.__trigger_answers_dic[trigger] = []
 
         list_tuples = self.__trigger_answers_dic[trigger]
 
-        tuple_found = self._find_answer(list_tuples, response)
+        tuple_found = self._find_answer(list_tuples, answer)
         if tuple_found is not None:
             new_tuple = (tuple_found[0], tuple_found[1] + 1)
             list_tuples.remove(tuple_found)
             list_tuples.append(new_tuple)
         else:
-            new_tuple = (response, 1)
+            new_tuple = (answer, 1)
             list_tuples.append(new_tuple)
 
         #sort
         list_tuples.sort(key=lambda tup: tup[1], reverse=True)
 
     # trigger normalizer: lowercase, no punctuation and substituted the diacritics with the ascii equivalent character
-    def __trigger_normalizer(self, trigger):
+    def normalize_string(self, trigger):
         return Normalizer.normalize_string(trigger)
 
     # reads the trigger using regex
@@ -118,12 +118,14 @@ class TriggersAnswerReader:
 
         :param trigger: The question
         :return: sorted list of tuples (string, int), the first value is the answer and the second the #occurences
+                 if there is no answers, a empty list is returned
         """
 
-        if trigger not in self.__trigger_answers_dic:
-            return None
+        normalized_trigger = self.normalize_string(trigger)
+        if normalized_trigger not in self.__trigger_answers_dic:
+            return list()
 
-        return self.__trigger_answers_dic[trigger]
+        return self.__trigger_answers_dic[normalized_trigger]
 
     def get_answer(self, trigger):
         """
@@ -132,11 +134,12 @@ class TriggersAnswerReader:
         :return: The answer (string)
         """
 
-        if trigger not in self.__trigger_answers_dic:
+        normalized_trigger = self.normalize_string(trigger)
+        if normalized_trigger not in self.__trigger_answers_dic:
             return None
 
         #first element of the returning tuple
-        return self.get_answers(trigger)[0][0]
+        return self.get_answers(normalized_trigger)[0][0]
 
 
 

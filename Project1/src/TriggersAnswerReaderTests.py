@@ -66,30 +66,30 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
     def test_data_structure(self):
         """
         Tests the internal data structure. Checks if the stored answers are correct and if the queries returns the
-        expected results.
+        expected results. Don't forget that the strings are normalized
         """
         #Test one addition
-        self._put("Question1", "Response1")
+        self._process_trigger_answer("Question1", "Response1")
         assert(len(self.get_answers("Question1")) == 1)
 
         #Test multiple responses for same question
-        self._put("Question2", "Response1")
-        self._put("Question2", "Response2")
+        self._process_trigger_answer("Question2", "Response1")
+        self._process_trigger_answer("Question2", "Response2")
         assert(len(self.get_answers("Question2")) == 2)
 
         #Test same response for same question and therefore should increment
-        self._put("Question2", "Response2")
+        self._process_trigger_answer("Question2", "Response2")
         assert(len(self.get_answers("Question2")) == 2)
         answers = self.get_answers("Question2")
         assert answers is not None
-        answer = self._find_answer(answers, "Response2")
+        answer = self._find_answer(answers, self.normalize_string("Response2"))
         assert answer is not None
-        assert answer[0] == "Response2"
+        assert answer[0] == self.normalize_string("Response2")
         assert answer[1] == 2
 
         #Find non-existent trigger
         non_existent_trigger = self.get_answers("Bla")
-        assert non_existent_trigger is None
+        assert len(non_existent_trigger) == 0
         non_existent_trigger = self.get_answer("Bla")
         assert non_existent_trigger is None
 
@@ -99,24 +99,26 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
         """
         Tests if the  answers stored are sorted from the most frequent to the least frequent
         """
-        self._put("TestQuestion2", "Response1")
-        self._put("TestQuestion2", "Response2")
-        self._put("TestQuestion2", "Response3")
-        self._put("TestQuestion2", "Response3") #Response3 : 2
-        self._put("TestQuestion2", "Response3") #Response3 : 3
-        self._put("TestQuestion2", "Response3") #Response3 : 4
-        self._put("TestQuestion2", "Response2") #Response2 : 2
-        self._put("TestQuestion2", "Response1") #Response1 : 2
-        self._put("TestQuestion2", "Response2") #Response2 : 3
-        self._put("TestQuestion2", "Response4") #Response4 : 1
-        self._put("TestQuestion2", "Response5") #Response5 : 1
+        self._process_trigger_answer("TestQuestion2", "Response1")
+        self._process_trigger_answer("TestQuestion2", "Response2")
+        self._process_trigger_answer("TestQuestion2", "Response3")
+        self._process_trigger_answer("TestQuestion2", "Response3") #Response3 : 2
+        self._process_trigger_answer("TestQuestion2", "Response3") #Response3 : 3
+        self._process_trigger_answer("TestQuestion2", "Response3") #Response3 : 4
+        self._process_trigger_answer("TestQuestion2", "Response2") #Response2 : 2
+        self._process_trigger_answer("TestQuestion2", "Response1") #Response1 : 2
+        self._process_trigger_answer("TestQuestion2", "Response2") #Response2 : 3
+        self._process_trigger_answer("TestQuestion2", "Response4") #Response4 : 1
+        self._process_trigger_answer("TestQuestion2", "Response5") #Response5 : 1
 
         answers = self.get_answers("TestQuestion2")
-        assert answers[0][0] == "Response3"
-        assert answers[1][0] == "Response2"
-        assert answers[2][0] == "Response1"
-        assert answers[3][0] == "Response5" or answers[3][0] == "Response4"
-        assert answers[4][0] == "Response5" or answers[4][0] == "Response4"
+        assert answers[0][0] == self.normalize_string("Response3")
+        assert answers[1][0] == self.normalize_string("Response2")
+        assert answers[2][0] == self.normalize_string("Response1")
+        assert answers[3][0] == self.normalize_string("Response5") or \
+               answers[3][0] == self.normalize_string("Response4")
+        assert answers[4][0] == self.normalize_string("Response5") or \
+               answers[4][0] == self.normalize_string("Response4")
 
         print "Passed sort test"
 
@@ -124,31 +126,32 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
         """
         Tests if it is return the most frequent answer
         """
-        self._put("TestQuestion1", "Response1")
-        self._put("TestQuestion1", "Response2")
-        self._put("TestQuestion1", "Response3")
-        self._put("TestQuestion1", "Response3") #Response3 : 2
-        self._put("TestQuestion1", "Response3") #Response3 : 3
-        self._put("TestQuestion1", "Response3") #Response3 : 4
-        self._put("TestQuestion1", "Response2") #Response2 : 2
-        self._put("TestQuestion1", "Response1") #Response1 : 2
-        self._put("TestQuestion1", "Response2") #Response2 : 3
-        self._put("TestQuestion1", "Response4") #Response4 : 1
-        self._put("TestQuestion1", "Response5") #Response5 : 1
+        self._process_trigger_answer("TestQuestion1", "Response1")
+        self._process_trigger_answer("TestQuestion1", "Response2")
+        self._process_trigger_answer("TestQuestion1", "Response3")
+        self._process_trigger_answer("TestQuestion1", "Response3") #Response3 : 2
+        self._process_trigger_answer("TestQuestion1", "Response3") #Response3 : 3
+        self._process_trigger_answer("TestQuestion1", "Response3") #Response3 : 4
+        self._process_trigger_answer("TestQuestion1", "Response2") #Response2 : 2
+        self._process_trigger_answer("TestQuestion1", "Response1") #Response1 : 2
+        self._process_trigger_answer("TestQuestion1", "Response2") #Response2 : 3
+        self._process_trigger_answer("TestQuestion1", "Response4") #Response4 : 1
+        self._process_trigger_answer("TestQuestion1", "Response5") #Response5 : 1
 
         #Response3 is most frequent: 4
-        assert self.get_answer("TestQuestion1") == "Response3"
+        assert self.get_answer("TestQuestion1") == self.normalize_string("Response3")
 
         #changing the leadership
-        self._put("TestQuestion1", "Response2") #Response2 : 4
-        self._put("TestQuestion1", "Response2") #Response2 : 5
+        self._process_trigger_answer("TestQuestion1", "Response2") #Response2 : 4
+        self._process_trigger_answer("TestQuestion1", "Response2") #Response2 : 5
 
         #Response2 is most frequent: 5
-        assert self.get_answer("TestQuestion1") == "Response2"
+        assert self.get_answer("TestQuestion1") == self.normalize_string("Response2")
 
         #Response3 and Response2 are 5 (draw)
-        self._put("TestQuestion1", "Response3") #Response3 : 5
-        assert self.get_answer("TestQuestion1") == "Response2" or self.get_answer("TestQuestion1") == "Response3"
+        self._process_trigger_answer("TestQuestion1", "Response3") #Response3 : 5
+        assert self.get_answer("TestQuestion1") == self.normalize_string("Response2") or \
+               self.get_answer("TestQuestion1") == self.normalize_string("Response3")
 
         print "Passed get response test"
 

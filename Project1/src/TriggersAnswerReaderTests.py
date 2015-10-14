@@ -72,16 +72,16 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
         expected results. Don't forget that the strings are normalized
         """
         #Test one addition
-        self._process_trigger_answer("Question1", "Response1")
+        self._process_user_input_answer("Question1", "Response1")
         assert(len(self.get_answers("Question1")) == 1)
 
         #Test multiple responses for same question
-        self._process_trigger_answer("Question2", "Response1")
-        self._process_trigger_answer("Question2", "Response2")
+        self._process_user_input_answer("Question2", "Response1")
+        self._process_user_input_answer("Question2", "Response2")
         assert(len(self.get_answers("Question2")) == 2)
 
         #Test same response for same question and therefore should increment
-        self._process_trigger_answer("Question2", "Response2")
+        self._process_user_input_answer("Question2", "Response2")
         assert(len(self.get_answers("Question2")) == 2)
         answers = self.get_answers("Question2")
         assert answers is not None
@@ -102,17 +102,17 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
         """
         Tests if the  answers stored are sorted from the most frequent to the least frequent
         """
-        self._process_trigger_answer("TestQuestion2", "Response1")
-        self._process_trigger_answer("TestQuestion2", "Response2")
-        self._process_trigger_answer("TestQuestion2", "Response3")
-        self._process_trigger_answer("TestQuestion2", "Response3") #Response3 : 2
-        self._process_trigger_answer("TestQuestion2", "Response3") #Response3 : 3
-        self._process_trigger_answer("TestQuestion2", "Response3") #Response3 : 4
-        self._process_trigger_answer("TestQuestion2", "Response2") #Response2 : 2
-        self._process_trigger_answer("TestQuestion2", "Response1") #Response1 : 2
-        self._process_trigger_answer("TestQuestion2", "Response2") #Response2 : 3
-        self._process_trigger_answer("TestQuestion2", "Response4") #Response4 : 1
-        self._process_trigger_answer("TestQuestion2", "Response5") #Response5 : 1
+        self._process_user_input_answer("TestQuestion2", "Response1")
+        self._process_user_input_answer("TestQuestion2", "Response2")
+        self._process_user_input_answer("TestQuestion2", "Response3")
+        self._process_user_input_answer("TestQuestion2", "Response3") #Response3 : 2
+        self._process_user_input_answer("TestQuestion2", "Response3") #Response3 : 3
+        self._process_user_input_answer("TestQuestion2", "Response3") #Response3 : 4
+        self._process_user_input_answer("TestQuestion2", "Response2") #Response2 : 2
+        self._process_user_input_answer("TestQuestion2", "Response1") #Response1 : 2
+        self._process_user_input_answer("TestQuestion2", "Response2") #Response2 : 3
+        self._process_user_input_answer("TestQuestion2", "Response4") #Response4 : 1
+        self._process_user_input_answer("TestQuestion2", "Response5") #Response5 : 1
 
         answers = self.get_answers("TestQuestion2")
         assert answers[0][0] == self.normalize_answer("Response3")
@@ -129,30 +129,32 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
         """
         Tests if it is return the most frequent answer
         """
-        self._process_trigger_answer("TestQuestion1", "Response1")
-        self._process_trigger_answer("TestQuestion1", "Response2")
-        self._process_trigger_answer("TestQuestion1", "Response3")
-        self._process_trigger_answer("TestQuestion1", "Response3") #Response3 : 2
-        self._process_trigger_answer("TestQuestion1", "Response3") #Response3 : 3
-        self._process_trigger_answer("TestQuestion1", "Response3") #Response3 : 4
-        self._process_trigger_answer("TestQuestion1", "Response2") #Response2 : 2
-        self._process_trigger_answer("TestQuestion1", "Response1") #Response1 : 2
-        self._process_trigger_answer("TestQuestion1", "Response2") #Response2 : 3
-        self._process_trigger_answer("TestQuestion1", "Response4") #Response4 : 1
-        self._process_trigger_answer("TestQuestion1", "Response5") #Response5 : 1
+
+        self.clear()
+        self._process_user_input_answer("TestQuestion1", "Response1")
+        self._process_user_input_answer("TestQuestion1", "Response2")
+        self._process_user_input_answer("TestQuestion1", "Response3")
+        self._process_user_input_answer("TestQuestion1", "Response3") #Response3 : 2
+        self._process_user_input_answer("TestQuestion1", "Response3") #Response3 : 3
+        self._process_user_input_answer("TestQuestion1", "Response3") #Response3 : 4
+        self._process_user_input_answer("TestQuestion1", "Response2") #Response2 : 2
+        self._process_user_input_answer("TestQuestion1", "Response1") #Response1 : 2
+        self._process_user_input_answer("TestQuestion1", "Response2") #Response2 : 3
+        self._process_user_input_answer("TestQuestion1", "Response4") #Response4 : 1
+        self._process_user_input_answer("TestQuestion1", "Response5") #Response5 : 1
 
         #Response3 is most frequent: 4
         assert self.get_answer("TestQuestion1") == self.normalize_answer("Response3")
 
         #changing the leadership
-        self._process_trigger_answer("TestQuestion1", "Response2") #Response2 : 4
-        self._process_trigger_answer("TestQuestion1", "Response2") #Response2 : 5
+        self._process_user_input_answer("TestQuestion1", "Response2") #Response2 : 4
+        self._process_user_input_answer("TestQuestion1", "Response2") #Response2 : 5
 
         #Response2 is most frequent: 5
         assert self.get_answer("TestQuestion1") == self.normalize_answer("Response2")
 
         #Response3 and Response2 are 5 (draw)
-        self._process_trigger_answer("TestQuestion1", "Response3") #Response3 : 5
+        self._process_user_input_answer("TestQuestion1", "Response3") #Response3 : 5
         assert self.get_answer("TestQuestion1") == self.normalize_answer("Response2") or \
                self.get_answer("TestQuestion1") == self.normalize_answer("Response3")
 
@@ -163,21 +165,23 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
         """
         Tests normalize string
         """
-        self._process_trigger_answer("TestQuestion3", "Response1")
-        self._process_trigger_answer("TéstQuestion3", "Response2")
-        self._process_trigger_answer("TéstQuestion3.", "Response3")
-        self._process_trigger_answer("Tést,Quèstíõn3.", "Response4")
-        self._process_trigger_answer("Tèst,Questiôn3.", "Response5")
-        self._process_trigger_answer("Tést,Question3.", "Response6")
-        self._process_trigger_answer("Tést,QUESTION3.", "Response7")
-        self._process_trigger_answer("Tést,QUESTION3.\n", "Response8")
-        self._process_trigger_answer("Tést!,QUESTION3.\n", "Response9")
-        self._process_trigger_answer("Tést!,QU:ES;TI,ON?3.\n", "Response10")
-        self._process_trigger_answer("Tést!,QU:ES;TI,ON?3.\n", "Response11")
-        self._process_trigger_answer("Tést!,\"QU:ES;TI,O\"N?3.\n", "Response12")
 
-        self._process_trigger_answer("Té)s(t!,\"QU:E(S;TI,O\"N?3.\n", "Response13")
-        self._process_trigger_answer("Té)s(t!,\"QU:E(S;TÍ,Õ\"N?3.\n", "Response13")
+        self.clear()
+        self._process_user_input_answer("TestQuestion3", "Response1")
+        self._process_user_input_answer("TéstQuestion3", "Response2")
+        self._process_user_input_answer("TéstQuestion3.", "Response3")
+        self._process_user_input_answer("Tést,Quèstíõn3.", "Response4")
+        self._process_user_input_answer("Tèst,Questiôn3.", "Response5")
+        self._process_user_input_answer("Tést,Question3.", "Response6")
+        self._process_user_input_answer("Tést,QUESTION3.", "Response7")
+        self._process_user_input_answer("Tést,QUESTION3.\n", "Response8")
+        self._process_user_input_answer("Tést!,QUESTION3.\n", "Response9")
+        self._process_user_input_answer("Tést!,QU:ES;TI,ON?3.\n", "Response10")
+        self._process_user_input_answer("Tést!,QU:ES;TI,ON?3.\n", "Response11")
+        self._process_user_input_answer("Tést!,\"QU:ES;TI,O\"N?3.\n", "Response12")
+
+        self._process_user_input_answer("Té)s(t!,\"QU:E(S;TI,O\"N?3.\n", "Response13")
+        self._process_user_input_answer("Té)s(t!,\"QU:E(S;TÍ,Õ\"N?3.\n", "Response13")
 
 
         assert len(self.get_answers("TestQuestion3")) == 13
@@ -186,6 +190,8 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
 
     def test_read_user_input(self):
         assert "Bla bla bla" == self._read_user_input("User Input: Bla bla bla")
+        assert self._read_user_input("GIBBERISH") is None
+        assert self._read_user_input("user input: asdhasdh") is None
         print "Success reading user input"
 
 
@@ -193,8 +199,11 @@ class TestTriggersAnswerReader(TriggersAnswerReader):
         """
         Tests if the file is processed correctly
         """
+        self.clear()
         self.process_file(file_name)
-        assert self.number_triggers() > 0
+        assert self.number_matched_user_input() == 1
+        assert len(self.get_answers("Tens filhos?")) == 12
+        assert self.get_answer("Tens filhos?") == "Não."
         print "Passed reading file. Detected some triggers, the other tests covered the rest"
 
 
@@ -202,12 +211,16 @@ if __name__ == '__main__':
     questions_answer_reader = TestTriggersAnswerReader()
 
     print "--- STARTING TESTS ---"
+    questions_answer_reader.test_read_user_input()
     questions_answer_reader.test_trigger_regex()
     questions_answer_reader.test_answer_regex()
+    questions_answer_reader.test_normalizer()
+
     questions_answer_reader.test_data_structure()
     questions_answer_reader.test_sort()
+
     questions_answer_reader.test_get_answer()
-    #questions_answer_reader.test_process_file("TestResources/PerguntasPosSistema.txt")
-    questions_answer_reader.test_normalizer()
-    questions_answer_reader.test_read_user_input()
+    questions_answer_reader.test_process_file("TestResources/LitePerguntasPosSistema.txt")
+    #questions_answer_reader.dump_map()
+
     print "--- END OF TESTS ---"

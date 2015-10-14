@@ -95,9 +95,9 @@ class TriggersAnswerReader:
 
     # trigger normalizer: lowercase, no punctuation and substituted the diacritics with the ascii equivalent character
 
-    def __trigger_normalizer(self, trigger):
+    def normalize_string(self, string):
         rxutil = RegexUtil()
-        return rxutil.normalize_string(trigger)
+        return rxutil.normalize_string(string)
 
 
     # reads the trigger using regex

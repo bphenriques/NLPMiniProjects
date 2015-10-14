@@ -32,3 +32,46 @@ class RegexUtil:
             re_result += char
 
         return re_result + "]"
+
+
+    def normalize_string(self, sentence):
+        sentence = sentence.lower()
+        sentence = self.remove_diacritics(sentence)
+        sentence = self.remove_punctuation(sentence)
+        return sentence
+
+    def remove_punctuation(self, sentence):
+        sentence = re.sub("[:;,\.\?!]", '', sentence)
+        sentence = re.sub("[\"\(\)]", '', sentence)
+        sentence = re.sub("\r\n", '', sentence)
+        return sentence
+
+    def remove_diacritics(self, sentence):
+        # a
+        sentence = sentence.replace('á', 'a')
+        sentence = sentence.replace('à', 'a')
+        sentence = sentence.replace('ã', 'a')
+        sentence = sentence.replace('â', 'a')
+        # e
+        sentence = sentence.replace('é', 'e')
+        sentence = sentence.replace('è', 'e')
+        sentence = sentence.replace('ẽ', 'e')
+        sentence = sentence.replace('ê', 'e')
+        # i
+        sentence = sentence.replace('í', 'i')
+        sentence = sentence.replace('ì', 'i')
+        sentence = sentence.replace('ĩ', 'i')
+        sentence = sentence.replace('î', 'i')
+        # o
+        sentence = sentence.replace('ó', 'o')
+        sentence = sentence.replace('ò', 'o')
+        sentence = sentence.replace('ô', 'o')
+        sentence = sentence.replace('õ', 'o')
+        # u
+        sentence = sentence.replace('ú', 'u')
+        sentence = sentence.replace('ù', 'u')
+        sentence = sentence.replace('ũ', 'u')
+        sentence = sentence.replace('û', 'u')
+        # c
+        sentence = sentence.replace('ç', 'c')
+        return sentence

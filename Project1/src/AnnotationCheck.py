@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -
 import re
+from RegexUtil import RegexUtil
 
-from Normalizer import normalize_string
-from TriggersAnswerReader import QuestionsAnswerReader
+from TriggersAnswerReader import TriggersAnswerReader
 
 class AnnotationCheck:
 
@@ -26,13 +26,15 @@ class AnnotationCheck:
 
 
     def get_annotation(self, question, answer, nanswers):
+
+        rxutil = RegexUtil()
         #Todo verificar filepath e nanswers
         file = open(self._annotationFilePath)
-        normalizedquestion = normalize_string(question)
+        normalizedquestion = rxutil.normalize_string(question)
 
         line = file.readline()
         while (line):
-            normalizedline = normalize_string(line)
+            normalizedline = rxutil.normalize_string(line)
             matchquestion = re.search("user input - " + normalizedquestion, normalizedline)
             if (matchquestion is not None):
                 for i in range(0, nanswers):
@@ -53,7 +55,8 @@ class AnnotationCheck:
                 tp = tp + 1
 
         return float(tp) / len(answers)
-    #banana = list("ynmym")
-    #banana = ['y', 'n', 'm']
-    #print accuracy(banana)
-    #print getannotation("És aluno do Técnico?", "Isso é a coisa mais burra que disse desde há algum tempo.", "../AnotadoAll.txt", 20)
+#banana = list("ynmym")
+#banana = ['y', 'n', 'm']
+#print accuracy(banana)
+#ac = AnnotationCheck("txt/AnotadoAll.txt")
+#print ac.get_annotation("És aluno do Técnico?", "Isso é a coisa mais burra que disse desde há algum tempo.", 20)

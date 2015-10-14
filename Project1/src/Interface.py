@@ -4,7 +4,12 @@ from AnnotationCheck import AnnotationCheck
 def sss(fileName, question):
 
     questionsAnswerReader = QuestionsAnswerReader(fileName)
-    return questionsAnswerReader.get_answer(question)
+    answer = questionsAnswerReader.get_answer(question)
+
+    if answer is None:
+        return "Não sei responder"
+    else:
+        return answer
 
 def myAvalia(annotationFile, questionsFile):
 

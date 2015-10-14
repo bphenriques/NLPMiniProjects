@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import re, Normalizer
+import re
 from RegexUtil import RegexUtil
 
 class TriggersAnswerReader:
@@ -94,8 +94,11 @@ class TriggersAnswerReader:
         list_tuples.sort(key=lambda tup: tup[1], reverse=True)
 
     # trigger normalizer: lowercase, no punctuation and substituted the diacritics with the ascii equivalent character
-    def normalize_string(self, trigger):
-        return Normalizer.normalize_string(trigger)
+
+    def __trigger_normalizer(self, trigger):
+        rxutil = RegexUtil()
+        return rxutil.normalize_string(trigger)
+
 
     # reads the trigger using regex
     def _read_trigger(self, possible_trigger):

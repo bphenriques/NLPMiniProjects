@@ -11,7 +11,7 @@ class AnnotationCheck:
     def __init__(self, annotationFilePath):
         self._annotationFilePath = annotationFilePath
 
-    def your_avalia(self, annotationFile, questionsAnswersReader, questionsFilePath, maxnanswers):
+    def your_avalia(self, questionsAnswersReader, questionsFilePath, maxnanswers):
 
         answerslist = list()
         with open(questionsFilePath) as questionFile:

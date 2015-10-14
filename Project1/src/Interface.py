@@ -18,7 +18,7 @@ def myAvalia(annotationFile, questionsFile):
     questionsAnswersReader.process_file("TestResources/PerguntasPosSistema.txt")
 
     annotationCheck = AnnotationCheck(annotationFile)
-    answerslist = annotationCheck.your_avalia(annotationFile, questionsAnswersReader, questionsFile, 20)
+    answerslist = annotationCheck.your_avalia(questionsAnswersReader, questionsFile, 20)
 
     return annotationCheck.accuracy(answerslist)
 
@@ -33,5 +33,9 @@ if __name__ == "__main__":
 
     #There are many similar triggers with this user_input
     assert sss("TestResources/PerguntasPosSistema.txt", "Tens filhos?") == u"Não."
+
+    accuracy_t1 = myAvalia("../txt/AnotadoAll.txt", "TestResources/Perguntas.txt")
+    print "accuracy_t1: ", accuracy_t1
+    assert accuracy_t1 == (float(1)/3)
 
     print "Passed sss tests"

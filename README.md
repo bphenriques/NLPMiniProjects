@@ -17,6 +17,7 @@ $ python
 
 ```python
 from Interface import sss
+from Interface import myAvalia
 
 corpus_src = "TestResources/PerguntasPosSistema.txt"
 

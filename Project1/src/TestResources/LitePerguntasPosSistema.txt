@@ -428,7 +428,7 @@ M4 score - 1.0
 Final Score - 0.950000025331974
 
 2
-T - Tens filhos?
+T - - Tens filhos?
 A - Não.
 M1 score - 1.0
 M2 score - 0.0

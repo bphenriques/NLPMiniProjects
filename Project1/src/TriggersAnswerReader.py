@@ -8,16 +8,18 @@ class TriggersAnswerReader:
     """
         Responsible for handling user_input and all possible answers.
     """
-    __USER_INPUT_TAG = "User Input: "
+    __USER_INPUT_TAG = "User Input:"
     __TRIGGER_TAG = "T"
     __ANSWER_TAG = "A"
-    __trigger_regex = ""
-    __answer_regex = ""
-    __user_input_answers_dic = {}
+
+    __trigger_regex = None
+    __trigger_tag_regex = None
+    __answer_regex = None
+    __answer_tag_regex = None
 
     __user_input_regex = None
-    __trigger_tag_regex = None
-    __answer_tag_regex = None
+    __user_input_tag_regex = None
+    __user_input_answers_dic = {}
 
     file_name = None
 
@@ -30,7 +32,8 @@ class TriggersAnswerReader:
         self.__trigger_regex = self.__trigger_tag_regex + rew.at_least_one(rew.anything)
         self.__answer_regex = self.__answer_tag_regex + rew.at_least_one(rew.anything)
 
-        self.__user_input_regex = self.__USER_INPUT_TAG + rew.multiple_white_space() + rew.any(rew.anything)
+        self.__user_input_tag_regex = rew.multiple_white_space() + self.__USER_INPUT_TAG + rew.multiple_white_space()
+        self.__user_input_regex = self.__user_input_tag_regex + rew.any(rew.anything)
 
     def process_file(self, file_name):
         """
@@ -59,8 +62,6 @@ class TriggersAnswerReader:
             user_input = self._read_user_input(possible_user_input)
             if user_input is None: continue #keep looking for
 
-            #print "user_input: ", user_input
-
             #loop until next "User Input: Something" is found
             potential_next_user_input = None
             while potential_next_user_input is None:
@@ -85,17 +86,10 @@ class TriggersAnswerReader:
                     answer = self._read_answer(possible_answer)
                     if answer is None: continue
 
-                    #print "\ttrigger: ", trigger
-                    #print "\t\tanswer: ", answer
-
-                    normalized_user_input = self.normalize_user_input(user_input)
-                    normalized_trigger = self.normalize_user_input(trigger)
-                    if normalized_trigger == normalized_user_input:
-                        self._process_user_input_answer(user_input, answer)
+                    self._process_user_input_answer(user_input, trigger, answer)
                 else:
                     user_input = potential_next_user_input
                     potential_next_user_input = None
-                    #print "user_input: ", user_input
                     continue
 
         file_in.close()
@@ -110,8 +104,13 @@ class TriggersAnswerReader:
                 print "\t[", answer[1], "] ", answer[0].decode("utf-8")
 
     # Update internal map of triggers and answers
-    def _process_user_input_answer(self, user_input, answer):
-        self._put(user_input, self.normalize_answer(answer))
+    def _process_user_input_answer(self, user_input, trigger, answer):
+        #print "user_input: ", user_input
+        #print "\ttrigger: ", trigger
+        #print "\t\tanswer: ", answer
+
+        if self.normalize_user_input(user_input) == self.normalize_user_input(trigger):
+            self._put(user_input, self.normalize_answer(answer))
 
     # Adds element to the map, if the key already exists, append the value to the existing ones and updates the count
     # The list is always sorted by the most frequent to the least frequent
@@ -138,29 +137,29 @@ class TriggersAnswerReader:
         rxutil = RegexUtil()
         return rxutil.normalize_string(user_input)
 
-    def normalize_answer(se_lf, answer):
+    def normalize_answer(self, answer):
         return answer
 
     # reads the trigger using regex
     def _read_trigger(self, possible_trigger):
-        found_regex = re.findall(self.__trigger_regex, possible_trigger)
-        if len(found_regex) == 0: return None
+        found_regex = re.search(self.__trigger_regex, possible_trigger)
+        if found_regex is None: return None
 
-        return re.sub(self.__trigger_tag_regex, '', ''.join(found_regex))
+        return re.sub(self.__trigger_tag_regex, '', found_regex.string).strip()
 
     # reads the answer using regex
     def _read_answer(self, possible_answer):
-        found_regex = re.findall(self.__answer_regex, possible_answer)
-        if len(found_regex) == 0: return None
+        found_regex = re.search(self.__answer_regex, possible_answer)
+        if found_regex is None: return None
 
-        return re.sub(self.__answer_tag_regex, '', ''.join(found_regex))
+        return re.sub(self.__answer_tag_regex, '', found_regex.string).strip()
 
     # Reads user input using regex
     def _read_user_input(self, possible_input):
-        found_regex = re.findall(self.__user_input_regex, possible_input)
-        if len(found_regex) == 0: return None
+        found_regex = re.search(self.__user_input_regex, possible_input)
+        if found_regex is None: return None
 
-        return re.sub(self.__USER_INPUT_TAG, '', ''.join(found_regex))
+        return re.sub(self.__user_input_tag_regex, '', found_regex.string).strip()
 
     def number_matched_user_input(self):
         """

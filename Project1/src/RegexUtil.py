@@ -33,17 +33,19 @@ class RegexUtil:
 
         return re_result + "]"
 
-
     def normalize_string(self, sentence):
         sentence = self.remove_diacritics(sentence)
         sentence = sentence.lower()
         sentence = self.remove_punctuation(sentence)
+        sentence = self.custom_strip(sentence)
         return sentence
+
+    def custom_strip(self, sentence):
+        return sentence.strip(" -\r\n")
 
     def remove_punctuation(self, sentence):
         sentence = re.sub("[:;,\.\?!]", '', sentence)
         sentence = re.sub("[\"\(\)]", '', sentence)
-        sentence = re.sub("[\r\n]", '', sentence)
         return sentence
 
     def remove_diacritics(self, sentence):

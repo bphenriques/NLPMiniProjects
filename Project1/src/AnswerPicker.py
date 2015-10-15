@@ -104,70 +104,6 @@ class AnswerPicker:
             for answer in answers:
                 print "\t[", answer[1], "]", answer[0]
 
-    # Update internal map of triggers and answers
-    def _process_user_input_answer(self, user_input, trigger, answer):
-        # print "user_input: ", user_input
-        # print "\ttrigger: ", trigger
-        # print "\t\tanswer: ", answer
-
-        if isinstance(user_input, str): user_input = user_input.decode("utf-8")
-        if isinstance(trigger, str): trigger = trigger.decode("utf-8")
-        if isinstance(answer, str): answer = answer.decode("utf-8")
-
-        if user_input not in self.__user_input_answers_dic:
-            self.__user_input_answers_dic[user_input] = []
-
-        if self.normalize_user_input(user_input) == self.normalize_trigger(trigger):
-            self._put(user_input, self.normalize_answer(answer))
-
-    # Adds element to the map, if the key already exists, append the value to the existing ones and updates the count
-    # The list is always sorted by the most frequent to the least frequent
-    def _put(self, user_input, answer):
-        list_tuples = self.__user_input_answers_dic[user_input]
-
-        tuple_found = self._find_answer(list_tuples, answer)
-        if tuple_found is not None:
-            new_tuple = (tuple_found[0], tuple_found[1] + 1)
-            list_tuples.remove(tuple_found)
-            list_tuples.append(new_tuple)
-        else:
-            new_tuple = (answer, 1)
-            list_tuples.append(new_tuple)
-
-        # sort
-        list_tuples.sort(key=lambda tup: tup[1], reverse=True)
-
-    # lowercase, no PUNCTUATION and transformed the diacritics
-    def normalize_user_input(self, user_input):
-        return RegexUtil.normalize_string(user_input)
-
-    def normalize_trigger(self, trigger):
-        return RegexUtil.normalize_string(trigger)
-
-    def normalize_answer(self, answer):
-        return answer
-
-    # reads the trigger using regex
-    def _read_trigger(self, possible_trigger):
-        found_regex = re.search(self.__trigger_regex, possible_trigger)
-        if found_regex is None: return None
-
-        return re.sub(self.__trigger_tag_regex, '', found_regex.string).strip()
-
-    # reads the answer using regex
-    def _read_answer(self, possible_answer):
-        found_regex = re.search(self.__answer_regex, possible_answer)
-        if found_regex is None: return None
-
-        return re.sub(self.__answer_tag_regex, '', found_regex.string).strip()
-
-    # Reads user input using regex
-    def _read_user_input(self, possible_input):
-        found_regex = re.search(self.__user_input_regex, possible_input)
-        if found_regex is None: return None
-
-        return re.sub(self.__user_input_tag_regex, '', found_regex.string).strip()
-
     def number_matched_user_input(self):
         """
         :return: Number of existing triggers
@@ -208,13 +144,81 @@ class AnswerPicker:
         else:
             return answers[0][0]  # [first answer] [first element tuple]
 
+    def clear(self):
+        """
+        Clears the internal map of user_inputs and answers
+        """
+        self._file_name = None
+        self.__user_input_answers_dic = {}
+
+    # Update internal map of triggers and answers
+    def _process_user_input_answer(self, user_input, trigger, answer):
+        # print "user_input: ", user_input
+        # print "\ttrigger: ", trigger
+        # print "\t\tanswer: ", answer
+
+        if isinstance(user_input, str): user_input = user_input.decode("utf-8")
+        if isinstance(trigger, str): trigger = trigger.decode("utf-8")
+        if isinstance(answer, str): answer = answer.decode("utf-8")
+
+        if user_input not in self.__user_input_answers_dic:
+            self.__user_input_answers_dic[user_input] = []
+
+        if self._normalize_user_input(user_input) == self._normalize_trigger(trigger):
+            self._put(user_input, self._normalize_answer(answer))
+
+    # Adds element to the map, if the key already exists, append the value to the existing ones and updates the count
+    # The list is always sorted by the most frequent to the least frequent
+    def _put(self, user_input, answer):
+        list_tuples = self.__user_input_answers_dic[user_input]
+
+        tuple_found = self._find_answer(list_tuples, answer)
+        if tuple_found is not None:
+            new_tuple = (tuple_found[0], tuple_found[1] + 1)
+            list_tuples.remove(tuple_found)
+            list_tuples.append(new_tuple)
+        else:
+            new_tuple = (answer, 1)
+            list_tuples.append(new_tuple)
+
+        # sort
+        list_tuples.sort(key=lambda tup: tup[1], reverse=True)
+
+    def _normalize_user_input(self, user_input):
+        # lowercase, no punctuation diacritics transformation
+        return RegexUtil.normalize_string(user_input)
+
+    def _normalize_trigger(self, trigger):
+        # lowercase, no punctuation diacritics transformation
+        return RegexUtil.normalize_string(trigger)
+
+    def _normalize_answer(self, answer):
+        return answer
+
+    # reads the trigger using regex
+    def _read_trigger(self, possible_trigger):
+        found_regex = re.search(self.__trigger_regex, possible_trigger)
+        if found_regex is None: return None
+
+        return re.sub(self.__trigger_tag_regex, '', found_regex.string).strip()
+
+    # reads the answer using regex
+    def _read_answer(self, possible_answer):
+        found_regex = re.search(self.__answer_regex, possible_answer)
+        if found_regex is None: return None
+
+        return re.sub(self.__answer_tag_regex, '', found_regex.string).strip()
+
+    # Reads user input using regex
+    def _read_user_input(self, possible_input):
+        found_regex = re.search(self.__user_input_regex, possible_input)
+        if found_regex is None: return None
+
+        return re.sub(self.__user_input_tag_regex, '', found_regex.string).strip()
+
     # util: find tuple with a given name
     def _find_answer(self, tup_list, name):
         for tup in tup_list:
             if tup[0] == name:
                 return tup
         return None
-
-    def clear(self):
-        self._file_name = None
-        self.__user_input_answers_dic = {}

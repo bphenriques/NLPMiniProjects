@@ -4,6 +4,10 @@ from AnswerPicker import AnswerPicker
 
 
 class AnnotationCheckTests(AnnotationCheck):
+    """
+    Test class for AnnotationCheck
+    """
+
     _answer_picker = AnswerPicker()
     _annotation_check = None
 
@@ -15,20 +19,10 @@ class AnnotationCheckTests(AnnotationCheck):
         assert expected_value == self.evaluate_accuracy(self._answer_picker, questions_file, 20)
 
     def test_stats(self):
-        """
-        Test 1
-        """
         self.__aux_test_stats("TestResources/Perguntas.txt", (float(1)/3))
 
     def see_stats(self):
-        """
-        Test 1
-        """
-
         print self.evaluate_accuracy(self._answer_picker, "TestResources/banana.txt", 20)
-
-
-
 
 if __name__ == "__main__":
     annotation_check_tests = AnnotationCheckTests("TestResources/PerguntasPosSistema.txt", "TestResources/AnotadoAll.txt")

@@ -7,6 +7,10 @@ from AnswerPicker import AnswerPickerAnswerResult
 
 
 class AnnotationCheck:
+    """
+    AnnotationChecker. Allows evaluating accuracy of a set of User_Questions and answers
+    """
+
     POSITIVE_CHAR = 'y'
     NEGATIVE_CHAR = 'n'
     MAYBE_CHAR = 'm'
@@ -19,7 +23,9 @@ class AnnotationCheck:
 
     def __init__(self, annotation_file_path):
         """
-        :param annotation_file_path:
+        Constructor. If the annotation_file_path doesn't exist an exception is thrown
+
+        :param annotation_file_path: the file path to the annotation
         """
         if not os.path.exists(annotation_file_path):
             print "File not found"
@@ -29,52 +35,45 @@ class AnnotationCheck:
         self._answer_regex_sufix = self._annotation_separator_regex + "[" + self.POSITIVE_CHAR + self.NEGATIVE_CHAR + self.MAYBE_CHAR + "][\s]*$"
 
     def evaluate_accuracy(self, answer_picker, questions_file_path, max_n_answers):
+        """
+        Determines the accuracy of a AnswerPicker given a list of questions
+
+        :param answer_picker: instance of AnswerPicker with the corpus already studied
+        :param questions_file_path: source of questions
+        :param max_n_answers: max number of answers to look for
+        :return: accuracy of the answer_picker
+        """
+
         if not os.path.exists(questions_file_path):
             print "Questions File not found"
             raise Exception
 
-        answers_list = self._evaluate(answer_picker, questions_file_path, max_n_answers)
-        return self._accuracy(answers_list)
+        # list of y, n or m
+        answers_stats_list = self._evaluate(answer_picker, questions_file_path, max_n_answers)
+        return self._accuracy(answers_stats_list)
 
     def _evaluate(self, answer_picker, questions_file_path, max_n_answers):
-        """
-        Bla bla bla
-        :param answer_picker:
-        :param questions_file_path:
-        :param max_n_answers:
-        :return:
-        """
-
         answers_list = list()
         with open(questions_file_path) as questionFile:
             for question in questionFile:
+                # remove - and whitespace
                 question = RegexUtil.custom_strip(question)
                 answer = answer_picker.get_answer(question)
 
-                if (answer == AnswerPickerAnswerResult.INVALID_USER_INPUT) or (answer == AnswerPickerAnswerResult.TRIGGER_NOT_FOUND):
+                # check if input is invalid or if there is no possible answer
+                if answer == AnswerPickerAnswerResult.INVALID_USER_INPUT or AnswerPickerAnswerResult.TRIGGER_NOT_FOUND == answer:
                     annotation = 'n'
                 else:
                     annotation = self._get_annotation(question, answer, max_n_answers)
 
+                # add to the list for future analysis
                 answers_list.append(annotation)
             questionFile.close()
         return answers_list
 
     def _get_annotation(self, user_input, answer, max_n_answers):
-        """
-        Gets the corresponding annotation from the answer given an user-input
-
-        To simplify and since it wasn't required, the user_input is not normalized,
-        i.e., keep case, keep diacritric and keep ponctuation
-
-        :param user_input:
-        :param answer:
-        :param max_n_answers:
-        :return: the annotation
-        """
         file_in = open(self._annotation_file_path)
 
-        # regex to find specific user_input in the file
         line = file_in.readline()
         while line:
             # Search User Input: in the beginning of the line
@@ -83,6 +82,7 @@ class AnnotationCheck:
 
             if sole_question == user_input:
                 for i in range(0, max_n_answers):
+                    # answer is in utf-8 therefore we convert the line to utf-8 as well
                     answer_line = file_in.readline().decode('utf-8')
 
                     # Getting answer by removing prefix and sufix
@@ -90,12 +90,14 @@ class AnnotationCheck:
                     potential_answer = re.sub(self._answer_regex_sufix, '', potential_answer)
 
                     if potential_answer == answer:
+                        # split the sentence with the separator
                         splits_separator = re.split(self._annotation_separator_regex, answer_line)
                         if len(splits_separator) == 0: continue
                         file_in.close()
 
                         annotation = splits_separator[len(splits_separator) - 1]
-                        annotation = annotation.strip(string.whitespace) # remove carriage and newlines
+                         # remove carriage and newlines
+                        annotation = annotation.strip(string.whitespace).lower()
 
                         return annotation
 
@@ -105,11 +107,6 @@ class AnnotationCheck:
         return self.NEGATIVE_CHAR
 
     def _accuracy(self, answers):
-        """
-        :param answers:
-        :param positive_char:
-        :return:
-        """
         if len(answers) == 0: return 0
 
         tp = answers.count(self.POSITIVE_CHAR)

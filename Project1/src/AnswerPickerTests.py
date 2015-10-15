@@ -11,10 +11,6 @@ class TestAnswerPicker(AnswerPicker):
     """
 
     def test_answer_regex(self):
-        """
-        Tests answer regex. If fails, an exception is thrown.
-        """
-
         test_in = "A - (ÀàÁáÉéèÉÈíÍìÌÓóòÒãõôÔÀÀÀAÀÀÀÀÀÀÀ). Derp. Não estou a dizer coisa com coisa"
         expected = "(ÀàÁáÉéèÉÈíÍìÌÓóòÒãõôÔÀÀÀAÀÀÀÀÀÀÀ). Derp. Não estou a dizer coisa com coisa"
         assert expected == self._read_answer(test_in)
@@ -39,11 +35,8 @@ class TestAnswerPicker(AnswerPicker):
         assert expected == self._read_answer(test_in)
 
 
-    def test_trigger_regex(self):
-        """
-        Tests trigger regex. If fails, an exception is thrown.
-        """
 
+    def test_trigger_regex(self):
         test_in = "T - (ÀàÁáÉéèÉÈíÍìÌÓóòÒãõôÔÀÀÀAÀÀÀÀÀÀÀ). Derp. Não estou a dizer coisa com coisa"
         expected = "(ÀàÁáÉéèÉÈíÍìÌÓóòÒãõôÔÀÀÀAÀÀÀÀÀÀÀ). Derp. Não estou a dizer coisa com coisa"
         assert expected == self._read_trigger(test_in)
@@ -68,10 +61,6 @@ class TestAnswerPicker(AnswerPicker):
         assert expected == self._read_trigger(test_in)
 
     def test_user_input_regex(self):
-        """
-        Tests user input regex. If fails, an exception is thrown.
-        """
-
         assert "Bla bla bla" == self._read_user_input("User Input: Bla bla bla")
         assert self._read_user_input("GIBBERISH") is None
         assert self._read_user_input("user input: asdhasdh") is None
@@ -93,10 +82,6 @@ class TestAnswerPicker(AnswerPicker):
         assert expected == self._read_user_input(test_in)
 
     def test_trigger_inexistent(self):
-        """
-        Tests inexistent trigger for a given user input
-        """
-
         self.clear()
 
         # added new question but trigger does not match
@@ -108,10 +93,6 @@ class TestAnswerPicker(AnswerPicker):
         assert answer == AnswerPickerAnswerResult.TRIGGER_NOT_FOUND
 
     def test_wrong_user_input(self):
-        """
-        Tests wrong user_input
-        """
-
         self.clear()
 
         # Find non-existent trigger
@@ -121,11 +102,6 @@ class TestAnswerPicker(AnswerPicker):
         assert answer == AnswerPickerAnswerResult.INVALID_USER_INPUT
 
     def test_answer_frequency(self):
-        """
-        Tests answer frequency. Adds several triggers and answers and verifies if the insertion are correct and if
-        the frequency of those same answers are being updated as expected
-        """
-
         self.clear()
 
         # Test one addition
@@ -142,16 +118,12 @@ class TestAnswerPicker(AnswerPicker):
         assert(len(self.get_answers("Question2")) == 2)
         answers = self.get_answers("Question2")
         assert answers is not None
-        answer = self._find_answer(answers, self.normalize_answer("Response2"))
+        answer = self._find_answer(answers, self._normalize_answer("Response2"))
         assert answer is not None
-        assert answer[0] == self.normalize_answer("Response2")
+        assert answer[0] == self._normalize_answer("Response2")
         assert answer[1] == 2
 
     def test_sort(self):
-        """
-        Tests if the  answers stored are sorted from the most frequent to the least frequent
-        """
-
         self._process_user_input_answer("TestQuestion2", "TestQuestion2", "Response1")
         self._process_user_input_answer("TestQuestion2", "TestQuestion2", "Response2")
         self._process_user_input_answer("TestQuestion2", "TestQuestion2", "Response3")
@@ -164,20 +136,17 @@ class TestAnswerPicker(AnswerPicker):
         self._process_user_input_answer("TestQuestion2", "TestQuestion2", "Response4")  # Response4 : 1
         self._process_user_input_answer("TestQuestion2", "TestQuestion2", "Response5")  # Response5 : 1
 
+        # Tests if the  answers stored are sorted from the most frequent to the least frequent
         answers = self.get_answers("TestQuestion2")
-        assert answers[0][0] == self.normalize_answer("Response3")
-        assert answers[1][0] == self.normalize_answer("Response2")
-        assert answers[2][0] == self.normalize_answer("Response1")
-        assert answers[3][0] == self.normalize_answer("Response5") or \
-               answers[3][0] == self.normalize_answer("Response4")
-        assert answers[4][0] == self.normalize_answer("Response5") or \
-               answers[4][0] == self.normalize_answer("Response4")
+        assert answers[0][0] == self._normalize_answer("Response3")
+        assert answers[1][0] == self._normalize_answer("Response2")
+        assert answers[2][0] == self._normalize_answer("Response1")
+        assert answers[3][0] == self._normalize_answer("Response5") or \
+               answers[3][0] == self._normalize_answer("Response4")
+        assert answers[4][0] == self._normalize_answer("Response5") or \
+               answers[4][0] == self._normalize_answer("Response4")
 
     def test_get_answer(self):
-        """
-        Tests if it is return the most frequent answer
-        """
-
         self.clear()
         self._process_user_input_answer("TestQuestion1", "TestQuestion1", "Response1")
         self._process_user_input_answer("TestQuestion1", "TestQuestion1", "Response2")
@@ -192,24 +161,21 @@ class TestAnswerPicker(AnswerPicker):
         self._process_user_input_answer("TestQuestion1", "TestQuestion1", "Response5")  # Response5 : 1
 
         # Response3 is most frequent: 4
-        assert self.get_answer("TestQuestion1") == self.normalize_answer("Response3")
+        assert self.get_answer("TestQuestion1") == self._normalize_answer("Response3")
 
         # changing the leadership
         self._process_user_input_answer("TestQuestion1", "TestQuestion1", "Response2")  # Response2 : 4
         self._process_user_input_answer("TestQuestion1", "TestQuestion1", "Response2")  # Response2 : 5
 
         # Response2 is most frequent: 5
-        assert self.get_answer("TestQuestion1") == self.normalize_answer("Response2")
+        assert self.get_answer("TestQuestion1") == self._normalize_answer("Response2")
 
         # Response3 and Response2 are 5 (draw)
         self._process_user_input_answer("TestQuestion1", "TestQuestion1", "Response3")  # Response3 : 5
-        assert self.get_answer("TestQuestion1") == self.normalize_answer("Response2") or \
-               self.get_answer("TestQuestion1") == self.normalize_answer("Response3")
+        assert self.get_answer("TestQuestion1") == self._normalize_answer("Response2") or \
+               self.get_answer("TestQuestion1") == self._normalize_answer("Response3")
 
     def test_normalizer(self):
-        """
-        Tests normalize string
-        """
         self.clear()
 
         self._process_user_input_answer("TestQuestion3", "TestQuestion3", "Response1")
@@ -230,9 +196,6 @@ class TestAnswerPicker(AnswerPicker):
         assert len(self.get_answers("TestQuestion3")) == 13
 
     def test_process__lite_file(self, file_name = "TestResources/LitePerguntasPosSistema.txt"):
-        """
-        Tests a lite file
-        """
         self.clear()
         self.process_file(file_name)
         assert self.number_matched_user_input() == 3
@@ -240,9 +203,6 @@ class TestAnswerPicker(AnswerPicker):
         assert self.get_answer("Tens filhos?") == u"Não."
 
     def test_process_big_file(self, file_name = "TestResources/PerguntasPosSistema.txt"):
-        """
-        Tests big file
-        """
         self.clear()
         self.process_file(file_name)
 

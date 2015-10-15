@@ -5,12 +5,25 @@ import string
 
 
 class RegexUtil:
+    """
+    Utility class for regex processing
+    """
+
+    def __init__(self):
+        pass
+
     WHITE_SPACE = "\s"
     PT_LETTER = "À-ÿ\w"
     PUNCTUATION = ":;,\.\?!\"\(\)"
 
     @staticmethod
     def normalize_string(sentence):
+        """
+        Remove diacritics, punctuation strip from - or white space, and lower case
+
+        :param sentence: input
+        :return: sentence normalized
+        """
         sentence = RegexUtil.remove_diacritics(sentence)
         sentence = sentence.lower()
         sentence = RegexUtil.remove_punctuation(sentence)
@@ -19,14 +32,33 @@ class RegexUtil:
 
     @staticmethod
     def custom_strip(sentence):
+        """
+        Strips the input from string.whitespace or -
+
+        :param sentence: input
+        :return: input stripped from - or whitespace
+        """
         return sentence.strip("-" + string.whitespace)
 
     @staticmethod
     def remove_punctuation(sentence):
+        """
+        Removes punctuation from the sentence that don't affect the meaning of the portuguese texts (e.g. "matei-te" and
+        "matei, te" could mean different things
+
+        :param sentence: input
+        :return: input without punctuation
+        """
         return re.sub("[" + RegexUtil.PUNCTUATION + "]", '', sentence)
 
     @staticmethod
     def remove_diacritics(sentence):
+        """
+        Remove diacritics from the sentence
+
+        :param sentence: input
+        :return: input without diacritics
+        """
         # a
         sentence = sentence.replace(u'á', 'a')
         sentence = sentence.replace(u'à', 'a')

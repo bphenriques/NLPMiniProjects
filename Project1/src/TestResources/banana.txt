@@ -1,3 +1,4 @@
+Como te chamas?
 A tua familia é numerosa?
 Aceitas tomar café?
 Achas que hoje vai estar calor?
@@ -12,7 +13,6 @@ Como está o tempo?
 Como estás?
 Como se chama a tua mãe?
 Como se chama o teu irmão?
-Como te chamas?
 Como vai o dia?
 Como é que te chamas?
 Conheces essas pessoas atrás de ti?

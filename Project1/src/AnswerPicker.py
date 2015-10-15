@@ -179,6 +179,7 @@ class AnswerPicker:
         """
 
         if isinstance(user_input, str): user_input = user_input.decode("utf-8")
+        user_input = RegexUtil.custom_strip(user_input)
         if user_input not in self.__user_input_answers_dic:
             return None
 
@@ -193,6 +194,7 @@ class AnswerPicker:
         """
 
         if isinstance(user_input, str): user_input = user_input.decode("utf-8")
+        user_input = RegexUtil.custom_strip(user_input)
         answers = self.get_answers(user_input)
         if answers is None:
             return self.INVALID_USER_INPUT

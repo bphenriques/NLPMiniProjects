@@ -34,7 +34,7 @@ if __name__ == "__main__":
     annotation_check_tests = AnnotationCheckTests("TestResources/PerguntasPosSistema.txt", "TestResources/AnotadoAll.txt")
 
     tests = [
-        #annotation_check_tests.test_stats,
+        annotation_check_tests.test_stats,
         annotation_check_tests.see_stats
     ]
 

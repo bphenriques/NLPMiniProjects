@@ -3,7 +3,7 @@ import re
 import os.path
 import string
 from RegexUtil import RegexUtil
-from AnswerPicker import AnswerPicker
+from AnswerPicker import AnswerPickerAnswerResult
 
 
 class AnnotationCheck:
@@ -51,14 +51,10 @@ class AnnotationCheck:
                 question = RegexUtil.custom_strip(question)
                 answer = answer_picker.get_answer(question)
 
-
-                if (answer == AnswerPicker.INVALID_USER_INPUT) or (answer == AnswerPicker.TRIGGER_NOT_FOUND):
+                if (answer == AnswerPickerAnswerResult.INVALID_USER_INPUT) or (answer == AnswerPickerAnswerResult.TRIGGER_NOT_FOUND):
                     annotation = 'n'
                 else:
-                    print question
-                    print  " - " + answer
                     annotation = self._get_annotation(question, answer, max_n_answers)
-                    print annotation
 
                 answers_list.append(annotation)
             questionFile.close()
@@ -79,12 +75,9 @@ class AnnotationCheck:
         file_in = open(self._annotation_file_path)
 
         # regex to find specific user_input in the file
-        match_question_regex = self._user_input_regex_prefix + user_input
-
         line = file_in.readline()
         while line:
-            #print "-- " + line
-            # Search User Input: in the beggining of the line
+            # Search User Input: in the beginning of the line
             sole_question = re.sub(self._user_input_regex_prefix, '', line)
             sole_question = re.sub("[\s]*$", '', sole_question)
 
@@ -106,24 +99,10 @@ class AnnotationCheck:
 
                         return annotation
 
-
-                    # annotation = re.search(self._answer_regex_sufix, annotation)
-                    #
-                    # answer_line = re.sub(self._answer_regex_prefix, '', answer_line)
-                    #
-                    # annotation = re
-                    # answer_line = re.sub(self._answer_regex_prefix, '', answer_line)
-                    # if "A - " + answer + " : " in answer_line:
-                    #     tmp = answer_line.replace(answer, '').split(":")
-                    #     if len(tmp) > 1:
-                    #         annotation = tmp[1].strip()
-                    #         file_in.close()
-                    #         return annotation
-
             line = file_in.readline()
 
         # if user question is not found
-        #return self.NEGATIVE_CHAR
+        return self.NEGATIVE_CHAR
 
     def _accuracy(self, answers):
         """

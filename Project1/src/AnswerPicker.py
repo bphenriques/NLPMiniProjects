@@ -5,17 +5,22 @@ import os.path
 from RegexUtil import RegexUtil
 
 
+class AnswerPickerAnswerResult:
+    def __init__(self):
+        pass
+
+    INVALID_USER_INPUT = 0
+    TRIGGER_NOT_FOUND = 1
+
+
 class AnswerPicker:
     """
         Responsible for handling user_input and all possible answers.
     """
 
-    INVALID_USER_INPUT = u"Frase incorrecta"
-    TRIGGER_NOT_FOUND = u"Não sei responder"
-
-    __user_input_tag_regex = r"[\s]*" + "User Input:" + r"[\s]*"
-    __trigger_tag_regex = r"[\s]*" + "T" + r"[\s]*" + "-" + r"[\s]*"
-    __answer_tag_regex = r"[\s]*" + "A" + r"[\s]*" + "-" + r"[\s]*"
+    __user_input_tag_regex = r"^[\s]*" + "User Input:" + r"[\s]*"
+    __trigger_tag_regex = r"^[\s]*" + "T" + r"[\s]*" + "-" + r"[\s]*"
+    __answer_tag_regex = r"^[\s]*" + "A" + r"[\s]*" + "-" + r"[\s]*"
 
     __user_input_regex = None
     __trigger_regex = None
@@ -27,9 +32,9 @@ class AnswerPicker:
 
     def __init__(self):
         # pre-computing regex expressions
-        self.__user_input_regex = self.__user_input_tag_regex + ".*"
-        self.__trigger_regex = self.__trigger_tag_regex + ".*"
-        self.__answer_regex = self.__answer_tag_regex + ".*"
+        self.__user_input_regex = self.__user_input_tag_regex + ".*$"
+        self.__trigger_regex = self.__trigger_tag_regex + ".*$"
+        self.__answer_regex = self.__answer_tag_regex + ".*$"
 
     def process_file(self, file_name):
         """
@@ -197,10 +202,9 @@ class AnswerPicker:
         user_input = RegexUtil.custom_strip(user_input)
         answers = self.get_answers(user_input)
         if answers is None:
-            return self.INVALID_USER_INPUT
-
+            return AnswerPickerAnswerResult.INVALID_USER_INPUT
         if len(answers) == 0:
-            return self.TRIGGER_NOT_FOUND
+            return AnswerPickerAnswerResult.TRIGGER_NOT_FOUND
         else:
             return answers[0][0]  # [first answer] [first element tuple]
 

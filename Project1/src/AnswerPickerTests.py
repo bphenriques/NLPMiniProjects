@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from AnswerPicker import AnswerPicker
+from AnswerPicker import AnswerPickerAnswerResult
 import TestsUtil
 
 
@@ -104,7 +105,7 @@ class TestAnswerPicker(AnswerPicker):
         answers = self.get_answers("Question3")
         assert answers is not None and len(answers) == 0
         answer = self.get_answer("Question3")
-        assert answer == self.TRIGGER_NOT_FOUND
+        assert answer == AnswerPickerAnswerResult.TRIGGER_NOT_FOUND
 
     def test_wrong_user_input(self):
         """
@@ -117,7 +118,7 @@ class TestAnswerPicker(AnswerPicker):
         answers = self.get_answers("Bla")
         assert answers is None
         answer = self.get_answer("Bla")
-        assert answer == self.INVALID_USER_INPUT
+        assert answer == AnswerPickerAnswerResult.INVALID_USER_INPUT
 
     def test_answer_frequency(self):
         """
@@ -246,14 +247,14 @@ class TestAnswerPicker(AnswerPicker):
         self.process_file(file_name)
 
         # The following question has no triggers that are similar to the user input
-        assert self.get_answer("A tua familia é numerosa?") == u"Não sei responder"
+        assert self.get_answer("A tua familia é numerosa?") == AnswerPickerAnswerResult.TRIGGER_NOT_FOUND
 
         #Non existent at all
-        assert self.get_answer("I DONT EXIST?") == u"Frase incorrecta"
+        assert self.get_answer("I DONT EXIST?") == AnswerPickerAnswerResult.INVALID_USER_INPUT
 
         #There are many similar triggers with this user_input
         assert self.get_answer("Tens filhos?") == u"Não."
-        assert self.get_answer("tens filhos?") == u"Frase incorrecta"
+        assert self.get_answer("tens filhos?") == AnswerPickerAnswerResult.INVALID_USER_INPUT
 
 
 if __name__ == '__main__':

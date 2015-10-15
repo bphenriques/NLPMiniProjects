@@ -11,9 +11,10 @@ The python version used for this project is 2.7.10
 
 ## Example usage
 
-A file "example.py" shows an example of code usage:
+A file in "Project1/src/example.py" shows an example of usage:
 
 ```sh
+$ cd NLPMiniProjects/Project1/src
 $ python
 ```
 

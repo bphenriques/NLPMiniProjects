@@ -9,8 +9,9 @@ There are two folders:</p>
 <p>The project aims to, in the portuguese language, given a question deliver the most probable answer.</p>
 <p>The python version used for this project is 2.7.10</p>
 <h2><a id="Example_usage_11"></a>Example usage</h2>
-<p>A file &quot;<a href="http://example.py">example.py</a>&quot; shows an example of code usage:</p>
-<pre><code class="language-sh">$ python
+<p>A file in “Project1/src/example.py” shows an example of usage:</p>
+<pre><code class="language-sh">$ <span class="hljs-built_in">cd</span> NLPMiniProjects/Project1/src
+$ python
 </code></pre>
 <pre><code class="language-python"><span class="hljs-keyword">from</span> Interface <span class="hljs-keyword">import</span> sss
 <span class="hljs-keyword">from</span> Interface <span class="hljs-keyword">import</span> myAvalia
@@ -30,8 +31,8 @@ question_2 = <span class="hljs-string">"Tens filhos?"</span>
 accuracy = myAvalia(<span class="hljs-string">"TestResources/AnotadoAll.txt"</span>, <span class="hljs-string">"TestResources/Perguntas.txt"</span>, <span class="hljs-string">"TestResources/PerguntasPosSistema.txt"</span>)
 <span class="hljs-keyword">print</span> <span class="hljs-string">"Perguntas.txt accuracy is: "</span>, accuracy <span class="hljs-comment"># 0.333333</span>
 </code></pre>
-<h1><a id="File_Structure_39"></a>File Structure</h1>
-<h3><a id="Corpus_file_40"></a>Corpus file</h3>
+<h1><a id="File_Structure_40"></a>File Structure</h1>
+<h3><a id="Corpus_file_41"></a>Corpus file</h3>
 <pre><code>...
 User <span class="hljs-keyword">Input</span> - Viste o último filme <span class="hljs-keyword">do</span> Woody Allen?
     A - <span class="hljs-keyword">N</span>ão é nada oficial ainda, eu <span class="hljs-keyword">n</span>ão dei a minha palavra ainda. : <span class="hljs-keyword">n</span>
@@ -41,19 +42,19 @@ User <span class="hljs-keyword">Input</span> - Viste o último filme <span class
 User <span class="hljs-keyword">Input</span> - És <span class="hljs-keyword">de</span> onde?
     ...
 </code></pre>
-<h3><a id="Anotations_file_52"></a>Anotations file</h3>
+<h3><a id="Anotations_file_53"></a>Anotations file</h3>
 <pre><code>...
 <span class="hljs-label">User Input:</span> <span class="hljs-literal">A</span> tua familia é numerosa?
 T - <span class="hljs-literal">A</span> tua família?
 <span class="hljs-literal">A</span> - Não é isso...
 ...
 </code></pre>
-<h3><a id="Questions_file_61"></a>Questions file</h3>
+<h3><a id="Questions_file_62"></a>Questions file</h3>
 <pre><code>A tua familia é numerosa?
 <span class="hljs-label">Aceitas</span> tomar café?
 <span class="hljs-keyword">Andas </span>na escola?
 </code></pre>
-<h1><a id="Urls_68"></a>Urls</h1>
+<h1><a id="Urls_69"></a>Urls</h1>
 <ul>
 <li><a href="http://www.nltk.org/">Natural Language Toolkit</a></li>
 <li><a href="https://github.com/GitTiago">Tiago Santos</a></li>

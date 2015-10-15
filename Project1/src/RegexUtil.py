@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import re
+import string
 
 class RegexUtil:
     white_space = "\s"
@@ -41,7 +42,7 @@ class RegexUtil:
         return sentence
 
     def custom_strip(self, sentence):
-        return sentence.strip(" -\r\n")
+        return sentence.strip("-" + string.whitespace)
 
     def remove_punctuation(self, sentence):
         sentence = re.sub("[:;,\.\?!]", '', sentence)

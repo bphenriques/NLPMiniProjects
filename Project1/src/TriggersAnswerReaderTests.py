@@ -219,6 +219,6 @@ if __name__ == '__main__':
 
     questions_answer_reader.test_get_answer()
     questions_answer_reader.test_process_file("TestResources/LitePerguntasPosSistema.txt")
-    #questions_answer_reader.dump_map()
+    questions_answer_reader.dump_map()
 
     print "--- END OF TESTS ---"

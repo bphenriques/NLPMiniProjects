@@ -4,10 +4,14 @@ import re
 import os.path
 from RegexUtil import RegexUtil
 
-class TriggersAnswerReader:
+class AnswerPicker:
     """
         Responsible for handling user_input and all possible answers.
     """
+
+    INVALID_USER_INPUT = u"Frase incorrecta"
+    TRIGGER_NOT_FOUND = u"Não sei responder"
+
     __USER_INPUT_TAG = "User Input:"
     __TRIGGER_TAG = "T"
     __ANSWER_TAG = "A"
@@ -21,7 +25,7 @@ class TriggersAnswerReader:
     __user_input_tag_regex = None
     __user_input_answers_dic = {}
 
-    file_name = None
+    _file_name = None
 
     def __init__(self):
 
@@ -44,41 +48,41 @@ class TriggersAnswerReader:
 
         If the file does not exist, an exception is thrown
 
-        :param: file_name, the path to the file
+        :param: _file_name, the path to the file
         """
 
         if not os.path.exists(file_name):
             print "File not found"
             raise Exception
 
-        self.file_name = file_name
+        self._file_name = file_name
 
-        file_in = open(self.file_name, 'rU')
+        file_in = open(self._file_name, 'rU')
         while True:
             possible_user_input = file_in.readline()
             if not possible_user_input: break #EOF
 
-            #Read "User Input: Something"
+            # Read "User Input: Something"
             user_input = self._read_user_input(possible_user_input)
             if user_input is None: continue #keep looking for
 
-            #loop until next "User Input: Something" is found
+            # loop until next "User Input: Something" is found
             potential_next_user_input = None
             while potential_next_user_input is None:
                 input = file_in.readline()
                 if not input: break #EOF
 
-                #print "potential_next_user_input: ", input
+                # print "potential_next_user_input: ", input
                 potential_next_user_input = self._read_user_input(input)
 
-                #haven't reached the next user input
+                # haven't reached the next user input
                 if potential_next_user_input is None:
 
                     # Is it "T - Something?"
                     trigger = self._read_trigger(input)
                     if trigger is None: continue
 
-                    #if so, next line must be "A - Something"
+                    # if so, next line must be "A - Something"
                     possible_answer = file_in.readline()
                     if not possible_answer: break #EOF
 
@@ -99,26 +103,30 @@ class TriggersAnswerReader:
         Prints the stored data regarding user input and the possible answers
         """
         for key, answers in self.__user_input_answers_dic.iteritems():
-            print "User_Input: ", key
+            print "User_Input:", key
             for answer in answers:
-                print "\t[", answer[1], "] ", answer[0].decode("utf-8")
+                print "\t[", answer[1], "]", answer[0]
 
     # Update internal map of triggers and answers
     def _process_user_input_answer(self, user_input, trigger, answer):
-        #print "user_input: ", user_input
-        #print "\ttrigger: ", trigger
-        #print "\t\tanswer: ", answer
+        # print "user_input: ", user_input
+        # print "\ttrigger: ", trigger
+        # print "\t\tanswer: ", answer
 
-        if self.normalize_user_input(user_input) == self.normalize_user_input(trigger):
+        if isinstance(user_input, str): user_input = user_input.decode("utf-8")
+        if isinstance(trigger, str): trigger = trigger.decode("utf-8")
+        if isinstance(answer, str): answer = answer.decode("utf-8")
+
+        if user_input not in self.__user_input_answers_dic:
+            self.__user_input_answers_dic[user_input] = []
+
+        if self.normalize_user_input(user_input) == self.normalize_trigger(trigger):
             self._put(user_input, self.normalize_answer(answer))
 
     # Adds element to the map, if the key already exists, append the value to the existing ones and updates the count
     # The list is always sorted by the most frequent to the least frequent
-    def _put(self, trigger, answer):
-        if trigger not in self.__user_input_answers_dic:
-            self.__user_input_answers_dic[trigger] = []
-
-        list_tuples = self.__user_input_answers_dic[trigger]
+    def _put(self, user_input, answer):
+        list_tuples = self.__user_input_answers_dic[user_input]
 
         tuple_found = self._find_answer(list_tuples, answer)
         if tuple_found is not None:
@@ -129,13 +137,15 @@ class TriggersAnswerReader:
             new_tuple = (answer, 1)
             list_tuples.append(new_tuple)
 
-        #sort
+        # sort
         list_tuples.sort(key=lambda tup: tup[1], reverse=True)
 
-    # user_input normalizer: lowercase, no punctuation and substituted the diacritics with the ascii equivalent character
+    # lowercase, no punctuation and transformed the diacritics
     def normalize_user_input(self, user_input):
-        rxutil = RegexUtil()
-        return rxutil.normalize_string(user_input)
+        return RegexUtil().normalize_string(user_input)
+
+    def normalize_trigger(self, trigger):
+        return RegexUtil().normalize_string(trigger)
 
     def normalize_answer(self, answer):
         return answer
@@ -176,8 +186,9 @@ class TriggersAnswerReader:
                  if there is no answers, a empty list is returned
         """
 
+        if isinstance(user_input, str): user_input = user_input.decode("utf-8")
         if user_input not in self.__user_input_answers_dic:
-            return list()
+            return None
 
         return self.__user_input_answers_dic[user_input]
 
@@ -189,15 +200,18 @@ class TriggersAnswerReader:
         :return: The answer (string)
         """
 
-        if user_input not in self.__user_input_answers_dic:
-            return None
+        if isinstance(user_input, str): user_input = user_input.decode("utf-8")
+        answers = self.get_answers(user_input)
+        if answers is None:
+            return self.INVALID_USER_INPUT
 
-        #first element of the returning tuple
-        return self.get_answers(user_input)[0][0]
+        if len(answers) == 0:
+            return self.TRIGGER_NOT_FOUND
+        else:
+            return answers[0][0] # [first answer] [first element tuple]
 
 
-
-    #util: find tuple with a given name
+    # util: find tuple with a given name
     def _find_answer(self, tuplist, name):
         for tup in tuplist:
             if tup[0] == name:
@@ -205,5 +219,5 @@ class TriggersAnswerReader:
         return None
 
     def clear(self):
-        self.file_name = None
+        self._file_name = None
         self.__user_input_answers_dic = {}

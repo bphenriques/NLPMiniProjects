@@ -9,7 +9,7 @@ def run_tests(tests):
 
     :param: tests: Array of functions to be executed
     """
-    
+
     print "--- STARTING TESTS ---\n"
 
     count = 0

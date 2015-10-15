@@ -22,7 +22,7 @@ def sss(file_name, question):
     return answer
 
 
-def myAvalia(annotation_file, questions_file, corpus_file_path="TestResources/PerguntasPosSistema.txt", ):
+def myAvalia(annotation_file, questions_file, corpus_file_path="TestResources/PerguntasPosSistema.txt"):
     # process corpus file
     questions_answers_reader = AnswerPicker()
     questions_answers_reader.process_file(corpus_file_path)

@@ -6,6 +6,7 @@ There are two folders:
 - Project 2
 
 The project aims to, in the portuguese language, given a question deliver the most probable answer.
+
 The python version used for this project is 2.7.10
 
 ## Example usage

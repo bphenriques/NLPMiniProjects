@@ -4,6 +4,7 @@ import re
 import os.path
 from RegexUtil import RegexUtil
 
+
 class AnswerPicker:
     """
         Responsible for handling user_input and all possible answers.
@@ -12,32 +13,23 @@ class AnswerPicker:
     INVALID_USER_INPUT = u"Frase incorrecta"
     TRIGGER_NOT_FOUND = u"Não sei responder"
 
-    __USER_INPUT_TAG = "User Input:"
-    __TRIGGER_TAG = "T"
-    __ANSWER_TAG = "A"
-
-    __trigger_regex = None
-    __trigger_tag_regex = None
-    __answer_regex = None
-    __answer_tag_regex = None
+    __user_input_tag_regex = r"[\s]*" + "User Input:" + r"[\s]*"
+    __trigger_tag_regex = r"[\s]*" + "T" + r"[\s]*" + "-" + r"[\s]*"
+    __answer_tag_regex = r"[\s]*" + "A" + r"[\s]*" + "-" + r"[\s]*"
 
     __user_input_regex = None
-    __user_input_tag_regex = None
+    __trigger_regex = None
+    __answer_regex = None
+
     __user_input_answers_dic = {}
 
     _file_name = None
 
     def __init__(self):
-
         # pre-computing regex expressions
-        rew = RegexUtil()
-        self.__trigger_tag_regex = rew.multiple_white_space() + self.__TRIGGER_TAG + rew.multiple_white_space() + "-" + rew.multiple_white_space()
-        self.__answer_tag_regex = rew.multiple_white_space() + self.__ANSWER_TAG + rew.multiple_white_space() + "-" + rew.multiple_white_space()
-        self.__trigger_regex = self.__trigger_tag_regex + rew.at_least_one(rew.anything)
-        self.__answer_regex = self.__answer_tag_regex + rew.at_least_one(rew.anything)
-
-        self.__user_input_tag_regex = rew.multiple_white_space() + self.__USER_INPUT_TAG + rew.multiple_white_space()
-        self.__user_input_regex = self.__user_input_tag_regex + rew.any(rew.anything)
+        self.__user_input_regex = self.__user_input_tag_regex + ".*"
+        self.__trigger_regex = self.__trigger_tag_regex + ".*"
+        self.__answer_regex = self.__answer_tag_regex + ".*"
 
     def process_file(self, file_name):
         """
@@ -60,17 +52,17 @@ class AnswerPicker:
         file_in = open(self._file_name, 'rU')
         while True:
             possible_user_input = file_in.readline()
-            if not possible_user_input: break #EOF
+            if not possible_user_input: break  # EOF
 
             # Read "User Input: Something"
             user_input = self._read_user_input(possible_user_input)
-            if user_input is None: continue #keep looking for
+            if user_input is None: continue  # keep looking for
 
             # loop until next "User Input: Something" is found
             potential_next_user_input = None
             while potential_next_user_input is None:
                 input = file_in.readline()
-                if not input: break #EOF
+                if not input: break  # EOF
 
                 # print "potential_next_user_input: ", input
                 potential_next_user_input = self._read_user_input(input)
@@ -84,7 +76,7 @@ class AnswerPicker:
 
                     # if so, next line must be "A - Something"
                     possible_answer = file_in.readline()
-                    if not possible_answer: break #EOF
+                    if not possible_answer: break  # EOF
 
                     # Look for "A - Something..."
                     answer = self._read_answer(possible_answer)
@@ -140,12 +132,12 @@ class AnswerPicker:
         # sort
         list_tuples.sort(key=lambda tup: tup[1], reverse=True)
 
-    # lowercase, no punctuation and transformed the diacritics
+    # lowercase, no PUNCTUATION and transformed the diacritics
     def normalize_user_input(self, user_input):
-        return RegexUtil().normalize_string(user_input)
+        return RegexUtil.normalize_string(user_input)
 
     def normalize_trigger(self, trigger):
-        return RegexUtil().normalize_string(trigger)
+        return RegexUtil.normalize_string(trigger)
 
     def normalize_answer(self, answer):
         return answer
@@ -208,12 +200,11 @@ class AnswerPicker:
         if len(answers) == 0:
             return self.TRIGGER_NOT_FOUND
         else:
-            return answers[0][0] # [first answer] [first element tuple]
-
+            return answers[0][0]  # [first answer] [first element tuple]
 
     # util: find tuple with a given name
-    def _find_answer(self, tuplist, name):
-        for tup in tuplist:
+    def _find_answer(self, tup_list, name):
+        for tup in tup_list:
             if tup[0] == name:
                 return tup
         return None

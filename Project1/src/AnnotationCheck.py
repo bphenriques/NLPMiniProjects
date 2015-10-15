@@ -12,10 +12,10 @@ class AnnotationCheck:
     MAYBE_CHAR = 'm'
 
     _annotation_file_path = None
-    _user_input_regex_prefix = "User Input[\s]*-[\s]*"
-    _answer_regex_prefix = "[\s]*A[\s]*-[\s]*"
+    _user_input_regex_prefix = "User Input" + r"[\s]*" + "-" + r"[\s]*"
+    _answer_regex_prefix = r"[\s]*" + "A" + r"[\s]*" + "-" + r"[\s]*"
     _answer_regex_sufix = None
-    _annotation_separator_regex = "[\s]*:[\s]*"
+    _annotation_separator_regex = r"[\s]*" + ":" + r"[\s]*"
 
     def __init__(self, annotation_file_path):
         """

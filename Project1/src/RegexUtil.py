@@ -5,52 +5,28 @@ import string
 
 
 class RegexUtil:
-    white_space = "\s"
-    utf_letter = "À-ÿ\w"
-    letter = "\w"
-    diatric = "À-ÿ"
-    punctuation = "?!.,-;\"()"
-    anything = "."
+    WHITE_SPACE = "\s"
+    PT_LETTER = "À-ÿ\w"
+    PUNCTUATION = ":;,\.\?!\"\(\)"
 
-    def diatric_sentence(self):
-        return self.re_builder(self.white_space, self.utf_letter, self.punctuation)
-
-    def multiple_white_space(self):
-        return self.any(self.re_builder(self.white_space))
-
-    def at_least_one(self, re):
-        return re + r"+"
-
-    def any(self, re):
-        return re + r"*"
-
-    def optional(self, re):
-        return re + r"?"
-
-    def re_builder(self, *chars):
-        re_result = r"["
-
-        for char in chars:
-            re_result += char
-
-        return re_result + "]"
-
-    def normalize_string(self, sentence):
-        sentence = self.remove_diacritics(sentence)
+    @staticmethod
+    def normalize_string(sentence):
+        sentence = RegexUtil.remove_diacritics(sentence)
         sentence = sentence.lower()
-        sentence = self.remove_punctuation(sentence)
-        sentence = self.custom_strip(sentence)
+        sentence = RegexUtil.remove_punctuation(sentence)
+        sentence = RegexUtil.custom_strip(sentence)
         return sentence
 
-    def custom_strip(self, sentence):
+    @staticmethod
+    def custom_strip(sentence):
         return sentence.strip("-" + string.whitespace)
 
-    def remove_punctuation(self, sentence):
-        sentence = re.sub("[:;,\.\?!]", '', sentence)
-        sentence = re.sub("[\"\(\)]", '', sentence)
-        return sentence
+    @staticmethod
+    def remove_punctuation(sentence):
+        return re.sub("[" + RegexUtil.PUNCTUATION + "]", '', sentence)
 
-    def remove_diacritics(self, sentence):
+    @staticmethod
+    def remove_diacritics(sentence):
         # a
         sentence = sentence.replace(u'á', 'a')
         sentence = sentence.replace(u'à', 'a')

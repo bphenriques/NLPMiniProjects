@@ -21,6 +21,23 @@ class TestAnswerPicker(AnswerPicker):
         test_in = "T - (ÀàÁáÉéèÉÈíÍìÌÓóòÒãõôÔÀÀÀAÀÀÀÀÀÀÀ). Derp. Não estou a dizer coisa com coisa"
         assert self._read_answer(test_in) is None
 
+        test_in = "A -    STUFF   "
+        expected = "STUFF"
+        assert expected == self._read_answer(test_in)
+
+        test_in = "A -  \t  STUFF  \t "
+        expected = "STUFF"
+        assert expected == self._read_answer(test_in)
+
+        test_in = "A -  STUFF\n"
+        expected = "STUFF"
+        assert expected == self._read_answer(test_in)
+
+        test_in = "A -  STUFF\r\n"
+        expected = "STUFF"
+        assert expected == self._read_answer(test_in)
+
+
     def test_trigger_regex(self):
         """
         Tests trigger regex. If fails, an exception is thrown.
@@ -33,6 +50,22 @@ class TestAnswerPicker(AnswerPicker):
         test_in = "A - (ÀàÁáÉéèÉÈíÍìÌÓóòÒãõôÔÀÀÀAÀÀÀÀÀÀÀ). Derp. Não estou a dizer coisa com coisa"
         assert self._read_trigger(test_in) is None
 
+        test_in = "T -    STUFF   "
+        expected = "STUFF"
+        assert expected == self._read_trigger(test_in)
+
+        test_in = "T -  \t  STUFF  \t "
+        expected = "STUFF"
+        assert expected == self._read_trigger(test_in)
+
+        test_in = "T -  STUFF\n"
+        expected = "STUFF"
+        assert expected == self._read_trigger(test_in)
+
+        test_in = "T -  STUFF\r\n"
+        expected = "STUFF"
+        assert expected == self._read_trigger(test_in)
+
     def test_user_input_regex(self):
         """
         Tests user input regex. If fails, an exception is thrown.
@@ -41,6 +74,22 @@ class TestAnswerPicker(AnswerPicker):
         assert "Bla bla bla" == self._read_user_input("User Input: Bla bla bla")
         assert self._read_user_input("GIBBERISH") is None
         assert self._read_user_input("user input: asdhasdh") is None
+
+        test_in = "User Input:    STUFF   "
+        expected = "STUFF"
+        assert expected == self._read_user_input(test_in)
+
+        test_in = "User Input:  \t STUFF  \t "
+        expected = "STUFF"
+        assert expected == self._read_user_input(test_in)
+
+        test_in = "User Input:  STUFF\n"
+        expected = "STUFF"
+        assert expected == self._read_user_input(test_in)
+
+        test_in = "User Input:  STUFF\r\n"
+        expected = "STUFF"
+        assert expected == self._read_user_input(test_in)
 
     def test_trigger_inexistent(self):
         """

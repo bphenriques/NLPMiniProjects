@@ -15,7 +15,7 @@ class AnswerPickerAnswerResult:
 
 class AnswerPicker:
     """
-        Responsible for handling user_input and all possible answers.
+        Responsible for handling user_input, the corpus file and all possible answers.
     """
 
     __user_input_tag_regex = r"^[\s]*" + "User Input:" + r"[\s]*"

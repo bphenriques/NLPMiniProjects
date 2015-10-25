@@ -49,6 +49,7 @@ def test_med():
     assert MED(u, y) == 1
     assert MED(x, u) == 2
     assert MED(x, w) == 3
+    assert MEDsentence("A Bruna e muita linda", "O Bruno e muito lindo") == 4
 
 if __name__ == "__main__":
     tests = [

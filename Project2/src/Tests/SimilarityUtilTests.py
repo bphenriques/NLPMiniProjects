@@ -43,13 +43,14 @@ def test_med():
     y = 'Bruna'
     x = 'Brunoob'
 
-    assert MED(s, t) == 3
-    assert MED(t, s) == 3
-    assert MED(u, w) == 1
-    assert MED(u, y) == 1
-    assert MED(x, u) == 2
-    assert MED(x, w) == 3
-    assert MEDsentence("A Bruna e muita linda", "O Bruno e muito lindo") == 4
+    assert med(s, t) == 3
+    assert med(t, s) == 3
+    assert med(u, w) == 1
+    assert med(u, y) == 1
+    assert med(x, u) == 2
+    assert med(x, w) == 3
+    assert med_sentence("A Bruna e muita linda", "O Bruno e muito lindo") == 4
+    assert med_sentence("A Bruna e-muita linda", "O Bruno e muito lindo") == 5
 
 if __name__ == "__main__":
     tests = [

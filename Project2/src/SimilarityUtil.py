@@ -1,30 +1,81 @@
 from nltk.tokenize import wordpunct_tokenize
 
-def jaccard_sentence(s1, s2):
-    return jaccard(s1.split(' '), s2.split(' '))
 
-def jaccard(v1, v2):
-    s1, s2 = set(v1), set(v2)
+def jaccard_sentence(sentence1, sentence2):
+    """
+    Determines jaccard ratio of two sentences
+
+    :param sentence1:
+    :param sentence2:
+    :return: jaccard value
+    """
+    return jaccard(wordpunct_tokenize(sentence1), wordpunct_tokenize(sentence2))
+
+
+def jaccard(sequence1, sequence2):
+    """
+    Determines jaccard ratio of two lists
+
+    :param sequence1: first list
+    :param sequence2: second list
+    :return: jaccard value
+    """
+    s1, s2 = set(sequence1), set(sequence2)
     intersection = s1.intersection(s2)
 
     return float(len(intersection)) / float((len(s1) + len(s2) - len(intersection)))
 
-def dice(v1, v2):
-    s1, s2 = set(v1), set(v2)
+
+def dice(sequence1, sequence2):
+    """
+
+    :param sequence1:
+    :param sequence2:
+    :return: dice value
+    """
+    s1, s2 = set(sequence1), set(sequence2)
     intersection = s1.intersection(s2)
     return 2*(float(len(intersection)) / float((len(s1) + len(s2))))
 
 
-def dice_sentence(s1, s2):
-    return dice(s1.split(' '), s2.split(' '))
+def dice_sentence(sentence1, sentence2):
+    """
 
-def MEDsentence(sentence1, sentence2, c1=1, c2=1, c3=1):
+    :param sentence1:
+    :param sentence2:
+    :return: dice value
+    """
+    return dice(wordpunct_tokenize(sentence1), wordpunct_tokenize(sentence2))
+
+
+def med_sentence(sentence1, sentence2, c1=1, c2=1, c3=1):
+    """
+    Determines minimum edit distance of two sentences. No normalization is done
+
+    :param sentence1: first sentence
+    :param sentence2: second sentence
+    :param c1: optional weight
+    :param c2: optional weight
+    :param c3: optional weight
+    :return: integer, minimum edit distance
+    """
     sequence1 = wordpunct_tokenize(sentence1)
     sequence2 = wordpunct_tokenize(sentence2)
 
-    return MED(sequence1, sequence2, c1, c2, c3)
+    return med(sequence1, sequence2, c1, c2, c3)
 
-def MED(sequence1, sequence2, c1=1, c2=1, c3=1):
+
+def med(sequence1, sequence2, c1=1, c2=1, c3=1):
+    """
+    Determines minimum edit distance of two sequences.
+
+    :param sequence1: first list
+    :param sequence2: second list
+    :param c1: optional weight
+    :param c2: optional weight
+    :param c3: optional weight
+    :return: integer, minimum edit distance
+    """
     size1, size2 = len(sequence1), len(sequence2)
 
     if size1 == 0:

@@ -2,8 +2,10 @@
 
 import re
 import os.path
-from SimilarityStrategy import SimilarityStrategy
+import sys
+from Strategy1 import Strategy1
 from RegexUtil import RegexUtil
+
 
 class AnswerPickerAnswerResult:
     def __init__(self):
@@ -29,18 +31,17 @@ class AnswerPicker:
     __user_input_answers_dic = {}
     __user_input_identical_trigger_found_flags = {}
 
-    _file_name = None
-
     def __init__(self, similarity_strategy=None):
         # pre-computing regex expressions
-        if similarity_strategy is None: self._similarity_strategy = SimilarityStrategy()
+        if similarity_strategy is None: self._similarity_strategy = Strategy1()
         else: self._similarity_strategy = similarity_strategy
-        
+
         self.__user_input_regex = self.__user_input_tag_regex + ".*$"
         self.__trigger_regex = self.__trigger_tag_regex + ".*$"
         self.__answer_regex = self.__answer_tag_regex + ".*$"
 
     def process_file(self, file_name):
+
         """
         Processes file given by argument. If the execution completes, the data is stored and accessible
         using other methods (e.g. get_answer and get_answers).
@@ -56,9 +57,7 @@ class AnswerPicker:
             print "File not found"
             raise Exception
 
-        self._file_name = file_name
-
-        file_in = open(self._file_name, 'rU')
+        file_in = open(file_name, 'rU')
         while True:
             possible_user_input = file_in.readline()
             if not possible_user_input: break  # EOF
@@ -152,7 +151,6 @@ class AnswerPicker:
         """
         Clears the internal map of user_inputs and answers
         """
-        self._file_name = None
         self.__user_input_answers_dic = {}
 
     # Update internal map of triggers and answers
@@ -177,7 +175,7 @@ class AnswerPicker:
                 self.__user_input_answers_dic[user_input] = []
                 self._put(user_input, self._similarity_strategy.normalize_answer(answer))
                 self.__user_input_identical_trigger_found_flags[user_input] = True
-        elif user_input not in self.__user_input_identical_trigger_found_flags and self._similarity_strategy.is_similar_enough(user_input, trigger):
+        elif user_input not in self.__user_input_identical_trigger_found_flags and self._similarity_strategy.is_user_input_trigger_similar(user_input, trigger):
             self._put(user_input, self._similarity_strategy.normalize_answer(answer))
 
 

@@ -164,8 +164,12 @@ class AnswerPicker:
         if user_input not in self.__user_input_answers_dic:
             self.__user_input_answers_dic[user_input] = []
 
-        if self._normalize_user_input(user_input) == self._normalize_trigger(trigger):
+        if self._is_similar_enough(user_input, trigger):
             self._put(user_input, self._normalize_answer(answer))
+
+    #verify using word/sentence distance if a trigger is close enough
+    def _is_similar_enough(self, user_input, trigger):
+        return self._normalize_user_input(user_input) == self._normalize_trigger(trigger)
 
     # Adds element to the map, if the key already exists, append the value to the existing ones and updates the count
     # The list is always sorted by the most frequent to the least frequent

@@ -1,0 +1,621 @@
+User Input: A tua familia é numerosa?
+Normalized question: a tua familia e numerosa
+Retrieving Lucene results...
+Retrieving QA's from database...
+Scoring the QA's...
+1
+T - A tua família?
+A - Não é isso...
+M1 score - 0.9021934127035144
+M2 score - 0.0
+M3 score - 0.6299999999999999
+M4 score - 0.873
+
+Final Score - 0.7044580433770944
+
+2
+T - E a tua família?
+A - Como é que eles se sentem?
+M1 score - 0.6620586599951049
+M2 score - 0.0
+M3 score - 0.7200000000000001
+M4 score - 0.8454
+
+3
+T - É a tua família?
+A - Sim, a minha família.
+M1 score - 0.8057825889045529
+M2 score - 0.26666666666666666
+M3 score - 0.7200000000000001
+M4 score - 0.0
+
+Final Score - 0.6510681283921272
+
+4
+T - É a tua família?
+A - É.
+M1 score - 0.598163535532777
+M2 score - 0.0
+M3 score - 0.7200000000000001
+M4 score - 0.7524
+
+Final Score - 0.6506890774947304
+
+5
+T - À tua família.
+A - E à minha.
+M1 score - 0.9321301254968332
+M2 score - 0.0
+M3 score - 0.6299999999999999
+M4 score - 0.0
+
+Final Score - 0.6261390562710921
+
+6
+T - A tua família.
+A - O que aconteceu?
+M1 score - 0.8288753873895908
+M2 score - 0.0
+M3 score - 0.6299999999999999
+M4 score - 0.3
+
+Final Score - 0.6251626340550619
+
+7
+T - E a tua família?
+A - O meu pai morreu quando eu tinha 12 anos.
+M1 score - 0.4558524182146587
+M2 score - 0.0
+M3 score - 0.7200000000000001
+M4 score - 0.8236
+
+Final Score - 0.6151157407089104
+
+8
+T - Ela é a tua família.
+A - Não passo a ser responsável por ela.
+M1 score - 0.5936855236714981
+M2 score - 0.0
+M3 score - 0.6
+M4 score - 1.0
+
+Final Score - 0.6081056728214058
+
+9
+T - E a tua família?
+A - Desde que o meu irmão morreu... perdemos um pouco a cabeça.
+M1 score - 0.696640520634726
+M2 score - 0.0
+M3 score - 0.7200000000000001
+M4 score - 0.0
+
+Final Score - 0.6049921730780888
+
+10
+T - E a tua família?
+A - Não, nenhum deles sabe sobre o bebé.
+M1 score - 0.504547150721165
+M2 score - 0.0
+M3 score - 0.7200000000000001
+M4 score - 0.3
+
+Final Score - 0.577364160261124
+
+11
+T - E a tua família?
+A - A única família que tinha, vi-os a serem mortos.
+M1 score - 0.5750208600538179
+M2 score - 0.13333333333333333
+M3 score - 0.7200000000000001
+M4 score - 0.0
+
+Final Score - 0.5751729402200048
+
+12
+T - E isso... salvou a tua família?
+A - Kyle, a minha família é que me salvou.
+M1 score - 0.9135492588199815
+M2 score - 0.2
+M3 score - 0.5238095238095237
+M4 score - 0.0
+
+Final Score - 0.5721600330248959
+
+13
+T - Somos a tua família.
+A - O quê?
+M1 score - 0.9892713154601089
+M2 score - 0.0
+M3 score - 0.48
+M4 score - 0.0
+
+Final Score - 0.5607814121531116
+
+14
+T - À tua família.
+A - À sua.
+M1 score - 0.46021884003636027
+M2 score - 0.0
+M3 score - 0.6299999999999999
+M4 score - 0.7226
+
+Final Score - 0.5568256660840872
+
+15
+T - Mas amas a tua família.
+A - E o teu nome de família.
+M1 score - 0.7615759487587876
+M2 score - 0.26666666666666666
+M3 score - 0.4095238095238095
+M4 score - 0.8798
+
+Final Score - 0.5550242286693482
+
+16
+T - A tua família abandonou-te. E depois?
+A - Quer mesmo saber? Não é uma história fácil de relembrar.
+M1 score - 0.5262563597838632
+M2 score - 0.0
+M3 score - 0.5571428571428572
+M4 score - 0.8596
+
+Final Score - 0.5502654935597594
+
+17
+T - É alguém ligado à tua família?
+A - Alguém que trabalha para a tua família?
+M1 score - 0.7464790820623316
+M2 score - 0.2
+M3 score - 0.5238095238095237
+M4 score - 0.23199999999999993
+
+Final Score - 0.5452389783516762
+
+18
+T - Vou jantar contigo... e com a tua família.
+A - É isso que vamos fazer.
+M1 score - 0.7591727711421424
+M2 score - 0.0
+M3 score - 0.4222222222222222
+M4 score - 0.8406
+
+Final Score - 0.5440340689007823
+
+19
+T - A tua família vem ao casamento?
+A - Não...
+M1 score - 0.7032158100216265
+M2 score - 0.0
+M3 score - 0.4
+M4 score - 1.0
+
+Final Score - 0.5309647576479614
+
+20
+T - É a tua família?
+A - Olha, eu estou apenas a começar a minha vida, de volta juntos.
+M1 score - 0.4498151179067693
+M2 score - 0.0
+M3 score - 0.7200000000000001
+M4 score - 0.0
+
+Final Score - 0.5309445493173137
+
+Best answer score: 0.7044580433770944
+Answer: Não é isso...
+
+User Input: Aceitas tomar café?
+Normalized question: aceitas tomar cafe
+Retrieving Lucene results...
+Retrieving QA's from database...
+Scoring the QA's...
+1
+T - Queres tomar café?
+A - Não, obrigada.
+M1 score - 0.6526678859111597
+M2 score - 0.0
+M3 score - 0.5
+M4 score - 1.0
+
+Final Score - 0.570800381004336
+
+2
+T - Queres ir tomar um café?
+A - Não.
+M1 score - 0.824546597477438
+M2 score - 0.0
+M3 score - 0.31666666666666665
+M4 score - 1.0
+
+Final Score - 0.5215306610043364
+
+3
+T - Vamos lá tomar um café.
+A - Não.
+M1 score - 0.8245465974774381
+M2 score - 0.0
+M3 score - 0.31666666666666665
+M4 score - 1.0
+
+Final Score - 0.5215306610043364
+
+4
+T - Gostava de tomar um café?
+A - Não, obrigado.
+M1 score - 1.0
+M2 score - 0.0
+M3 score - 0.31666666666666665
+M4 score - 0.3
+
+Final Score - 0.5041666828095913
+
+5
+T - Se quer tomar um café?
+A - Não. Obrigado.
+M1 score - 1.0
+M2 score - 0.0
+M3 score - 0.31666666666666665
+M4 score - 0.23359999999999997
+
+Final Score - 0.49752668271064754
+
+6
+T - Sente-se. Aceita um café?
+A - Não, obrigado.
+M1 score - 1.0
+M2 score - 0.0
+M3 score - 0.18333333333333332
+M4 score - 0.8360000000000001
+
+Final Score - 0.48443334868550303
+
+7
+T - Querem tomar café connosco?
+A - Sim, obrigado.
+M1 score - 0.5821338838602026
+M2 score - 0.0
+M3 score - 0.37000000000000005
+M4 score - 0.8160000000000001
+
+Final Score - 0.4597401777243159
+
+8
+T - Quer ir tomar um café?
+A - Não, obrigada.
+M1 score - 0.6526678859111598
+M2 score - 0.0
+M3 score - 0.31666666666666665
+M4 score - 0.7996
+
+Final Score - 0.44992704518687976
+
+9
+T - Olá, querida. Queres tomar café?
+A - Não estou com fome.
+M1 score - 0.5493447142690969
+M2 score - 0.0
+M3 score - 0.36666666666666664
+M4 score - 0.8082
+
+Final Score - 0.4472900930714142
+
+10
+T - Tomam um café?
+A - Não, obrigado.
+M1 score - 1.0
+M2 score - 0.0
+M3 score - 0.21000000000000002
+M4 score - 0.28279999999999994
+
+Final Score - 0.4437800148457289
+
+11
+T - Vens tomar um café?
+A - Agora não.
+M1 score - 0.5050453161119877
+M2 score - 0.0
+M3 score - 0.37000000000000005
+M4 score - 0.8778
+
+Final Score - 0.4427936065729733
+
+12
+T - Posso tomar só café?
+A - Não estou com muita fome.
+M1 score - 0.4946947554587306
+M2 score - 0.0
+M3 score - 0.37000000000000005
+M4 score - 0.8822
+
+Final Score - 0.44012843826016435
+
+13
+T - Podemos ir tomar um café.
+A - Não, aqui está bem.
+M1 score - 0.5490097958981149
+M2 score - 0.0
+M3 score - 0.31666666666666665
+M4 score - 1.0
+
+Final Score - 0.4388696172458849
+
+14
+T - Foi tomar café?
+A - E como foi?
+M1 score - 0.20681822199569155
+M2 score - 0.0
+M3 score - 0.5
+M4 score - 0.865
+
+Final Score - 0.42354547631358774
+
+15
+T - Aceitas um café, Anders?
+A - Sim, claro.
+M1 score - 0.38680048744030116
+M2 score - 0.0
+M3 score - 0.37000000000000005
+M4 score - 1.0
+
+Final Score - 0.4195401567439713
+
+16
+T - Queres subir para tomar um café?
+A - Eu não bebo café.
+M1 score - 0.5851734779115056
+M2 score - 0.21000000000000002
+M3 score - 0.2785714285714286
+M4 score - 0.7856000000000001
+
+Final Score - 0.4178263407114765
+
+17
+T - Bom, vamos tomar café.
+A - Sabe o que está acontecendo aqui?
+M1 score - 0.36540905057945067
+M2 score - 0.0
+M3 score - 0.42000000000000004
+M4 score - 0.7256
+
+Final Score - 0.41318272561786895
+
+18
+T - Tome uma xícara de café...
+A - Não quero café.
+M1 score - 0.7055169501080817
+M2 score - 0.21000000000000002
+M3 score - 0.16428571428571426
+M4 score - 1.0
+
+Final Score - 0.4125122399050014
+
+19
+T - Encontrámo-nos duas vezes para tomar café.
+A - Vá lá, ela não bebe café.
+M1 score - 0.4028380190956209
+M2 score - 0.16428571428571426
+M3 score - 0.3285714285714285
+M4 score - 1.0
+
+Final Score - 0.40977998748885625
+
+20
+T - Vamos tomar café como pessoas civilizadas.
+A - Tu não bebes café.
+M1 score - 0.5004917186994678
+M2 score - 0.21000000000000002
+M3 score - 0.2785714285714286
+M4 score - 0.8664000000000001
+
+Final Score - 0.40050181205878127
+
+Best answer score: 0.570800381004336
+Answer: Não, obrigada.
+
+User Input: Tens filhos?
+Normalized question: tens filhos
+Retrieving Lucene results...
+Retrieving QA's from database...
+Scoring the QA's...
+1
+T - Tens filhos?
+A - Não.
+M1 score - 1.0
+M2 score - 0.0
+M3 score - 1.0
+M4 score - 1.0
+
+Final Score - 0.950000025331974
+
+2
+T - - Tens filhos?
+A - Não.
+M1 score - 1.0
+M2 score - 0.0
+M3 score - 1.0
+M4 score - 1.0
+
+Final Score - 0.950000025331974
+
+3
+T - Tens filhos?
+A - Sim, tenho um filho.
+M1 score - 0.9259453259632121
+M2 score - 0.0
+M3 score - 1.0
+M4 score - 1.0
+
+Final Score - 0.9277836222381372
+
+4
+T - Tens filhos?
+A - Sim. O que terias feito?
+M1 score - 0.8142265328439775
+M2 score - 0.0
+M3 score - 1.0
+M4 score - 0.8826
+
+Final Score - 0.8825279827956354
+
+5
+T - Tens filhos?
+A - Não.
+M1 score - 1.0
+M2 score - 0.0
+M3 score - 1.0
+M4 score - 0.28359999999999996
+
+Final Score - 0.8783600242644548
+
+6
+T - Tens filhos?
+A - Não, é complicado.
+M1 score - 0.8320583064711343
+M2 score - 0.0
+M3 score - 1.0
+M4 score - 0.7868
+
+Final Score - 0.8782975149536005
+
+7
+T - Tens filhos?
+A - Não.
+M1 score - 1.0
+M2 score - 0.0
+M3 score - 1.0
+M4 score - 0.0
+
+Final Score - 0.8500000238418579
+
+8
+T - Tens filhos?
+A - Sim, dois.
+M1 score - 0.6224249536404943
+M2 score - 0.0
+M3 score - 1.0
+M4 score - 1.0
+
+Final Score - 0.8367275069230771
+
+9
+T - Tens filhos?
+A - Sim, uma filha de doze anos.
+M1 score - 0.5909977530315581
+M2 score - 0.0
+M3 score - 1.0
+M4 score - 1.0
+
+Final Score - 0.8272993463657548
+
+10
+T - Tens filhos?
+A - Não tinha tempo.
+M1 score - 0.5718132340068993
+M2 score - 0.0
+M3 score - 1.0
+M4 score - 0.7696000000000001
+
+Final Score - 0.798503990086337
+
+11
+T - Tens filhos?
+A - Um filho.
+M1 score - 0.6703648306223877
+M2 score - 0.0
+M3 score - 1.0
+M4 score - 0.24319999999999997
+
+Final Score - 0.775429469461413
+
+12
+T - Tens filhos?
+A - O Emanuele. Tem sete anos.
+M1 score - 0.28233872553215555
+M2 score - 0.0
+M3 score - 1.0
+M4 score - 0.8826
+
+Final Score - 0.7229616342614921
+
+13
+T - Tens filhos?
+A - Uma menina.
+M1 score - 0.17048658132542954
+M2 score - 0.0
+M3 score - 1.0
+M4 score - 0.8832
+
+Final Score - 0.6894659896669868
+
+14
+T - E tu, tens filhos?
+A - Não.
+M1 score - 1.0
+M2 score - 0.0
+M3 score - 0.5333333333333333
+M4 score - 0.878
+
+Final Score - 0.6811333529204131
+
+15
+T - Não tens filhos.
+A - Não sabes o que se sente.
+M1 score - 0.9145961029374943
+M2 score - 0.0
+M3 score - 0.6666666666666666
+M4 score - 0.3
+
+Final Score - 0.671045516845071
+
+16
+T - Tens filhos?
+A - Nunca quis filhos dele.
+M1 score - 0.06556597479509306
+M2 score - 0.26666666666666666
+M3 score - 1.0
+M4 score - 0.7394000000000001
+
+Final Score - 0.6569431397748715
+
+17
+T - Tens filhos?
+A - Tenho dois filhos.
+M1 score - 0.22585219137999646
+M2 score - 0.3333333333333333
+M3 score - 1.0
+M4 score - 0.0
+
+Final Score - 0.6344223389423151
+
+18
+T - Tia April, tens filhos?
+A - Não.
+M1 score - 1.0
+M2 score - 0.0
+M3 score - 0.5333333333333333
+M4 score - 0.3
+
+Final Score - 0.623333352059126
+
+19
+T - Tens dois filhos?
+A - Sim. Ainda são pequenos. Uma menina de cabelo dourado.
+M1 score - 0.4471492340069204
+M2 score - 0.0
+M3 score - 0.6666666666666666
+M4 score - 0.8498
+
+Final Score - 0.5857914514127637
+
+20
+T - Sargento Russell, tens filhos?
+A - Ainda não, mas tenho um par de sobrinhos.
+M1 score - 0.5607905090702558
+M2 score - 0.0
+M3 score - 0.5333333333333333
+M4 score - 0.808
+
+Final Score - 0.5423705003013966
+
+Best answer score: 0.950000025331974
+Answer: Não.

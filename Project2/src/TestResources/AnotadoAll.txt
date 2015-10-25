@@ -1,0 +1,4051 @@
+User Input - Viste o último filme do Woody Allen?
+	A - Não é nada oficial ainda, eu não dei a minha palavra ainda. : n
+	A - Eu não entendi patavina. : m
+	A - De qual filme estás a falar? : y
+	A - Não. : y
+	A - Não, mãe. : y
+	A - Não, eu nunca... : y
+	A - Não me interessa como é o filme... : y
+	A - A esse, não. : m
+	A - E não há segurança? : n
+	A - Não, é diferente para todos. : n
+	A - O que é isso para você? É você o diretor do filme? : y
+	A - A decisão é minha, não é do Gavin. Ele estava a deixar sair algum vapor. : n
+	A - Não foi assim tão caro. : n
+	A - Todo não. : y
+	A - Ela disse que ele morreu há 10 anos. : n
+	A - Não sei. : y
+	A - É um milagre, pai. Onde a achaste? : n
+	A - Não é verdade. : n
+	A - Ela é o rosto Que não consigo esquecer : n
+User Input - És de onde?
+	A - De a Oeste daqui. : y
+	A - De Madrid. : y
+	A - Da Turquia. : y
+	A - Dos arredores de Filadélfia. : y
+	A - De quando. : n
+	A - Da Biblioteca de Londres. : m
+	A - Vim agora de... : n
+	A - De Boiro. Estava a dar um passeio de bicicleta. : y
+	A - Do norte. : y
+	A - Do novo forte, da caravana. : y
+	A - De por aí. : y
+	A - - De Boston. : y
+	A - De Chicago. : y
+	A - Originário de Dublin. : y
+	A - De Argyle, no Texas. Fica mesmo a Norte de Dallas. : y
+	A - De uma terriola chamada San Anton. : y
+	A - De Sicades. : y
+	A - De onde sou? : m
+	A - De Columbia. E tu? : y
+User Input - És aluno do Técnico?
+	A - Isso é a coisa mais burra que disse desde há algum tempo. : m
+	A - Parece um radiossonda para amostragem atmosférica. : n
+	A - O que é isto ? : m
+	A - Mas... você não é Stephen Falken? : n
+	A - ¿Qué tal que te tire el monstruo de Frankenstein, nena? : n
+	A - É para alguma experiência de drogas? : n
+	A - Sabiam que a ejaculação regular é um preventivo contra o cancro da próstata? : n
+	A - Espera aí! É a tua vez de falar com os putos. : n
+	A - Professora, por que é que a Noriko morreu? : n
+	A - Ele é um mestre. : n
+	A - Não. Estão com a minha empresa. : m
+	A - Não sei o que quer dizer com "tecnicamente". : n
+	A - Não acredito que disseste isso. Porquê... Kate? : m
+	A - Você é impopular. : n
+	A - Os nossos pais expulsaram-te de casa e a culpa é deles. : n
+	A - -É do tipo das que escrevem as suas opiniões nos rodapés. : n
+	A - Nunca desistes de tentar ser um melhor médico, e não passas por cima de outras pessoas para o fazer. : n
+	A - Não. Na verdade, são duas do primeiro, o que, em um bom dia, é igual a uma do segundo. : m
+User Input - Vives sozinho?
+	A - Não, vivo com o Peter. : y
+	A - Olha, sou o barman, não sou a mãe dele. : n
+	A - Não me relembres, Red : m
+	A - Costumava viver com uma pessoa, mas a minha mãe foi para a Flórida. : y
+	A - Sim, sozinho! : y
+	A - Sim. : y
+	A - Sim. Sozinho. : y
+	A - Sozinho! : y
+	A - Sou só eu e o meu mordomo. : y
+	A - Não, vou com vocês. : n
+	A - Sim, andei à tua procura. : m
+	A - Não, senhor. Eu vou com você. : n
+	A - E pensei: Graças a Deus... alguém normal que não sabe interagir com essas coisas também. : n
+	A - Sozinho. : y
+	A - Sim, vivo completamente só, de momento. : y
+User Input - Tudo bem?
+	A - Podes fazer o que quiseres da tua vida, mas, um dia, saberás o que é o amor. : n
+	A - Santo Deus! Pensei que só os músicos é que faziam isso. : n
+	A - Mas tens de prometer dar-lhe comida, bebida e limpar o que ele sujar. : n
+	A - Se ele não nos está a seguir agora, e se nos mantivermos afastados de camiões e da polícia, talvez consigamos ter algum espaço de manobra. : n
+	A - Está tudo bem, ok? : y
+	A - Tudo bem. : y
+	A - Eu vou mostrar-lhe a casa. : n
+	A - Jesus, Sally. O que é isto? : n
+	A - Pára o carro, por favor. : m
+	A - Sim, acho que sim. : y
+	A - Não pareces um curador. : n
+	A - A tua mãe vai ficar bem. Percebes? : n
+	A - Ligam o carro e anda em frente. : n
+	A - Mas deixo aqui o meu número, para o caso do dono voltar. : n
+	A - Se não queres fazer a ti própria, e não quiseres fazer isso por mim... : n
+	A - Pegue a direção, O que está acontecendo? : n
+	A - O que é isso? : m
+	A - Obrigada por não ir à polícia. : m
+	A - O que é, puta, choras por causa desta merda? : n
+	A - Está bem. : m
+User Input - Viste o jogo dos New York Knicks?
+	A - Por qué me grita? : m
+	A - Não. : y
+	A - Eu o avisei então que viajar era um negócio sujo. : n
+	A - Sim. Tu és o Fort Knox. : n
+	A - Não era um jogo de futebol onde um árbitro foi assassinado? : y
+	A - É só uma pequena reportagem. É boa. Não a viste? : n
+	A - Walter disse-me que alguém se estava a meter com o meu homem.! : n
+	A - Ela conhece um escritor em New York. : n
+	A - Não acredito que procures dicas em tablóides de supermercado. : n
+	A - Sim, o Magic Johnson foi o melhor jogador que já vi. : y
+	A - Porquê em New York? : n
+	A - Temos de a proteger. : n
+	A - Deve ser a revista "SAIBA". Mais ninguém tem o seu número. : n
+	A - O seu Ãºltimo livro, "Perder a FÃ©", Ã© actualmente o nÃºmero um... ...da lista de best-sellers daquele jornal. : n
+	A - O jogo acabou. : n
+	A - Tenho cara de quem assiste a jogo? : y
+	A - Não posso acreditar que vai perder a corrida de sábado. : n
+	A - Bem, em New York e Philadelphia, Serei chamado do pobre Mark Rutland que perdeu a cabeça por uma garota bonita. : n
+	A - Para o caso de não teres reparado. : m
+User Input - Tudo bem contigo?
+	A - Estás bem? : n
+	A - Sim, está tudo bem. Liguei à minha amiga de S. Francisco. : y
+	A - Está bem. : n
+	A - Sim, sim. Normal e trivial. : y
+	A - Tudo bem... : y
+	A - Sim, sim perfeitamente, está tudo bem. : y
+	A - Onde está ela? : n
+	A - Não. : y
+	A - Está bem, tudo bem. : y
+	A - Bem, bem, muito bem. : y
+	A - Estou bem. Bateman, esta é a Maya. Desculpe. : y
+	A - Não chores, está tudo bem. : y
+	A - Está tudo bem. : y
+	A - O que se passa? : m
+	A - Sim, tudo bem. : y
+	A - Não te preocupes connosco. Estamos só a fazer sexo. : m
+	A - Sim. : y
+	A - Sim, está tudo bem, câmbio. : y
+User Input - Vives sozinho ou com a tua família?
+	A - Não, eu disse-te que não o faria. : n
+	A - Sim, a minha família. : y
+	A - E o teu nome de família. : n
+	A - A Maggie não sabe exactamente onde está... e se não souberes exactamente, nunca o encontrarás. : n
+	A - Não passo a ser responsável por ela. : n
+	A - Como é que ela está? : n
+	A - E à minha. : n
+	A - Como é que eles se sentem? : n
+	A - Eu? Não. : n
+	A - Eu e o Bobby vamos contigo. : n
+	A - Não é isso... : n
+	A - Não. : n
+	A - O quê? : m
+	A - À sua. : n
+	A - Achas que não sei o que isto está a fazer-me? : n
+	A - Acho que precisas de limpar a mente, é o que eu acho. : n
+	A - O que aconteceu? : n
+	A - É isso que vamos fazer. : n
+	A - A minha não, Hooker. : n
+User Input - És estudante ou trabalhador?
+	A - Não faço outra vez, desculpa-me. : n
+	A - Não. Desculpa. : m
+	A - Pensámos que ficarias contente. : n
+	A - Qual é a tua, Claire? : m
+	A - Sou. : y
+	A - Está boa , não é assim? : n
+	A - Vejamos... Agora vais perguntar-me onde estudo, em que ano estou e dizer que é pena não nos termos conhecido há mais tempo. : m
+	A - Não, sou o Forrest Manco. : n
+	A - Culpada? Tu não sabias que ela podia ter morrido? : n
+	A - Não, Bug. A resposta é: muito brilhante. : n
+	A - Por que não disseste antes aos Japoneses? : n
+	A - A minha mãe diz, Estúpido é quem estupidez faz. : n
+	A - E eu não vou ser de certeza! : n
+	A - Não. : m
+	A - Não, sou uma estudante necessitada. : y
+	A - Que raio de pai achas que sou? : n
+User Input - És casado?
+	A - Não podes olhar para outras mulheres. : n
+	A - O quê? Não. : y
+	A - Sim. : y
+	A - Divorciado. : y
+	A - Não, não. E tu? : y
+	A - Não me arrependo, Simon. De nada. : m
+	A - Sim. Eu disse-te? : y
+	A - Tive de manter segredo. : y
+	A - Estiveste fora muito tempo. : m
+	A - Não. E tu? : y
+	A - Já fui. : y
+	A - Não : y
+	A - Não. : y
+User Input - Tens uma cor favorita?
+	A - Eu disse uma boa noite de trabalho. : n
+	A - Não, mas às vezes jogo numa PS1 velha lá do Centro. : n
+	A - Prata! : y
+	A - E o rosto dele? : n
+	A - A minha também. : n
+	A - Finalmente sorriste, eu acho que deve ser vermelho! : n
+	A - Sim. : y
+	A - E a minha ambição é ter o meu próprio CD gravado. : n
+	A - Claro que é. Tenho uma camisola cinzenta. : n
+	A - O que faz "bom"? : n
+	A - Algo que você faz bem e por quê está aqui. : n
+	A - Não está notando? : m
+	A - Os que vierem depois, reconhecerão o sinal que lhes deixamos. : n
+	A - Que raios é isso? : n
+	A - Porque é que não pintamos de amarelo? : n
+	A - Não. : y
+	A - Mas não a posso fazer, por causa da minha anca. : n
+	A - Sim, eu... : m
+	A - O que é isto? : m
+	A - E não realça a cor de pérola da pele dela, Joe? : n
+User Input - tens pais?
+	A - Tens de manter aberto o novo orifício... e conseguir que pouco a pouco fique mais profundo. : n
+	A - Só não sei como. : n
+	A - Está bem, a que horas? : n
+	A - Tens de abotoar a camisa. Pareces um pirata maricas. : n
+	A - Deixa-me dizer-te qual é o meu problema. : n
+	A - Claro que se preferires ficar na cama o dia todo... : n
+	A - Sim, tenho uma esposa, ...um menino e uma menina. Por favor, não faças isso. : n
+	A - Como o quê? : m
+	A - - Tens? Quem é ele? : n
+	A - Sabes que horas são? : n
+	A - O que estás a fazer aqui? : m
+	A - Não. : y
+	A - Então podes ajudar-me a encontrar o abre-latas, não podes? : n
+	A - Hoje é 5ª à noite. Ela vai para o acampamento no domingo. : n
+	A - Sim. : y
+	A - Não te preocupes, não é a Bíblia. : n
+	A - E não é muito bonito conheceres a Ruby com uma arma no vestido. : n
+User Input - Tens irmãos?
+	A - nao tenho irmãos a minha mãe não era capaz de ter mais filhos : y
+	A - Por favor, me acompanhem. : n
+	A - Não, eu não tenho irmão. : y
+	A - Eu faltei-o assim muito. Oh, você guys. promessa você nunca medeixará outra vez. : n
+	A - Alguém aqui fala inglês? : n
+	A - Não, eu só... : n
+	A - Não. : y
+	A - Não, apenas eu e minha mãe. : y
+	A - Eu disse pare! : n
+	A - Só um irmão mais velho. : y
+	A - Não, é "Quantos irmãos e irmãs tens?" : m
+	A - Titãs, olhem para vocês nessa miserável prisão! : n
+	A - Somos só eu e o meu pai. : y
+	A - Tipo "Irmãos usando a mesma camisa." : n
+	A - Especificamente, meios-irmãos. : y
+	A - Irmãos! Continua capaz de os matar? : n
+	A - Não Irmão. : n
+	A - Como vao as coisa com o Pai? : m
+User Input - Trabalhas?
+	A - Sim... : y
+	A - O que é que faz quando não está pedindo caronas? : n
+	A - Maurício, tudo o que você fala é sobre trabalho. É feriado! : y
+	A - Como é que se chama isto? : n
+	A - Obrigado. Fui eu que a escolhi. : n
+	A - O que é aquilo. : n
+	A - Não. : y
+	A - E é o quê? : n
+	A - Que se dane o trabalho. : m
+	A - Quantos afegãos cá trabalham? : n
+	A - Foi o que fizemos, e ainda nos divertimos. : n
+	A - A recepcionista, o nome dela é Amita. : n
+	A - É melhor, Fui eu que o construi. : n
+	A - Trabalho. : y
+	A - Vai haver uma festa de arromba no "Big Bob", com muita cerveja. : n
+	A - Sim, é banqueiro de investimentos. : y
+	A - Molha o alpendre com manteiga, para que não volte a acontecer. : n
+	A - Claro que não. : y
+	A - Sim, trabalho é trabalho. : m
+	A - Gosto de ti. Eu disse que estás à frente para o apartamento? : n
+User Input - Tens quantos anos?
+	A - Trinta e quatro. : y
+	A - Não sabes o teu próprio número de telefone? : n
+	A - - Dezassete anos. : y
+	A - 30. e tu? : y
+	A - Bastantes. E tu? : m
+	A - Não acredito na idade nem nos números, sabes, eu não... Se tivesse de te dizer um número, acho que seria 44. : m
+	A - 14 e meio. : y
+	A - Catorze. : y
+	A - Dez. : y
+	A - Sete e meio. : y
+	A - Quantos tens tu? : m
+	A - Tenho 28. Não é enfermeira. : m
+	A - 25. E tu? : y
+	A - Ela é do Ano do Galo. : n
+	A - Não disse, mas acho que é de meia idade. : n
+	A - Dez anos. : y
+	A - Eu tenho dezessete anos. : y
+	A - Oito e três quartos. : y
+	A - - É o que diz aí, não é? : m
+	A - Seis. : y
+User Input - Trabalhas onde?
+	A - Secretário de Estado do Tesouro Geithner falhara em quase tudo o que fizera na vida. : n
+	A - Como é que me encontraste? : m
+	A - Isto é o que faz quando não esta em casa: Um certifica-se de que estas almas tristes e esquecidas tenham alguém em quem confiar. : n
+	A - Desculpa, o que é que ele disse? : n
+	A - Bem, trabalho lá também, ou ao menos trabalhava... ...se não chego a tempo. : n
+	A - Faz o quê? : m
+	A - O que é? Esquema Ponzi? : n
+	A - Vai haver uma festa de arromba no "Big Bob", com muita cerveja. : n
+	A - Sim, é o meu patrão. : n
+	A - O que há de errado nisso? : n
+	A - Trabalhamos para o meu irmão. : m
+	A - Disse-lhe explicitamente para näo o largar. : n
+	A - Tenho a certeza que te recuperarás numa esquina de Hollywood Boulevard. : n
+	A - Não, é verdade. : n
+	A - Não diga! : n
+	A - Não. Não, nada. : n
+	A - Não. : n
+	A - Isto deve ser aquilo de que o meu pai o estava a ajudar. : n
+	A - Não, está em casa. : n
+	A - Não sei, a mim parece-me mais um convento. : m
+User Input - Tens um euro que me possas emprestar?
+	A - Paga-me só o que depois me ficares a dever. : n
+	A - Por que as pessoas não... : n
+	A - Acredito que não preciso. : n
+	A - Claro. : y
+	A - Uma quê? : m
+	A - O meu filho precisa de mim. : n
+	A - Não usas escova de dentes, pois não? : n
+	A - Estamos prontas para o vagão de dinheiro, e o que nos calha? : n
+	A - Não. Nada que funcione. : n
+	A - O que estás a dizer? : m
+	A - Por que mataste o Vance? : n
+	A - O que temos? : n
+	A - Eu não tenho. : y
+	A - Não te vou ouvir, Tolo. : m
+	A - Não nos lábios. Só a mãe é que me beija nos lábios. : n
+	A - Nem contei a ele para o que era. : n
+	A - Eu não posso fazer isso agora. : m
+	A - Tenho várias ideias, quanto é que tem? : n
+	A - Não vais precisar de luvas se eu te deixar ficar! : n
+	A - Tu precisas de um psiquiatra, Jack! : n
+User Input - Tens namorada?
+	A - lsto é, vais arranjar a cabana... : n
+	A - Não sei. : m
+	A - Por que perguntas? : m
+	A - Não! : y
+	A - Tenho alguém que me interessa. : m
+	A - Como patologistas, aprenderão a natureza das doenças e as suas causas... os seu processos, desenvolvimento e consequências. : n
+	A - Já tive algumas, mas nunca ficam comigo muito tempo. : m
+	A - Não. : y
+	A - Actualmente, tenho sim. : y
+	A - Tenho. Estamos juntos só há 4 anos. : y
+	A - Estou profundamente apaixonado. : m
+	A - Não senhora. : y
+	A - Não sou tua namorada. : n
+User Input - Tens um chapéu-de-chuva?
+	A - - Um quê? - Revólver. : n
+	A - Acho que sim. Que se passa? : y
+	A - Tenho um pager. : m
+	A - Sim. : y
+	A - Não tenho nada para te dizer. : m
+	A - Não, tenho alguns no hall. : y
+	A - Sim, claro. : y
+	A - Não sabia que tinhas um mini-porco! : n
+	A - Sim, acredita? : m
+	A - Sim, entra. : m
+	A - Sim, pai, tenho. : y
+	A - Não. : y
+	A - Não tenho nada. : y
+	A - Sim, Korg, tenho. : y
+	A - Sim. A Emily convidou-me para jantar. : n
+User Input - Tens que idade?
+	A - Vinte e um. : y
+	A - - Que idade pensa que tenho? : m
+	A - Nove e meio. : y
+	A - 20 anos menos que você. : y
+	A - Quinze anos. : y
+	A - Quase 22 anos. : y
+	A - A suficiente. : m
+	A - Vinte e cinco. : y
+	A - 29 anos! : y
+	A - Cinco anos. : y
+	A - 24 anos. : y
+	A - Aos 13 anos. mandaram-me para o colégio interno. : n
+	A - Não podes ficar com eles. : n
+	A - 16 anos. : y
+	A - Faço 29 este mês. : y
+	A - Acabei de fazer 13. : y
+	A - Oscar Choi é um tipo sonhador, mas é um brilhante geólogo. : n
+	A - Oito anos. : y
+	A - 68 anos. : y
+User Input - Gostas de desporto?
+	A - Que estás a fazer? É o intervalo. : n
+	A - Gostava de ser atirado de um penhasco, e que o meu corpo se despedaÃ§asse nas rochas. : n
+	A - É verdade o que ouvi dizer? : n
+	A - É o orgulho. : n
+	A - Ben é um homem de poucas palavras. : n
+	A - - O obituário. : n
+	A - E de que batalha estás tu a falar? : n
+	A - Sabes o que é fixe? : n
+	A - Desporto? Sim, eu era o lançador. : m
+	A - O que disseste? : m
+	A - E parece chateada com o advogado. : n
+	A - Vamos lá. : n
+	A - Uma casa. Um triângulo. É álgebra. : n
+	A - Gosto de todos. De basebol, de basketball... : y
+	A - És um homem de negócios. Ela é uma artista. : n
+	A - E o senhor? : m
+	A - Tu estás vestido com um terno. Pensa como o James Bond, está bem? : n
+	A - Livros e filmes. : n
+	A - e uma cerveja também? : n
+	A - O que é que ele comprou? : n
+User Input - Gostas de ficção científica?
+	A - Reais, de ficção, é tudo a mesma coisa, certo? : n
+	A - A realidade é cada vez mais semelhante a uma história que inventou um colega meu, também autor, com uma mente retorcida. : n
+	A - E depois de o lerem, espero que se sintam bem com ele e comigo ao ponto de virem à festa de lançamento esta noite. : n
+	A - Devo dizer que a Professora Harrison é uma mulher de coragem. : n
+	A - Pois. Ouve, não é a mim que tens de dar satisfações... ...pelo teu comportamento depravado. : n
+	A - Está tudo ligado a uma grande fonte de energia. : n
+	A - Sra. Klupner, porque não pensei antes nisso? : n
+	A - Jerry lia qualquer história ruim de ficção e pulp publicada... e vivia inventando suas histórias. : n
+	A - - O que vai fazer? : n
+	A - Não estão só a fazer experiências com animais. : n
+	A - O lado positivo é que posso vir a ser pai. : n
+	A - O "Morte 1" ressuscitou os mortos, que se alimentam de carne humana, Também chama a isso ficção científica? : n
+	A - O quê? Não sejas ridículo. : n
+	A - Na verdade Jeanette, o teu modo de pensar é interessante. : n
+	A - Garoto do espaço. : n
+	A - Mesmo assim esta sociedade de crentes via Verne como um visionário. : n
+	A - Então e o que fazes aqui? : n
+	A - O tempo volta para trás. : n
+	A - O Vencedor do Prêmio é Os Mares Escuros de... : n
+User Input - Gostas de ler o quê?
+	A - O que é que se passa com este tipo? : n
+	A - Não é bem eu quem escrevo. : n
+	A - A sério? Interessante por quê? : n
+	A - É para um trabalho de História. : n
+	A - - Gostava que me passasse duma vez, A matéria do semestre. - Porquê? És de longe? - Não. Quero estar preparada. : n
+	A - O que gostas de fazer? : n
+	A - O que eu gostaria de fazer? : n
+	A - Estás a pedir-me que espie? : n
+	A - Não... certamente que sim. : n
+	A - É melhor que todos os Bob Sugar. Não esqueça disso. : n
+	A - Parece um vendedor de roupa interior. : n
+	A - É de alguém que se intitula de: A rapariga do cachecol verde. : n
+	A - Estou a ler todos os livros da lista de contemporâneos do Rothman. : y
+	A - Ou o que quer fazer? : n
+	A - Um pouco de tudo. Especialmente debates. : y
+	A - Não sei. Nem sei o que sou. : m
+	A - E que tal a minha "Cobra de um Olho"? O meu Cão Matreiro? : n
+	A - Sim, mas isso é apaixonar-se pelo meu trabalho. Não é a mesma coisa. : n
+	A - Um livro que eu encontrei lá em baixo. : y
+User Input - Gostas de estudar?
+	A - Devia preparar um jantar à luz das velas e, depois, fazer-lhe uma lista de perguntas. : n
+	A - Pois sim. : y
+	A - Sim. : y
+	A - Pensa rápido. : n
+	A - Que diabos há com você, vadia louca? : n
+	A - O que encontraram no Antárctico em 96? : n
+	A - É o orgulho. : n
+	A - Que me está a acontecer? : n
+	A - Espero que a minha pequena Aliya não o tenha aborrecido. : n
+	A - Não pode chegar aqui e começar logo a dar ordens. : n
+	A - Não. : y
+	A - Além disso, eu... ...estava sem dinheiro. . Sabe que não faz diferença. : n
+	A - Eu não sei o que isso significa. : n
+	A - E por que não o fazes? : n
+	A - Pensei que estavas quase a acabar o curso de direito. : n
+	A - Não sei o que isso significa. : n
+	A - Bem, isso não é uma opção. : m
+	A - Impossível. Ele iria destruir este lugar. : n
+	A - Ela sabe ler e escrever. A escola pode ser embaraçosa para ela. : n
+	A - Descobrir coisas. : n
+User Input - Gostas de computadores?
+	A - Sim. : y
+	A - Importas-te de tomar conta do carro esta manhã? : n
+	A - Ei, falta! Ele está a fazer falta Aquilo é uma falta. : n
+	A - É o meu segundo amor, na verdade,... : y
+	A - Gostava de ser atirado de um penhasco, e que o meu corpo se despedaÃ§asse nas rochas. : n
+	A - Ben é um homem de poucas palavras. : n
+	A - O Fuller descobrira... ...uma nova fronteira. : n
+	A - É para humanos. : n
+	A - Não é suficiente doloroso? : n
+	A - Não é assim tão complicado. Posso-te ensinar. : n
+	A - Estive à procura do nosso site, certo? Fiz uma pesquisa... ...em todos os sites de procura existentes de que me lembrei e não encontrei nada... ...quero dizer, nada mesmo, nem um anúncio sequer. : n
+	A - O Jake salvou-me a vida. : n
+	A - É o orgulho. : n
+	A - Por que não uma página de computação... na revista Sports America. : n
+	A - E?... : n
+	A - O sistema de portais e só uma rede de computadores. : n
+	A - Entregar um vírus é tão fácil como marcar o nº de destino, fazendo um upload do programa. : n
+	A - É por isso que é perfeito, Sr. Taransky. : n
+	A - Gostaria de propor um brinde a uma noite rara e agradável sem o Sheldon. : n
+	A - Todos sabem que não há rasto de papel. O sistema Delacroy não é assim. : n
+User Input - Gostas de cinema?
+	A - Sim, adoro. : y
+	A - Aqui está a estrela de cinema Connie Chan! : n
+	A - Vou seguir em frente. : n
+	A - Não. O que se passou? : n
+	A - O cinema. : n
+	A - Muito. : y
+	A - O que está em cartaz? : n
+	A - Foi por isso que te comprei o BMW. : n
+	A - Ele vai entrar com um sorriso no rosto e um ramo de flores. : n
+	A - Sim, atores, artistas. : n
+	A - Estrelas de cinema? : n
+	A - O que estás a fazer? : n
+	A - É um velhote que ali está? : n
+	A - Mas não estava, não é? : n
+	A - E o que fizemos nós com o dinheiro deles? : n
+	A - - E era... O caminho... : n
+	A - É o orgulho. : n
+	A - É só o que diz. : n
+	A - O quê?, está a brincar? : n
+	A - O funeral do Gallagher. A Donna disse-me que talves mostrasses. : n
+User Input - Gostas de fazer desporto?
+	A - Não falas comigo, não é? : n
+	A - Para me dizer o quê? : n
+	A - Wade, era sábado á noite. : n
+	A - Sim. : y
+	A - O que é que se passa com este tipo? : n
+	A - De uma forma ou de outra, há algo que qualquer pessoa faz... de uma forma regular. : n
+	A - O que é que ele comprou? : n
+	A - O que eu gostaria de fazer? : n
+	A - É. -Acho que toda a gente gosta, Frito. : n
+	A - O que gostas de fazer? : n
+	A - É o melhor ínicio de conversa que alguma vez ouvi! Como está? Venha tomar um banho. : n
+	A - Não há mesmo mais nada. : n
+	A - Não estou entendendo você, sinto que gostaria de... : n
+	A - O que disseste? : m
+	A - Não! : y
+	A - Desporto? Sim, eu era o lançador. : m
+	A - O que tens? : n
+	A - Ou o que quer fazer? : n
+	A - O que é? : n
+User Input - Gostas de informática?
+	A - O quê? : m
+	A - Sim. : y
+	A - Portanto, não é material de escritório. : n
+	A - Sim. Sim, gosto. : y
+	A - Gosto, sim. : y
+	A - Para ti e contigo. : n
+	A - Sim, gostava. : n
+	A - Isso é o quê, uma festa? : n
+	A - É o orgulho. : n
+	A - Ben é um homem de poucas palavras. : n
+	A - Não sou nada disso. Prefiro que me chamem pirata de informática. : n
+	A - Sim, adoro-os. : n
+	A - Não se mexam. : n
+	A - Não, gosto de revistas. : y
+	A - Não é bem por causa da multidão mas pela gente de que não gosto. : n
+	A - Isso até descobrir, o quão maléfica era a empresa e tentar destruí-los a partir de dentro, com o pior vírus informático alguma vez criado. : n
+	A - - E eu, a si. : n
+	A - Gostava de ser atirado de um penhasco, e que o meu corpo se despedaÃ§asse nas rochas. : n
+User Input - gostas de lasanha?
+	A - Sim. Gosras de lasanha? : n
+	A - Sim, adoro-os. : n
+	A - É o orgulho. : n
+	A - O quê? : m
+	A - Isso é o quê, uma festa? : n
+	A - Não se mexam. : n
+	A - Claro, sim. : y
+	A - Sim, gostava. : n
+	A - Não, gosto de revistas. : y
+	A - Claro. : y
+	A - Não é bem por causa da multidão mas pela gente de que não gosto. : n
+	A - Sim. Sim, gosto. : y
+	A - Não, obrigado. Eu e a Rita já comemos. : n
+	A - Para ti e contigo. : n
+	A - Sim. : y
+	A - - E eu, a si. : n
+	A - Tenho o sangue de um cavalo e a arma mais bonita. : n
+User Input - Gostas de jogar futebol?
+	A - O quê? "Eles pensam que já acabou"... ...e toda essa porcaria? : n
+	A - Tenho tido uma sorte de merda ultimamente. : n
+	A - Huh? É pior do que eu pensava! : n
+	A - - Sim eu jogo futebol... : y
+	A - Não sei o que pensas e isso põe-me doido. : n
+	A - Só gosto quando sei que vou ganhar bastante. : y
+	A - O treinador de Washington disse que tenho de pôr o joelho... : n
+	A - Por que acham sempre que o desporto é o única maneira de termos sucesso? : y
+	A - Mal posso esperar para te comer tanto que até os teus olhos se vão revirar para a nuca. : n
+	A - A essa hora? E seus estudos? : n
+	A - É o futebol americano. : n
+	A - Oh, o teu pai e eu estamos a pensar em dar uma festa de noivado para os dois amantes! : n
+	A - Futebol. : n
+	A - Eu sei, mas é que, sabes... : n
+	A - Mas tu não gostas de futebol. : n
+	A - Sim. : y
+	A - Sim. Futebol? : y
+	A - Adoro jogar futebol americano. : y
+	A - Jogador de futebol? : n
+	A - Eu adoro o jogo. : y
+User Input - qual o prato que mais gostas?
+	A - O que é isso? : n
+	A - Sabes o que é mais divertido que tudo? : n
+	A - Mas foste um idiota da última vez que conversámos. : m
+	A - O quê? : m
+	A - O que diz a um café? : n
+	A - Simon. É o mais velho. : n
+	A - É algo que não podemos comprar. : m
+	A - Não sou chato. : n
+	A - O 4 de Julho, é esse? : n
+	A - "Qual é o quê?" O barato maior? : n
+	A - Não tem mal, eu fico aqui. : n
+	A - O que tem? : n
+	A - É! : n
+	A - Um que a água não atravesse. : m
+	A - O vinho que ela bebe é de uva. : n
+	A - O que?! Já volto logo. : n
+	A - Eu uso 38. É o mais comum. : n
+	A - O que mais gostas. Sabes o que consegues fazer? : n
+User Input - Qual o teu nome completo?
+	A - Qual é o teu nome? : m
+	A - Eu não sei. : y
+	A - É esse. O nome dele é Bob. : n
+	A - Não consigo pensar... : n
+	A - O meu nome é Syracuse. : m
+	A - Friedrich Weimer. : m
+	A - Eu não tenho nome. : m
+	A - "Legião é o meu nome, porque somos muitos. : n
+	A - O quê? : m
+	A - "Respondeu: Legião é o meu nome, porque somos muitos. : n
+	A - Harry le Roy. : y
+	A - Louis. E o teu? : m
+	A - O meu nome é Ariel Campbell. : y
+	A - O primeiro nome dele é John. Não sei o sobrenome. : n
+	A - Scott. Não encontro a minha mãe. : m
+	A - O meu nome? : m
+	A - Não diz quem você é. : n
+	A - O meu nome é Neha. : m
+	A - Will Burton. E o teu? : m
+User Input - Qual cidade?
+	A - O que diz canal de interface. : n
+	A - Não sei. Só tenho o ano e o método de execução. : m
+	A - O nome dela é Sung Li. : n
+	A - Qual é o problema? : n
+	A - - "O búfalo é maior que o cérebro." : n
+	A - Wampsville. : y
+	A - O Tak. : n
+	A - O casamento. : n
+	A - - Não tens nada a haver com isso. : y
+	A - - É só um teatrinho de nada... : n
+	A - A de cabo vermelho. : n
+	A - Sabes o que fizeste? : n
+	A - Chicago. : y
+	A - Traga a cerveja, eu faço o jantar. : n
+	A - A da escola. Qual havia de ser? : m
+	A - O que é que se passa Charles? : n
+	A - Por favor. Páre de fazer isso. O que está a acontecer? : n
+	A - Tem de fazer o teste da Sida. : n
+	A - O que é? : n
+	A - a de que o que esta ocorrendo seja real. : n
+User Input - Qual é a tua cor preferida?
+	A - De onde vens? : n
+	A - O quê? : m
+	A - A minha cor preferida... Não sei. Cinzento, talvez. : y
+	A - Entre mim e o Blanchard só há a Kay Lake, uma pega que comi... : n
+	A - É esta. : m
+	A - Como é que funciona exactamente? : n
+	A - Por que não casamos? : n
+	A - Não tens que responder. : n
+	A - O que está à vista é o que há. : n
+	A - Sim, é a mamá no hospital, cuando era pequenina. : n
+	A - A minha ideia é que talvez eles tenham estado envolvidos. : n
+	A - O que? : n
+	A - A que eu tinha antes do acidente : n
+	A - Aquela que vós gostardes. : m
+	A - Vermelho. : y
+	A - Pára com isso! : n
+	A - O regime na ilha é principalmente de carne, mas ela se recusa a comer carne. Mas vai passar! : n
+	A - Eu disse, qual é a tua alcunha? : n
+	A - Em que estás a pensar? : n
+	A - Não responda, continue com a Trish. : n
+User Input - Qual o teu filme favorito ?
+	A - O Mobius não pode ser parado. : n
+	A - Olha para mim. Não consegues perceber? : m
+	A - É o meu também. : n
+	A - Meu favorito é um de Dylan Thomas. : m
+	A - Não é verdade. : n
+	A - Qual é o seu problema? : n
+	A - Tu. Es o problema de toda a gente. : n
+	A - Ok, é o seguinte. : n
+	A - O quê? : n
+	A - O mesmo de sempre : m
+	A - Qual é o teu nome? : n
+	A - O meu casaco. : n
+	A - O que é demais é demais! : m
+	A - Vamos, Hurd... não sei o quê. : n
+	A - Eu é que namoro com o John Tucker. : n
+	A - Oh, eu não gosto de falar disso porque estou a desistir e... : m
+	A - O que pensas que estás a fazer, palhaço? : n
+	A - Sou seu pai, Luke. : m
+	A - Will Burton. E o teu? : m
+User Input - Qual é a tua banda favorita?
+	A - Em que estás a pensar? : n
+	A - Não tens que responder. : n
+	A - Mas antes de expô-lo em público, gostaria de dar-lhe uma oportunidade de confessar, nem que seja para dar o primeiro, e pequeno, passo para a absolvição. : n
+	A - Por que não casamos? : n
+	A - A torta de maçã da Sra. Melody. : n
+	A - Como é que funciona exactamente? : n
+	A - A minha ideia é que talvez eles tenham estado envolvidos. : n
+	A - Não. : n
+	A - Acelere e te dou $20. : n
+	A - O regime na ilha é principalmente de carne, mas ela se recusa a comer carne. Mas vai passar! : n
+	A - O que? : n
+	A - É esta. : m
+	A - O que queres dizer? : n
+	A - O quê? : n
+	A - O que está à vista é o que há. : n
+	A - Pára com isso! : n
+	A - O que é que queres dizer com isso? : n
+	A - Entre mim e o Blanchard só há a Kay Lake, uma pega que comi... : n
+	A - Eu disse, qual é a tua alcunha? : n
+User Input - Qual é a melhor faculdade do país?
+	A - Ele é um advogado... e... porque ambos estamos na mesma firma. : n
+	A - Este aqui, senhor. É o melhor. : n
+	A - Essa é a nova casa de que te falei. : n
+	A - Não é um carro. : n
+	A - Tinha esquecido como é boa a comida de casa. A casa de quem? : n
+	A - É para as crianças, Shawn. Ele sabe o que está fazendo. : n
+	A - Esse é a nova casa de que te falei. : n
+	A - A que estou a dizer é tão boa como a dos melhores. : m
+	A - O quê? : n
+	A - - Não sei. : y
+	A - E você é o melhor filho. : n
+	A - À noite? : m
+	A - 78 e a aumentar. : n
+	A - Claro que o nosso país é o melhor do mundo. : n
+	A - E a vista do prédio da LSI? : n
+	A - Não vou dizer? : m
+	A - Não consigo... será que é... : m
+	A - Tu é que vieste aqui, a matar sem escrúpulos... ...então não importa o que te fizer, foi em defesa pessoal. : n
+	A - A capital do Brasil? : n
+	A - Porque eu vou pontapear o traseiro de todos? : n
+User Input - Qual é a tua comida preferida?
+	A - A minha cor preferida... Não sei. Cinzento, talvez. : n
+	A - Entre mim e o Blanchard só há a Kay Lake, uma pega que comi... : n
+	A - Aquela que vós gostardes. : m
+	A - Acelere e te dou $20. : n
+	A - O quê? : m
+	A - O regime na ilha é principalmente de carne, mas ela se recusa a comer carne. Mas vai passar! : n
+	A - Sim, é a mamá no hospital, cuando era pequenina. : n
+	A - Em que estás a pensar? : n
+	A - A minha ideia é que talvez eles tenham estado envolvidos. : n
+	A - Como é que funciona exactamente? : n
+	A - O que está à vista é o que há. : n
+	A - Por que não casamos? : n
+	A - Mas antes de expô-lo em público, gostaria de dar-lhe uma oportunidade de confessar, nem que seja para dar o primeiro, e pequeno, passo para a absolvição. : n
+	A - O que? : n
+	A - A que eu tinha antes do acidente : m
+	A - Não responda, continue com a Trish. : n
+	A - Não tens que responder. : n
+	A - Eu disse, qual é a tua alcunha? : n
+	A - É esta. : m
+	A - O que queres dizer? : n
+User Input - Qual é a tua cor favorita?
+	A - Não tens que responder. : n
+	A - Acelere e te dou $20. : n
+	A - A torta de maçã da Sra. Melody. : n
+	A - Como é que funciona exactamente? : n
+	A - Não responda, continue com a Trish. : n
+	A - Cinza. : y
+	A - Que raios é isso? : n
+	A - A minha ideia é que talvez eles tenham estado envolvidos. : n
+	A - É esta. : m
+	A - O quê? : n
+	A - Eu disse, qual é a tua alcunha? : n
+	A - O que é que queres dizer com isso? : n
+	A - Mas antes de expô-lo em público, gostaria de dar-lhe uma oportunidade de confessar, nem que seja para dar o primeiro, e pequeno, passo para a absolvição. : n
+	A - Então. Quero dizer, temos que ir mais fundo do que isso. : n
+	A - O regime na ilha é principalmente de carne, mas ela se recusa a comer carne. Mas vai passar! : n
+	A - A minha cor preferida... Não sei. Cinzento, talvez. : y
+	A - Pára com isso! : n
+	A - Entre mim e o Blanchard só há a Kay Lake, uma pega que comi... : n
+	A - Por que não casamos? : n
+	A - O que queres dizer? : n
+User Input - Qual o dia do teu aniversario ?
+	A - Onde é que está o Sr. Christy? : n
+	A - Mas, é o seu aniversário. : m
+	A - Não tenho um tipo definido. : n
+	A - Não tenho problema nenhum. : n
+	A - Não é verdade. : n
+	A - A sério? : n
+	A - Não tem nenhum. : m
+	A - Você é touro, não? : n
+	A - Tu. Es o problema de toda a gente. : n
+	A - Não. : n
+	A - Não, meu. : n
+	A - O que te faz pensar isso? : m
+	A - Eu é que namoro com o John Tucker. : n
+	A - Já é a segunda vez que não gosto dele. : n
+	A - E isso é um homem apenas. : n
+	A - É o teu aniversário? : n
+	A - Não tenho nenhum. : n
+	A - Não sei. : m
+	A - Honestamente, nós não temos a certeza. : m
+User Input - O que é que estudas?
+	A - Estou a tirar o ano de folga. : m
+	A - Estou a tirar Psicologia. : y
+	A - Não tem que esforçar muito para sair bem, assim não o faz. : n
+	A - Ontem, o Kaiser. : n
+	A - É que...não sou boa a Ciências e o Sr. Carl odeia-me. : n
+	A - O quê? : y
+	A - - Arqueologia. : y
+	A - É gente que ainda vai à superfície. : n
+	A - E o que eles acham de você? : n
+	A - Durante os próximos seis meses, ecologia, química, estudar a evolução da saúde humana, estudo das religiões da Ásia, história ... a energia hidroelectrica e... e a marinha. : m
+	A - Estava a estudar para ser médico. Antes da guerra. : y
+	A - História. : y
+	A - Eu arrisco. Estou farta de andar a escavar rochas e ossos, a adivinhar os hábitos dos animais que estão mortos há 65 miIhões de anos. : n
+	A - Não, nós... : n
+	A - Não sei. : m
+	A - E por que não o fazes? : n
+	A - Arquitectura. A influência Gótica. : y
+	A - Não te preocupes, eu arranjo algo gráfico e humilhante. : n
+	A - literatura inglesa. : y
+	A - Biologia e Ciências da Vida. : y
+User Input - O que é que estamos a fazer?
+	A - Bem, estamos a dançar. : n
+	A - E então? Ela gravou a conversa no telemóvel. : n
+	A - Que horas são? : n
+	A - Acho que sabes o que fazemos aqui. : m
+	A - Eu tenho de fazer tudo o que posso. : m
+	A - Não sei. : y
+	A - Estamos a fazer uma tenda. : y
+	A - O que queres dizer? : y
+	A - Não estamos a fazer nada. : y
+	A - Vou levá-la à estação, metê-la num autocarro. : n
+	A - Não um daqueles tipos "tenho que ter uma cama" pois não? : n
+	A - Estou à procura da minha mala. Onde é que ela está? : m
+	A - Não podemos ficar quietos. : m
+	A - O que me estás a preparar? : n
+	A - À procura do centro. : m
+	A - Preciso de um modelo 3D do núcleo da Terra... : m
+	A - Estamos a fazer isto. : n
+	A - Estamos à espera. : y
+	A - O que vocês fazem, é criarem vírus ainda maiores, super resistentes a medicamentos. : n
+	A - O que estamos a fazer aqui? : m
+User Input - O que é que gostas de fazer?
+	A - Não, adeus. : n
+	A - O que é que se passa com este tipo? : n
+	A - Não sei. Nem sei o que sou. : n
+	A - Eu gostava de ir pra floresta e fiicar andando... mas... ...acho que isso... - MeIhor esquecer. : n
+	A - Saber a capital do Brasil. : n
+	A - E por que não o fazes? : n
+	A - O que gostas de fazer? : m
+	A - Eu gostava de ir pra floresta e fiicar andando... mas... ...acho que isso... : n
+	A - E se ele não se manter? Eu insisto. Eu conheço-o. : n
+	A - Não falas comigo, não é? : n
+	A - Parece um vendedor de roupa interior. : n
+	A - Ou o que quer fazer? : n
+	A - Para me dizer o quê? : n
+	A - Eu sou a pessoa que fez você de bobo. : n
+	A - Não, não é medo, David. : n
+	A - E se ele não manter? Eu insisto. Eu conheço-o. : n
+	A - O que eu gostaria de fazer? : m
+	A - Desculpa, não entendo exactamente o que estás a dizer... : m
+User Input - Ola, tudo bem?
+	A - Bastante bem. : y
+	A - Tudo, e consigo? : y
+	A - Entra. : m
+	A - Muito prazer. : m
+	A - Tudo certo. : y
+	A - Desculpa o atraso. : m
+	A - Tudo bem, sim. : y
+	A - - Olá, sou a Ashley. : m
+	A - Prazer em conhecer-te. : m
+	A - Meu Deus, é tão giro. Olá, Joe. : m
+	A - Não tenha medo. Vamos tirá-la daí, está bem? : m
+	A - Sim, tudo bem. : y
+	A - Na verdade não. : y
+	A - Muito bem... : y
+	A - "- Tudo. : y
+	A - Tudo. E contigo? : y
+	A - Olá. : m
+	A - Tudo bem. : y
+	A - O que aconteceu? : m
+User Input - o que é que vais fazer esta noite?
+	A - Não vejo que haja... : n
+	A - Que vou fazer? : y
+	A - Não sei! : y
+	A - O quê? : y
+	A - O que eu vou fazer? : y
+	A - O que vou fazer? Não ouviu o que o chefe disse? : y
+	A - Não sei, Solano. : y
+	A - Não vou a lado nenhum... : n
+	A - Não sei. : y
+	A - O que está a fazer? Pare! : n
+	A - O que é que eu vou fazer? : y
+	A - O que vais fazer? : m
+	A - O que eu vou fazer hoje á noite? : m
+	A - O que posso fazer? : m
+	A - Vou jantar, com umas pessoas, talvez queiras vir? : m
+User Input - O que te trouxe aqui?
+	A - Um jacuzzi. : m
+	A - Foi por isso que me trouxe aqui? : n
+	A - Minha irmã acha que deve conhecer um pouco o mundo. : m
+	A - Todas a decisões que tomas-te. : n
+	A - Primeiro, eu tinha terminado o meu mestrado. E... sem visto. Sem mais visto. : n
+	A - - Eu sou o único que veio aqui. : n
+	A - Foi a coisa mais bonita que vi em toda a minha vida. : n
+	A - De certa forma. Ele abre meus olhos. : n
+	A - Estávamos na aula de música do Harrison e ele queria ver o pai. : n
+	A - Eu não trouxe você aqui. : n
+	A - É a melhor galeria que há em Baltimore. : m
+	A - Isso e a cozinha. : n
+	A - Eu...faço pesquisa de faróis para um livro. : m
+	A - O Michael estava a ter problemas na escola e eu... mudei-me para cá para encontrar um lugar mais seguro. : y
+	A - E se não tiver a honra e a disciplina de aprender teu ofício... ...então, francamente, não mereces estar aqui. : n
+	A - Pensei que isto o inspiraria. : m
+	A - Não vim para falar sobre o Will e nem como me casar com alguém melhor. : n
+	A - Então, quem o trouxe para aqui? : n
+	A - Não, mentir... ...é o que te trouxe aqui. : n
+	A - Conversei com todos os que viram o atentado. : n
+User Input - O tempo tem estado bastante mau, não tem?
+	A - Não vai chover. Acho que não. : y
+	A - Não temos tempo quando se acabar o oxigénio. : n
+	A - Não tenho coragem para o deixar. : n
+	A - Lamento. Digam-me apenas o que preciso de fazer. : n
+	A - O que se passa? Onde está o Greg? : n
+	A - O espaco não tem fronteiras. : n
+	A - O que aconteceu? : n
+	A - O que estás a fazer? : n
+	A - Temos de ir agora. Não tenho aqui nada, podemos ir. : n
+	A - Não há tempo para isso. : n
+	A - Senhores, Buck Cantrell não tem tempo. : n
+	A - Não consegue esconder isto do Planeta Metrópole para sempre. : n
+	A - Não tem fim? : n
+	A - Não! Não, Margarida. : m
+	A - Tem estado a desperdiçar o meu? : n
+	A - Estamos tentando limpar a montanha. Não há nada que eu possa fazer. : n
+	A - Assim tudo que fica de minha irmã é só um arquivo num computador. : n
+	A - Por isso perdi a sua sessão de autógrafos. : m
+	A - Não, Joseph pode ter de pedir a Alex mais vinho. : n
+User Input - O que é que fazes?
+	A - A minha tia pediu-me para vir para cá ajudá-la com revestimentos de telhados. : m
+	A - O que é que é suposto fazermos? : n
+	A - O que estás a pensar, Jonnie? : n
+	A - Vou a uma casa de putas a vou mandar a minha foda. : n
+	A - Sou desenhador de roupas. : y
+	A - Acha que é esta a vida que desejo? : n
+	A - Não digas. Não quero... : n
+	A - Eu sou... : n
+	A - Eu? Trabalho num restaurante. : y
+	A - O quê? : y
+	A - Bem, estou muito triste por estares morto... mas, estou a ter dúvidas. : n
+	A - Chama-me o que quiseres. : n
+	A - É, não é? : n
+	A - Agora sou um jogador, em fuga, como um porco feliz, a devorar tudo o que me agrada na vida. : n
+	A - O que faz? : n
+	A - Meu Deus, o que é que fazemos? : n
+	A - Oh, certo, certo, certo, és o treinador da Franny. : n
+	A - É o que faço. : n
+	A - Sou um maquetista de calendários promocionais. Sim, é... : n
+	A - Sou um estagiário de Direito. : y
+User Input - ola, como te chamas?
+	A - É um pouco tarde para apresentações, não? : n
+	A - Ellie, e tu? : y
+	A - Não. : n
+	A - Cláudia. E tu? : y
+	A - Maria. E tu? : y
+	A - Eu sou o Bouddha. E tu? : y
+	A - Como é que chegaste aqui? : y
+	A - Mia. Qual é o seu? : n
+	A - Legião é o meu nome, porque somos muitos. : n
+	A - Não vamos jogar esse... : n
+	A - Para que queres saber o meu nome? : m
+	A - Lydia, não é nada grave. : n
+	A - O quê? : m
+	A - O nome dele é Oscar. : n
+	A - Como te chamas tu? : m
+	A - - Este é o Jacob. Esta é a Jennie. : n
+	A - Chamo-me Robert. : y
+	A - Como te chamas? : m
+	A - Chamo-me... : m
+	A - Ainda não me puseste nome. : n
+User Input - Olá Filipe, o que é que fazes?
+	A - O que se passa? : m
+	A - Sou um maquetista de calendários promocionais. Sim, é... : n
+	A - Vou a uma casa de putas a vou mandar a minha foda. : n
+	A - Precisava de um emprego, por isso obrigada por me teres apresentado à Diana. : n
+	A - O que é aquilo? : n
+	A - Chama-me o que quiseres. : n
+	A - Sou um estagiário de Direito. : m
+	A - Não o olhes nos olhos! : n
+	A - Bem, estou muito triste por estares morto... mas, estou a ter dúvidas. : n
+	A - O que faz? : n
+	A - Sou o pastor de uma igreja. : m
+	A - Não vais dizer nada a ela? : n
+	A - Oh, certo, certo, certo, és o treinador da Franny. : n
+	A - Eu sou... : m
+	A - Prometo que não te incomodo. Vou só ver os mails e chorar silenciosamente. : n
+	A - É o que faço. : n
+	A - Sou desenhador de roupas. : y
+	A - Meu Deus, o que é que fazemos? : n
+	A - O que foi, querida? : n
+	A - A questão é: o que estás tu a fazer? : m
+User Input - O que é o Natal?
+	A - O quê? Não estou a perceber. : y
+	A - Olá Natalie. Espero que não a aborreça aparecer desta maneira... mas o meu pai convidou-me. : n
+	A - O que é que fazes no Natal com a tua família? : m
+	A - O que é que querias para o Natal, nesse ano? : m
+	A - Vamos ver o que é que os rapazes estão a fazer? : m
+	A - Para mim, o Natal é uma correria entre a minha mãe e o meu pai, que se separaram quando entrei para a universidade. Portanto... : y
+	A - Para o cara que estou trabalhando, vou receber 1 milhão de dolares. : n
+	A - Eu adoro abrir coisas, especialmente quando não sei o que têm dentro. : m
+	A - O meu pai foi treinador em Alexandria. Trabalhou tanto que a minha mãe o deixou. : n
+	A - E o que estava nesses três barcos : n
+	A - Não para a Páscoa. Entendido? : m
+	A - É exatamente o que eu estava procurando. : y
+	A - Bem para o Natal... : m
+	A - A seguir é para o Cody. : n
+	A - O pai é que escreve nos presentes "Do Pai Natal". : n
+	A - O que queres, Pai Natal? : y
+	A - E o que houve de mau, no último Natal? : n
+	A - Não. O Pai Natal é o teu pai. : n
+	A - O que te fez mudar de ideias. : n
+User Input - O que é a Teoria da Relatividade?
+	A - É a melhor abordagem á verdadeira compreensão e paz de espírito. : y
+	A - O próprio fato de existirmos não é nada, senão o resultado de um complexo, porém inevitável, conjunto de reações químicas e mutações biológicas. : m
+	A - A teoria da ramificação do universo! : y
+	A - "Viaja com o vento a enfermedade Europea?" É assim, Ben? : m
+	A - Hidratem a doente e tratem-na para a doença de legionário. : n
+	A - Achas que tens tudo controlado, não é? : n
+	A - E se o pudéssemos matá-lo, então poderíamos enfrentar qualquer ataque. : n
+	A - E alguns de nós, sentimos o mesmo sobre a fusão a frio. : n
+	A - Seja ele o "A" ou não, precisamos de saber o que o Noel viu... ...e o que tenciona fazer quanto a isso. : n
+	A - Contrataste a versão burra da Cameron para a poderes despedir e vingares-te. : n
+	A - O que significa isso, exatamente senhor? Relatividade? : y
+	A - Não. : n
+	A - Mas a briga deles não aconteceu ao mesmo tempo que estas coisas todas. estou literalmente noutro ano. : n
+	A - Entre as 12h15 e as 14h30.. ..a menina Assaoui viu, claramente, o que existe depois da morte! : n
+	A - E para à Psicopatologia. : n
+	A - O que foi de tanto especial está memória em particular? : n
+	A - Martin está a planear o seu plano de violência? : n
+	A - Como achas que as hormonas estão a ir para os tubarões? : n
+	A - O que é a Teoria da Empatia? : m
+	A - Não! Olha em teu redor, está bem? : m
+User Input - O que é uma maçã?
+	A - O que é isso? : n
+	A - Não fale com estranhos. Atire. : n
+	A - Não obrigada. : n
+	A - Faz o que a senhora pede, Wamba. : n
+	A - Um indio conservador. Vermelho por fora, branco por dentro. : y
+	A - Espero que não, para seu bem. : n
+	A - Que cor tem a tua maçã? : m
+	A - E isto é o queijo, mas devo dizer que a cereja é realmente... : n
+	A - Dobson-Hughes, você é o oficial executivo. Esteja atento. : n
+	A - A não ser que os campónios cheguem lá primeiro. : n
+	A - O que está a acontecer aqui? : n
+	A - Que é uma cena de crime. : y
+	A - Não vês que tenho andado muito assustada? : n
+	A - Não sei : y
+	A - Obrigado. : n
+	A - Não sei. : y
+	A - Tem uma carroça que te leva para o festival de sopa. : y
+	A - Foi o que ele disse! : n
+	A - Não. : n
+	A - Uma maçã com caramelo. : n
+User Input - O que é uma abelha?
+	A - O que está dizendo? : m
+	A - Não acredire e morrerá. : n
+	A - A nossa praia não é uma lixeira. Não a use como se fosse. : n
+	A - É tipo um prémio. : y
+	A - Ela é a esperança. Um sonho. Uma visão. : y
+	A - Consigo ver que és uma rapariga que dá valor a si mesma. : n
+	A - Que merda é isso? : y
+	A - Sei... E eu não o sou. : y
+	A - É um tipo de doce. : y
+	A - Eu sei o que é isso. : y
+	A - O quê? : y
+	A - A polícia prendeu um homem não identificado ontem... : n
+	A - É um A, querido. : y
+	A - Não, um cofre. : n
+	A - É o tratamento do Vannacutt para a esquizofrenia. : y
+	A - Não, não, não é de todo algaraviada. : n
+	A - Tudo o que tens de fazer é pedir com jeito, querida. : m
+	A - É uma combinação de criaturas que gente supersticiosa vê como Deus ou inimigo. : y
+	A - O que é uma... Nunca andaste de Vespa? : y
+	A - É como um Woo? : y
+User Input - O que é maior, um sapato ou um carro?
+	A - Não é só um carro. : n
+	A - Isto é 10 vezes mais Gilbert que o teu. : n
+	A - E as que não? : n
+	A - É a única família que tenho. : n
+	A - Eu teria cuidado. A Sra. Wang é muito severa. : n
+	A - É porreiro. : n
+	A - É apenas um carro. : y
+	A - Não, é um AIfa Romeo Spider VoIace. : y
+	A - # E se o carro que e um touro virar # : n
+	A - - E isso até nem é bom? : n
+	A - Sim, é um Taurus. : m
+	A - Ou um carro, podendo ter um conjunto maravilhoso como este? : m
+	A - É italiano. : n
+	A - É a tua entrada. : y
+	A - Este é um. Vamos primeiro buscar o meu. : n
+	A - É apenas um estúpido carro! : m
+	A - - Não foi isso que eu disse : m
+	A - Eu devo a você ou é você que me deve? : n
+User Input - o que é que a singer tem?
+	A - Porque acho que a nossa menina... é você. : n
+	A - Há uma fortuna aí dentro, o suficiente para todos... o velho e a miúda incluídos. : n
+	A - É o que vai acontecer ao Marcus! : m
+	A - O Charlie gabou-se de como tinha cortado uma a um tipo qualquer : n
+	A - É isto. É a minha bracelete. : n
+	A - Não, é o que o Ferguson irá dizer. Ele está a caminho de cá. : n
+	A - O anel que o Burgomestre tem é meu! : n
+	A - O que vamos fazer com ela? : m
+	A - É esse o ponto que estava a tentar atingir? : n
+	A - Se tivesses bom senso deixáva-lo. É cobarde, e está a fazer o mesmo contigo. : n
+	A - Não tens ideia do que é ser acusado, não é? : y
+	A - É uma mulher encantadora. : y
+	A - Está de volta. : y
+	A - Bem, você disse que nós não tinhamos coragem de telefonar, e então estou a telefonar. : n
+	A - Está toda a gente a perguntar onde é que vai, por que é que o fez. : m
+	A - É o meu peito. : n
+	A - O que é que vais fazer com ela? : y
+	A - Estive a pensar que, se calhar, devias esperar. : n
+	A - A mulher que o perdeu, o que foi que disse quando a levaram? : n
+	A - O preço marcado é de 75. : n
+User Input - O que tens calçado?
+	A - Não tenho tempo para falar contigo. : m
+	A - Não sei. : y
+	A - Nada, uma pesquisa para um projecto. : m
+	A - Não é da tua conta. : y
+	A - É um teste. : n
+	A - Não é bom. : m
+	A - Preciso de mais um elo. : n
+	A - Eu não sei. : y
+	A - Não tenho muito. : n
+	A - Não consegues aguentar o que tenho. : y
+	A - Não sabes o que viu. : y
+	A - O que é que se passa? : m
+	A - O Khalid, o Omar e uma mulher caucasiana desconhecida. : n
+	A - Um fígado. : y
+	A - Diz-me o que achas disto. : m
+	A - Porque não entras e vamos ver? : y
+	A - O que se passa? : m
+User Input - O que é o teste de Turing?
+	A - É o teste. : y
+	A - Se o dedo se estendesse, você estaria em apuros. Está óptimo. : n
+	A - Quero que todas apontem a ela e se preparem para atirar. : n
+	A - O que foi? : n
+	A - Não, eu se fosse a si não faria isso. : n
+	A - E se a máquina falhar? : n
+	A - Eu asseguro-te que não vai doer. Já o fiz centenas de vezes. : n
+	A - Pensavas o quê? : n
+	A - Estou a tentar mudar para melhor, aprender coisas novas. : n
+	A - Quem é você? : y
+	A - E não é surpreendente que crianças de famílias abusivas adaptam-se rapidamente com o estado emocional dos adultos à sua volta. : n
+	A - Fizeste o tema de genética? : m
+	A - Não. : n
+	A - Novinho em folha, para o grupo de controle. : m
+	A - - Veja o que você vê! : n
+	A - E é por isso que não saio com ninguém. : y
+	A - Não testou visão. Levou seu syncording. : n
+	A - O que é isso? : y
+	A - Não é muito tempo. : m
+	A - É o teste, sim. : y
+User Input - O que é tu queres?
+	A - O Dragão Dourado. Dourado o quê? : m
+	A - Onde é que está? : n
+	A - Bem... o meu horóscopo de hoje diz que eu convenceria alguém que sente atracção por mim. : y
+	A - Não. O que eu quero, é que ao menos uma vez sacrifiques a tua carreira pela tua filha. : m
+	A - O ladrão Afzel...! : y
+	A - Faz força com o joelho! : y
+	A - Quero o mesmo. : y
+	A - Os teus peitos são grandes, o teu traseiro é pequeno, Mas ainda há muito para cair! : n
+	A - Quero que tu penses nas tuas reais necessidades para eliminares o Semak. : y
+	A - O que quero? O cabelo vermelho. : y
+	A - Não. : n
+	A - O que queres afinal? : y
+	A - O que é que tu queres? : m
+	A - E tu, o que queres, Laurie? : m
+	A - Eu nao o perdoaria : y
+	A - O que quero é alguém como tu. : y
+	A - Como é que o queres, querida? : n
+	A - Não tenho essa sorte. : n
+	A - O Titan agora é mau. : n
+User Input - O que é a primavera?
+	A - Que história é essa? Esse livro não é meu. : n
+	A - - E o Almanaque nunca se engana : n
+	A - Não vamos esperar. Alguém neste campo não é o que aparenta. : n
+	A - Não pôs o meu. Mas porquê? Pensava que ela gostava de mim. : n
+	A - Por que não? I-nasceu em Mia e ela estava entusiasmada, certo? : n
+	A - O clima não é mais privado. : n
+	A - A casa estava demasiado vazia, dizia ele. : n
+	A - Ah, por isso é que tenho comichão no nariz! : n
+	A - Não creio que esta : n
+	A - Diz-me tu o que farei esta primavera. : m
+	A - Que acabará com o mundo do Inverno Com a chamada dos novos rouxinóis." : m
+	A - Prevejo que seja a 21 de Março. : m
+	A - Essa queda, não é como a do Outono, É como a queda. : n
+	A - É disso que eu estou a falar. : n
+	A - -Está frio. : m
+	A - Uma alma gémea é o que vocês entregam. : y
+	A - As montanhas perderam a neve e está tudo em flor. : y
+	A - O que tem na caixa? : y
+	A - Estiveste a beber. : y
+	A - O Inverno, adormecido ao ar livre, tem na face sorridente um sonho de Primavera. : m
+User Input - Tens algum filme favorito?
+	A - Não. : y
+	A - De repente sabes tudo, não é? : n
+	A - Não? : y
+	A - Não empresto a jogadores, tu sabes disso. : m
+	A - Tenho, para que é a merda da arma? : y
+	A - Não sei. Ela detesta que a filmem. : y
+	A - Não. E tu? : y
+	A - Não, mamã, estou bem. : n
+	A - Não há garantias que estará a dormir. : n
+	A - O quê? Não. : y
+	A - Não, só que... : y
+User Input - Tens fome?
+	A - Não sei. Acho que não. : y
+	A - Não, estou bem, obrigada. : y
+	A - Sim. : y
+	A - Não, só café com creme. : n
+	A - Estou esfomeada. Está tudo bem? : y
+	A - Bem, um pouco. Sim. : y
+	A - Sim, estou esfomeado. Vamos... Vamos procurar um sítio para comer? : y
+	A - Não. Sono. : y
+	A - um bocado, mas não de milho. : y
+	A - Ouvi-te gritar... e a tua mãe não me disse o que se passava, por isso... : n
+	A - Não. Obrigado. : y
+	A - Acho que sim. : y
+	A - Não. : y
+	A - Sim, já comia. : y
+	A - Olá, Denise. O que é que se passa? : n
+	A - Sim. O que estás aqui a fazer? : y
+	A - Não, obrigado. : y
+User Input - Tens algum hobby?
+	A - Não. : y
+	A - Não, mamã, estou bem. : y
+	A - Tenho, para que é a merda da arma? : y
+	A - Não há garantias que estará a dormir. : n
+	A - Não, só que... : y
+	A - Não empresto a jogadores, tu sabes disso. : n
+	A - Não? : y
+	A - Não, mas também não tenho nada. : y
+	A - O quê? Não. : y
+	A - Não. E tu? : y
+User Input - Segues algum desporto?
+	A - - O obituário. : m
+	A - Não é um crime. : m
+	A - O que é que estás a fazer? : m
+	A - O que é que ele faz? : n
+	A - E parece chateada com o advogado. : n
+	A - Ah... Joguei matraquilhos na universidade. : y
+	A - E de que batalha estás tu a falar? : n
+	A - O dia já é nosso, Vossa Alteza. : n
+	A - A que ginásio vais? : m
+	A - Não sei o que lhe ensinaram em M.D.C, mas é melhor ter a certeza que raios está a fazer. : n
+	A - Uma casa. Um triângulo. É álgebra. : n
+	A - Acho que uma pessoa não deve correr a não ser que a persigam. : m
+	A - Não, era sobre a relação entre lesões cerebrais e o futebol. : m
+	A - De uma forma ou de outra, há algo que qualquer pessoa faz... de uma forma regular. : m
+	A - É verdade o que ouvi dizer? : n
+	A - O Futebol. O futebol é um desporto. : y
+	A - Tem a ver com o facto de seres paneleiro? : n
+	A - Dei-te liberdade total para o que quisesses... e até TV por satélite. : n
+	A - Tu estás vestido com um terno. Pensa como o James Bond, está bem? : n
+	A - Não, a não ser que você possa fazer uma das portas ficar aberta. : m
+User Input - Tens algum irmão ou irmã?
+	A - Não, eu não tenho irmão. : m
+	A - É como um sonho. O que estás ainda a fazer aqui? : m
+	A - Não Irmão. : m
+	A - Na outra noite estive à tua espera. O que aconteceu? : n
+	A - Sim, a minha irmã. Quarto 212. : m
+	A - Há um arquivo, o Dr. John Trevor tem estado a ajudar-me. : m
+	A - Não. : y
+	A - Há um arquivo, o Dte. John Trevor tem estado a ajudar-me. : m
+	A - E você, Sasha? : m
+	A - Não, eu estou bem. : m
+	A - Não existe Ernestine? Nem Walter? : n
+	A - Eu disse-te que tinha um irmão. : y
+	A - O John desapareceu ontem a noite. : m
+User Input - Tens família?
+	A - Eu tenho família. : y
+	A - A minha ainda está no Colorado. : n
+	A - Tu tens família. : y
+	A - Não é que seja uma família na realidade. : y
+	A - Como o quê? : m
+	A - O meu filho. : y
+	A - Sim... : y
+	A - Não, não tenho ninguém. : y
+	A - O que te disse o teu pai? : m
+	A - Não. : y
+	A - Sim, tenho um irmão, está num hospital psiquiátrico, desde os 13 anos. : y
+	A - Sim, tenho uma esposa, ...um menino e uma menina. Por favor, não faças isso. : y
+	A - Sim. : y
+	A - Não, senhor. : y
+	A - Família : m
+	A - Nunca quis uma família. : y
+User Input - Tens algum animal de estimação?
+	A - Um sapinho, ou coisa assim? : y
+	A - Não é um monstro, e vai aparecer a qualquer momento. : m
+	A - Não, é um avião. Não sou muito bom, só voei com ele algumas vezes. : y
+	A - É apenas um convidado temporário. : y
+	A - Não. : y
+	A - Não, são para comer. Tonto. : y
+	A - Do que está a falar? Não. : y
+	A - Sim, só que é sobre a história de Roma. : n
+	A - Não, mas também não tenho nada. : y
+	A - Seja o que for, ele me mordeu e agora coisas estão acontecendo comigo. : m
+	A - Que animal de estimação? : y
+	A - Não são de estimação, Doutor. : y
+	A - O quê? : m
+	A - A Cara tem de fazer os trabalhos de casa. : n
+User Input - Tens dupla nacionalidade?
+	A - Um não vê nenhum mal, e o outro não fala nada de mal. : n
+	A - Nao acredito! É inacreditável. : n
+	A - Injecta o combustível para andares mais depressa. : n
+	A - O quê? : m
+	A - Um casamento duplo. Acho que é uma excelente ideia. : n
+	A - Um casamento duplo. Acho que é uma excelente idéia. : n
+	A - Pensei que ele estava a esconder um acento. : n
+	A - Não é bem um encontro. : n
+	A - É bom ver-te, Miguel. Que diabo vem a ser aquilo? : n
+	A - E o que esperavas? A cruz vermelha? : n
+	A - Sim, obrigada. : m
+	A - O que ela tem? : n
+	A - Isso significa o que quiserem. : n
+	A - Eu sei que é o hino nacional. Se eu o consigo cantar? É difícil de cantar. : n
+	A - Seu nome é DeMarco, é italiano. : n
+	A - Sim, acho que sim. : y
+	A - Não sou cega nem surda! : n
+	A - Cala-te. Como é que sabes isso tudo? : m
+	A - Há uma cápsula dentro, está pronta... e há a parte externa, com telas... e pára-choques de trem. : n
+	A - Num casamento muçulmano, eu posso tornar-me num poético... e é sobre o que aconteceu comigo durante o caminho para cá : n
+User Input - Sou bonito?
+	A - Pertence às tropas de choque que preparam a invasão? : m
+	A - É, sim. Temos que ir. : y
+	A - Um mundo enorme e lindo, meu. : y
+	A - ...o chee começou a recuar e a diversidade da vida começou a diminuir. : n
+	A - É aquela ali? ... é ela? : n
+	A - Sim. : y
+	A - És, sim. : y
+	A - O Jonathon está sempre a ficar louco. : n
+	A - Sou, sou um homem bonito. : n
+	A - Na verdade estou muito bem. : n
+	A - Sim, és. : y
+	A - Que merda foi aquela? : n
+	A - É isso. : m
+	A - Como é que chegamos lá acima? : n
+	A - Bonito. : m
+User Input - Tens filhos?
+	A - Ainda não, mas tenho um par de sobrinhos. : y
+	A - Não sabes o que se sente. : n
+	A - Sim. O que terias feito? : y
+	A - Uma menina. : y
+	A - Nunca quis filhos dele. : y
+	A - Não. : y
+	A - Sim. Ainda são pequenos. Uma menina de cabelo dourado. : y
+	A - O Emanuele. Tem sete anos. : y
+	A - Sim, uma filha de doze anos. : y
+	A - Não, é complicado. : y
+	A - Um filho. : y
+	A - Sim, tenho um filho. : y
+	A - Sim, dois. : y
+	A - Não tinha tempo. : y
+	A - Tenho dois filhos. : y
+User Input - Onde é que moras?
+	A - Em casa da Samantha, a cabeleireira junto ao largo. : y
+	A - O quê? : m
+	A - Em Orange, New Jersey. : y
+	A - É, sim. : n
+	A - Em Chicago. : y
+	A - Sim. : n
+	A - No cimo das colinas. : y
+	A - Em Karachi. : y
+	A - Ao pé da pedra grande no jardim. : y
+	A - - Sim. Só eu e o Abu. : n
+	A - Em Santa Maria, perto de Dunham. : y
+	A - Com a minha mãe e não é sob as ondas. : n
+	A - Não. : n
+	A - Eu moro... Estou a morar com a minha mãe. : y
+	A - Com a minha mãe. : y
+	A - Em Haeven, como quase todos. : y
+	A - Eu não sei! : y
+	A - Não, senhora. : n
+	A - Moro na casa ali em baixo. : y
+User Input - Onde é que tu trabalhas?
+	A - Onde raios estavas? : n
+	A - É um trabalho para o australiano. : n
+	A - Sou de fora. : n
+	A - Estás aí em cima? O quê? : n
+	A - Eu saí para comer alguma coisa. Como foi o teu dia? : n
+	A - O que é que lhe fez? : n
+	A - Não sei. : m
+	A - Não és o único com um tio. : m
+	A - Suba, dê a volta e crie o máximo de diversões que puder. : n
+	A - Não. : n
+	A - Aang, não penses que tudo isto é mau. : n
+	A - Ela precisa de uma injecção. : n
+	A - E tu tens qualquer coisa que os outros não têm. : n
+	A - Por que simplesmente te foste embora? : n
+	A - Vou para a igreja. : n
+	A - Para onde é que estás a olhar? : m
+	A - Olha , eu não compreendo. : m
+	A - Sai com a Prue e a Charlie. : n
+	A - O que é que tu encontraste? : n
+	A - Não, a verdade, é que a coisa esta Realmente muito complicada agora. : n
+User Input - Para onde vais?
+	A - Para a cidade. : y
+	A - Para que lado vai o malhado? : m
+	A - Para a vila. Anda. : y
+	A - Telefonar a um amigo para fazer uma entrega especial. : m
+	A - Vou para Pacific Playland! : y
+	A - Para onde vais? Volta! : n
+	A - Para casa, maldição. : y
+	A - Para casa : y
+	A - Devolvendo-as para a natureza, onde pertencem. : n
+	A - Não sei. : y
+	A - A caminho de casa. : y
+	A - Vou descer. Vou buscar a caveira. : y
+	A - Para uma viagem. Importas-te? : y
+	A - Para onde estás a ir? : m
+	A - Não sei. Chama-me um táxi. : y
+	A - Para onde vou? Só quero... : y
+	A - Vou para o laboratório. Estou a meio de uma experiência. : y
+User Input - Onde é que compraste essa roupa?
+	A - É do Royal. : n
+	A - A mãe disse que eu sou um cordeiro. : n
+	A - Eu estava ensaiando para um jogo escolar. : n
+	A - É melhor que não tenhas tocado nela! Socorro! : m
+	A - O que estás a fazer? : m
+	A - Tem que fazer piada de tudo? : y
+	A - Não o ouço. : m
+	A - Isso é... O que... : n
+	A - O que dizes, Rose? : m
+	A - O quê? : m
+	A - Y Manty? Que é? : n
+	A - Esta é uma roupa social. : m
+	A - Não, ela é emprestada. : y
+	A - Ele disse que é o que você costumava fazer. : n
+	A - Qual é o problema? : m
+	A - Não. : n
+	A - Sr. Pratt ofereceu-se para pagar o resgate. : n
+	A - - Não tive alternativa. : n
+	A - O meu pai. : n
+	A - O que é isto? : m
+User Input - Onde é que trabalhas?
+	A - O que tem isto tudo a ver com conquistar a morte? : n
+	A - Tenta não... : n
+	A - Não digo. Não gosto de estar lá. : y
+	A - Bem, não é a prisão, olhe para ali. : m
+	A - Não faço a mínima! : y
+	A - O quê? : m
+	A - Onde é que está o quê, Jen? : n
+	A - Onde é que está? : n
+	A - Não tenho ninguém. : n
+	A - Onde está a bracelete? : n
+	A - É por ali... O mesmo caminho por onde vieste. : y
+	A - Eu já tenho nada a fazer aqui. : n
+	A - Vocês tenham cuidado. E lembrem-se... se virem o Cavaleiro... Atravessem a ponte. : n
+	A - Não interessa onde estive. : m
+	A - Mas não tem carro. : n
+	A - A casa do Tom. : n
+	A - À Igreja... : n
+	A - Onde está o quê? : n
+	A - Estou na p... : n
+User Input - Onde é que estudaste?
+	A - Por que não se casou ainda? : n
+	A - Onde é que está o quê, Jen? : n
+	A - Vocês tenham cuidado. E lembrem-se... se virem o Cavaleiro... Atravessem a ponte. : n
+	A - Tenta não... : n
+	A - Oh,... Olá, Sr. Heatherington. É o Sr. Heatherington. : n
+	A - A carrinha ainda está aqui, quer dizer que ele não deve ter ido muito longe daqui. : n
+	A - Onde é que está? : n
+	A - Mas não tem carro. : n
+	A - Queres que eu conduza...? Queres um táxi? : n
+	A - Onde está a bracelete? : n
+	A - Não digo. Não gosto de estar lá. : y
+	A - Pike! É o Henry. : n
+	A - Encontrar o Manny. : n
+	A - Já teve alta, mas queria que eu lhe desse isto. : n
+	A - - Acabei de ter uma óptima ideia. : m
+	A - Não interessa onde estive. : y
+	A - Vou para o meu apartamento. : n
+	A - Não faço a mínima! : y
+	A - Mutual Choice. Não, nem por isso. : n
+User Input - Onde trabalhas?
+	A - Não, dirijo uma escola de etiqueta. : n
+	A - Não. Não, nada. : n
+	A - Isto é o que faz quando não esta em casa: Um certifica-se de que estas almas tristes e esquecidas tenham alguém em quem confiar. : n
+	A - Faz o quê? : n
+	A - E como empregado de Sona, meu amigo, tens a capacidade única de não seres baleado por estares aí. : n
+	A - Tenho a certeza que te recuperarás numa esquina de Hollywood Boulevard. : n
+	A - Secretário de Estado do Tesouro Geithner falhara em quase tudo o que fizera na vida. : n
+	A - Não. : n
+	A - Relaxa. Não é o melhor momento. : m
+	A - Bem, trabalho lá também, ou ao menos trabalhava... ...se não chego a tempo. : m
+	A - Não, é verdade. : n
+	A - Tudo bem. Tudo bem. : n
+	A - Desculpa, o que é que ele disse? : m
+	A - Vai haver uma festa de arromba no "Big Bob", com muita cerveja. : n
+	A - O casamento está em nossas cabeças, e você está convidando essas estrangeiras... : n
+	A - Não, está em casa. : n
+	A - Não diga! : n
+	A - Trabalhamos para o meu irmão. : n
+	A - O que há de errado nisso? : n
+	A - Ele disse que não podia ajudar. : n
+User Input - Onde vives?
+	A - Em casa. : y
+	A - Vivo na Jackson Heights. Dantes tinha o meu recanto em Mumbai... : y
+	A - Não. : n
+	A - Não digo. Não gosto de estar lá. : y
+	A - Aqui mesmo. Esta é a tua casa. : y
+	A - Rose City. : y
+	A - Disse-lhes onde e quando te podiam encontrar. : n
+	A - - No Herman HaII. : y
+	A - Mais quanto tempo... isto vai durar? : m
+	A - Que se passa, querida? : m
+	A - Com a minha mãe e os outros, em casa de Mr. Logan, a 16 kms. : y
+	A - Vivo na lnglaterra. : y
+	A - Em lnglewood, com a minha tia. : y
+	A - Em Eastland Heights, nos arredores de Atlanta. : y
+	A - - Anda, vou mostrar-te. : y
+	A - À frente de Saint-Laurent. Uma casinha perto de Pointe-Claire. : y
+	A - Não tenho ninguém. : n
+	A - A mata é a minha casa. : y
+	A - Não está em casa. : n
+	A - Aqui em Roma, Número 14 Via-delle-Camene. : y
+User Input - Podes ajudar-me com isto?
+	A - Ajudar-te a fazer o quê? : y
+	A - Ferramentas para quê? : m
+	A - Sim, claro. : y
+	A - Tu queres que eu te leve ao teu disco voador? Não! : y
+	A - Não é preciso. : y
+	A - Só Deus sabe quanto têm sofrido, a última coisa que eu quero... ... é fazer-vos sofrer mais. : m
+	A - Claro, eu ajudo-te. : y
+	A - Posso. : y
+	A - Claro. : y
+	A - Porquê? O que estás a oferecer? : y
+	A - Ela foi embora, Ray. : n
+	A - EstÃ¡ a fazer o controlo de vÃ¡cuo. : n
+	A - O pai está a almoçar fora. Não sei com quem. : n
+	A - Mãe, o que é? : y
+	A - Não consigo abrir isto. : y
+	A - Querido, passa-se alguma coisa? : m
+	A - Será que posso? : m
+	A - Claro. Entre. : y
+User Input - Onde vais assim vestido?
+	A - Vou buscar as alianças da Maya e do Dink. : y
+	A - Vou para o meu quarto. : y
+	A - Isto não é o meu problema. : n
+	A - Onde achas que vou? Assaltar um comboio! : y
+	A - Para a minha lição! : y
+	A - é a minha despedida de solteiro. : y
+	A - Ainda tenho de ir à policia. : y
+	A - Vou ajudá-lo a fazer mudanças e precisam da minha ajuda. : y
+	A - A uma entrevista. : y
+	A - Vou buscar as roupas da Sally à lavandaria. : y
+	A - Vou buscar madeira. : y
+	A - - À casa de banho. : y
+	A - Vou para casa. : y
+	A - Vou lá fora para ir buscar alguma coisa para beber. : y
+	A - Não sei. : y
+	A - Vou a encontrar uma forma de subir isso e sair daqui. : y
+	A - Vou a arranjar quem ma chupe. : y
+	A - Vou apanhar a rapariga. : y
+	A - A casa dela. : y
+User Input - Como correu o dia?
+	A - Foi bom. : y
+	A - Correu bem. Foi longo. : y
+	A - Como correu o quê? : y
+	A - Foi bom, pai. : m
+	A - Bem. Trabalho novo. Lugar carira. : y
+	A - Está tudo... bem. : y
+	A - Nada bem. : y
+	A - Correu bem. : y
+	A - É do escritório. : n
+	A - Querida, estás a reagir tão bem. : n
+	A - Correu tudo bem. O médico diz que estou bem. : y
+	A - Estás bem? : n
+	A - Uma tarde inteira a levar com portas na cara. : y
+	A - Bem. : y
+User Input - Como aprendeste a falar português?
+	A - É natural, nasci no Porto. O meu pai é comerciante de vinhos. : y
+	A - Como queres que saiba? : y
+	A - E acho que isso envergonhou o Ozzy por não conseguir fazer. : n
+	A - Esta é a minha amiga. : n
+	A - Observava a minha mãe e fazia exactamente o oposto. : y
+	A - E a Loretta... : n
+	A - Não aprendi tudo. : y
+	A - Com a minha mãe. : y
+	A - Não sou teu mano, irmão. : n
+	A - Sim...o quê? : n
+	A - Aprenderam a dizer não. : n
+	A - Não só falar, mas também a amar. : y
+	A - Não é? : n
+	A - Eu não sabia. : n
+	A - Não sei porquê, mas foi contra ele que descarregaram a raiva. : n
+	A - Porquê? Não era o que estavas à espera de alguém como eu? : m
+	A - A minha mãe, ela ensina na escola. : y
+	A - A ver TV. : y
+	A - Aprende a fazer negócios e aprende a escrever sobre isso. : n
+	A - O meu amigo. : m
+User Input - Aceitas tomar café?
+	A - Sim, obrigado. : y
+	A - Não quero café. : y
+	A - Não. : y
+	A - Não, obrigado. : y
+	A - Vá lá, ela não bebe café. : n
+	A - E como foi? : n
+	A - Não, obrigada. : y
+	A - Não, aqui está bem. : y
+	A - Agora não. : y
+	A - Não estou com muita fome. : y
+	A - Tu não bebes café. : y
+	A - Não estou com fome. : y
+	A - Sabe o que está acontecendo aqui? : n
+	A - Eu não bebo café. : y
+	A - Não. Obrigado. : y
+	A - Sim, claro. : y
+User Input - Achas que hoje vai estar calor?
+	A - Não sei, agora está muito picuinhas. : n
+	A - Não sei. : y
+	A - A Monica é uma causa perdida. Para ser uma grande líder de claque... tem de se fazer sacrifícios, e sugiro que comeces por ela. : n
+	A - Espero que sim. : y
+	A - Acho que sim. : y
+	A - Não é o que eu acho. É o que eu sei. : y
+	A - O quê? Que ela não tem uma parte? : n
+	A - Por que não resultaria? : n
+	A - Não, ele é um idiota. : n
+	A - Não a quantia que queriamos, não temos os 40 mil, não temos assim tanto. : n
+	A - Eu, sim. : y
+	A - Problemas? Acho que não. : n
+	A - Sim. : y
+	A - E claro que sim. : y
+	A - Não. : y
+User Input - Com quem vives?
+	A - Com a avó Rigg. : y
+	A - Com o Rockefeller. : y
+	A - Com quem? : n
+	A - O que se passa? : n
+	A - Só com o meu tio. : y
+	A - Com o pai, claro. : y
+	A - Como com quem? : y
+	A - Com quem o necessite. : y
+	A - Com o Johnny. : y
+	A - Com alguém. : y
+	A - Mas... o que... : m
+	A - Com o Super-homem. : y
+	A - Com o Manu. : y
+	A - Com o papai. : y
+	A - Com o Mathieu. : y
+	A - Com a Molly. : y
+	A - Com a minha mãe, o meu pai, e o meu cão, Max. : y
+	A - O que é que isso interessa? : y
+	A - Não sei! Com quem quiser. : y
+	A - Com o meu irmão. : y
+User Input - Andas em que faculdade?
+	A - Não, eu... : n
+	A - Querem saber o que eu fiz? : n
+	A - Então, não sabes o que estou a passar. : n
+	A - Eu não vou para a faculdade. : y
+	A - O quê? : m
+	A - O que andas a fazer? : n
+	A - A cozinhar raviolli de saltos altos. E tu? : n
+	A - Não ando a bisbilhotar. : n
+	A - Estou a tirar Psicologia. : y
+	A - O quê, querido? : m
+	A - A alimentar os patos, o que te parece? : n
+	A - Saltar a 450 m não é fácil. : n
+	A - Desculpa. É curiosidade natural por uma rapariga assim. : n
+	A - O que andas a fazer aqui em baixo? : n
+	A - Não é uma boa área de busca, mas doutra maneira não te tínhamos encontrado. : n
+	A - O que é que ela disse? : n
+	A - Não te preocupes com o Max. Eu digo-lhe que a tua avó morreu. : n
+	A - Estou a tirar o ano de folga. : y
+	A - Ha, andas a ficar interessada em mim. : n
+	A - Não sei. : y
+User Input - Amanhã encontramo-nos?
+	A - E amanhã, e amanhã. : y
+	A - Amanhã? : y
+	A - Amanhã. : y
+	A - Sim, amanhã. : y
+	A - Amanhã bem cedo. : y
+	A - Até amanhã! : y
+	A - Por que amanhã? : y
+	A - Sim! : y
+	A - Amanhã... : y
+	A - Sim. : y
+User Input - A tua familia é numerosa?
+	A - Não... : y
+	A - E o teu nome de família. : n
+	A - Olha, eu estou apenas a começar a minha vida, de volta juntos. : n
+	A - É. : y
+	A - À sua. : n
+	A - Não é isso... : n
+	A - Desde que o meu irmão morreu... perdemos um pouco a cabeça. : n
+	A - O que aconteceu? : n
+	A - O quê? : m
+	A - Kyle, a minha família é que me salvou. : n
+	A - Como é que eles se sentem? : n
+	A - O meu pai morreu quando eu tinha 12 anos. : y
+	A - Não, nenhum deles sabe sobre o bebé. : n
+	A - Sim, a minha família. : n
+	A - É isso que vamos fazer. : n
+	A - Quer mesmo saber? Não é uma história fácil de relembrar. : y
+	A - E à minha. : n
+	A - A única família que tinha, vi-os a serem mortos. : y
+	A - Alguém que trabalha para a tua família? : n
+	A - Não passo a ser responsável por ela. : n
+User Input - Andas na escola?
+	A - Sim, é o concerto de pop. : n
+	A - Não. : y
+	A - Oh, sim, não. : y
+	A - Em frente a todos. : n
+	A - Não, faço cursos por correspondência. A Mãe diz que é melhor assim. : y
+	A - Ela estava a chorar, Tyler! : n
+	A - Encontraram as coisas dele, por isso já não está lá a dormir. : n
+	A - Não, a mamãe vai. : n
+	A - Não, é o meu prazer de ler. : n
+	A - A mãe não lhe contou? : y
+	A - Não voltes a dizê-Io, sim? : n
+	A - Não o vejo desde pequenino. : n
+	A - Não sei. Como se chama a escola? : y
+	A - Não vou à escola. : y
+	A - Vamos buscá-lo. E levamo-lo connosco. : n
+	A - Como o que? : n
+	A - Sou professor. : y
+	A - Não estou surpreso. Bem, nós estamos. : n
+User Input - Como e que te chamas?
+	A - Chamo-me William, mas chamam-me de O miúdo de Abilene. : y
+	A - Whisper. Como é que te chamas? Whisper! Finn. : n
+	A - Quem és tu? : n
+	A - Courtney, o que é que estás aqui a fazer? : n
+	A - O meu nome é Tomas. : s
+	A - Porque é que ainda não falam? São deficientes ou algo do tipo? : n
+	A - Abby. Qual é o teu? : y
+	A - Briana. : y
+	A - Como é que te chamas? : y
+	A - Elmer Gravlaki. : y
+	A - Eu sou a Abóbora. : y
+	A - O nome dele é Oscar. : n
+	A - Betty Sizemore. O que é que escreve? : y
+	A - Como é que me chamo? Bellmer, Paul Bellmer. Porquê? : y
+	A - Tu és bom! : n
+	A - John Smith. : y
+	A - Cuidado com a câmara. : n
+	A - Edward, Edward B. Train. : y
+	A - Não te lembras? : y
+	A - O quê? : m
+User Input - Conheces essas pessoas atrás de ti?
+	A - Vamos! : m
+	A - Isso é repugnante. Esse armário. : n
+	A - Não sei do que é que estás a falar. : y
+	A - O que temos aqui? : n
+	A - O sonho de espIendor : n
+	A - O que foi isto? : n
+	A - O quê? : m
+	A - Anda, vamos! : m
+	A - O que foi, Kyoko? : n
+	A - Vamos. : m
+	A - Não, mas vou acertar. : n
+	A - Estás a falar de quê? : y
+	A - Que sorte a minha, conheci o único criminoso que não conhece o homem mais poderoso da cidade! : n
+	A - Espero que sim. : y
+	A - O que estás a fazer? Quer-nos matar? - Eu só... : n
+	A - De onde é que vêem? : m
+User Input - Como se chama a tua mãe?
+	A - Chama-se: "Os gritos de um Atleta Antes de Morrer". : n
+	A - A tua miúda, como se chama? : n
+	A - Ela está morta! : y
+	A - Ela não é a minha mãe. : n
+	A - A questionar o meu discernimento. : n
+	A - Ele é real. : n
+	A - A minha mãe é lindíssima. : n
+	A - A minha mãe que me odeia. : n
+	A - "A Ratoeira". : n
+	A - Parece ter corrido tudo bem à segunda tentativa. : n
+	A - Ela está bem. : n
+	A - Não parecia muito bem da última vez que a vi. : n
+	A - Voltou a levantar-se. : n
+	A - Não me lembro. Ninguém vai mais lá. : y
+	A - Creio que é Marlene. : y
+	A - E a Cam respondeu... : n
+	A - Está bem. : n
+	A - A minha mãe não vos fez nada. : n
+	A - Deixa a minha mae fora disto. Ela é mais homem do que tu jamais serás. : y
+User Input - Como se chama o teu irmão?
+	A - Está bem, ele é o tal. Aquele ali mesmo. Estou? Olá! : n
+	A - O nome do meu irmão é o mal-cheiroso Jimmy Dorf. Queres saber porquê? : y
+	A - Acho que como eu. : n
+	A - O meu?.... Chama-se Marcus. : y
+	A - O que achas? : m
+	A - Eu e o meu irmão? : n
+	A - O meu irmão? Como assim, o meu irmão? : y
+	A - Conheceu o Mitch em São Francisco? Não é assim? : n
+	A - Ele está bem doente, não? : n
+	A - Onde está o meu advogado? : n
+	A - O que importa? : y
+	A - Sim, é o Bridey. : n
+	A - Ele é o Sr. Samuel, um produtor de cinema americano. : y
+	A - Diga o seu nome. : n
+	A - O Professor Flostre. : n
+	A - Importa-se se eu não lhe disser? É uma coisa tão triste... : y
+	A - Tom, e ele não é o meu namorado. : y
+	A - Jeanne d'A rc. É nos arredores de Soissons. : n
+	A - O tipo ligado ao paranormal? : y
+	A - É o tipo de coisas que ele faria. : n
+User Input - Como estás?
+	A - Bem. : y
+	A - Estou bem. : y
+	A - - Bem... : y
+	A - Bem... : y
+User Input - Costumas ir ao cinema?
+	A - Eu não me importo. : n
+	A - Ouve... ...sinto muito. Por tudo o que disse e fiz. : n
+	A - Sim, e de lá vamos para a festa do Andy. : y
+	A - Claro que não! É noite de semana. : n
+	A - O quê? Qual é o nome dele? : n
+	A - Sim, é do que precisas. : y
+	A - Não, amanhã não posso. : n
+	A - E o urso está a acampar na floresta : n
+	A - Certo. Isso é bom. : y
+	A - Näo sejas tola, é noite de sábado. É noite de sair. : y
+	A - Não faço mais isso. Está bem? : y
+	A - Bom, quando é que volta? : n
+	A - Está bem. : n
+	A - Não! : y
+	A - É uma crueldade da vida! : n
+	A - Não que eu passe lá a vida. Era só um exemplo. : n
+	A - O que devo dizer a seus pais? : n
+	A - Uma bilhete. Isso é bom. : n
+	A - O que você quer de mim? : n
+User Input - Como vai o dia?
+	A - Foi normal. E o teu? : y
+	A - Vai lamentar o dia... em que se meteu com o Supremo. : n
+	A - Muito bem. : y
+	A - Está indo bem. : y
+	A - O scâner dele é no final da semana. : n
+	A - - Oh, Jesus. O trabalho é uma merda, ok? : y
+	A - Bom. E o teu? : y
+	A - Bem. : y
+	A - É do escritório. : n
+	A - Começou bem, e acabou... : y
+	A - Já tive melhores. : y
+	A - Vai bem, obrigado. : y
+	A - Ótimo. Ele é fabuloso. : n
+	A - Vai bem. : y
+	A - É um chato. : n
+	A - Nada que te diga respeito. : y
+	A - Vai bem. É... : y
+	A - Ensaio com a banda depois das aulas, e trabalho às 6:00. : n
+User Input - Como está o tempo?
+	A - Falámos do tempo. : n
+	A - O que estás a fazer? : n
+	A - Que estamos noivos! : n
+	A - Que engraçada. : n
+	A - Está ótimo. Só que estou na Escócia. : y
+	A - Vivendo com o sol brilhante, irmã. Nada, apenas o sol brilhante. : n
+	A - Não está muito bom. : y
+	A - Não estou na Florida. Estou ligando do Aeroporto de Stapleton. : y
+	A - Nuvens a 20 mil pés em quase todo o percurso. : y
+	A - Quem se preocupa com o passado? : n
+	A - Vê. Um sistema de baixa pressão a vir do Alasca. : y
+	A - Jack, o que estás a fazer? : n
+	A - Tens que confessar os seus pecados, ou o céu não te aceita. : n
+	A - Ontem, pensava que a amava. : n
+	A - Escuta, a única razão de eu estar aqui, é porque o meu chefe me disse para estar. : n
+	A - Então vais ter de te esmerar, não é? : n
+	A - Susie não é o primeiro andróide que criei. : n
+	A - Os removedores de neve estão mantendo as coisas funcionando na cidade... mas as estradas nas montanhas estão bloqueadas. : y
+	A - Agora está acima. Já sabe. : n
+	A - Bom. E eu vou... Ok. Então, adeus. : n
+User Input - Como é que te chamas?
+	A - Briana. : y
+	A - Edward, Edward B. Train. : y
+	A - Tu és bom! : n
+	A - John Smith. : y
+	A - O meu nome é Tomas. : y
+	A - Como é que me chamo? Bellmer, Paul Bellmer. Porquê? : y
+	A - Betty Sizemore. O que é que escreve? : y
+	A - Cuidado com a câmara. : n
+	A - Como é que te chamas? : n
+	A - Chamo-me William, mas chamam-me de "O miúdo de Abilene." : y
+	A - O quê? : m
+	A - Abby. Qual é o teu? : y
+	A - Porque é que ainda não falam? São deficientes ou algo do tipo? : n
+	A - O nome dele é Oscar. : n
+	A - Elmer Gravlaki. : y
+	A - Courtney, o que é que estás aqui a fazer? : y
+	A - Não te lembras? : y
+	A - Whisper. Como é que te chamas? Whisper! Finn. : n
+	A - Quem és tu? : m
+	A - Eu sou a Abóbora. : y
+User Input - Como te chamas?
+	A - Lydia, não é nada grave. : n
+	A - Não vamos jogar esse... : y
+	A - Marty... : y
+	A - Como é que chegaste aqui? : n
+	A - Chamo-me Robert. : y
+	A - É um pouco tarde para apresentações, não? : y
+	A - Chamo-me... : y
+	A - Isto aqui.. é tudo sobre o que se trata. : n
+	A - Legião é o meu nome, porque somos muitos. : y
+	A - Marty. : y
+	A - Cláudia. E tu? : y
+	A - Eu sou o Bouddha. E tu? : y
+	A - Robert. : y
+	A - O nome dele é Oscar. : n
+	A - Maria. E tu? : y
+	A - Ellie, e tu? : y
+	A - Mia. Qual é o seu? : y
+	A - - Este é o Jacob. Esta é a Jennie. : n
+	A - Para que queres saber o meu nome? : y
+	A - O quê? : m
+User Input - Costumas passar por aqui?
+	A - Sim! : y
+	A - Eu e a Donna fazemos exercíco. Não é verdade, Donna? : m
+	A - O outro lado é uma escapatória para os administradores, em caso de motim. : n
+	A - Não de tudo. : n
+	A - Não. : y
+	A - - Sim! : y
+	A - Sim. : y
+	A - Não, por favor, eu quero que me diga : n
+	A - Eu tentei, ele não irá. : n
+	A - O Fender tem um barco. Vamos a pé. : n
+	A - Vá para o quarto minha Senhora. : n
+	A - Porque não? Estou em paz. : y
+	A - Que parte de 'cala-te', é que não entendes? : m
+	A - Fique aqui, por favor : y
+	A - Não acham que tenho dois aldeãos aqui? : n
+	A - Não sabia o que ele fazia aqui exactamente. : n
+User Input - De onde vens?
+	A - Do rio abaixo. : y
+	A - New York. : y
+	A - Não tens nada a ver com isso. : y
+	A - Não se prenda comigo. : n
+	A - Fui pescar a Cuernavaca. : y
+	A - Tens alguma coisa a dizer? Desta vez em inglês. : n
+	A - Às terças trabalho na destilaria. : y
+	A - Não! : n
+	A - De Columbus, no Ohio. : y
+	A - Não sei. : y
+	A - Porque pareces deslocada : n
+	A - Vamos. : n
+	A - Não. : n
+	A - Metro Sul. : y
+	A - Ali de trás. : y
+	A - Não, pá. Não olhes. : n
+	A - Eu sei que o Kane não te enviou. Então quem te enviou? : n
+	A - Está bem. : n
+User Input - Dás-me o teu contacto?
+	A - Obrigado por vires. : n
+	A - Porque é que ele havia de o fazer? : n
+	A - Do que estás a falar? : y
+	A - O que te disse? : n
+	A - Estás a defender o drogado ou o quê? Não, quero que ele se foda. Estou com o Sokol. : n
+	A - Por que não me informaram? : n
+	A - Abbey. E já pensava que nunca mais ias perguntar. : m
+	A - Senhor, é um submarino. Os padrões de som correspondem ao Florida. : n
+	A - Tu não existes. : m
+	A - Viram-no pela última vez com o Agente Lee, que foi ferido na derrocada. : n
+	A - Ah, sim. : y
+	A - Não. Não. : y
+	A - Eles mataram-no. Ele está no caixão comigo. : n
+	A - Eu trato dele. : n
+	A - O nome dele é Arif. : n
+	A - Não finjas que é mais do que isso. : n
+	A - Juro que não sei quem é! : m
+	A - É o 04 336 6310. : y
+	A - E vou enviar-te um convite para a festa do bebé. : n
+	A - O que é pena? Não sabes? : n
+User Input - De onde é que vens?
+	A - Não se prenda comigo. : n
+	A - Que estás a fazer? : n
+	A - - O que é que isso interessa? : y
+	A - Ouça o que lhe digo. : n
+	A - De onde todos viemos. A Estrela Natal. : y
+	A - Não consigo ver! : n
+	A - É um trabalho para o australiano. : n
+	A - De Beverloo. : y
+	A - Eu sei que o Kane não te enviou. Então quem te enviou? : n
+	A - Oh, não sei. : y
+	A - De minha casa. A porta estava aberta. : y
+	A - Disse-lhes que nos veríamos atrás destas rochas. : n
+	A - Agora sei que não estamos sozinhos. : n
+	A - Ia a caminho da casa do Andy Andersen quando vi o teu carro. : y
+	A - De Chicago. : y
+	A - O que é que estás aqui a fazer? : n
+	A - Merda. : n
+	A - O quê? Onde nasci? : y
+	A - Não tens nada a ver com isso. : y
+	A - Está por todo o lado. : n
+User Input - E passatempos preferidos?
+	A - O quê? : m
+	A - Sim, é a mamá no hospital, cuando era pequenina. : n
+	A - O que? : m
+	A - Não digas mais nada. : n
+	A - Mas... na verdade é o "Flores de Aço". : n
+	A - Não preferiríeis que tivesse um casamento simples e sem complicações, como a Mary? : n
+	A - Sabes o que é? : n
+	A - O fim é tão ambíguo. : n
+	A - É uma desculpa! : n
+	A - A primeira vez que o li era um rapazinho e quis conhecer o Capitão Nemo. : y
+	A - A minha também! : n
+	A - Montanhismo é um passatempo. : y
+	A - Ele candidatou-se a um emprego em África. O projecto não vingou e eu tinha uma vaga. : n
+	A - Acho que esta é a sua 15ª visita... : n
+	A - Esta é uma escavação privada, Sr. Carsen... ...receio que as suas medições terão de esperar. : n
+	A - Sabe o que salvou a vida a Napoleão? : n
+	A - A sério Charlotte, qual é o teu problema comigo? : n
+	A - Além disso, é o meu aniversário. : n
+	A - É a tua preferida? : n
+User Input - De onde és?
+	A - De por aí. : y
+	A - De uma terriola chamada San Anton. : y
+	A - De a Oeste daqui. : y
+	A - Dos arredores de Filadélfia. : y
+	A - De onde sou? : y
+	A - San Diego. : y
+	A - Do norte. : y
+	A - Do novo forte, da caravana. : n
+	A - - De Boston. : y
+	A - De um lugar chamado Glens Falls. : y
+	A - Originário de Dublin. : y
+	A - De Madrid. : y
+	A - De quando. : n
+	A - De Boiro. Estava a dar um passeio de bicicleta. : y
+	A - De Chicago. : y
+	A - De Sicades. : y
+	A - De Argyle, no Texas. Fica mesmo a Norte de Dallas. : y
+	A - Vim agora de... : n
+User Input - De que tipo de filmes gostas?
+	A - Não. : n
+	A - É um pouco Nana Tootsie para o meu gosto. : n
+	A - Eu não sei. Ele é um idiota. : n
+	A - A Shoah é ''esse tipo de coisa''? : n
+	A - Por que não olha para mim, cabrão? : n
+	A - Eu... Não quero que saias magoada. : n
+	A - Eu tenho uma agência de publicidade. : y
+	A - Ainda não pensei sobre isso. Sra. Kiran, diz-se que é a sra. Kiran Kumar. : n
+	A - Do tipo de música que vós gostardes. : n
+	A - Não sei. Minha prima, mora em Silver Lake. : n
+	A - É um lorno. : n
+	A - Não quero nenhum carro. : n
+	A - Policial e sci-fi. : y
+	A - Sim, eu gosto de filmes. : n
+	A - Como? Gosto deIe como é. : n
+	A - Os de finais tristes ou felizes? : y
+	A - Não me importa. Acho que disco. : n
+	A - O de sempre..."O Beco da Vaselina", "Dois Caras, uma Garota e Um Cavalo", "Um Preto Grande..." : y
+	A - Sim. : n
+User Input - De que tipo de músicas gostas?
+	A - Não quero nenhum carro. : n
+	A - Eu... Não quero que saias magoada. : n
+	A - Não sei. : y
+	A - Sim. : n
+	A - É um pouco Nana Tootsie para o meu gosto. : n
+	A - Eu não sabia que fazias isso. : n
+	A - Sim. O Que? : n
+	A - Hummmmm... ouço hip-hop e, rock, soul, funk, não sei. Gosto de estar sempre a renovar. : y
+	A - A música é óptima e sabes que adoro dançar. : n
+	A - Como? Gosto deIe como é. : n
+	A - A Shoah é ''esse tipo de coisa''? : n
+	A - Sim, gosto. : n
+	A - Do tipo de música que vós gostardes. : y
+	A - Ai sim? : n
+	A - Sim : n
+	A - Música? : y
+	A - O que foi? : n
+	A - Não me importa. Acho que disco. : n
+User Input - De onde és natural?
+	A - - De Boston. : y
+	A - De Madrid. : y
+	A - De Sicades. : y
+	A - De uma terriola chamada San Anton. : y
+	A - De Nova Iorque. E chamo-me Victoria. : y
+	A - De Argyle, no Texas. Fica mesmo a Norte de Dallas. : y
+	A - De onde sou? : y
+	A - De um lugar chamado Glens Falls. : y
+	A - Originário de Dublin. : y
+	A - De Chicago. : y
+	A - Sou o Jacob. : n
+	A - Dos arredores de Filadélfia. : y
+	A - Vim agora de... : y
+	A - De a Oeste daqui. : y
+	A - San Diego. : y
+	A - De Arkansas. : y
+	A - De por aí. : y
+	A - De Boiro. Estava a dar um passeio de bicicleta. : y
+User Input - Do que é que tu mais gostas?
+	A - Então para quê preocupar? : n
+	A - Não. : n
+	A - O que eu detesto mais do que a inconveniência... são actores que pensam que podem realizar. : n
+	A - Como é que nos vemos todas as semanas, mas nunca fizemos nada? : n
+	A - É doloroso viver com medo, näo é? : n
+	A - Do que é que gostas Matt? : n
+	A - Isso é porque sabes do que eu gosto. : n
+	A - Ninguém está a dizer que é preciso álcool para ter uma noite excitante e memorável. : n
+	A - É mais forte do que eu. : n
+	A - É a pergunta de hoje Kelly. Do que é que não gostas? : n
+	A - Não sou chato. : n
+	A - Não entendes mesmo, não é? Ela não regula da cabeça! : n
+	A - Eu não... : y
+	A - Cuidado! Ainda se magoa mais do que a ela! : n
+	A - Sim, bem, não estou pedrada. : n
+	A - Mas foste um idiota da última vez que conversámos. : n
+	A - Simon. É o mais velho. : m
+	A - Haley, o microfone vais pegar E do rapaz que gostas vais falar : n
+	A - Não é um querer, é uma necessidade : n
+User Input - Costumas sair à noite?
+	A - Nao, senhor, ainda nao, mas o Cooper voltou e nao sei o que está a fazer. : n
+	A - Não chamo isso de "sair". : y
+	A - O problema é ele, não eu. : n
+	A - Mary, minha Mary Levo-te a sair hoje à noite : n
+	A - Não sei como consegues. : n
+	A - Vou fazer o que puder. : y
+	A - E eu disse que não. : y
+	A - Não. : y
+	A - É a minha vez de dar a festa, a seguir. Não pises o meu cabelo. : n
+	A - Sim! : y
+	A - O que é que pensas que estas a fazer? : n
+	A - O quê? Já não gostas daquilo? : n
+	A - Não, não sei. Tenho de terminar um trabalho. : n
+	A - O quê? : m
+	A - O Que? : m
+	A - Por que eu não poderia sair agora? : n
+	A - Espero que sim. O que estás a fazer? : n
+User Input - Que música gostas?
+	A - É o título de uma canção. Escreveu-a um húngaro. : n
+	A - A música é óptima e sabes que adoro dançar. : n
+	A - Adoro esta música. : m
+	A - Sim, a música é um idoma que todos entendem. : n
+	A - Sim, tem ritmo e pode-se dançar. : n
+	A - Pois verás, o basket é como a música. : m
+	A - Toca bem o violino mas produz pouco que se possa chamar de música! : n
+	A - Música? : y
+	A - Eu também adoro música. : n
+	A - Acho que é Haydn. Música de câmara. : y
+	A - Do tipo de música que vós gostardes. : y
+	A - Sim. : n
+	A - Eu adoro a música! : m
+	A - O que me lembra... : m
+	A - E que tal algum respeito? : n
+	A - Música boa. : y
+	A - Sabe o que eu gostaria, só uma vez? : n
+User Input - Que hobbies tens?
+	A - - Há alguma coisa... o quê? : n
+	A - Não sei. Dói-me o pescoço. Uma dor lancinante. : n
+	A - Tenho, que me apreenderam a carrinha, graças a si. : n
+	A - Meu bem, diz-me que se passa? : n
+	A - Nada. : y
+	A - Pensei, quando falámos de assuntos íntimos... ...que você guardaria o segredo e não os repetiria. : n
+	A - O nariz a sangrar. : n
+	A - Uns batimentos de coração. Não falam. : n
+	A - Que queres dizer? : y
+	A - É o tipo que me escapou, Jacob. Queres que o despache? : n
+	A - O que é? : n
+	A - Não por favor. : n
+	A - Não tens nada. : n
+	A - Não me peças! : n
+	A - Não, não, não. Sou livre. : y
+	A - Não é bom. : n
+	A - Não sabes o que viu. : n
+User Input - Que país gostavas de visitar?
+	A - O que interessa não é a nossa segurança. : n
+	A - Não gosto de compromissos. : n
+	A - É por isso que está aqui? : n
+	A - E ele a tirou de lá. : n
+	A - Que gostam de aventura, o tanas. Até comigo resultou. : n
+	A - Não era bem isto que tinha em mente, mas também serve. : n
+	A - Preciso de um contacto para o livro. : n
+	A - Esta é apenas uma de muitas. : n
+	A - Nunca pensei em ir para universidade, até que o Dr. Lee me recrutou. : n
+	A - É o que se faz na minha família. : n
+	A - Não. : n
+	A - Eu sou de Akmannycaca, estamos na lista telefônica dos Estados Unidos : n
+	A - Não, claro que não! : n
+	A - Como é que ele se chama? : n
+	A - Não pode se atrasar. : n
+	A - Nem sequer gostas de bebés, o que farás com crianças. : n
+	A - Não sei. : y
+	A - Quem toma conta de ti? : n
+	A - Não quero nenhum carro. : n
+	A - O tipo que pensa que sua vida é mais importante que qualquer outra pessoa. : n
+User Input - Que horas são?
+	A - É cedo, mas tem de ir. : m
+	A - É de madrugada, temos que nos ir. : m
+	A - É tarde. : y
+	A - São quase 8:00. : y
+	A - 5 e meia. A que horas é o voo? : y
+	A - São três e um quarto. : y
+	A - É hora de ir trabalhar. : y
+	A - É tarde, já passa da meia-noite. : y
+	A - São quase 3. : y
+	A - São quase 8h30. : y
+	A - Não é tarde, ainda nem é meio-dia. : y
+	A - É de tarde. : y
+	A - É cedo. São seis e meia. : y
+	A - Não tenho relógio! É teu! : y
+	A - Seis e meia. : y
+	A - É cedo. : y
+	A - São quase 2 e meia. : y
+	A - São quase 9 horas. : y
+	A - Creio que é... meio-dia : y
+User Input - Que género de musica?
+	A - Não sei. : y
+	A - A música é óptima e sabes que adoro dançar. : n
+	A - É muito simples. : n
+	A - Não sei de que género. : y
+	A - Havia uma linda mulher... com um sorriso tão radiante que iluminava a noite mais escura. : n
+	A - É um género de música do mundo. : y
+	A - Do género em que fugimos e escondermos a cabeça na areia? : n
+	A - Coisas que não devia ver. : n
+	A - Da tropa. Não como essas amaricadas. : y
+	A - Não, eu sei que entendo. : n
+	A - Não vos serve de nada... : n
+	A - E o que é que me fizeste? : n
+	A - Não, é um... : n
+	A - Um de pronto-a-vestir, como no catálogo da Sears. : n
+	A - Género religioso. : y
+	A - Do tipo de eu não ir trabalhar hoje? A malha nota-se muito? : n
+	A - Sobre um exército secreto... o dos 12 Macacos. : n
+	A - Um movimento voluntário. : n
+	A - É a dona? : n
+	A - Vozes, cantando o meu nome. : y
+User Input - Que línguas falas?
+	A - E que mais? : n
+	A - Vem cá, meu. : n
+	A - Sou fluente em mais de 6 milhões de formas de comunicação e... : y
+	A - É mais suave que a nossa. : n
+	A - Portanto, descemos e confundimos a tua língua... ...para que não entendas a língua de outro. : n
+	A - Não. Parece que já entende a nossa língua. : n
+	A - O que é inglês? : n
+	A - E que não anda por aí de camisola como um árabe. : n
+	A - Sei que é uma virgem. : n
+	A - É uma coisa de anjo. : n
+	A - É melhor que nos devolva a Sarah. : n
+	A - O quê? : m
+	A - Cinco, mas francês tenho falado. : y
+	A - E a vocalização de duas vozes distintas simultaneamente? : n
+	A - E o que diz? : n
+	A - E sabes cozinhar. : n
+	A - Ladino. A lingua que a tua mãe falava quando era pequena, em Espanha. : y
+	A - - O quê? Não, não, ouve... : m
+User Input - Que fazes para te divertires?
+	A - Que se lixe. : n
+	A - Não aprovo que andes peIo cemitério, acho isso mórbido, proíbo_to. : n
+	A - Sim, nao E? : n
+	A - Não estava a gozar. : n
+	A - Não, estou a gostar muito. : n
+	A - Não faço ideia do que estás a falar. : y
+	A - É o que vou fazer já. : y
+	A - Eu meio que tento não me divertir. : y
+	A - Mais do que isso! : n
+	A - Pensei que esta fosse a saída. Eu tentei. : n
+	A - Espero que sim. : n
+	A - Oh, espero por tipos como tu. : y
+	A - Não é uma questão de divertimento. Eu sei que tenho razão. : n
+	A - Tive que ir atrás de ti. : m
+	A - Não é verdade! : n
+	A - O quê? : m
+	A - Diz-me que não ias adorar a ideia de esfregar isso na cara da Brenda. : n
+	A - Não posso acreditar que sejas tu. : n
+	A - Não faço isto para me divertir. : y
+	A - Não é para isso que este local serve. : n
+User Input - Que gostas de fazer no teu tempo livre?
+	A - Ela é inteligente. Não a entrevistaste. : n
+	A - O quê? : m
+	A - Ou o que quer fazer? : n
+	A - O que estas para aí a dizer? : y
+	A - Bem, penso que deviam matá-lo durante o sono. : n
+	A - ok. assim que eu estarei bem só por um momento. : n
+	A - O que for indicado. : y
+	A - Não. : n
+	A - Que é isso? : n
+	A - Mas escrever não é o sentido da tua vida. : y
+	A - Não falas comigo, não é? : n
+	A - A culpa não é tua. : n
+	A - O que é que se passa com este tipo? : n
+	A - O que eu gostaria de fazer? : y
+	A - E o Paul Finch contratou uma dançarina exótica ao invés de uma actriz. : n
+	A - Não, gosto de revistas. : n
+	A - O que é que a Natalie Anderson estaria a fazer a saír com um estúpido como eu? : n
+	A - O que gostas de fazer? : n
+User Input - Que género de música é que gostas?
+	A - Do tipo de eu não ir trabalhar hoje? A malha nota-se muito? : n
+	A - É evidente que eu... : m
+	A - Acho que é Haydn. Música de câmara. : y
+	A - Do que está falando? : m
+	A - Do tipo de música que vós gostardes. : y
+	A - É muito simples. : n
+	A - Não vos serve de nada... : n
+	A - Música? : y
+	A - É um género de música do mundo. : y
+	A - Fica-me com a de Sábado ás 6. : n
+	A - Do género em que fugimos e escondermos a cabeça na areia? : n
+	A - E o que é que me fizeste? : n
+	A - É a dona? : n
+	A - Não, é um... : n
+	A - Coisas que não devia ver. : n
+	A - É muito ocupada para isso. : n
+	A - Não sei. : y
+	A - Não sei de que género. : y
+	A - É uma pena que tenha de recusar. : n
+	A - É o título de uma canção. Escreveu-a um húngaro. : n
+User Input - Que idade tens?
+	A - Acabei de fazer 13. : y
+	A - Oscar Choi é um tipo sonhador, mas é um brilhante geólogo. : n
+	A - Oito anos. : y
+	A - 24 anos. : y
+	A - 29 anos! : y
+	A - 16 anos. : y
+	A - - Que idade pensa que tenho? : y
+	A - A suficiente. : y
+	A - 68 anos. : y
+	A - Vinte e cinco. : y
+	A - Não podes ficar com eles. : n
+	A - Quase 22 anos. : y
+	A - 13, mas tenho uma mente madura. : y
+	A - Não percebes muito de mulheres, pois não? : m
+	A - Aos 13 anos. mandaram-me para o colégio interno. : n
+	A - Nove e meio. : y
+	A - Quinze anos. : y
+	A - Porque podes ter 20 e tais. : n
+	A - Quinze. : y
+User Input - Qual é o teu livro favorito?
+	A - O quê? : m
+	A - Tu. Tu és o meu problema. : n
+	A - O Mobius não pode ser parado. : n
+	A - Meu favorito é um de Dylan Thomas. : y
+	A - Ok, é o seguinte. : n
+	A - Tu. Es o problema de toda a gente. : n
+	A - - O meu problema? : n
+	A - Não é verdade. : n
+	A - O que pensas que estás a fazer, palhaço? : n
+	A - Eu é que namoro com o John Tucker. : n
+	A - O que estás a fazer? : n
+	A - - E qual é o teu? : m
+	A - Qual é o teu nome? : m
+	A - O meu nome é Neha. : n
+	A - Qual é o seu problema? : n
+	A - Queres saber qual é o meu problema? : n
+	A - O meu problema? : n
+	A - Will Burton. E o teu? : m
+User Input - Qual é a tua nacionalidade?
+	A - Por que não casamos? : n
+	A - O que? : m
+	A - A Andie quer que a vá buscar. : n
+	A - O quê? Não tens vida própria? Não é suficientemente real pra ti? : n
+	A - Acelere e te dou $20. : n
+	A - O regime na ilha é principalmente de carne, mas ela se recusa a comer carne. Mas vai passar! : n
+	A - Como é que funciona exactamente? : n
+	A - Não tens que responder. : n
+	A - Entre mim e o Blanchard só há a Kay Lake, uma pega que comi... : n
+	A - Em que estás a pensar? : m
+	A - O que está à vista é o que há. : n
+	A - Pára com isso! : m
+	A - A minha ideia é que talvez eles tenham estado envolvidos. : n
+	A - O quê? : m
+	A - Eu disse, qual é a tua alcunha? : m
+	A - O que queres dizer? : m
+	A - Não sejas mulherzinha, Joe. : n
+	A - Mas antes de expô-lo em público, gostaria de dar-lhe uma oportunidade de confessar, nem que seja para dar o primeiro, e pequeno, passo para a absolvição. : n
+	A - Não tenho uma. : y
+	A - É esta. : n
+User Input - Qual é o teu nome?
+	A - Scott. Não encontro a minha mãe. : y
+	A - Eu não o costumo dizer às pessoas. : y
+	A - O meu nome é Syracuse. : y
+	A - O meu nome? : y
+	A - O meu nome é Ariel Campbell. : y
+	A - Eu não tenho nome. : y
+	A - Qual é o teu nome? : m
+	A - Eu sou o Vincent. : y
+	A - Eu não sei. : y
+	A - 14 K, é o meu nome! : y
+	A - Não consigo pensar... : y
+	A - É, é o meu nome. : y
+	A - O meu nome é Neha. : y
+	A - É esse. O nome dele é Bob. : n
+	A - "Legião é o meu nome, porque somos muitos. : y
+	A - Will Burton. E o teu? : y
+	A - Não, não! Espera, não, não. : n
+	A - É Louise. : y
+	A - Louis. E o teu? : y
+User Input - Qual é o teu filme favorito?
+	A - Não é verdade. : n
+	A - Qual é o seu problema? : n
+	A - Qual é o teu nome? : m
+	A - O que estás a fazer? : n
+	A - O meu problema é uma fingida, desviada de quatro olhos num vestido de gorda. : n
+	A - Ok, é o seguinte. : n
+	A - O quê? : m
+	A - Queres saber qual é o meu problema? : n
+	A - Will Burton. E o teu? : n
+	A - Tu. Tu és o meu problema. : n
+	A - Eu é que namoro com o John Tucker. : n
+	A - O meu nome é Neha. : n
+	A - O que pensas que estás a fazer, palhaço? : n
+	A - - O meu problema? : n
+	A - Oh, eu não gosto de falar disso porque estou a desistir e... : m
+	A - Meu favorito é um de Dylan Thomas. : y
+	A - Tu. Es o problema de toda a gente. : n
+	A - O meu problema? : n
+User Input - Qual é a tua idade?
+	A - O que está à vista é o que há. : m
+	A - Em que estás a pensar? : m
+	A - Eu disse, qual é a tua alcunha? : m
+	A - Não tens que responder. : n
+	A - É esta. : n
+	A - Pára com isso! : m
+	A - Doze... mas... já tenho doze há muito tempo. : y
+	A - Mas antes de expô-lo em público, gostaria de dar-lhe uma oportunidade de confessar, nem que seja para dar o primeiro, e pequeno, passo para a absolvição. : n
+	A - Entre mim e o Blanchard só há a Kay Lake, uma pega que comi... : n
+	A - O quê? : m
+	A - O que? : m
+	A - O regime na ilha é principalmente de carne, mas ela se recusa a comer carne. Mas vai passar! : n
+	A - Acelere e te dou $20. : n
+	A - Não sejas mulherzinha, Joe. : n
+	A - Por que não casamos? : n
+	A - Como é que funciona exactamente? : n
+	A - Não tenho uma. : y
+	A - A minha ideia é que talvez eles tenham estado envolvidos. : n
+	A - A minha? : m
+	A - Doze. Mais ou menos. E tu? : y
+User Input - Qual é a tua língua materna?
+	A - Achas que a morte do Sammy Davis deixou uma vaga na comédia? : n
+	A - Eu disse, qual é a tua alcunha? : n
+	A - O quê? : m
+	A - É esta. : m
+	A - Entre mim e o Blanchard só há a Kay Lake, uma pega que comi... : n
+	A - Mas antes de expô-lo em público, gostaria de dar-lhe uma oportunidade de confessar, nem que seja para dar o primeiro, e pequeno, passo para a absolvição. : n
+	A - A minha ideia é que talvez eles tenham estado envolvidos. : n
+	A - Não sejas mulherzinha, Joe. : n
+	A - Em que estás a pensar? : m
+	A - Parece que estou a caminho de te recuperar. : n
+	A - Pára com isso! : m
+	A - O que queres dizer? : m
+	A - Como é que funciona exactamente? : n
+	A - O que está à vista é o que há. : n
+	A - O que? : m
+	A - Só entre nós, ...o que achas que está a acontecer? : n
+	A - O regime na ilha é principalmente de carne, mas ela se recusa a comer carne. Mas vai passar! : n
+	A - Não tens que responder. : n
+	A - Por que não casamos? : n
+	A - Acelere e te dou $20. : n
+User Input - Qual é a tua profissão?
+	A - Acelere e te dou $20. : n
+	A - Eu disse, qual é a tua alcunha? : n
+	A - O que está à vista é o que há. : n
+	A - Mas antes de expô-lo em público, gostaria de dar-lhe uma oportunidade de confessar, nem que seja para dar o primeiro, e pequeno, passo para a absolvição. : m
+	A - Não tenho uma. : y
+	A - Sim. O que é que tu fazes? : n
+	A - Não tens que responder. : n
+	A - O quê? : m
+	A - Em que estás a pensar? : m
+	A - Não sejas mulherzinha, Joe. : n
+	A - O que queres dizer? : m
+	A - Pára com isso! : m
+	A - Um tipo, o Jimmy Speckerman, que me costumava atormentar no liceu. : n
+	A - A minha ideia é que talvez eles tenham estado envolvidos. : n
+	A - Como é que funciona exactamente? : n
+	A - O regime na ilha é principalmente de carne, mas ela se recusa a comer carne. Mas vai passar! : n
+	A - Entre mim e o Blanchard só há a Kay Lake, uma pega que comi... : n
+	A - O que? : m
+	A - É esta. : n
+	A - Por que não casamos? : n
+User Input - Qual é o teu apelido?
+	A - Eu é que namoro com o John Tucker. : n
+	A - Gautier. Não que seja o verdadeiro. : y
+	A - Ok, é o seguinte. : n
+	A - O que pensas que estás a fazer, palhaço? : n
+	A - Qual é o seu problema? : m
+	A - O que estás a fazer? : n
+	A - O meu problema? : n
+	A - Desculpa, o meu quê? : y
+	A - Tu. Es o problema de toda a gente. : n
+	A - Tu. Tu és o meu problema. : n
+	A - Queres saber qual é o meu problema? : n
+	A - O quê? : m
+	A - Qual é o teu nome? : m
+	A - O meu nome é Neha. : m
+	A - Sabes qual é. : y
+	A - Não é verdade. : n
+	A - - O meu problema? : n
+	A - Vamos, Hurd... não sei o quê. : m
+	A - - E qual é o teu? : m
+User Input - Qual é o teu clube de futebol preferido?
+	A - O meu nome é Neha. : n
+	A - O que pensas que estás a fazer, palhaço? : n
+	A - Tu. Es o problema de toda a gente. : n
+	A - O dos cavalos pretos e brancos. : y
+	A - Will Burton. E o teu? : m
+	A - Ok, é o seguinte. : n
+	A - Tu. Tu és o meu problema. : n
+	A - O Contabilista. : n
+	A - O que estás a fazer? : m
+	A - O meu problema? : n
+	A - Qual é o seu problema? : n
+	A - "Showgirls"; é de meter medo a um susto. E o seu? : m
+	A - Qual é o teu nome? : n
+	A - Queres saber qual é o meu problema? : n
+	A - O meu problema é uma fingida, desviada de quatro olhos num vestido de gorda. : n
+	A - - O meu problema? : n
+	A - Eu é que namoro com o John Tucker. : n
+	A - O quê? : m
+User Input - Qual é o teu desporto favorito?
+	A - Eu é que namoro com o John Tucker. : n
+	A - O meu problema? : n
+	A - Qual é o seu problema? : m
+	A - Queres saber qual é o meu problema? : n
+	A - Não é verdade. : n
+	A - Desculpa, o meu quê? : y
+	A - O que pensas que estás a fazer, palhaço? : n
+	A - Meu favorito é um de Dylan Thomas. : m
+	A - Qual é o teu nome? : n
+	A - - O meu problema? : n
+	A - O Mobius não pode ser parado. : n
+	A - Tu. Tu és o meu problema. : n
+	A - Tu. Es o problema de toda a gente. : n
+	A - O que estás a fazer? : n
+	A - - E qual é o teu? : m
+	A - O quê? : m
+	A - Ok, é o seguinte. : n
+	A - O meu nome é Neha. : n
+User Input - Quantos anos tens?
+	A - - Dezassete anos. : y
+	A - Seis. : y
+	A - Catorze. : y
+	A - Não sabes o teu próprio número de telefone? : n
+	A - Dez. : y
+	A - Ela é do Ano do Galo. : n
+	A - Não acredito na idade nem nos números, sabes, eu não... Se tivesse de te dizer um número, acho que seria 44. : y
+	A - Sete e meio. : y
+	A - 30. e tu? : y
+	A - Eu tenho dezessete anos. : y
+	A - Oito e três quartos. : y
+	A - Tenho 28. Não é enfermeira. : n
+	A - Tenho 29. : y
+	A - Quantos tens tu? : m
+	A - 16, minha senhora. : y
+	A - 14 e meio. : y
+	A - Trinta e quatro. : y
+	A - Bastantes. E tu? : y
+	A - 25. E tu? : y
+	A - Dezoito? : y
+User Input - Qual é o teu número de telefone?
+	A - Não é verdade. : n
+	A - O que estás a dizer? : m
+	A - A cidade e o Estado, por favor. : n
+	A - O Mobius não pode ser parado. : n
+	A - O dos cavalos pretos e brancos. : n
+	A - Abbey. E já pensava que nunca mais ias perguntar. : n
+	A - O Contabilista. : n
+	A - Eu é que namoro com o John Tucker. : n
+	A - É o da Julie. : m
+	A - Sim e o meu e-mail. : n
+	A - Tu. Es o problema de toda a gente. : n
+	A - O quê? : m
+	A - Para quê? : m
+	A - Vamos, Hurd... não sei o quê. : n
+	A - Não há problema . : n
+	A - Não há. : m
+	A - - Não : n
+	A - O VW no espaço 23. : n
+	A - Ela não gosta de ser encomodada. É um curso intensivo. : n
+User Input - Quando é que nasceste?
+	A - Ah, Sr. Fuller... De onde disse que é? : n
+	A - Eu trabalhava a Sandra. : n
+	A - Não me lembro. : n
+	A - Para a semana que vem : n
+	A - Não fiz porra nenhuma. Eu e a Rebecca mal nos falamos. : n
+	A - Qual é a sensação? : n
+	A - Não é o Norte. : n
+	A - No mesmo ano que tu, atrasado. : y
+	A - Eu também. Bem, chega de conversa. Mostra-me um pouco do que vou aprender. : n
+	A - Falta pouco. Ele vai ser um"anxaneta" como tu. : n
+	A - E quando ela morreu, eu mudei-me para cá para viver com a minha outra tia. : n
+	A - A qualquer momento, por isso, vamos começar a queca antes que se torne uma a três. : n
+	A - A da Mary Liz, e do Scottie. : n
+	A - Por que o falcão caça? : n
+	A - A 13 de Abril. : y
+	A - E onde está a vagina? : n
+	A - Sentes a magia? : n
+	A - É como um tique, mas não é bem um tique. : n
+	A - É incrível como se pode amar alguém que nunca se conheceu. : n
+	A - Daqui a quatro meses. : y
+User Input - Qual é o teu trabalho?
+	A - Qual é o teu nome? : n
+	A - Tu. Es o problema de toda a gente. : n
+	A - O VW no espaço 23. : n
+	A - - E qual é o teu? : m
+	A - Desculpa, o meu quê? : m
+	A - - É a minha paixão. : m
+	A - Eu é que namoro com o John Tucker. : n
+	A - O meu nome? : n
+	A - - O meu problema? : n
+	A - Queres saber qual é o meu problema? : n
+	A - Qual é o seu problema? : n
+	A - Tu. Tu és o meu problema. : n
+	A - O que estás a fazer? : n
+	A - O meu problema? : n
+	A - O quê? : m
+	A - O que pensas que estás a fazer, palhaço? : n
+	A - O que fazes realmente? : n
+	A - O que fizeste? : n
+	A - Trabalho no Parque Aquático Splish Splash em Ottawa. : y
+User Input - Qual é o teu tipo de música favorito?
+	A - Queres saber qual é o meu problema? : n
+	A - Eu é que namoro com o John Tucker. : n
+	A - Ok, é o seguinte. : n
+	A - Não é verdade. : n
+	A - Eu sou... "A" negativo. : n
+	A - Tu. Es o problema de toda a gente. : n
+	A - Não tenho um tipo definido. : y
+	A - Qual é o seu problema? : n
+	A - O Mobius não pode ser parado. : n
+	A - - O meu problema? : n
+	A - Meu favorito é um de Dylan Thomas. : y
+	A - Qual é o teu nome? : n
+	A - Cheio de nódoas negras e ligaduras. : n
+	A - O que pensas que estás a fazer, palhaço? : m
+	A - O Contabilista. : n
+	A - O que me dizes de uma viagem? : n
+	A - O quê? : m
+	A - Não tenho um tipo. Valorizo o interior. : n
+User Input - Que disciplinas tens?
+	A - Não sei. Dói-me o pescoço. Uma dor lancinante. : n
+	A - Não, não, não. Sou livre. : n
+	A - Meu bem, diz-me que se passa? : n
+	A - Uns batimentos de coração. Não falam. : n
+	A - Eu consigo, está bem? : n
+	A - - Há alguma coisa... o quê? : n
+	A - Que queres dizer? : m
+	A - Não por favor. : n
+	A - O que é? : m
+	A - Não me peças! : m
+	A - Está esquisito. : n
+	A - O nariz a sangrar. : n
+	A - Nada. : m
+	A - É o tipo que me escapou, Jacob. Queres que o despache? : n
+	A - Tenho, que me apreenderam a carrinha, graças a si. : n
+	A - Não tens nada. : n
+	A - Pensei, quando falámos de assuntos íntimos... ...que você guardaria o segredo e não os repetiria. : n
+User Input - Que achas deste tempo, hein?
+	A - Vê o estado em que está! : y
+	A - Ah, Penny, não é o que você... : n
+	A - Não. : n
+	A - Não é uma resposta simples. : m
+	A - Muito bonito, tal como a nossa Jiya. : m
+	A - A vida é muito curta. : m
+	A - Não sei. : m
+	A - É , acho que pensei. -É. : n
+	A - O que é assim? : n
+	A - É engraçado. : y
+	A - Você sabe o que é isto? : n
+	A - Não tenho a certeza, Harry. : y
+	A - Sim, é o que eles dizem. : n
+	A - Honestamente, ela não é a minha primeira prioridade. : n
+	A - Não é uma questão de entrar a tempo. Não se consegue ver nada. : n
+	A - Sim, sim, sim. É sensual. : n
+	A - Agitando a bandeira e tudo mais. : n
+	A - Não, mas estás a desperdiçar o dela. : n
+	A - -O quê? : m
+User Input - Qual é o teu número de telemóvel?
+	A - Eu vou afiar o meu lápis. : n
+	A - O que estás a dizer? : m
+	A - Vamos, Hurd... não sei o quê. : n
+	A - Qual é o número? : m
+	A - O Contabilista. : n
+	A - Tu. Es o problema de toda a gente. : n
+	A - O quê? : m
+	A - A cidade e o Estado, por favor. : n
+	A - O dos cavalos pretos e brancos. : n
+	A - Tu. Tu és o meu problema. : n
+	A - Não há. : m
+	A - O VW no espaço 23. : n
+	A - Não há problema . : n
+	A - O que é isto? : n
+	A - O Mobius não pode ser parado. : n
+	A - Não. : n
+	A - Eu é que namoro com o John Tucker. : n
+	A - Não é verdade. : n
+	A - Ela não gosta de ser encomodada. É um curso intensivo. : n
+User Input - Quantas línguas falas?
+	A - Muitas. Mas aparentemente não as suficientes para este lugar. : y
+	A - 5, na realidade. : y
+	A - - O quê? Não, não, ouve... : n
+	A - "Excusez-moi," Jimmy. : m
+	A - O quê? : m
+	A - Cinco, mas francês tenho falado. : y
+	A - E sabes cozinhar. : n
+	A - E que não anda por aí de camisola como um árabe. : n
+	A - E que mais? : n
+	A - A língua dos Deuses. : y
+	A - Não é esquisita. É a língua divina. : m
+	A - Não, mas tenho a certeza que me vai esclarecer. : n
+	A - Portanto, descemos e confundimos a tua língua... ...para que não entendas a língua de outro. : n
+	A - Sei que é uma virgem. : n
+	A - O que é inglês? : n
+	A - Sou fluente em mais de 6 milhões de formas de comunicação e... : y
+	A - É uma coisa de anjo. : n
+	A - Não. Parece que já entende a nossa língua. : n
+	A - É mais suave que a nossa. : n
+User Input - Que dia é hoje?
+	A - É Natal pai. : y
+	A - Hoje é. Não, espera. : n
+	A - É dia... Terá que esperar! : n
+	A - É véspera de Natal, 24 de dezembro. : y
+	A - Não sei. É terça-feira? : y
+	A - Hoje? : m
+	A - O Julian saberia dizer. : m
+	A - Sexta-feira? Que eternidade. : m
+	A - É quarta-feira. : y
+	A - É isso. Acabou-se a viagem no tempo! : n
+	A - O quê? : m
+	A - É sexta-feira. : y
+	A - É terça. : y
+	A - Acho que é 30 de Novembro. : y
+	A - Eu acho que é 12. : y
+	A - Última vez que verifiquei, era quarta-feira. : y
+	A - O teu aniversário. : y
+	A - Não sei. Há anos que não sei que dia é. : y
+	A - Não. Que dia é? : n
+	A - Não, qual é? : n
+User Input - Gostas de Senhor dos Anéis?
+	A - Sempre à procura do melhor, não é, tenente? : y
+	A - E ele a tirou de lá. : n
+	A - Tudo o que sabemos é que ele veio para o oeste a partir de Richmond cerca de um mês atrás. : n
+	A - Talvez esse não seja o tipo de trabalho que goste. : n
+	A - Já não estás com fome? : m
+	A - Mais filmes e outros downloads em WWW.PIRATATUGA.NET : n
+	A - O que estás a fazer, Jiya? Tu e Raj é que vão casar. : n
+	A - Nem sequer gostas de bebés, o que farás com crianças. : n
+	A - O que é tu vês? : n
+	A - Qual é o outro? : m
+	A - Não te vou pedir para afastares o Caine. Já fizeste o suficiente. : n
+	A - Não há anel mais bonito do que a minha Virginia! : n
+	A - Especialistas qualificaram o vídeo como um engano... que não é mais que um homem disfarçado de macaco. : n
+	A - Sir Ivanhoe ... ... Os chacais de John estão em cima de você. Eles sabem quem é você e que Isaac o ajuda. : n
+	A - Eu admiro um cara que não tem vergonha de tratar dos dentes. : n
+	A - Anéis de prata, a sua bunda! Arruelas malditas! Merda! : n
+	A - O coral pode dizer-nos quem e quando chegou à água. : n
+	A - Achas que eu ia deixar que te ficasses a rir? : n
+	A - Não seja estúpida. Amanhã a que horas? : n
+	A - Aprendi a minha lição. O que e que tu queres? : n
+User Input - Gostas de trabalhar?
+	A - O Harrison tem um apartamento inteiro ali. : n
+	A - Duplico o que ele lhe paga. : n
+	A - Quais os seus planos para o futuro? Que tipo de filmes gostaria de fazer? : n
+	A - Agora, não me leve a mal. O major não é assim tão mau. : n
+	A - É um agente acima da média, que aceitou entrar nesta equipa, e isso é suficiente para mim. : n
+	A - E gostava muito, que o meu trabalho falasse por mim. : n
+	A - Gostava de ser atirado de um penhasco, e que o meu corpo se despedaÃ§asse nas rochas. : n
+	A - Toda a gente precisa de um emprego. : y
+	A - É o orgulho. : n
+	A - Tira bem a pinta a todos nós, a todos nós. : n
+	A - Na verdade, gosto. : y
+	A - Também gosto de trabalhar contigo. : y
+	A - Sim, acho que podia ser um edifício de qualidade. : n
+	A - E não terei o Pentàgono a pressionar-me. : n
+	A - Ben é um homem de poucas palavras. : n
+	A - Bem, tirar fotocópias não é muito engraçado. : y
+	A - É o melhor algodão das redondezas. : n
+	A - O que é que estás a fazer? Já deviamos estar longe daqui. : m
+	A - Isto é de ontem à noite. : n
+	A - E o que faz David? : m
+User Input - gostas de morar aí?
+	A - E ele a tirou de lá. : n
+	A - - Que brilhante dedução... : m
+	A - Você é louca? Não pode entrar aí. : m
+	A - Isto não é um concurso! : m
+	A - Uma o que? : n
+	A - Isso quer dizer que sou... O teu novo vizinho. : n
+	A - Não é não. : y
+	A - Não podes matá-lo por isso! E além disso ele pode conseguir escapar. : n
+	A - Gostava de ser atirado de um penhasco, e que o meu corpo se despedaÃ§asse nas rochas. : m
+	A - Bem, eu gosto que o por aí a fora esteja por aí. : n
+	A - Mas eu preciso de você 24/7. : n
+	A - E gostaria de ficar com a casa deles, é isso? : m
+	A - Estás no precipício, pronto a saltar, porque não consegues lidar com o facto de que gostaste de ter sexo com um homem. : n
+	A - Isso é o que me preocupa. : m
+	A - É o Jody, que engravidou a minha garota? : n
+	A - Por que não viria? : n
+	A - É o orgulho. : n
+	A - Está muito longe de casa, não está? : n
+	A - É muito agradável, avó. : y
+	A - Meu vôo está partindo para Chicago e eu estou presa aqui com você. : n
+User Input - Gostas de mim?
+	A - É. : y
+	A - Não é isso. : m
+	A - Sim. : y
+	A - - Claro que gosto, que disparate. : y
+	A - A isto chama-se rolar de costas : n
+	A - Não não não. Não é isso. : m
+	A - - Eu gosto de ti. Claro que gosto. : y
+	A - Não. : y
+	A - Eu disse-te... eu gosto de ti... : y
+	A - Sim, mas estás a rasgar-me o casaco. : y
+	A - Sim, gosto. : y
+	A - Não sei. : y
+	A - Sim, claro. : y
+	A - Espera, diz-me que sim. : n
+	A - Perdoai-me, não sei o que é "gostais". : n
+	A - Claro que gosto de si! : y
+	A - Gosto de ti. : y
+	A - Achas que sou sexy? : y
+	A - Gosto de ti, sim... : y
+User Input - Gostas de sushi?
+	A - Ben é um homem de poucas palavras. : n
+	A - Não. Eu estou bem, obrigado. : y
+	A - Ouve-me. : m
+	A - Não quero me encher de sushi. : y
+	A - Nao! E diferente. : y
+	A - Sim. Sim, gosto. : y
+	A - Sim, adoro-os. : n
+	A - Não se mexam. : m
+	A - Não, gosto de revistas. : y
+	A - Não como sushi. : y
+	A - Gostava de ser atirado de um penhasco, e que o meu corpo se despedaÃ§asse nas rochas. : n
+	A - O quê? : m
+	A - Vou ficar com o teriaki. : m
+	A - Não sei. : y
+	A - Para ti e contigo. : n
+	A - Você diz que é ácido! : m
+	A - Não é bem por causa da multidão mas pela gente de que não gosto. : n
+	A - É o orgulho. : n
+	A - Sim, gostava. : n
+	A - Se convencermos a Larrabee do que é o mais racional, não fará caso. : n
+User Input - Gostas de música?
+	A - Tu escreves letras de música? : m
+	A - E eu gostaria de a ver toda na aula de Música. : n
+	A - Sim. : y
+	A - Então, o que fazes para te divertires por lá? : m
+	A - Não me digas. Este é... ..." Bo Diddley", de Mr. Diddley! : n
+	A - Para dizer-te a verdade, não tenho tempo para isso. : y
+	A - Sim, mas agora não é a altura. : y
+	A - Herb, estás a convidar-me para sair? : y
+	A - Assim está melhor. : m
+	A - - Claro. : y
+	A - Do tipo de música que vós gostardes. : y
+	A - Não praticas qualquer desporto e não tens uma namorada. : n
+	A - Eu comi a tua irmã? : n
+	A - Eu também adoro música. : n
+	A - Pois verás, o basket é como a música. : n
+	A - Eu adoro a música! : y
+	A - Não a conheço bem, se é boa ou assim. : n
+	A - Sim, a música é um idoma que todos entendem. : y
+User Input - Gostas de sair?
+	A - Não me consigo mexer. : m
+	A - Não o queremos aqui enquanto trabalhamos, não é? : n
+	A - Sabes que não podemos, temos de esperar por ela. : m
+	A - O que é isso? : y
+	A - Isso não faria qualquer sentido, certo? : m
+	A - Não. Temos de ficar. Aqui é seguro. : m
+	A - Tinha que fazer um botox de emergência. : n
+	A - Eu não sei o que aconteceu. : m
+	A - A quem o dizes! : m
+	A - Estamos aqui em nome dos credores, por ordem do tribunal, para que nada seja tirado cá de casa, e não saímos daqui. : n
+	A - Está bem. : n
+	A - E aqui também já não resta ninguém. : n
+	A - Não passou por ele? : n
+	A - Esqueceste-te de ir à casa de banho, Dr. Gray? : n
+	A - Não podemos. : y
+	A - Não. : y
+	A - Não vê que estou ocupado? : m
+	A - Acho que sei para onde estão a ir. : n
+	A - O que é que pensas que estás a fazer? : m
+	A - Está bem, espera. : n
+User Input - Gostas de ler?
+	A - É de alguém que se intitula de: A rapariga do cachecol verde. : n
+	A - Não, eu li... mas a Fundação acha que abrir as Urgências é uma acção precipitada. : n
+	A - Como é que os mataram? : m
+	A - - Gostava que me passasse duma vez, A matéria do semestre. - Porquê? És de longe? - Não. Quero estar preparada. : n
+	A - Com a era digital e isso? Nook? iPad? : m
+	A - Felizmente, não é preciso fazer isso. : m
+	A - Eu acho que sei o meu próprio nome. : n
+	A - É o que eu vou fazer. : y
+	A - Não... : y
+	A - É o orgulho. : n
+	A - É possível que uma fêmea Na posição horizontal : n
+	A - Digo que é Um Soldado Chamado Ryan. : n
+	A - Sim. : y
+	A - E... gosto de... tocar música. : m
+	A - O que vocÃª lÃª? : n
+	A - Se não é polícia, deve ir embora. : n
+	A - Pela liberdade de expressão e escolha. : n
+	A - Tenho de absorver as recordações do passado! : n
+	A - Acho que sim, quando tenho tempo. : y
+User Input - Gostas de musica clássica?
+	A - Eu sou bem musical, mas o que isso tem a ver? : y
+	A - Eu comi a tua irmã? : m
+	A - Pois verás, o basket é como a música. : n
+	A - Para dizer-te a verdade, não tenho tempo para isso. : y
+	A - Eu também adoro música. : n
+	A - Então, o que fazes para te divertires por lá? : m
+	A - E tu? : m
+	A - Nada. Mas vender é vender. : y
+	A - Do tipo de música que vós gostardes. : y
+	A - É o teste dos bichas, não é? : m
+	A - E eu gostaria de a ver toda na aula de Música. : n
+	A - A música é óptima e sabes que adoro dançar. : y
+	A - Herb, estás a convidar-me para sair? : m
+	A - Sim, a música é um idoma que todos entendem. : y
+	A - - Claro. : y
+	A - Sim. : y
+	A - Não me digas. Este é... ..." Bo Diddley", de Mr. Diddley! : n
+	A - Não praticas qualquer desporto e não tens uma namorada. : n
+User Input - Gostas de Praia?
+	A - Na praia. : n
+	A - Ei, Rato de Praia. Estou a falar contigo. : n
+	A - Atrás dos morros, um dos poucos Iugares do mundo... para se comer decentemente. É o pavilhão Azul. : n
+	A - Ben é um homem de poucas palavras. : n
+	A - Mudar de ares? Isso é bom, homem! : n
+	A - Onde te meteste? As miúdas estão molhadinhas prontas para filmar. Vou reduzir-te o ordenado. Vamos! : m
+	A - É o orgulho. : n
+	A - E o que houve com o que conversamos? : m
+	A - A equipa que vá para Cabo Doom o mais depressa possível. : n
+	A - A palavra é litoral. É sinônimo de praia. : m
+	A - Uma assim com areia. : y
+	A - Mas o lugar é particular e lindo. : n
+	A - Eu disse para ires buscar o Rato de Praia, não ouviste? : n
+	A - Vamos, vou-te ajudar a embarcar. : n
+	A - Vai bronzear-te um pouco, George. : n
+	A - Sobre o quê? : n
+	A - Não tinham o direito de me trazer aqui. : n
+	A - Gostava de ser atirado de um penhasco, e que o meu corpo se despedaÃ§asse nas rochas. : n
+	A - Rato de Praia, Rato de Praia... : n
+User Input - Mudando de assunto, quais são os teus hobbies?
+	A - Não tenho. : y
+	A - Não. : n
+	A - Entre o leste e oeste de Berlim. : n
+	A - Não sei, há tantas opções. É difícil escolher. : y
+	A - Não te exponhas. : n
+	A - Não. São do Stelu. : n
+	A - Não percebo. : m
+	A - O meu filho Brian, e a minha filha Kelly. : n
+	A - Não tenho planos. : n
+	A - A coisa não está bonita. : m
+	A - Que esta é uma oportunidade. : n
+	A - O que é que queres ser? : n
+	A - Não! : m
+	A - Eu não sei... Queres que te arranje uma lista? : y
+	A - Não que eu saiba. : n
+	A - Bem, ainda não tenho a certeza. : n
+	A - O quê? : m
+	A - Por favor, promete-me que não os enceras. : n
+	A - Se não conseguir a vaga de rapaz da casa? : n
+User Input - No que trabalhas?
+	A - Eu cuido de uma organização não-governamental Women for Change W.F.C : y
+	A - Ouvi dizer que a Ana já não está com o Vlado. : n
+	A - Não se ela soubesse que era eu a organizá-la. : n
+	A - Não me diga. Trabalha pro seu pai. : y
+	A - O que aconteceu? : n
+	A - Então fique. Este não é o melhor sítio que há? : n
+	A - Acabei a minha licenciatura em biologia, mas não sei o que fazer com ela. : y
+	A - E tenho a certeza da decisão que tomarás. : n
+	A - O que era?! : m
+	A - isso não é honesto. : n
+	A - Não, é só uma carta. : n
+	A - No que trabalho? : m
+	A - Gosto de ti. Eu disse que estás à frente para o apartamento? : m
+	A - É o que elas querem. : n
+	A - Como o quê? : n
+	A - Eu e a Rose fizemos um trabalho há algum tempo, e havia uma mulher que tinha... : n
+	A - O que é que ele pensa do trabalho? : n
+	A - O quê? : m
+User Input - Mais tarde queres ir ver o jogo de futebol?
+	A - A casa-de-banho é ao fundo do corredor. : n
+	A - Para a semana, aposto que estarão com o dobro do tamanho de hoje. : n
+	A - O que é? : m
+	A - Sim, ele levou-o para o "calabouço" e nunca mo devolveu. : n
+	A - Até pintei a minha barriga. : y
+	A - Acho que sim. : y
+	A - Do que estás a falar? : m
+	A - O que é, Joe? : m
+	A - Claro que sim. : y
+	A - Eu sei, mas é que, sabes... : n
+	A - Sim. Achei que devia. : y
+	A - O campeonato estadual está à porta. : y
+	A - Não sei o que pensas e isso põe-me doido. : n
+	A - Claro que sim! : y
+	A - Em que estás a pensar? : m
+	A - É mais importante que o Natal. : y
+	A - Sabia que não ias com o Gray. : y
+	A - Sim, com o Brock e o Tree, às 19 h. : y
+	A - Mas tu não gostas de futebol. : y
+	A - Deixem esse jogo de "viados" e acabem a mudança. : y
+User Input - O meu nome é Pedro, qual é o teu?
+	A - É esse. O nome dele é Bob. : n
+	A - 14 K, é o meu nome! : y
+	A - Louis. E o teu? : y
+	A - "Legião é o meu nome, porque somos muitos. : y
+	A - Eu não o costumo dizer às pessoas. : y
+	A - Eu sou o Vincent. : y
+	A - Qual é o meu nome, Victor? : y
+	A - "Respondeu: Legião é o meu nome, porque somos muitos. : y
+	A - Leve o meu companheiro de quarto! Está morto! : n
+	A - O meu nome é Ariel Campbell. : y
+	A - É, é o meu nome. : m
+	A - Meu nome é Winston. Winston Shakespeare. : y
+	A - O meu nome é Neha. : y
+	A - O meu nome é Syracuse. : y
+	A - O meu nome? : m
+	A - Will Burton. E o teu? : y
+	A - Eu não tenho nome. : y
+	A - Qual é o teu nome? : m
+User Input - O que e que gostas de fazer nos tempos livres?
+	A - Eu sou a pessoa que fez você de bobo. : m
+	A - Neutralizamos o laboratório, e voltamos para a plantação. : n
+	A - O que eu gostaria de fazer? : m
+	A - Vocês vêm connosco. Não podemos deixar ninguém atrás... para dar o alarme, agora, pois não? : n
+	A - O que é que a Natalie Anderson estaria a fazer a saír com um estúpido como eu? : n
+	A - E sabe que o fazemos bem. : n
+	A - Estamos tentando mostrar o que podemos fazer! : m
+	A - A não ser que cheguem ao fim do vale. : n
+	A - Ou o que quer fazer? : m
+	A - O que é que se passa com este tipo? : n
+	A - E o Paul Finch contratou uma dançarina exótica ao invés de uma actriz. : n
+	A - Não sei. : y
+	A - Eu gosto mesmo é de ver filmes antigos. : y
+	A - Não importa o que aconteça?? : n
+	A - Oh, e para que sirvo? Para o que me deixou apta? : n
+	A - É, olha para isto. : n
+	A - É um resumo. Conciso. Simétrico. É a maneira que vejo o mundo. : n
+	A - Quando ganhas, tens tudo o que quiseres. Tens a menina e cerveja. : n
+	A - O que gostas de fazer? : m
+User Input - Moras aonde?
+	A - Ouviste o Perry. O Super-Homem voltou e ele acha que sou a única capaz de... : n
+	A - Para o México, lá à bom armeiro. : y
+	A - O que eu fiz? Deixa eu ir! : n
+	A - Não sei. : y
+	A - Para casa. : m
+	A - Não quero falar disso. : m
+	A - Não sei. Itália, França. Estrangeiro. : y
+	A - Não é aonde mas sim quando. : n
+	A - Deixou-me naquela coisa, na gaveta. E então puseram-me o colete de força. : n
+	A - - Não sei aonde. : y
+	A - Ela disse para casa. : n
+	A - Vi-o a sair às escondidas com o Garrett. Anda. : n
+	A - A minha casa. : m
+	A - Este é o lugar onde aconteceu. : n
+	A - Para longe daqui, é só o que sei. : y
+	A - - O Condado de Tyler : n
+	A - Casa de nós. Do Gaz e do Spike. : y
+	A - Não há uma cidade nestas colônias bastante grande para ocultar o vermelho de seus cabelos : n
+User Input - Já viajaste?
+	A - O verdadeiro deus é aquele que está entre as pernas de uma mulher. : n
+	A - E a reserva? : m
+	A - Tem-se a sensação de que não vamos a lado nenhum. : m
+	A - Não. : y
+	A - Sim. A volta do mundo. : y
+	A - Não podem levar o automóvel! Fred anotou a quilometragem! : n
+	A - E eu não discutiria isso com nenhuma amiga. : m
+	A - Achas que é a solução? : m
+	A - Não vem com a gente? : m
+	A - Sim, mas nunca com muito luxo. : y
+	A - Sim, passei um tempo na América. : y
+	A - Lá você é uma grande coisa, mas aqui não. : n
+	A - Isso é para começar. Gaste o que precisar. : n
+	A - O que é que quere dizer com boa companhia? : n
+	A - E a Molly? : n
+	A - Não estou. : n
+	A - É assim que ganho a vida. : y
+User Input - Moras em Lisboa?
+	A - O seu pai é um veterano e tem um irmão de 17 anos de idade. : n
+	A - É um caso clássico de PID. : n
+	A - E tive que voltar... porque Griff perdera o emprego... e estava precisando do irmão mais velho de novo. : m
+	A - Espanha. : y
+	A - Isso não é verdade! : y
+	A - Na China. : y
+	A - A minha mãe mora lá com o meu pai... e os meus dois irmãos. : y
+	A - Não há nada entre mim e o Willl. : n
+	A - Metade do ano. O meu pai trabalha no serviço florestal... : y
+	A - Ah, então o seu amigo é um coroinha? : n
+	A - Ele não vai a Lisboa desde 1990. Consta do processo. : n
+	A - Além do Shitao, é a única parente que ele tem. : n
+	A - O problema é que não há muitos jovens, como nós. : m
+	A - E a morte de seu pai? : n
+	A - O que ele estÃ¡ fazendo lÃ¡? : m
+	A - Então de que cidade é que gosta? : m
+	A - O Times é um jornal raramente encontrado nas mãos dos analfabetos. : n
+	A - O barco para a AmÃ©rica. : n
+	A - O Neil e a Sara. : n
+User Input - não achas isso um pouco estranho?
+	A - O que queres dizer? : m
+	A - Claro que não. Este colar era da segunda mulher dele, e ela está ali sentada. : y
+	A - O que é isto? : m
+	A - É, não. : y
+	A - Não... : y
+	A - No que é que estava a pensar? Normalmente é tão discreto. : y
+	A - Não, meu, é perfeito. : y
+	A - Não, é fixe. : y
+	A - Não. : y
+	A - Ela não bebe nada... é uma andróide. : y
+	A - O quê? : m
+	A - Acho que ainda não está totalmente descongelado. : n
+	A - Não achas que devias aplaudir a minha coragem? : n
+	A - Não, não acho nada estranho. : y
+	A - Não acho que interesse o que eu penso. : y
+	A - Não sei o que significa melodramático. : n
+	A - Os lobos? Não fazem isso. : y
+	A - Tudo que sabe bem assim não é estranho. : y
+	A - Não consigo deixar de pensar na Valerie. : n
+	A - De que é que estás a falar? : y
+User Input - Nasceste onde?
+	A - Em Paris. : y
+	A - Nasci aqui e passei a vida enfiada em água até aos joelhos. : y
+	A - A sério? : n
+	A - Não, sou de Wyoming. : y
+	A - Sob uma estrela errante : y
+	A - Polónia. : y
+	A - Não me lembro. : y
+	A - Eu nasci. : n
+	A - A 13 de Abril. : n
+	A - A tua mãe esteve aqui com outros chimpanzés. : n
+User Input - Em que dia nasceste ?
+	A - Ah, provavelmente dia 6. Pode ser dia 7, pode ser dia 8. Mas estamos a apostar para dia 6 : y
+	A - Minha mãe disse que choveu por sete dias e sete noites. : n
+	A - E ele criou a máquina? : n
+	A - O que quer? : m
+	A - Bem, Pai, quero que o teu sonho se torne realidade. : n
+	A - Faremos todos os possíveis para que seja o menos doloroso possível. : n
+	A - Não sei. : y
+	A - Porquê? O que é que aconteceu com ele, afinal? : m
+	A - Não fales assim. Sei que vais melhorar. : n
+	A - Impressionante. Ã melhor treinares um um gesto com a mÃ£o para acompanhar. : n
+	A - Não, eu percebi a pergunta. Porque precisa de saber isso? : n
+	A - Eu também. Bem, chega de conversa. Mostra-me um pouco do que vou aprender. : n
+	A - A Mary não é nada dele. Nem nunca será. : n
+	A - Não nasci no Canadá. : n
+	A - É o que te trouxe a Nova York? : n
+	A - Quem é a Tara? : m
+	A - Não sei, mas parecia que estava bastante transtornado. : n
+	A - Vejamos... Foi no domingo passado. : y
+	A - Acho que me rebentaram as Ã¡guas. : n
+	A - E o Presidente? Sabe quem ele é. : n
+User Input - Estudas?
+	A - Durante os próximos seis meses, ecologia, química, estudar a evolução da saúde humana, estudo das religiões da Ásia, história ... a energia hidroelectrica e... e a marinha. : y
+	A - Ontem, o Kaiser. : n
+	A - Arrastei-a até aqui. : n
+	A - Sou Niccolo, mas já não sou estudante. : y
+	A - O que é que tu fazes? : m
+	A - Sim, mas acabei de ser suspensa. : y
+	A - Não. : y
+	A - Isso é engraçado... ...porque o Jimmy telefonou para saber de ti. : n
+	A - Em nenhuma, acabei de terminar. : n
+	A - Em Columbia. : y
+	A - Assim é que se fala. : n
+	A - Eu quero saber a verdade! O que estão fazendo aqui? : n
+	A - Sim. : y
+	A - ... da humanidade é o homem. : n
+	A - Não, nem por isso. : y
+	A - Nao sejas possessivo, está bem? : n
+	A - O que é isso? : y
+User Input - Estudas ou trabalhas?
+	A - E percebi que você é um... : n
+	A - Não sei. : y
+	A - Não me posso dar ao luxo de ser mau pagador e ter cadastro. : n
+	A - O que isso tem ligação com o assassinato de Nigel? : n
+	A - Pensamos que uma linha entre trabalho e vida é importante. : m
+	A - E aqueles que aqui estão não querem ser meus amigos. : n
+	A - A expressão que tens agora na cara, não tem preço. : n
+	A - Eu sei que não é fácil, pá. : n
+	A - Que se passa ? : m
+	A - Não podemos confiar nele. : n
+	A - Estou apenas a dar voltas pela estrada de serviço. : m
+	A - O que é um mix-master? : n
+	A - estudo música. e tu? : y
+	A - Não. : n
+	A - Não, estudo no MIT, mas tenho um lance de família. : m
+	A - Não me lembro. : m
+	A - Não na escola. : n
+	A - Não, nós... : n
+	A - Mas não. Tens que ser o salvador da aldeia. : n
+User Input - Então a que é que chamas sair?
+	A - É a isso que chamam "Beef Wellington". : n
+	A - É indigno! : n
+	A - Não é assim tão mau quando o conheces melhor, garanto-te. : n
+	A - - Todos aqui vos chamarão "casados". Quantos anos é que ela tem? : n
+	A - O quê? : m
+	A - Antes que avancemos mais, eu não posso passar a noite aqui. : n
+	A - Essa é a nave mãe. Tem que ser. : n
+	A - Ah, não é tão difícil. : n
+	A - E que tal, meu? Temos algum problema? Tu roubaste o uniforme dele ou não? : m
+	A - Como é que fez isso? Só eu é que o consigo pôr a trabalhar. : n
+	A - Está bem, eu vou buscar o resto das coisas e vejo-te às 6:45. : n
+	A - É, sim, mas esquece isso, o que aconteceu depois? : n
+	A - É isso o que eu faço. : n
+	A - O que raio...? : m
+	A - Não é isso. É que... : n
+	A - Como sabes o escroto é a pele que cobre os tomates. : n
+	A - O quê? A polícia? : n
+User Input - Em que trabalhas?
+	A - Não precisas de dizer tudo a toda a gente. Não é preciso. : n
+	A - Na semana passada um antigo aluno enviou-me um projecto em que estava a trabalhar com o Laboratório QT. : n
+	A - Estou a escrever para um amigo. : y
+	A - É um caso novo. Vem. : m
+	A - Faço "web sites". : y
+	A - Em todos os grandes ranchos de Montana do Norte. : y
+	A - Não trabalho, querida, sou actor. : y
+	A - Sou um consultor. : y
+	A - No jornal The New York Sentinel. : y
+	A - Sou estudante. Estou a tirar inglês e espanhol. : y
+	A - Não é bastante formosa. : n
+	A - Na invenção mais importante da História da humanidade. : y
+	A - Em quê? : n
+	A - Sou assassino profissional. : y
+	A - Sou um vendedor pseudo vigarista. : y
+	A - Não me admiraria que, um dia, chegasses a Director Executivo. : n
+	A - Sangue. : n
+	A - Sim, trabalha em Jean-Bart. : m
+	A - Sou co-proprietária de um salão de beleza. Sun City. : y
+User Input - Es o filipe ?
+	A - Sou. E tu és...? : y
+	A - Não, não estou a dizer que é bom. : n
+	A - Eu sou o Tyson! : y
+	A - - Sim. : y
+	A - Isso é como o Tucker "falhado"? : n
+	A - És o maior! : n
+	A - És o Duque! : n
+	A - Não sei do que estás a falar. : y
+	A - Sim. : y
+	A - Tu és a Theo e tu a Eleanor. Eu sou o Dr. Marrow. : y
+	A - O que quer que eu faça? : n
+	A - O quê? : m
+	A - És o Duque... : m
+	A - Não me mintas. Não é o teu tipo de coisa. : n
+	A - Não, mas posso ser... : y
+	A - Sim. Sim. : y
+	A - Para ti, é uma ocupação a tempo inteiro, não é? : n
+	A - Não o incentives! : n
+User Input - Estas ai sozinho?
+	A - Estás surdo? Estás sozinho? Não. : y
+	A - Estava à espera que acordasses para te poder dar as más notícias. : m
+	A - Sim, estou a pesquisar. : y
+	A - Estou a mijar. : n
+	A - Estou aqui... : m
+	A - Sim. Que conselho lhe deste? : y
+	A - E o carro? : n
+	A - Não vieste jantar. : n
+	A - Sim, estou aqui. : y
+	A - Sim, Charlie,diz. : y
+	A - Sim... : y
+	A - Eu estou aqui. : n
+	A - Sim. : y
+	A - É o teu telemóvel, não é? : n
+	A - Não. : y
+	A - Meu Deus, é a Bruxa e o Tonto. : n
+	A - Sim? : y
+User Input - Então e esse tempo ?
+	A - Não, é...é tudo. : n
+	A - Bom, é melhor que não ter nenhum. : n
+	A - É o que queria ouvir. : n
+	A - Aposto que ele é um bom ouvinte. : n
+	A - Não podes disparar a um homem desarmado. : n
+	A - Agora é a tua vez de fazeres a mim. : n
+	A - Eu acho que seja o indicado para ele. Ele é um pouco leviano, não acha? : n
+	A - Sim. Fala como se não acreditasse. : n
+	A - Sim, e não deveria tê-lo. : n
+	A - O quê? : m
+	A - Esse é ele. : n
+	A - De quê? : n
+	A - Não lhe importa se tem um filho gay, desde que não seja ele. : n
+	A - Não é problema teu. : m
+	A - Não, não te vou contar nada, és muito negativo. : n
+	A - O funeral? Não, é só uma pequena coisa oficial. : n
+	A - Não é longe. : n
+	A - Isso é realidade! : n
+	A - Não precisas disso. Os maricas é que usam isso. Não precisas disso. : n
+	A - E por quê não o veria? : n
+User Input - Em que local estudas?
+	A - O tipo chegou a pagar-te? : n
+	A - Na sua testa, podíamos ver a linha das montanhas contra o céu. : n
+	A - Já não. : n
+	A - Não sei. : y
+	A - As terras rêm de ser devolvidas conforme a Lei, assim não há injustiças. : n
+	A - Claro, foi onde nos falaram de si. : n
+	A - O que diz aqui. Eu não sei. : n
+	A - O que quiser. : n
+	A - Em um caso surpreendente, o cameraman da CNA, Huey Taylor... foi baleado e morto num quarto de um motel em Eagle Rock City. : n
+	A - Enquanto meus amigos passaram o verão na Europa... eu fiz a prova para a escola de direito. : m
+	A - Era para eles voltarem, agora é de vocês. : n
+	A - Não sabemos de onde? : n
+	A - Durante os próximos seis meses, ecologia, química, estudar a evolução da saúde humana, estudo das religiões da Ásia, história ... a energia hidroelectrica e... e a marinha. : n
+	A - Em nenhuma, acabei de terminar. : y
+	A - Hei, boa idéia, vamos até à delegacia Podemos falar lá. : n
+	A - É mais a Victoria Grayson. Acho que foi ela que o fez. : n
+	A - ''com uma." Diz: ''Eu simplesmente não queria entrar no território de outro, ''mas é mais glorioso matar um polícia do que uma criança, 'porque um polícia pode ripostar." É o que diz. : n
+	A - Estou a tirar o ano de folga. : y
+	A - Ontem, o Kaiser. : n
+	A - Porque é que ele desapareceu assim? : n
+User Input - Em que países já estiveste?
+	A - Portugal e a sua enorme frota. : n
+	A - É a ponta do iceberg. : n
+	A - Sim, é um lugar encantador. Encantador. : n
+	A - Fui a um show em Detroit. : n
+	A - Não, e estão. É só que eu... : n
+	A - O meu planeta é Koddhar. : y
+	A - Faz isto pela mamã e pelo papá. Está bem? Olha para mim. : n
+	A - É a campeã, Eleanor Holm. : n
+	A - Sim, já. : n
+	A - Em Inglaterra. : y
+	A - Não sei. Suporiam que fora uma overdose. Está sempre a acontecer. : n
+	A - Só vejo fruta de plástico e tipos gordos com chapéus minúsculos. : n
+	A - Deus não é para ser gozado. : n
+	A - O Joe nunca esteve num clube de strip. : n
+	A - Isto não é um debate. : n
+	A - Vais gostar da minha mãe. Ela é nova e muito bonita. : n
+	A - Não. : n
+User Input - Onde nasceste?
+	A - Não, sou de Wyoming. : n
+	A - Eu nasci. : n
+	A - Polónia. : y
+	A - Sob uma estrela errante : y
+	A - Em Paris. : y
+	A - A tua mãe esteve aqui com outros chimpanzés. : m
+	A - Não me lembro. : y
+	A - Nasci aqui e passei a vida enfiada em água até aos joelhos. : y
+	A - A 13 de Abril. : n
+User Input - Onde compras a roupa?
+	A - Ele é o de reserva. Surdo como uma porta. : n
+	A - O que estás aqui a fazer? Sai daqui! : m
+	A - A menos que pretenda ir a um funeral mais tarde... ...talvez queira baixar um bocado o tom. : n
+	A - Foi com o dinheiro que eu poupei em meias. : n
+	A - Está bem. : n
+	A - Está tudo a desfazer-se! É horrível. : m
+	A - Quem é que falou em tirar a roupa? : n
+	A - Onde está ele? : n
+	A - O que é? : m
+	A - Não me lembro. : y
+	A - Agora! Depressa! Para o que estás a olhar? Tira a roupa! : n
+	A - Estás a ver isto? : m
+	A - Bem, eu nunca. : n
+	A - Eu diria à Stephanie o que eu sinto por ela. : n
+	A - Não deves misturar a roupa branca com a de cor. : n
+	A - Então, por que traz essa? : n
+	A - A fazer limpezas? : n
+	A - É uma boa dona de casa. : n
+	A - Tenho de me certificar de que não trazes armas ou escutas, certo? : n
+	A - Mandaram que tirássemos a roupa. : n
+User Input - Onde moras?
+	A - Não era isso que estava a pensar. Como é que eu sabia. : n
+	A - Não... sei absolutamente nada sobre ti. : y
+	A - Com a minha mãe e não é sob as ondas. : y
+	A - Em casa da Samantha, a cabeleireira junto ao largo. : y
+	A - Restaurante na cidade : y
+	A - O quê? : m
+	A - Moro na casa ali em baixo. : y
+	A - River Creek, depois da entrada 10. : y
+	A - Quem fala? : m
+	A - Não. : n
+	A - Em Chicago. : y
+	A - Com a minha mãe. : y
+	A - Em Orange, New Jersey. : y
+	A - Não! : n
+	A - Eu não sei! : y
+	A - Ele não é perigoso. : n
+	A - Estás-te a passar, parceira? : m
+User Input - Olá! Como estás?
+	A - Estou bem. : y
+	A - Olá. Estou bem. : y
+	A - Bem. : y
+	A - Estás bem? : y
+	A - Olá. : y
+	A - Bem, obrigado. : y
+	A - Estou bem. E tu? : y
+	A - Muito bem, e tu? : y
+	A - Tudo bem. : y
+	A - Muito bem. : y
+	A - Estou bem. Como vai você? : y
+	A - Bem. E tu? : y
+	A - Olá. : y
+User Input - Onde estudaste?
+	A - Estudei. Na Wesleyan. : y
+	A - Isso é Boston? : n
+	A - Ele ganhou uma bolsa de estudos para ir a Harvard. : n
+	A - Não, não o vejo a deitar tudo isso fora. : n
+	A - Tu pensarias que... sabes, um extremo vai fazer de ti... eufórico, e o outro suicida. : n
+	A - Não, estudei o Purgatório. Passei lá 11 anos da minha vida. : n
+	A - Com o prof. Anderson em Edinburgo, Karl Strauss em Viena... : y
+	A - O que é isso? : n
+	A - Em Yale e depois em Cambridge. : y
+	A - Não, nem por isso. : n
+	A - Na Northwestern. : y
+	A - Em Columbia. : y
+	A - Toda a noite. Já me estava a passar. : n
+	A - A minha quê? : n
+	A - O que é que tu fazes? : n
+	A - Não. : n
+	A - Isso é engraçado... ...porque o Jimmy telefonou para saber de ti. : n
+	A - Não posso resolver os teus problemas. : n
+User Input - Olá, tudo bem?
+	A - Tudo bem, sim. : y
+	A - Na verdade não. : y
+	A - Sim, tudo bem. : y
+	A - Olá, sou a Ashley. : y
+	A - Entra. : m
+	A - Prazer em conhecer-te. : y
+	A - Tudo. : y
+	A - Muito bem... : y
+	A - Bastante bem. : y
+	A - Tudo bem. : y
+	A - Muito prazer. : y
+	A - Tudo. E contigo? : y
+	A - Desculpa o atraso. : y
+	A - Não tenha medo. Vamos tirá-la daí, está bem? : m
+	A - Olá. : y
+	A - Meu Deus, é tão giro. Olá, Joe. : n
+	A - Tudo certo. : y
+	A - O que aconteceu? : m
+	A - Tudo, e consigo? : y
+User Input - Onde te encontras?
+	A - Não é dificil encontrar Eke. Está sempre no mesmo lugar. : m
+	A - Onde nos encontraram a todos? Eu é que tive sorte. : y
+	A - Não até me dizer quem é e o que... : m
+	A - Estou a falar de si e do Dr. Winston. : n
+	A - O que estás a fazer? : y
+	A - No campo de uma propriedade. : y
+	A - No quarto de cima. : y
+	A - Estava na câmara que a Deb encontrou no hospital. : n
+	A - Não posso dizer. Só tenho de descobrir o que é. : n
+	A - Envia-me um DC-3 para o sul de Kegoma. : n
+	A - O que faz na cadeia? : m
+	A - Sociedade secreta, subterrâneo, em lugares onde menos o espera. : m
+	A - No hotel. : y
+	A - Stan, esta é a questão. : m
+	A - E esta?! : n
+	A - Como é que ele está? : n
+	A - O que mais queres de mim? : m
+	A - No seu armazém de provisões médicas. : y
+	A - No mesmo planeta de onde o Super-homem veio, Krypton. : y
+	A - No quarto, Senhor. : y
+User Input - Olá, como te chamas?
+	A - O nome dele é Oscar. : m
+	A - Não vamos jogar esse... : m
+	A - Mia. Qual é o seu? : y
+	A - O quê? : m
+	A - Cláudia. E tu? : y
+	A - Ainda não me puseste nome. : y
+	A - Como é que chegaste aqui? : m
+	A - É um pouco tarde para apresentações, não? : y
+	A - Como te chamas tu? : y
+	A - Lydia, não é nada grave. : y
+	A - - Este é o Jacob. Esta é a Jennie. : n
+	A - Legião é o meu nome, porque somos muitos. : y
+	A - Não. : n
+	A - Chamo-me... : m
+	A - Ellie, e tu? : y
+	A - Eu sou o Bouddha. E tu? : y
+	A - Chamo-me Robert. : y
+	A - Maria. E tu? : y
+	A - Para que queres saber o meu nome? : y
+	A - Como te chamas? : y
+User Input - Onde estudas?
+	A - O que é que tu fazes? : y
+	A - Não sei. : m
+	A - Não, nem por isso. : n
+	A - Ele ganhou uma bolsa de estudos para ir a Harvard. : m
+	A - Não se diz às cobaias que estão num labirinto! : m
+	A - A minha quê? : n
+	A - Isso é Boston? : n
+	A - Em Columbia. : y
+	A - Isso é engraçado... ...porque o Jimmy telefonou para saber de ti. : n
+	A - Sim, mas acabei de ser suspensa. : n
+	A - Com o prof. Anderson em Edinburgo, Karl Strauss em Viena... : y
+	A - Em Yale e depois em Cambridge. : y
+	A - O que é isso? : m
+	A - Ontem, o Kaiser. : n
+	A - Em nenhuma, acabei de terminar. : m
+	A - Não, não o vejo a deitar tudo isso fora. : n
+	A - Tu pensarias que... sabes, um extremo vai fazer de ti... eufórico, e o outro suicida. : n
+	A - Não. : n
+User Input - Olá, como estás?
+	A - Estou bem. : y
+	A - Estou bem. E tu? : y
+	A - Estou bem. Como vai você? : y
+	A - Muito bem, e tu? : y
+	A - Olá. : y
+	A - Bem. E tu? : y
+	A - Olá. Estou bem. : y
+	A - Olá. : y
+	A - Bem. : y
+	A - Bem, obrigado. : y
+	A - Estás bem? : y
+	A - Muito bem. : y
+	A - Tudo bem. : y
+User Input - O que estás a fazer?
+	A - O meu pai educou-me para terminar o que começo. : m
+	A - A escolher o caminho. : m
+	A - Nadar no Canal! O que achas que estou a fazer? : y
+	A - O que estás a fazer? Isso não é uma boa ideia. Desculpa. : m
+	A - Que raio estás tu a fazer? : y
+	A - A abrir o portão. : y
+	A - O que se passa? : m
+	A - Estás a fazer um trabalho maravilhoso, Scarlet. : n
+	A - Que estás a fazer? : m
+	A - Nada. Estou a dormir. : y
+	A - O que te parece que estou a fazer? A tirar o dinheiro. : y
+	A - Eis o que vou fazer: Vou descer pela parede, quando a costa estiver livre, eu liberto-os. : y
+	A - Tenho que voltar para a Argentina amanhã. : y
+	A - Era tudo o que eu precisava. : n
+	A - O que te parece? Ajuda-me. : m
+	A - O que é isto? : n
+	A - Eu perguntei, o que estás a fazer? : n
+	A - Nicole, o que estás a fazer? : n
+	A - Vou sair pela varanda. O que te parece? : y
+User Input - O que fazes?
+	A - Acho que não começámos ontem com o pé direito... portanto, pensei que talvez... pudesse convidá-lo para almoçar. Podermos relacionar-nos um pouco. : m
+	A - Bem, eu sei que és orgulhosa demais para voltar sozinha, por isso vim... vim buscar-te. : m
+	A - Conta-lhe. Se calhar pode dar-te alguns conselhos. : n
+	A - A Marie não é o tipo de rapariga que goste de playback. : n
+	A - Não sei o que fazer. : y
+	A - Eu sou... : m
+	A - Não sei, tenta ser honesto. Resulta com algumas pessoas. : n
+	A - Não conseguia dormir. : y
+	A - Estou aqui para observar os vossos rituais de acasalamento. Por isso, comecem!. : y
+	A - O que acha que é? : n
+	A - Eu vivo aqui, palerma. : y
+	A - Fazer o que eu faço? : n
+	A - Preciso de falar contigo. : m
+	A - Eu vivo aqui. : y
+	A - Não sei o que fazer! : m
+	A - Solta me : n
+	A - Não... a pergunta é, O que é que estás a fazer? : n
+	A - Não estamos na prisão, como dizias. : n
+	A - O que vai fazer? : n
+User Input - O que gostas de fazer?
+	A - De contar a nossa versão da história. : m
+	A - O que eu gostaria de fazer? : m
+	A - Eu sou a pessoa que fez você de bobo. : m
+	A - De acabar com este dia... ...de uma vez por todas. : n
+	A - Não falas comigo, não é? : n
+	A - Para me dizer o quê? : n
+	A - Parece um vendedor de roupa interior. : n
+	A - O que gostas de fazer? : n
+	A - Eu gostava de ir pra floresta e fiicar andando... mas... ...acho que isso... : y
+	A - Eu gostava de ir pra floresta e fiicar andando... mas... : y
+	A - O que é que se passa com este tipo? : n
+	A - De partir do princípio de que faço o papel de bonzinho porque és tu quem pede. : y
+	A - Ou o que quer fazer? : n
+	A - De trabalhar à noite, a servir panquecas a polícias, prostitutas e bêbados. : y
+	A - Para a volta de Yeltsin. : n
+	A - Um pouco de tudo. Especialmente debates. : y
+	A - O que fazemos aqui, no meio do deserto? : n
+	A - Não sei. Nem sei o que sou. : m
+	A - Eu gostava de ir pra floresta e fiicar andando... mas... ...acho que isso... - MeIhor esquecer. : y
+User Input - O que fazes no teu tempo livre?
+	A - O jogo neste momento ficou feio... perigoso, corrupto... cheio de bandidos, armas e ladrões... e não nos esquecemos do Wade Bull. : n
+	A - O teu tempo virá : n
+	A - Não me vais voltar a ver depois de hoje. : m
+	A - Acho que não seria capaz. : n
+	A - O que é que a Natalie Anderson estaria a fazer a saír com um estúpido como eu? : m
+	A - Acho que tu tens uma boa ideia, não tens? : m
+	A - O que é? : m
+	A - O futuro é o nosso mundo, Morpheus. : n
+	A - O anúncio antecipado é apenas uma estratégia promocional. : n
+	A - O quê? : m
+	A - Afinal, é com ele que vais casar. : n
+	A - O que eu quisesse. : m
+	A - Uma lista de compras. : y
+	A - O amor não nos diz o tempo. Tenho de ir. : n
+	A - Não. : n
+	A - Não. Ele que vá para o diabo, Henry. Apenas... : n
+	A - O teu tempo virá, sim : n
+User Input - O que fazes nos teus tempos livres?
+	A - Não queremos fazer-vos mal, mas a milícia tem de estar convencida da nossa determinacão , de libertar os escravos deste estado. : n
+	A - São á prova de água. : n
+	A - Se os queres gastar em bandas desenhadas e filmes de terror... : n
+	A - Não foi o que perguntei! : n
+	A - Eu lhe contarei isso que. Deixe, você e eu, ponha nossas diferenças atrás de nós. : n
+	A - Não podes ir buscar um médico com este tempo. : n
+	A - Não. : n
+	A - - Devíamos levá-lo de volta para a aldeia. : n
+	A - Não pareces ter entendido o conceito disto. : n
+	A - É bom que não o deixes vaguear muito. : n
+	A - Não fumo. : y
+	A - Não é meu livro, eu... Não importa. : n
+	A - Claro. E o que fazemos ao outro, o Brown? : n
+	A - Eu não gosto do tom dele. : n
+	A - É um avanço notável. : n
+	A - A propósito, domingo levamos o carro para a pista. : n
+	A - A cada 50 anos mais ou menos, quando quero fugir da confusão, vou para uma tribo primitiva da Nova Guiné onde sou adorado como um Deus imortal, e têm uma estátua enorme minha. : y
+	A - Não comeces com isso. : m
+	A - E ele não queria saber de todo. : n
+User Input - O que fazes nos tempos livres?
+	A - Eu lhe contarei isso que. Deixe, você e eu, ponha nossas diferenças atrás de nós. : n
+	A - Claro. E o que fazemos ao outro, o Brown? : n
+	A - Eu gosto mesmo é de ver filmes antigos. : y
+	A - Neutralizamos o laboratório, e voltamos para a plantação. : m
+	A - Não. : n
+	A - O que é que a Natalie Anderson estaria a fazer a saír com um estúpido como eu? : n
+	A - Como é que vou saber? : y
+	A - O quê? : m
+	A - Isto é de loucos. : m
+	A - A cada 50 anos mais ou menos, quando quero fugir da confusão, vou para uma tribo primitiva da Nova Guiné onde sou adorado como um Deus imortal, e têm uma estátua enorme minha. : y
+	A - Eu tenho de fazer tudo o que posso. : y
+	A - Não pareces ter entendido o conceito disto. : n
+	A - É um avanço notável. : n
+	A - - Devíamos levá-lo de volta para a aldeia. : n
+	A - A propósito, domingo levamos o carro para a pista. : n
+	A - Não queremos fazer-vos mal, mas a milícia tem de estar convencida da nossa determinacão , de libertar os escravos deste estado. : n
+	A - O que vamos nós fazer? : n
+	A - Se os queres gastar em bandas desenhadas e filmes de terror... : n
+	A - E ele não queria saber de todo. : n
+	A - Estamos tentando mostrar o que podemos fazer! : n
+User Input - O que gostas de fazer nos tempos livres?
+	A - Para me dizer o quê? : n
+	A - E sabe que o fazemos bem. : n
+	A - O que gostas de fazer? : n
+	A - Se os queres gastar em bandas desenhadas e filmes de terror... : n
+	A - A cada 50 anos mais ou menos, quando quero fugir da confusão, vou para uma tribo primitiva da Nova Guiné onde sou adorado como um Deus imortal, e têm uma estátua enorme minha. : y
+	A - O que gostarias de me fazer? : n
+	A - O que mais gostas. Sabes o que consegues fazer? : n
+	A - O que eu gostaria de fazer? : m
+	A - Eu gostava de ir pra floresta e fiicar andando... mas... ...acho que isso... - MeIhor esquecer. : y
+	A - Eu gostava de ir pra floresta e fiicar andando... mas... : y
+	A - Parece um vendedor de roupa interior. : n
+	A - Eu sou a pessoa que fez você de bobo. : n
+	A - Tu é que estragas tudo, estás sempre demasiado nervosa. : n
+	A - Eu gostava de ir pra floresta e fiicar andando... mas... ...acho que isso... : y
+	A - O que é que se passa com este tipo? : n
+	A - O que é que a Natalie Anderson estaria a fazer a saír com um estúpido como eu? : m
+	A - Ou o que quer fazer? : n
+	A - - Eu não sei : y
+	A - Não falas comigo, não é? : n
+User Input - O que fazes aqui?
+	A - Não sabia que o hotel aceitava vales de refeição : n
+	A - Vim pedir desculpa. Não sei o que me passou pela cabeça. : y
+	A - Vim ver-vos. Certificar-me que o Dane está a proteger o legado. : y
+	A - O meu encontro amoroso e de prova de vinhos era a duas ruas daqui. : y
+	A - Eu vivo aqui, palerma. : y
+	A - Não devias estar aqui. : m
+	A - Pensei em passar a noite com alguém que me irrita. : y
+	A - O que fazias na cripta? : m
+	A - Amanhã, vou fazer os pagamentos, mas achei melhor vir depositar o cheque que convenientemente te esqueceste de assinar. : y
+	A - Viemos ver o Harry. : y
+	A - Vivo aqui. : y
+	A - Eu moro aqui. : y
+	A - O meu computador avariou-se outra vez. : y
+	A - Sabes o que vim fazer. : m
+	A - - Vim trazer-te a comida. Achei que já sabias da rotina. : y
+	A - O "Belos e Malditos" acaba para a semana. : m
+	A - O que esperavas? : m
+	A - Estava a ver o estrangeiro. : m
+	A - Só estou fazendo o melhor que posso para salvá-la. : n
+	A - Eu vivo aqui. : y
+User Input - O que gostavas de vir a fazer na tua vida?"
+	A - Como é que isso faz com você? : n
+	A - O Finch disse que o Stifler falou com ela. : n
+	A - Ou o que quer fazer? : n
+	A - Faz o que tiveres de fazer. : n
+	A - O que quer que digam, não tenho de o fazer. : n
+	A - É o namorado da Maggie. : n
+	A - - Eu não sei : y
+	A - Até mentir. Não é difícil. Estou agora a escrever uma mentira! : n
+	A - O que eu gostaria de fazer? : m
+	A - E que tal? : n
+	A - Se soubesses como é que foi, não dirias que era especial. : n
+	A - O que tens ? : n
+	A - O quê? : n
+	A - Eben, estamos a fazer o melhor que podemos. Temos de esperar. : n
+	A - Se é que o tens... : n
+	A - O que gostas de fazer? : n
+	A - Não sei. : y
+	A - Eu gostava de ir para a floresta e ficar a andar... mas acho que isso pode mudar, agora. : n
+	A - Bem... eu estou a tirar uma espécie de férias. : n
+User Input - O que fazes na vida?
+	A - Sou arquitecto. : y
+	A - Não é realmente até que eu tenha escrito. : n
+	A - Boa pergunta, pai. Vince, o que fazes na vida? : n
+	A - Eu? Bem... : m
+	A - Já te disse, os meus amigos tratam-me por Luce. : n
+	A - Pirata de video! : y
+	A - Sou redactor de contracapas. : y
+	A - Bem... eu estou a tirar uma espécie de férias. : y
+	A - Umas coisas aqui, outras ali. Mas agora... estou a fazer uma pausa. : y
+	A - E quanto a você, minha senhora? : m
+	A - Estou reformado. Inventei uns jogos infantis quando era novo. : y
+	A - Não sei. : y
+	A - Não sabes? : m
+	A - Sou gerente dum negócio. : y
+	A - Não sei. E tu, Kate? : y
+	A - Trabalho em construções. : y
+	A - - Sou o gerente de uma empresa de renovação de casas. : y
+	A - Sou uma actriz. Quer dizer, estou a estudar para ser. : y
+	A - Desculpe. Não sei o que tem. : n
+	A - Eu sou professora de ópera. : y
+User Input - Quais são os teu filmes favoritos?
+	A - O eixo está partido... E... está todo desfeito. : n
+	A - Que esta é uma oportunidade. : n
+	A - Não tenho. : y
+	A - A polícia de Santa Rosa acha que foi um crime. : n
+	A - A igreja e o estado. : m
+	A - O pai de Michael Kovak é um dos 14 : n
+	A - O que achas? : m
+	A - Fazemos Bum Bum carro: é como os automóveis, Mas com o real máquinas. : n
+	A - Quando dois corações se encontram, um passa a saber do que gosta e não gosta o outro. : n
+	A - Diz-lhe que... ...é a tal tatuagem. : n
+	A - Entre o leste e oeste de Berlim. : n
+	A - Bem, ainda não tenho a certeza. : y
+	A - Não muitos. Acho que não perdemos mais de dois quartos. : n
+	A - Qual é a empresa que estás... : n
+	A - É verdade. Os termos. Queria faIar-Ihe sobre isso. : n
+	A - A coisa não está bonita. : n
+	A - Se não conseguir a vaga de rapaz da casa? : n
+	A - O que é que queres ser? : n
+	A - Gente rude, senhor, de mãos calosas, que em Atenas exercem seus ofícios... e que nunca haviam trabalhado com o espírito. : n
+	A - Não se vê muita TV por aqui. : y
+User Input - Quais é que são as tuas maiores qualidades?
+	A - Não. : n
+	A - Certo. Esta é a minha loja de antiguidades. : n
+	A - Foste tu que pediste o submarino. : n
+	A - Não é que não goste dele como pessoa. : n
+	A - Tu é que tens que decidir. : y
+	A - A sério? Para esconder o quê? : n
+	A - Onde é que ele vai aterrar? : n
+	A - - Não. : n
+	A - Estás-me a perseguir? : y
+	A - Não faria isso se fosse a si, a menos que queira que a sua cabeça salte como a um boneco. : n
+	A - Ordens específicas, Miolos, é de não deixar entrar ninguém. : n
+	A - Bem... vou dizer a minha esposa que está tudo bem... e que com certeza que vamos sair daqui. : n
+	A - Reunir todos e levá-los para a escola. : m
+	A - Não são muitas, não são tão... : n
+	A - Só tu é que tens alguma força de vontade? : n
+	A - De que estás a falar? : m
+	A - O quê? : m
+	A - Amarelo e vermelho, ou o branco. : n
+User Input - Qual a tua serie de televisão favorita ?
+	A - Harry, não tens nada melhor que possas fazer? : n
+	A - "O Polícia e a Bióloga Marinha". : y
+	A - Eu disse, qual é a tua alcunha? : n
+	A - Que parvoíce! Gwen a minha favorita?. : n
+	A - É sobre um editor que está sempre a irritar o autor. : y
+	A - Entre mim e o Blanchard só há a Kay Lake, uma pega que comi... : n
+	A - A torta de maçã da Sra. Melody. : n
+	A - Por que não casamos? : n
+	A - É esta. : n
+	A - O quê? : m
+	A - O que raio é isso? : m
+	A - Há o mercado durante a semana, com fruta e vegetais de toda a espécie. : n
+	A - A minha ideia é que talvez eles tenham estado envolvidos. : n
+	A - O que é que queres dizer com isso? : m
+	A - Não tens que responder. : n
+	A - E mais uma coisa, menina, nunca me disseste que o monstro era real! : n
+	A - Acho que é a bebida. : n
+	A - Mas antes de expô-lo em público, gostaria de dar-lhe uma oportunidade de confessar, nem que seja para dar o primeiro, e pequeno, passo para a absolvição. : n
+	A - O regime na ilha é principalmente de carne, mas ela se recusa a comer carne. Mas vai passar! : n
+	A - Parece que estou a caminho de te recuperar. : n
+User Input - Quais são os teus livros favoritos?
+	A - Quando dois corações se encontram, um passa a saber do que gosta e não gosta o outro. : n
+	A - Bem, ainda não tenho a certeza. : m
+	A - Não se vê muita TV por aqui. : n
+	A - Não. : n
+	A - Não que eu saiba. : n
+	A - Por favor, promete-me que não os enceras. : n
+	A - Se não conseguir a vaga de rapaz da casa? : n
+	A - Não percebo. : m
+	A - Gente rude, senhor, de mãos calosas, que em Atenas exercem seus ofícios... e que nunca haviam trabalhado com o espírito. : n
+	A - Não tenho planos. : n
+	A - Não. São do Stelu. : n
+	A - A polícia de Santa Rosa acha que foi um crime. : n
+	A - Não tenho. : y
+	A - A coisa não está bonita. : n
+	A - Não muitos. Acho que não perdemos mais de dois quartos. : n
+	A - Não sei, há tantas opções. É difícil escolher. : y
+	A - O meu filho Brian, e a minha filha Kelly. : n
+	A - Que esta é uma oportunidade. : n
+	A - O que é que queres ser? : n
+	A - Entre o leste e oeste de Berlim. : n
+User Input - Quais é que são os teus hobbies?
+	A - Não que eu saiba. : n
+	A - Por acaso não tenho amigos. : m
+	A - Vou tentar não levar isso a mal. : m
+	A - Se não conseguir a vaga de rapaz da casa? : n
+	A - Ficamos com a casa dos fundos só para nós, não é? : n
+	A - O que é que queres ser? : n
+	A - Entre o leste e oeste de Berlim. : n
+	A - Qual é a empresa que estás... : n
+	A - O meu filho Brian, e a minha filha Kelly. : n
+	A - Não tenho planos. : n
+	A - Que esta é uma oportunidade. : n
+	A - Não. São do Stelu. : n
+	A - Este... é o meu Pai. : n
+	A - Não. : n
+	A - Bem, ainda não tenho a certeza. : y
+	A - Não tenho. : y
+	A - A coisa não está bonita. : n
+	A - É o que te pergunto. O metro quadrado tão barato é uma pechincha, não? : n
+	A - Não percebo. : m
+	A - Não sei, há tantas opções. É difícil escolher. : y
+User Input - Quais é que são as tuas bandas favoritas?
+	A - Não é que não goste dele como pessoa. : n
+	A - Amarelo e vermelho, ou o branco. : n
+	A - Não. : n
+	A - Ordens específicas, Miolos, é de não deixar entrar ninguém. : n
+	A - Não são muitas, não são tão... : m
+	A - E as demos que nunca ouves? Dá-me uma oportunidade. : n
+	A - O quê? : m
+	A - De que estás a falar? : m
+	A - Certo. Esta é a minha loja de antiguidades. : n
+	A - Reunir todos e levá-los para a escola. : n
+	A - O que é isto tudo? : n
+	A - Estás-me a perseguir? : n
+	A - A sério? Para esconder o quê? : n
+	A - - Não. : n
+	A - Tu é que tens que decidir. : n
+	A - Não faria isso se fosse a si, a menos que queira que a sua cabeça salte como a um boneco. : n
+	A - Onde é que ele vai aterrar? : n
+	A - Já disse que não. : n
+User Input - Praticas desporto?
+	A - Tu estás vestido com um terno. Pensa como o James Bond, está bem? : n
+	A - De uma forma ou de outra, há algo que qualquer pessoa faz... de uma forma regular. : y
+	A - Ele quase foi para as Olimpíadas, não foi, coelho? : n
+	A - Não é um crime. : y
+	A - É verdade o que ouvi dizer? : n
+	A - Pareço-lhe um jogador de equipa? : y
+	A - - O obituário. : n
+	A - A que ginásio vais? : m
+	A - Uma casa. Um triângulo. É álgebra. : n
+	A - Ah... Joguei matraquilhos na universidade. : y
+	A - Sabes o que é fixe? : n
+	A - um homem que não pratica desporto, não é homem de verdade, creio eu. : m
+	A - Pai... pára de o perseguir. : n
+	A - Algo como o basebol. : y
+	A - O dia já é nosso, Vossa Alteza. : n
+	A - Um homem que não faz desporto não é um homem de verdade. : m
+	A - O famoso lançador de rede. : n
+	A - E parece chateada com o advogado. : n
+	A - Não é bem literatura de entretenimento. : n
+	A - Não sabemos o que faz aqui. : n
+User Input - Preciso de direcções para chegar a Lisboa, sabes me dar?
+	A - Não há tempo. Ele tem estafilococos a comerem-lhe o braço. : n
+	A - Deixa que te diga, o alcoól não é para ti. : n
+	A - Não diga isso, Joe! É o tratamento. : n
+	A - Como o quê? : n
+	A - Não é bom para a tua pressão arterial. : n
+	A - Eu preciso de te virar as costas, porque essa é a razão por que as outras te deixam, tu nao consegues aguentar : n
+	A - - Eu não vejo o tio Tom, onde está? : n
+	A - Tecnicamente, o Howard é que é o engenhoso. : n
+	A - Não lhe dou a fórmula. : m
+	A - E não fazia nada de diferente, meu Deus, olha só para o que tivemos. : n
+	A - Nâo necessariamente. E por que goriIas? : n
+	A - E você está a ir para Chicago. É como se fosse o destino... : n
+	A - É só a tampa do radiador que está estalada. : n
+	A - Esbanjas bem os dolares de prata que nao tens, nao é, Gus? : n
+	A - E depois, como é que damos a volta desta forma... : n
+	A - E de Lisboa para o novo mundo. : n
+	A - Mas é a única coisa que posso fazer! : y
+	A - Chegámos até aqui e não vamos desistir até que eles cheguem a casa. : n
+	A - - O que tu queres dizer? - É a minha filha, eu posso fazê-lo : n
+	A - O Edgar e o Eduardo juntos... não são para brincadeiras. : n
+User Input - Qual a tua profissão
+	A - A torta de maçã da Sra. Melody. : n
+	A - O que está à vista é o que há. : m
+	A - O quê? : m
+	A - O que queres dizer? : m
+	A - Como é que funciona exactamente? : n
+	A - Entre mim e o Blanchard só há a Kay Lake, uma pega que comi... : n
+	A - Não tens que responder. : n
+	A - Bem, Eu sou fotógrafo. : y
+	A - Sim. O que é que tu fazes? : n
+	A - Mas antes de expô-lo em público, gostaria de dar-lhe uma oportunidade de confessar, nem que seja para dar o primeiro, e pequeno, passo para a absolvição. : n
+	A - É esta. : m
+	A - Pára com isso! : n
+	A - Disseste que eu não tinha sentimentos e emoções. : n
+	A - Um pouco disso e daquilo e nada de mais. : m
+	A - O que? : m
+	A - O regime na ilha é principalmente de carne, mas ela se recusa a comer carne. Mas vai passar! : n
+	A - Em que estás a pensar? : n
+	A - A minha ideia é que talvez eles tenham estado envolvidos. : n
+	A - Por que não casamos? : n
+	A - Eu disse, qual é a tua alcunha? : n
+User Input - Posso-te ver outra vez?
+	A - Ela quer ver outra vez. : n
+	A - Anda, outra vez! : n
+	A - Outra vez? : m
+	A - Não sabes como é. : n
+	A - Outra vez o quê? : m
+	A - Outra vez! : n
+	A - Sim. : y
+	A - Sim, estou a fazer uma pesquisa. : n
+	A - Está bem. Quero ir ao cinema amanhã à noite. : y
+	A - Sim, outra vez. : y
+	A - Ela ganhou outra vez. : n
+	A - Outra vez. : n
+	A - Ganhaste outra vez. : n
+	A - Perdi outra vez... : n
+	A - Perdão? Outra vez. : n
+	A - Washington não tem nenhum registo de uma empregada do Exército Eleanore Sears. : n
+User Input - Queres ir dar uma volta por Lisboa?
+	A - O que é que estás a fazer? : n
+	A - Do que estás à espera? : m
+	A - Tenho que pedir à minha mãe. : y
+	A - Sim, vai ajudar. : y
+	A - Porque não? : y
+	A - Sim! : y
+	A - Não. Vou antes dar uma corrida. : y
+	A - O Jared não disse para te afastares de mim? : n
+	A - Vamos. : y
+	A - Não posso. : y
+	A - Sim. : y
+	A - lsso seria esplêndido. Sim. : y
+	A - Como é que a Drew descobriu? : n
+	A - Não. : y
+	A - Não me deixam fazer isso. : y
+	A - Não, obrigado! : y
+	A - De certeza que é anterior à morte de Albert. : n
+	A - Pensas que podes chegar aqui e engatar-me. : m
+User Input - Quem são as pessoas atrás de ti?
+	A - O que estás a fazer? Quer-nos matar? - Eu só... : n
+	A - Estás a falar de quê? : m
+	A - Não é o que esperavas? : m
+	A - É a minha mamã e eu. : y
+	A - Não sei do que é que estás a falar. : m
+	A - Não te preocupes. Confia em mim, está bem? : m
+	A - Estes são o teu pai e a tua mãe. : y
+	A - Exato, sensual. É o que eu quis dizer. : n
+	A - São homens de negócios. : y
+	A - Que sorte a minha, conheci o único criminoso que não conhece o homem mais poderoso da cidade! : n
+	A - O quê? : m
+	A - Por que estão a tentar matar-nos? : n
+	A - O que foi, Kyoko? : m
+	A - O que temos aqui? : n
+	A - O que diabos ele está fazendo? : n
+	A - O sonho de espIendor : n
+User Input - Queres ir comer uma sandes?
+	A - Não me deixam fazer isso. : n
+	A - De quê? : y
+	A - Não. Planeei outra coisa. : y
+	A - Não, eu pensei que poderíamos ir comer. : y
+	A - Sei lá que tipo de sandes. Como no carro. : n
+	A - Sim. Adorava comer um bife, Archie. : y
+	A - Não. Vou antes dar uma corrida. : y
+	A - Não. : y
+	A - Não me parece que o queiras. : m
+	A - Não tenho como quê. : m
+	A - Sim. : y
+	A - Não, obrigado. : y
+	A - Não, hoje não. : y
+	A - Não é preciso. : y
+	A - Não é uma festa. : n
+User Input - Quem é a tua família?
+	A - Como é que eles se sentem? : n
+	A - Olha, eu estou apenas a começar a minha vida, de volta juntos. : n
+	A - O meu pai morreu quando eu tinha 12 anos. : m
+	A - Mãe, Pai, esta é a Paula. : y
+	A - Acho que é a mãe. : y
+	A - É a Dame Penelope Jean Lovegood III. : y
+	A - É. : n
+	A - A única família que tinha, vi-os a serem mortos. : y
+	A - Kyle, a minha família é que me salvou. : n
+	A - Não exactamente. : n
+	A - É a Francesca. Da escola. : y
+	A - Rita, esta é a Lois. Lois, Rita. : n
+	A - O que aconteceu? : n
+	A - E à minha. : n
+	A - Sim, a minha família. : n
+	A - Ela é minha! : n
+	A - Não passo a ser responsável por ela. : n
+	A - Não é isso... : n
+	A - Não, nenhum deles sabe sobre o bebé. : n
+	A - Desde que o meu irmão morreu... perdemos um pouco a cabeça. : n
+User Input - Queres ajuda?
+	A - Não, já to dou. Eu estou bem. : y
+	A - Obrigado, mas eu resolvo isto. : y
+	A - A tua, não. : y
+	A - Sim, se estiver na água... vou te passar tudo o que eu encontrar. Certo? : y
+	A - Não sei, Dallas. : y
+	A - Não. : y
+	A - Ora, sim. Obrigado. : y
+	A - Sim, obrigado. : y
+	A - Gostas de fazer dos meus filhos parvos? : n
+	A - Claro. : y
+	A - Não sei. : y
+	A - Não é preciso, obrigado. : y
+	A - Como está a Marion? : n
+	A - Sim. : y
+	A - Queres ajuda? : n
+	A - Podes ir comprar a alpista. : m
+	A - Não. Sim. : y
+User Input - Que séries gostas de ver?
+	A - E não durante muito tempo. : n
+	A - Não. : n
+	A - Eu..eu não quero ver nada, Chefe. : m
+	A - O que tens feito? : n
+	A - Não, ela não é nada... : n
+	A - Então eu faço um programa. : n
+	A - Certo, acho que captámos a ideia. : n
+	A - Este espectáculo é para ti, amigo. : n
+	A - E eu a ti, Raylan. : n
+	A - Acho que tenho uma televisão a mais por aqui. : n
+	A - Alguém que está distante, mas não direi o nome. : n
+	A - Não acreditas que eu consiga? : n
+	A - O que tenho a fazer é voltar àquele contentor e tentar novamente! : n
+	A - É o que eu peço aos meus amigos Americanos. : n
+	A - Ah, é? : n
+	A - Eu vou à frente e o Pavel atrás. : n
+	A - E eu a ti. : n
+User Input - Queres ir beber café?
+	A - Não sejas pessimista. : n
+	A - Não, eu... : n
+	A - Não, obrigada. Compro pelo caminho. : y
+	A - Não, estou bem. : y
+	A - Não, obrigado. Talvez quando voltar da minha corrida. : y
+	A - Sim... : y
+	A - Não, obrigado. : y
+	A - Claro. : y
+	A - Não, obrigado. Temos de ir. : y
+	A - Não vim aqui para tomar café. : y
+	A - Sim, obrigado Caubói. : y
+	A - Não, estou bem. Obrigado. : y
+	A - Não, obrigada. : y
+	A - Não. : y
+User Input - Que tipo de música gostas?
+	A - Não sei. : y
+	A - Música boa. : y
+	A - O que foi? : m
+	A - Provavelmente, música house. : y
+	A - Pois verás, o basket é como a música. : n
+	A - Não me importa. Acho que disco. : y
+	A - Sim. : n
+	A - Hummmmm... ouço hip-hop e, rock, soul, funk, não sei. Gosto de estar sempre a renovar. : y
+	A - Gosto muito Kokibuchuk. : n
+	A - A música é óptima e sabes que adoro dançar. : n
+	A - Sim. O Que? : n
+	A - Eu não sabia que fazias isso. : n
+	A - Eu também adoro música. : n
+	A - Música? : m
+	A - Como? Gosto deIe como é. : n
+	A - Vozes, cantando o meu nome. : y
+	A - Do tipo de música que vós gostardes. : y
+	A - Eu... Não quero que saias magoada. : n
+User Input - Queres ir comer um gelado?
+	A - Depois disso, o meu pai começou a provocar-me por causa do meu primeiro encontro, da forma que só os pais fazem. : n
+	A - Não. : y
+	A - Pode ser. : y
+	A - Não. Não obrigado. : y
+	A - Não, não me parece. : y
+	A - Sim... : y
+	A - Sim. : y
+	A - Vais adoecer. Um gelado, agora? : m
+	A - Não, obrigado. : y
+	A - Sim, sprinkles. : y
+	A - Sim. Adorava comer um bife, Archie. : y
+	A - Não. Planeei outra coisa. : y
+	A - Não, obrigada. : y
+	A - Compro chocolates e gelados para toda a gente, não se ofendam. : n
+	A - Não, não, está tudo bem. Não me importo nada de ir a pé. : y
+	A - Não estou mais perto de ir embora, pois não? : n
+User Input - Quem são os teus pais?
+	A - Não! : n
+	A - - Não. Sim! : n
+	A - Não, claro que não! : n
+	A - Não. Eu trato de mim. : n
+	A - Por favor, promete-me que não os enceras. : n
+	A - O que faltou fazer por estas miúdas, huh? : n
+	A - Ainda não. : n
+	A - É por isso que não estão aqui. : n
+	A - Foda-se, não! : n
+	A - - Não. : n
+	A - De certeza que não ês um polícia? : n
+	A - Não. E os teus? : n
+	A - Onde? Eles estão bem? Não estão igual à Kathy? : n
+	A - Não. São do Stelu. : n
+	A - Não conheço o meu pai. : m
+	A - Não. : n

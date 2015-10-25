@@ -27,6 +27,8 @@ class AnswerPicker:
     __answer_regex = None
 
     __user_input_answers_dic = {}
+    __user_input_identical_trigger_found_flags = {}
+
 
     _file_name = None
 
@@ -164,15 +166,21 @@ class AnswerPicker:
         if user_input not in self.__user_input_answers_dic:
             self.__user_input_answers_dic[user_input] = []
 
-        #check if userinput exists literraly, if so:
-        #   if I found out already a identical answer, append the element to the list
-        #   else, I delete athe element and set a flag as true
-
-        #else, if there is no answer with identical trigger, keep adding similar
-        #   else, ignore if it is not similar
-
-        if self._is_similar_enough(user_input, trigger):
+        # if user input is literally identical
+        if self._is_user_input_trigger_identical(user_input, trigger):
+            #if already found a match, append to the list
+            if user_input in self.__user_input_identical_trigger_found_flags:
+                self._put(user_input, self._normalize_answer(answer))
+            else: #if it is filled with similar stuff, delete because we already have a full match
+                self.__user_input_answers_dic[user_input] = []
+                self._put(user_input, self._normalize_answer(answer))
+                self.__user_input_identical_trigger_found_flags[user_input] = True
+        elif user_input not in self.__user_input_identical_trigger_found_flags and self._is_similar_enough(user_input, trigger):
             self._put(user_input, self._normalize_answer(answer))
+
+
+    def _is_user_input_trigger_identical(self, user_input, trigger):
+        return self._normalize_user_input(user_input) == self._normalize_trigger(trigger)
 
     #verify using word/sentence distance if a trigger is close enough
     def _is_similar_enough(self, user_input, trigger):
@@ -227,9 +235,12 @@ class AnswerPicker:
 
         return re.sub(self.__user_input_tag_regex, '', found_regex.string).strip()
 
+    def _are_answer_similar_enough(self, answer1, answer2):
+        return answer1 == answer2
+
     # util: find tuple with a given name
     def _find_answer(self, tup_list, name):
         for tup in tup_list:
-            if tup[0] == name:
+            if self._are_answer_similar_enough(tup[0], name):
                 return tup
         return None

@@ -10,9 +10,6 @@ def dice(v1, v2):
     return 2*(float(len(intersection)) / float((len(s1) + len(s2))))
 
 
-def word_to_list_chars(word):
-    return list(word)
-
 def MED(sentence1, sentence2, c1=1, c2=1, c3=1):
     size1, size2 = len(sentence1), len(sentence2)
 

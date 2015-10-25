@@ -1,7 +1,11 @@
+def jaccard_sentence(s1, s2):
+    return jaccard(s1.split(' '), s2.split(' '))
+
 
 def jaccard(v1, v2):
     s1, s2 = set(v1), set(v2)
     intersection = s1.intersection(s2)
+
     return float(len(intersection)) / float((len(s1) + len(s2) - len(intersection)))
 
 def dice(v1, v2):
@@ -9,6 +13,8 @@ def dice(v1, v2):
     intersection = s1.intersection(s2)
     return 2*(float(len(intersection)) / float((len(s1) + len(s2))))
 
+def dice_sentence(s1, s2):
+    return dice(s1.split(' '), s2.split(' '))
 
 def MED(sentence1, sentence2, c1=1, c2=1, c3=1):
     size1, size2 = len(sentence1), len(sentence2)

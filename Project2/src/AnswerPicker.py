@@ -164,6 +164,13 @@ class AnswerPicker:
         if user_input not in self.__user_input_answers_dic:
             self.__user_input_answers_dic[user_input] = []
 
+        #check if userinput exists literraly, if so:
+        #   if I found out already a identical answer, append the element to the list
+        #   else, I delete athe element and set a flag as true
+
+        #else, if there is no answer with identical trigger, keep adding similar
+        #   else, ignore if it is not similar
+
         if self._is_similar_enough(user_input, trigger):
             self._put(user_input, self._normalize_answer(answer))
 

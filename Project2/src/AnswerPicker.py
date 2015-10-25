@@ -2,8 +2,8 @@
 
 import re
 import os.path
+from SimilarityStrategy import SimilarityStrategy
 from RegexUtil import RegexUtil
-
 
 class AnswerPickerAnswerResult:
     def __init__(self):
@@ -17,7 +17,7 @@ class AnswerPicker:
     """
         Responsible for handling user_input, the corpus file and all possible answers.
     """
-
+    _similarity_strategy = None
     __user_input_tag_regex = r"^[\s]*" + "User Input:" + r"[\s]*"
     __trigger_tag_regex = r"^[\s]*" + "T" + r"[\s]*" + "-" + r"[\s]*"
     __answer_tag_regex = r"^[\s]*" + "A" + r"[\s]*" + "-" + r"[\s]*"
@@ -29,11 +29,13 @@ class AnswerPicker:
     __user_input_answers_dic = {}
     __user_input_identical_trigger_found_flags = {}
 
-
     _file_name = None
 
-    def __init__(self):
+    def __init__(self, similarity_strategy=None):
         # pre-computing regex expressions
+        if similarity_strategy is None: self._similarity_strategy = SimilarityStrategy()
+        else: self._similarity_strategy = similarity_strategy
+        
         self.__user_input_regex = self.__user_input_tag_regex + ".*$"
         self.__trigger_regex = self.__trigger_tag_regex + ".*$"
         self.__answer_regex = self.__answer_tag_regex + ".*$"
@@ -167,24 +169,18 @@ class AnswerPicker:
             self.__user_input_answers_dic[user_input] = []
 
         # if user input is literally identical
-        if self._is_user_input_trigger_identical(user_input, trigger):
+        if self._similarity_strategy.is_user_input_trigger_identical(user_input, trigger):
             #if already found a match, append to the list
             if user_input in self.__user_input_identical_trigger_found_flags:
-                self._put(user_input, self._normalize_answer(answer))
+                self._put(user_input, self._similarity_strategy.normalize_answer(answer))
             else: #if it is filled with similar stuff, delete because we already have a full match
                 self.__user_input_answers_dic[user_input] = []
-                self._put(user_input, self._normalize_answer(answer))
+                self._put(user_input, self._similarity_strategy.normalize_answer(answer))
                 self.__user_input_identical_trigger_found_flags[user_input] = True
-        elif user_input not in self.__user_input_identical_trigger_found_flags and self._is_similar_enough(user_input, trigger):
-            self._put(user_input, self._normalize_answer(answer))
+        elif user_input not in self.__user_input_identical_trigger_found_flags and self._similarity_strategy.is_similar_enough(user_input, trigger):
+            self._put(user_input, self._similarity_strategy.normalize_answer(answer))
 
 
-    def _is_user_input_trigger_identical(self, user_input, trigger):
-        return self._normalize_user_input(user_input) == self._normalize_trigger(trigger)
-
-    #verify using word/sentence distance if a trigger is close enough
-    def _is_similar_enough(self, user_input, trigger):
-        return self._normalize_user_input(user_input) == self._normalize_trigger(trigger)
 
     # Adds element to the map, if the key already exists, append the value to the existing ones and updates the count
     # The list is always sorted by the most frequent to the least frequent
@@ -202,17 +198,6 @@ class AnswerPicker:
 
         # sort
         list_tuples.sort(key=lambda tup: tup[1], reverse=True)
-
-    def _normalize_user_input(self, user_input):
-        # lowercase, no punctuation diacritics transformation
-        return RegexUtil.normalize_string(user_input)
-
-    def _normalize_trigger(self, trigger):
-        # lowercase, no punctuation diacritics transformation
-        return RegexUtil.normalize_string(trigger)
-
-    def _normalize_answer(self, answer):
-        return answer
 
     # reads the trigger using regex
     def _read_trigger(self, possible_trigger):
@@ -235,12 +220,9 @@ class AnswerPicker:
 
         return re.sub(self.__user_input_tag_regex, '', found_regex.string).strip()
 
-    def _are_answer_similar_enough(self, answer1, answer2):
-        return answer1 == answer2
-
     # util: find tuple with a given name
     def _find_answer(self, tup_list, name):
         for tup in tup_list:
-            if self._are_answer_similar_enough(tup[0], name):
+            if self._similarity_strategy.are_answer_similar_enough(tup[0], name):
                 return tup
         return None

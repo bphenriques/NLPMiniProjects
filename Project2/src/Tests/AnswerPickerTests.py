@@ -2,9 +2,9 @@
 
 from AnswerPicker import AnswerPicker
 from AnswerPicker import AnswerPickerAnswerResult
+from SimilarityStrategy import  SimilarityStrategy
 from UserInputTriggerAnswerReader import UserInputTriggerAnswerReader
 from Tests import TestsUtil
-
 
 class TestAnswerPicker(AnswerPicker):
     def test_trigger_inexistent(self):
@@ -121,27 +121,82 @@ class TestAnswerPicker(AnswerPicker):
 
         assert len(self.get_answers("TestQuestion3")) == 13
 
-    def test_process__lite_file(self, file_name = "TestResources/LitePerguntasPosSistema.txt"):
+    def test_process__lite_file(self):
         self.clear()
-        self._file_reader.process_file(file_name, self.process_user_input_answer)
+        self._file_reader.process_file("TestResources/LitePerguntasPosSistema.txt", self.process_user_input_answer)
 
         assert self.number_matched_user_input() == 3
         assert len(self.get_answers("Tens filhos?")) == 12
         assert self.get_answer("Tens filhos?") == u"Não."
 
-    def test_process_big_file(self, file_name = "TestResources/PerguntasPosSistema.txt"):
+    def test_process_big_file(self):
         self.clear()
-        self._file_reader.process_file(file_name, self.process_user_input_answer)
+        self._file_reader.process_file("TestResources/PerguntasPosSistema.txt", self.process_user_input_answer)
 
         # The following question has no triggers that are similar to the user input
         assert self.get_answer("A tua familia é numerosa?") == AnswerPickerAnswerResult.TRIGGER_NOT_FOUND
 
-        #Non existent at all
+        # Non existent at all
         assert self.get_answer("I DONT EXIST?") == AnswerPickerAnswerResult.INVALID_USER_INPUT
 
-        #There are many similar triggers with this user_input
+        # There are many similar triggers with this user_input
         assert self.get_answer("Tens filhos?") == u"Não."
         assert self.get_answer("tens filhos?") == AnswerPickerAnswerResult.INVALID_USER_INPUT
+
+    def test_delete_similar_triggers_after_identical_trigger(self):
+        self.clear()
+
+        self._similarity_strategy = StrategyTriggersAlwaysSimilar()
+
+        # Tailored made file
+        self._file_reader.process_file("TestResources/Lite2ndPerguntasPosSistema.txt", self.process_user_input_answer)
+
+        answers1 = self.get_answers("A tua familia é numerosa?")
+        assert len(answers1) == 1
+        assert self.get_answer("A tua familia é numerosa?") == u"Olha, eu estou apenas a começar a minha vida, de volta juntos."
+
+        answers2 = self.get_answers("Aceitas tomar café?")
+        assert len(answers2) == 16
+        assert self.get_answer("Aceitas tomar café?") == u"Não, obrigado."
+
+        answers3 = self.get_answers("Tens filhos?")
+        assert len(answers3) == 12
+        assert self.get_answer("Tens filhos?") == u"Não."
+
+        answers4 = self.get_answers("Como se chama a tua mãe?")
+        assert len(answers4) == 1
+        assert self.get_answer("Como se chama a tua mãe?") == u"Mãmã"
+
+    def test_similar_answers(self):
+        self.clear()
+
+        self._similarity_strategy = StrategyEverythingIsSimilar()
+
+        # Tailored made file
+        self._file_reader.process_file("TestResources/Lite2ndPerguntasPosSistema.txt", self.process_user_input_answer)
+
+        # only one possible answer with probability 20 (number of answers in the file)
+        answers2 = self.get_answers("Aceitas tomar café?")
+        assert len(answers2) == 1
+        assert answers2[0][1] == 20
+        # it's always the first answer found that is stored. The following ones are not stored
+        assert self.get_answer("Aceitas tomar café?") == u"Não, obrigada."
+
+
+class StrategyTriggersAlwaysSimilar(SimilarityStrategy):
+    def is_user_input_trigger_similar(self, user_input, trigger):
+        return True
+
+    def are_answer_similar_enough(self, answer1, answer2):
+        return answer1 == answer2
+
+class StrategyEverythingIsSimilar(SimilarityStrategy):
+    def is_user_input_trigger_similar(self, user_input, trigger):
+        return True
+
+    def are_answer_similar_enough(self, answer1, answer2):
+        return True
+
 
 
 if __name__ == '__main__':
@@ -155,7 +210,9 @@ if __name__ == '__main__':
         questions_answer_reader.test_sort,
         questions_answer_reader.test_get_answer,
         questions_answer_reader.test_process__lite_file,
-        questions_answer_reader.test_process_big_file
+        questions_answer_reader.test_process_big_file,
+        questions_answer_reader.test_delete_similar_triggers_after_identical_trigger,
+        questions_answer_reader.test_similar_answers
     ]
 
     TestsUtil.run_tests(tests)

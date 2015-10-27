@@ -1,0 +1,361 @@
+=====================================================================================================================
+=====================================================================================================================
+User Input: A tua familia é numerosa?
+
+Only the last Trigger is equal
+=====================================================================================================================
+=====================================================================================================================
+
+
+1
+T - A tua família?
+A - Não é isso...
+
+2
+T - E a tua família?
+A - Como é que eles se sentem?
+
+3
+T - É a tua família?
+A - Sim, a minha família.
+
+4
+T - É a tua família?
+A - É.
+
+5
+T - À tua família.
+A - E à minha.
+
+6
+T - A tua família.
+A - O que aconteceu?
+
+7
+T - E a tua família?
+A - O meu pai morreu quando eu tinha 12 anos.
+
+8
+T - Ela é a tua família.
+A - Não passo a ser responsável por ela.
+
+9
+T - E a tua família?
+A - Desde que o meu irmão morreu... perdemos um pouco a cabeça.
+
+10
+T - E a tua família?
+A - Não, nenhum deles sabe sobre o bebé.
+
+11
+T - E a tua família?
+A - A única família que tinha, vi-os a serem mortos.
+
+12
+T - E isso... salvou a tua família?
+A - Kyle, a minha família é que me salvou.
+
+13
+T - Somos a tua família.
+A - O quê?
+
+14
+T - À tua família.
+A - À sua.
+
+15
+T - Mas amas a tua família.
+A - E o teu nome de família.
+
+16
+T - A tua família abandonou-te. E depois?
+A - Quer mesmo saber? Não é uma história fácil de relembrar.
+
+17
+T - É alguém ligado à tua família?
+A - Alguém que trabalha para a tua família?
+
+18
+T - Vou jantar contigo... e com a tua família.
+A - É isso que vamos fazer.
+
+19
+T - A tua família vem ao casamento?
+A - Não...
+
+20
+T - A tua familia é numerosa?
+A - Olha, eu estou apenas a começar a minha vida, de volta juntos.
+
+
+=====================================================================================================================
+=====================================================================================================================
+User Input: Aceitas tomar café?
+
+Nothing is equals to the user input
+"Nao, obrigado" occurs 3 times
+"Nao, obrigada" occurs 2 times
+"Não." occurs 2 times
+
+17 possible answers
+=====================================================================================================================
+=====================================================================================================================
+
+1
+T - Queres tomar café?
+A - Não, obrigada.
+
+2
+T - Queres ir tomar um café?
+A - Não.
+
+3
+T - Vamos lá tomar um café.
+A - Não.
+
+4
+T - Gostava de tomar um café?
+A - Não, obrigado.
+
+5
+T - Se quer tomar um café?
+A - Não. Obrigado.
+
+6
+T - Sente-se. Aceita um café?
+A - Não, obrigado.
+
+7
+T - Querem tomar café connosco?
+A - Sim, obrigado.
+
+8
+T - Quer ir tomar um café?
+A - Não, obrigada.
+
+9
+T - Olá, querida. Queres tomar café?
+A - Não estou com fome.
+
+10
+T - Tomam um café?
+A - Não, obrigado.
+
+11
+T - Vens tomar um café?
+A - Agora não.
+
+12
+T - Posso tomar só café?
+A - Não estou com muita fome.
+
+13
+T - Podemos ir tomar um café.
+A - Não, aqui está bem.
+
+14
+T - Foi tomar café?
+A - E como foi?
+
+15
+T - Aceitas um café, Anders?
+A - Sim, claro.
+
+16
+T - Queres subir para tomar um café?
+A - Eu não bebo café.
+
+17
+T - Bom, vamos tomar café.
+A - Sabe o que está acontecendo aqui?
+
+18
+T - Tome uma xícara de café...
+A - Não quero café.
+
+19
+T - Encontrámo-nos duas vezes para tomar café.
+A - Vá lá, ela não bebe café.
+
+20
+T - Vamos tomar café como pessoas civilizadas.
+A - Tu não bebes café.
+
+
+=====================================================================================================================
+=====================================================================================================================
+User Input: Tens filhos?
+
+
+=====================================================================================================================
+=====================================================================================================================
+
+
+1
+T - Tens filhos?
+A - Não.
+
+2
+T - - Tens filhos?
+A - Não.
+
+3
+T - Tens filhos?
+A - Sim, tenho um filho.
+
+4
+T - Tens filhos?
+A - Sim. O que terias feito?
+
+5
+T - Tens filhos?
+A - Não.
+
+6
+T - Tens filhos?
+A - Não, é complicado.
+
+7
+T - Tens filhos?
+A - Não.
+
+8
+T - Tens filhos?
+A - Sim, dois.
+
+9
+T - Tens filhos?
+A - Sim, uma filha de doze anos.
+
+10
+T - Tens filhos?
+A - Não tinha tempo.
+
+11
+T - Tens filhos?
+A - Um filho.
+
+12
+T - Tens filhos?
+A - O Emanuele. Tem sete anos.
+
+13
+T - Tens filhos?
+A - Uma menina.
+
+14
+T - E tu, tens filhos?
+A - Não.
+
+15
+T - Não tens filhos.
+A - Não sabes o que se sente.
+
+16
+T - Tens filhos?
+A - Nunca quis filhos dele.
+
+17
+T - Tens filhos?
+A - Tenho dois filhos.
+
+18
+T - Tia April, tens filhos?
+A - Não.
+
+19
+T - Tens dois filhos?
+A - Sim. Ainda são pequenos. Uma menina de cabelo dourado.
+
+20
+T - Sargento Russell, tens filhos?
+A - Ainda não, mas tenho um par de sobrinhos.
+
+
+=====================================================================================================================
+=====================================================================================================================
+User Input: Como se chama a tua mãe?
+
+Only 10nd question matches
+=====================================================================================================================
+=====================================================================================================================
+
+1
+T - Como a tua mãe?
+A - A minha mãe não vos fez nada.
+
+2
+T - Como é a tua mãe?
+A - A minha mãe é lindíssima.
+
+3
+T - Como está a tua mãe?
+A - Ela está bem.
+
+4
+T - Como está a tua mãe?
+A - Está bem.
+
+5
+T - Como está a tua mãe?
+A - Está bem.
+
+6
+T - És como a tua mae.
+A - Deixa a minha mae fora disto. Ela é mais homem do que tu jamais serás.
+
+7
+T - Com a tua mãe.
+A - A minha mãe que me odeia.
+
+8
+T - Como se chama a nova?
+A - Creio que é Marlene.
+
+9
+T - Como a tua mãe.
+A - Parece ter corrido tudo bem à segunda tentativa.
+
+10
+T - Como se chama a tua mãe?
+A - Mãmã
+
+11
+T - Como se chama a peÃ§a?
+A - "A Ratoeira".
+
+12
+T - Como a tua mãe.
+A - Ele é real.
+
+13
+T - Como a tua mãe.
+A - A questionar o meu discernimento.
+
+14
+T - Como está a tua mãe?
+A - Não parecia muito bem da última vez que a vi.
+
+15
+T - Como se chama a cientista?
+A - E a Cam respondeu...
+
+16
+T - Como se chama a tua miúda?
+A - A tua miúda, como se chama?
+
+17
+T - Como se chama a cidade?
+A - Não me lembro. Ninguém vai mais lá.
+
+18
+T - John, se a tua mãe...
+A - Ela está morta!
+
+19
+T - Como está a tua mãe?
+A - Voltou a levantar-se.
+
+20
+T - Como se chama a tua obra?
+A - Chama-se: "Os gritos de um Atleta Antes de Morrer".

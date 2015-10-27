@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import re
-import os.path
-import sys
 from Strategy1 import Strategy1
 from RegexUtil import RegexUtil
 
@@ -32,7 +29,6 @@ class AnswerPicker:
         else: self._similarity_strategy = similarity_strategy
 
         self._file_reader = file_reader
-
 
     def dump_map(self):
         """
@@ -89,8 +85,14 @@ class AnswerPicker:
         """
         self.__user_input_answers_dic = {}
 
-    # Update internal map of triggers and answers
     def process_user_input_answer(self, user_input, trigger, answer):
+        """
+
+        :param user_input:
+        :param trigger:
+        :param answer:
+        :return:
+        """
         # print "user_input: ", user_input
         # print "\ttrigger: ", trigger
         # print "\t\tanswer: ", answer

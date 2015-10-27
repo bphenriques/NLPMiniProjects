@@ -2,9 +2,6 @@
 
 import re
 import os.path
-import sys
-from Strategy1 import Strategy1
-from RegexUtil import RegexUtil
 
 
 class UserInputTriggerAnswerReader:
@@ -32,6 +29,7 @@ class UserInputTriggerAnswerReader:
         If the file does not exist, an exception is thrown
 
         :param: _file_name, the path to the file
+        :param: process_user_input_answer_callback, call back function that receives, user_input, trigger and answer
         """
 
         if not os.path.exists(file_name):

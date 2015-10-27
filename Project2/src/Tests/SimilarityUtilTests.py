@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -
+
 from SimilarityUtil import *
-from TestsUtil import run_tests
+from Tests.TestsUtil import run_tests
 
 def test_jaccard_word():
     s = "saturday"

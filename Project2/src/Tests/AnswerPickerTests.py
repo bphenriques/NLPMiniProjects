@@ -3,7 +3,7 @@
 from AnswerPicker import AnswerPicker
 from AnswerPicker import AnswerPickerAnswerResult
 from UserInputTriggerAnswerReader import UserInputTriggerAnswerReader
-import TestsUtil
+from Tests import TestsUtil
 
 
 class TestAnswerPicker(AnswerPicker):

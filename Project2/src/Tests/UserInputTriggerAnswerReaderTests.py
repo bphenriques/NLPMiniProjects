@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from UserInputTriggerAnswerReader import UserInputTriggerAnswerReader
-import TestsUtil
+from Tests import TestsUtil
 
 
 class TestUserInputTriggerAnswerReader(UserInputTriggerAnswerReader):

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -
+
 import abc
 from RegexUtil import RegexUtil
 
@@ -14,6 +16,12 @@ class SimilarityStrategy(object):
         return
 
     def is_user_input_trigger_identical(self, user_input, trigger):
+        """
+
+        :param user_input:
+        :param trigger:
+        :return:
+        """
         return self.normalize_user_input(user_input) == self.normalize_trigger(trigger)
 
     def normalize_user_input(self, user_input):

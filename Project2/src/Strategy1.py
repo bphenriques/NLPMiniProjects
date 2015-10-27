@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -
+
 from SimilarityStrategy import SimilarityStrategy
 
 
@@ -7,4 +9,3 @@ class Strategy1(SimilarityStrategy):
 
     def are_answer_similar_enough(self, answer1, answer2):
         return answer1 == answer2
-

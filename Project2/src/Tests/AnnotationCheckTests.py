@@ -1,4 +1,6 @@
-import TestsUtil
+# -*- coding: utf-8 -
+
+from Tests import TestsUtil
 from AnnotationCheck import AnnotationCheck
 from AnswerPicker import AnswerPicker
 from UserInputTriggerAnswerReader import UserInputTriggerAnswerReader

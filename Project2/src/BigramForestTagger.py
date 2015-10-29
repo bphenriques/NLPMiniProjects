@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import nltk
 from nltk.corpus import floresta
 
@@ -33,5 +35,5 @@ class BigramForestTagger:
 
 if __name__ == '__main__':
     tagger = BigramForestTagger()
-    print tagger.tag_sentence("O Bruno e careca!")
+    print tagger.tag_sentence(r"O Bruno sujou a careca!")
 

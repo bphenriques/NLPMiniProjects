@@ -116,7 +116,7 @@ def med(sequence1, sequence2, c1=1, c2=1, c3=1):
     return matrix[matrix_row_size - 1][matrix_col_size - 1]
 
 
-def remove_words(sentence, list_words_to_remove):
+def remove_words(sentence, list_words_to_remove = nltk.corpus.stopwords.words('portuguese')):
     result = []
     for word in sentence.split(" "):
         if word not in list_words_to_remove:
@@ -130,12 +130,5 @@ def tok_stem(sentence):
     stemmer = nltk.stem.RSLPStemmer()
     # decode porque so alguns tem u'ola', encode para tirar os malditos u
     for word in l:
-        result.append(stemmer.stem(word).decode().encode())
+        result.append(stemmer.stem(word))
     return " ".join(result)
-
-
-if __name__ == "__main__":
-    stop_words = nltk.corpus.stopwords.words('portuguese')
-
-    print remove_words(u"a loja do mestre andré", stop_words)
-    print tok_stem("o assassinado do senhor alfred godofredo")

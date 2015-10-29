@@ -11,11 +11,10 @@ class BestStrategiesCalculator:
     def __init__(self, test_strategies):
         """
         Contructor
-        :param test_strategies: list of strategies to test
+        :param test_strategies: list of tuples (SimiliaryStrategy, float)  to test
         """
-        for strategy in test_strategies:
-            content = (strategy, 0)
-            self.__strategies.append(content)
+
+        self.__strategies = test_strategies
 
     def determine_best_strategy(self, annotation_file, questions_file, corpus_file, debug=False):
         """
@@ -31,7 +30,12 @@ class BestStrategiesCalculator:
         result = []
         for t in self.__strategies:
             if debug: print "Determining accuracy using ", t[0].__class__.__name__, "..."
-            aux = (t[0], myAvalia(annotation_file, questions_file, corpus_file, strategy=t[0]))
+
+            if t[1] == 0:
+                aux = (t[0], myAvalia(annotation_file, questions_file, corpus_file, strategy=t[0]))
+            else:
+                aux = (t[0], t[1])
+
             result.append(aux)
 
         # sort
@@ -44,19 +48,26 @@ class BestStrategiesCalculator:
         """
         print "========================================================================"
         print "================================ RESULTS ==============================="
+        print "="
         for strategy in self.__strategies:
-            print strategy[0].__class__.__name__, ": ", round(strategy[1], 6)*100, "% accurate"
+            print "= ", strategy[0].__class__.__name__, ": ", round(strategy[1], 6)*100, "% accurate"
+        print "="
         print "========================================================================"
 
+
+def create_tuple(strategy, accuracy=0):
+    return (strategy, accuracy)
 
 if __name__ == "__main__":
     annotations_file_path = "TestResources/AnotadoAll.txt"
     questions_file_path = "TestResources/AllCorpusQuestions.txt"
     corpus_file_path = "TestResources/PerguntasPosSistema.txt"
 
-
     strategies = [
-        Strategies.IdenticalStrategy(), # Baseline from project1
+        create_tuple(Strategies.IdenticalStrategy(), 0.185345),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggers(), 0.24569),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnAnswers(), 0.25),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswers(), 0.25),
     ]
 
     bsc = BestStrategiesCalculator(strategies)

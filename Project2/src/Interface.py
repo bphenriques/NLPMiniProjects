@@ -26,10 +26,10 @@ def sss(file_name, question):
     return answer
 
 
-def myAvalia(annotation_file, questions_file, corpus_file_path="TestResources/PerguntasPosSistema.txt"):
+def myAvalia(annotation_file, questions_file, corpus_file_path="TestResources/PerguntasPosSistema.txt", strategy=None):
     # process corpus file
     file_reader = UserInputTriggerAnswerReader()
-    answer_picker = AnswerPicker(file_reader)
+    answer_picker = AnswerPicker(file_reader, strategy)
     file_reader.process_file(corpus_file_path, answer_picker.process_user_input_answer)
 
     # analyse annotation_file and return the accuracy

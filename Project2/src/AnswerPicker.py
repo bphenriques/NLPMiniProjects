@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from Strategy1 import Strategy1
+from Strategies import IdenticalStrategy
 from RegexUtil import RegexUtil
 
 
@@ -25,7 +25,7 @@ class AnswerPicker:
 
     def __init__(self, file_reader, similarity_strategy=None):
         # pre-computing regex expressions
-        if similarity_strategy is None: self._similarity_strategy = Strategy1()
+        if similarity_strategy is None: self._similarity_strategy = IdenticalStrategy()
         else: self._similarity_strategy = similarity_strategy
 
         self._file_reader = file_reader

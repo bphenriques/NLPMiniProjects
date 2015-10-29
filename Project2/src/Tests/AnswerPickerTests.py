@@ -190,13 +190,13 @@ class StrategyTriggersAlwaysSimilar(SimilarityStrategy):
     def are_answer_similar_enough(self, answer1, answer2):
         return answer1 == answer2
 
+
 class StrategyEverythingIsSimilar(SimilarityStrategy):
     def is_user_input_trigger_similar(self, user_input, trigger):
         return True
 
     def are_answer_similar_enough(self, answer1, answer2):
         return True
-
 
 
 if __name__ == '__main__':

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -
 
+import nltk
 from nltk.tokenize import wordpunct_tokenize
 
 
@@ -108,8 +109,33 @@ def med(sequence1, sequence2, c1=1, c2=1, c3=1):
             if element1 == element2:
                 matrix[i][j] = matrix[i-1][j-1]
             else:
-                matrix[i][j] = min(matrix[i-1][j] + c1, matrix[i][j-1] + c2, matrix[i-1][j-1] + c3)
+                matrix[i][j] = min(matrix[i-1][j] + c1,
+                                   matrix[i][j-1] + c2,
+                                   matrix[i-1][j-1] + c3)
 
     return matrix[matrix_row_size - 1][matrix_col_size - 1]
 
 
+def remove_words(sentence, list_words_to_remove):
+    result = []
+    for word in sentence.split(" "):
+        if word not in list_words_to_remove:
+            result.append(word)
+    return " ".join(result)
+
+
+def tok_stem(sentence):
+    result = []
+    l = nltk.word_tokenize(sentence)
+    stemmer = nltk.stem.RSLPStemmer()
+    # decode porque so alguns tem u'ola', encode para tirar os malditos u
+    for word in l:
+        result.append(stemmer.stem(word).decode().encode())
+    return " ".join(result)
+
+
+if __name__ == "__main__":
+    stop_words = nltk.corpus.stopwords.words('portuguese')
+
+    print remove_words(u"a loja do mestre andré", stop_words)
+    print tok_stem("o assassinado do senhor alfred godofredo")

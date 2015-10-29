@@ -118,7 +118,8 @@ class AnswerPicker:
                 self._put(user_input, self._similarity_strategy.normalize_answer(answer))
 
             self.__user_input_identical_trigger_found_flags[user_input] = True
-        elif user_input not in self.__user_input_identical_trigger_found_flags and self._similarity_strategy.is_user_input_trigger_similar(user_input, trigger):
+        elif user_input not in self.__user_input_identical_trigger_found_flags and \
+                self._similarity_strategy.is_user_input_trigger_similar(user_input, trigger):
             self._put(user_input, self._similarity_strategy.normalize_answer(answer))
 
 

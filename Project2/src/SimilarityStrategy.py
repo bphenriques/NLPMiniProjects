@@ -7,6 +7,14 @@ from RegexUtil import RegexUtil
 class SimilarityStrategy(object):
     __metaclass__ = abc.ABCMeta
 
+    description = ""
+
+    def __init__(self, description=None):
+        if description is None:
+            self.description = self.__class__.__name__
+        else:
+            self.description = description
+
     @abc.abstractmethod
     def is_user_input_trigger_similar(self, user_input, trigger):
         return

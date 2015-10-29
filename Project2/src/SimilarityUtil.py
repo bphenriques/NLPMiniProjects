@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -
 
 import nltk
+import BigramForestTagger
 from nltk.tokenize import wordpunct_tokenize
 
 
@@ -133,6 +134,38 @@ def tok_stem(sentence):
         result.append(stemmer.stem(word).decode().encode())
     return " ".join(result)
 
+def dd_jaccard(sentence1, sentence2, weight1=0.5, weight2=0.5):
+
+    #TODO: should be stored
+    tagger = BigramForestTagger()
+    tagged_sentence1 = tagger.tagsentence(sentence1)
+    tagged_sentence2 = tagger.tagsentence(sentence2)
+
+    s1, s2 = set(tagged_sentence1), set(tagged_sentence2)
+    intersection = s1.intersection(s2)
+
+    non_intersection1 = s1.difference(s2)
+    non_intersection2 = s2.difference(s1)
+
+    totalmed = 0
+    difference_length = 0
+    for word1 in non_intersection1:
+        for word2 in non_intersection2:
+            if same_tag(word1, word2):
+                #word difference proportion
+                difference_length = difference_length + max(len(word1), len(word2))
+                temp_med = med(word1, word2)
+                totalmed = totalmed + temp_med
+                #TODO: break2
+
+    #TODO: falta equilibrio de pesos e crescerem na mesma direccao
+    jaccard = float(len(intersection)) / float((len(s1) + len(s2) - len(intersection)))
+    medsimilarity = 1 - float(totalmed) / difference_length
+    return jaccard
+
+def same_tag(tagged_word1, tagged_word2):
+    #TODO: test
+    return tagged_word1[1] == tagged_word2[1]
 
 if __name__ == "__main__":
     stop_words = nltk.corpus.stopwords.words('portuguese')

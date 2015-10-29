@@ -125,6 +125,16 @@ def remove_stop_words(sentence, list_words_to_remove = nltk.corpus.stopwords.wor
     return " ".join(result)
 
 
+def filter_non_interrogative_sentence(sentence):
+    split = [sentence]
+    if "." in sentence:
+        split = sentence.split(".")
+    elif "!" in sentence:
+        split = sentence.split("!")
+
+    return split[len(split)-1].strip()
+
+
 def tok_stem(sentence):
     result = []
     l = nltk.word_tokenize(sentence)

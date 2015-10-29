@@ -116,7 +116,7 @@ def med(sequence1, sequence2, c1=1, c2=1, c3=1):
     return matrix[matrix_row_size - 1][matrix_col_size - 1]
 
 
-def remove_words(sentence, list_words_to_remove = nltk.corpus.stopwords.words('portuguese')):
+def remove_stop_words(sentence, list_words_to_remove = nltk.corpus.stopwords.words('portuguese')):
     result = []
     for word in sentence.split(" "):
         if word not in list_words_to_remove:

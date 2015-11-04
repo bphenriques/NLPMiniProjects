@@ -179,3 +179,13 @@ def dd_jaccard(sentence1, sentence2, weight1=0.5, weight2=0.5):
 def same_tag(tagged_word1, tagged_word2):
     #TODO: test
     return tagged_word1[1] == tagged_word2[1]
+
+
+def filter_tags(list_pairs_token_tag, tags_to_remove):
+    result = []
+    for el in list_pairs_token_tag:
+        if el[1] not in tags_to_remove:
+            result.append(el)
+
+    return result
+

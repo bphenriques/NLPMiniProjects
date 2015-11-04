@@ -14,12 +14,14 @@ class BigramForestTagger:
         self.__corpus = tsents
 
     def train(self):
+        print "Training corpus ..."
         tsents = [[(w.lower(), self._simplify_tag(t)) for (w, t) in sent] for sent in self.__corpus if sent]
-        train = tsents[100:]
+        train = tsents[9000:]
         tagger0 = nltk.DefaultTagger('n')
         tagger1 = nltk.UnigramTagger(train, backoff=tagger0)
         self.__tagger = nltk.BigramTagger(train, backoff=tagger1)
         self.__is_trained = True
+        print "Training complete!"
 
     def tag_sentence(self, sentence):
         if not self.__is_trained:
@@ -32,6 +34,12 @@ class BigramForestTagger:
             return t[t.index("+")+1:]
         else:
             return t
+
+    def construct_sentence(self, list_pairs_token_tag):
+        result = ""
+        for el in list_pairs_token_tag:
+            result += el[0] + " "
+        return resultt
 
 if __name__ == '__main__':
     tagger = BigramForestTagger()

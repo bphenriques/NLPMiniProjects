@@ -169,3 +169,23 @@ class MorphoJaccard(SimilarityStrategy):
 
     def are_answer_similar_enough(self, answer1, answer2):
         return answer1 == answer2
+
+
+class Braccard(SimilarityStrategy):
+    __tagger = None
+    __threshold = 0
+    def __init__(self, tagger, threshold = 0.8):
+        SimilarityStrategy.__init__(self, )
+        self.__tagger = tagger
+        self.__threshold = threshold
+        self.add_arguments_description(threshold)
+
+    def is_user_input_trigger_similar(self, user_input, trigger):
+        s1 = self.normalize_user_input(user_input)
+        s2 = self.normalize_trigger(trigger)
+        return custom_jaccard(s1, s2, self.__tagger) >= self.__threshold
+
+    def are_answer_similar_enough(self, answer1, answer2):
+        s1 = RegexUtil.normalize_string(answer1)
+        s2 = RegexUtil.normalize_string(answer2)
+        return custom_jaccard(s1, s2, self.__tagger) >= self.__threshold

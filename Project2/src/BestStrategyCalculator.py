@@ -121,15 +121,31 @@ if __name__ == "__main__":
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 7), 0.387931034483),
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(8, 7), 0.39224137931),
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 8), 0.396551724138),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(8, 8), 0.39224137931),
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(9, 8), 0.379310344828),
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(8, 9), 0.375),
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(9, 9), 0.375),
+
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(1, 8), 0.254310344828),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(2, 8), 0.262931034483),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(3, 8), 0.288793103448),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(4, 8), 0.344827586207),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(5, 8), 0.366379310345),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(6, 8), 0.379310344828),
+
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 7), 0.387931034483),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 6), 0.379310344828),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 5), 0.379310344828),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 4), 0.375),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 3), 0.375),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 2), 0.370689655172),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 1), 0.370689655172),
     '''
 
     strategies = [
         create_tuple(Strategies.IdenticalStrategy(), 0.189655172414),
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswers(), 0.258620689655),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(8, 8), 0.39224137931),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 8), 0.396551724138),
     ]
 
     bsc = BestStrategiesCalculator(strategies)

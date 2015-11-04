@@ -135,7 +135,7 @@ class MegaStrategyFiltering(SimilarityStrategy):
 
         # filtering sentence by the tags
         user_input = self._tagger.construct_sentence(filter_tags(tagged_user_input, self._tags_to_filter_triggers))
-        tagged_trigger = self._tagger.construct_sentence(filter_tags(tagged_trigger, self._tags_to_filter_triggers))
+        trigger = self._tagger.construct_sentence(filter_tags(tagged_trigger, self._tags_to_filter_triggers))
 
         # removing stop words and steming
         user_input = tok_stem(remove_stop_words(user_input))

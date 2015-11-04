@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -
 
 import nltk
-import BigramForestTagger
+from BigramForestTagger import BigramForestTagger
 from nltk.tokenize import wordpunct_tokenize
 
 
@@ -144,35 +144,56 @@ def tok_stem(sentence):
         result.append(stemmer.stem(word))
     return " ".join(result)
 
-def dd_jaccard(sentence1, sentence2, weight1=0.5, weight2=0.5):
+def dd_jaccard(sentence1, sentence2, weighttag = 0.5):
 
     #TODO: should be stored
     tagger = BigramForestTagger()
-    tagged_sentence1 = tagger.tagsentence(sentence1)
-    tagged_sentence2 = tagger.tagsentence(sentence2)
+    tagged_sentence1 = tagger.tag_sentence(sentence1)
+    tagged_sentence2 = tagger.tag_sentence(sentence2)
 
     s1, s2 = set(tagged_sentence1), set(tagged_sentence2)
+
     intersection = s1.intersection(s2)
 
     non_intersection1 = s1.difference(s2)
     non_intersection2 = s2.difference(s1)
 
-    totalmed = 0
-    difference_length = 0
-    for word1 in non_intersection1:
-        for word2 in non_intersection2:
-            if same_tag(word1, word2):
-                #word difference proportion
-                difference_length = difference_length + max(len(word1), len(word2))
-                temp_med = med(word1, word2)
-                totalmed = totalmed + temp_med
-                #TODO: break2
+    taglist1 = extract_tags(non_intersection1)
+    taglist2 = extract_tags(non_intersection2)
 
-    #TODO: falta equilibrio de pesos e crescerem na mesma direccao
-    jaccard = float(len(intersection)) / float((len(s1) + len(s2) - len(intersection)))
-    medsimilarity = 1 - float(totalmed) / difference_length
-    return jaccard
+    tag_set1, tag_set2 = set(taglist1), set(taglist2)
+    tag_intersection = tag_set1.intersection(tag_set2)
+
+    jaccardlength = float((len(s1) + len(s2) - len(intersection)))
+
+    jaccarda = float(len(intersection))
+    #dividing by the corresponding size
+    jaccardb = weighttag * float(len(tag_intersection))
+
+
+    #tag = get_tag(word1)
+    #if tag in ['n', 'art', 'prp', 'prop', 'pron-pers', 'pron-det', 'pron-indp', 'num', ' '
+
+    return (jaccarda + jaccardb) / jaccardlength
+
+
+def extract_tags(non_intersection):
+    taglist = list()
+    for word in non_intersection:
+        taglist.append(get_tag(word))
+    return taglist
+
+
+def get_tag(word):
+    return word[1]
 
 def same_tag(tagged_word1, tagged_word2):
-    #TODO: test
     return tagged_word1[1] == tagged_word2[1]
+
+if __name__ == '__main__':
+    a=[('O', 'n'), ('Bruno', 'n'), ('sujou', 'n'), ('a', u'prp'), ('careca', 'n'), ('!', u'!')]
+    b=[('A', 'n'), ('Bruna', 'n'), ('sujou', 'n'), ('a', u'prp'), ('cabeleira', 'n'), ('!', u'!')]
+    print extract_tags(a)
+    print '\n'
+    print jaccard_sentence(r"O Bruno sujou a careca!", r"A Bruna sujou a cabeleira!")
+    print dd_jaccard(r"O Bruno sujou a careca!", r"A Bruna sujou a cabeleira!")

@@ -127,10 +127,15 @@ def remove_stop_words(sentence, list_words_to_remove = nltk.corpus.stopwords.wor
 
 def filter_non_interrogative_sentence(sentence):
     split = [sentence]
-    if "." in sentence:
-        split = sentence.split(".")
-    elif "!" in sentence:
+
+    if "!" in sentence:
         split = sentence.split("!")
+    elif "..." in sentence:
+        return sentence
+    elif "." in sentence:
+        split = sentence.split(".")
+    else:
+        return sentence
 
     return split[len(split)-1].strip()
 
@@ -190,6 +195,17 @@ def get_tag(word):
 def same_tag(tagged_word1, tagged_word2):
     return tagged_word1[1] == tagged_word2[1]
 
+
+def filter_tags(list_pairs_token_tag, tags_to_remove):
+    result = []
+    for el in list_pairs_token_tag:
+        if el[1] not in tags_to_remove:
+            result.append(el)
+
+    return result
+
+
+
 if __name__ == '__main__':
     a=[('O', 'n'), ('Bruno', 'n'), ('sujou', 'n'), ('a', u'prp'), ('careca', 'n'), ('!', u'!')]
     b=[('A', 'n'), ('Bruna', 'n'), ('sujou', 'n'), ('a', u'prp'), ('cabeleira', 'n'), ('!', u'!')]
@@ -197,3 +213,14 @@ if __name__ == '__main__':
     print '\n'
     print jaccard_sentence(r"O Bruno sujou a careca!", r"A Bruna sujou a cabeleira!")
     print dd_jaccard(r"O Bruno sujou a careca!", r"A Bruna sujou a cabeleira!")
+
+
+
+
+
+
+
+
+
+
+

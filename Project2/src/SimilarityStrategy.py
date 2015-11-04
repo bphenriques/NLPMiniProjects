@@ -2,6 +2,7 @@
 
 import abc
 from RegexUtil import RegexUtil
+import SimilarityUtil
 
 
 class SimilarityStrategy(object):
@@ -15,6 +16,8 @@ class SimilarityStrategy(object):
         else:
             self.description = description
 
+        self.add_arguments_description()
+
     @abc.abstractmethod
     def is_user_input_trigger_similar(self, user_input, trigger):
         return
@@ -22,6 +25,15 @@ class SimilarityStrategy(object):
     @abc.abstractmethod
     def are_answer_similar_enough(self, answer1, answer2):
         return
+
+    def add_arguments_description(self, *args):
+        self.description = self.__class__.__name__ + "("
+        for i in range(0, len(args)):
+            self.description += str(args[i])
+            if i != len(args) - 1:
+                self.description += ", "
+
+        self.description += ")"
 
     def is_user_input_trigger_identical(self, user_input, trigger):
         """
@@ -38,6 +50,8 @@ class SimilarityStrategy(object):
         :param user_input:
         :return:
         """
+
+        # no need to remove non interrogative sentences from the trigger
         return RegexUtil.normalize_string(user_input)
 
     def normalize_trigger(self, trigger):
@@ -46,7 +60,7 @@ class SimilarityStrategy(object):
         :param trigger:
         :return:
         """
-        return RegexUtil.normalize_string(trigger)
+        return RegexUtil.normalize_string(SimilarityUtil.filter_non_interrogative_sentence(trigger))
 
     def normalize_answer(self, answer):
         """
@@ -55,3 +69,4 @@ class SimilarityStrategy(object):
         :return:
         """
         return answer
+

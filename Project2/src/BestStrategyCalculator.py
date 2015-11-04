@@ -2,11 +2,12 @@
 
 from Interface import myAvalia
 import Strategies
-
+import sys, traceback
 
 class BestStrategiesCalculator:
 
     __strategies = []
+    __sorted_strategies = []
 
     def __init__(self, test_strategies):
         """
@@ -28,127 +29,127 @@ class BestStrategiesCalculator:
         :return:
         """
         result = []
-        for t in self.__strategies:
-            if debug: print "Determining accuracy using ", t[0].description, "..."
 
-            if t[1] == 0:
-                aux = (t[0], myAvalia(annotation_file, questions_file, corpus_file, strategy=t[0]))
-            else:
-                aux = (t[0], t[1])
+        try:
+            for t in self.__strategies:
+                if debug: print t[0].description, "..."
 
-            if debug: print "\t ", str(aux[1]*100), "% accurate"
+                if t[1] == 0:
+                    aux = (t[0], myAvalia(annotation_file, questions_file, corpus_file, strategy=t[0]))
+                else:
+                    aux = (t[0], t[1])
 
-            result.append(aux)
-
-        # sort
-        result.sort(key=lambda tup: tup[1], reverse=True)
-        self.__strategies = result
+                if debug: print "\t ", str(aux[1]*100), "% "
+                result.append(aux)
+        except KeyboardInterrupt:
+            print ".... Stopping....."
+        finally:
+            # sort
+            self.__strategies = list(result)
+            self.__sorted_strategies = result
+            self.__sorted_strategies.sort(key=lambda tup: tup[1], reverse=True)
 
     def show_results(self):
         """
         Dump the results sorted by the most accurate strategy to the least accurate
         """
+
+        if len(self.__sorted_strategies) == 0:
+            print "Empty list of strategies"
+            return
+
         print "========================================================================"
         print "================================ RESULTS ==============================="
         print "="
-        for strategy in self.__strategies:
+        for strategy in self.__sorted_strategies:
             print "= ", strategy[0].description, ": ", strategy[1]*100, "% accurate"
         print "="
         print "========================================================================"
+
+    def dump_array_strategys(self):
+        if len(self.__strategies) == 0:
+            print "Empty list of strategies"
+            return
+
+        print "========================================================================"
+        print "======================= ARRAY OF STRATEGIES ============================"
+        print "="
+
+        i = 0
+        print "strategies = ["
+        for strategy in self.__strategies:
+            if strategy[1] == 0.0:
+                continue
+
+            print "    create_tuple(Strategies.%s, %s)," %(strategy[0].description, str(strategy[1]))
+            i += 1
+        print "]"
+
+        print "========================================================================"
+
 
 
 def create_tuple(strategy, accuracy=0.0):
     return (strategy, accuracy)
 
-if __name__ == "__main__":
+
+
+def main():
     annotations_file_path = "TestResources/AnotadoAll.txt"
     questions_file_path = "TestResources/AllCorpusQuestions.txt"
     corpus_file_path = "TestResources/PerguntasPosSistema.txt"
 
-    '''
-    Values before removing non-interrogative sentences (an extra filter)
+    strategies = []
 
-        create_tuple(Strategies.IdenticalStrategy(), 0.185345),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggers(), 0.24569)
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnAnswers(), 0.25),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswers(), 0.25),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(1, 1), 0.25),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(1, 2), 0.258621),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(2, 1), 0.258621),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(2, 2), 0.267241),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(3, 2), 0.284482758621),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(2, 3), 0.293103448276),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(3, 3), 0.293103448276),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(4, 3), 0.362068965517),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(3, 4), 0.349137931034),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(4, 4), 0.344827586207),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(5, 4), 0.370689655172),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(4, 5), 0.375),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(5, 5), 0.375)
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(6, 5), 0.370689655172),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(5, 6), 0.366379310345),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(6, 6), 0.35775862069),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 6), 0.362068965517),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(6, 7), 0.366379310345),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 7), 0.366379310345),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(8, 7), 0.375),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 8), 0.375),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(8, 8), 0.370689655172)
+    # Baseline
+    strategies.append(create_tuple(Strategies.IdenticalStrategy(), 0.185345))
+
+    # removing stop words and using stems
+    strategies.append(create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswers(), 0.258620689655))
+
 
     '''
-
-    ''' After removing non interrogative sentences from triggers '''
-
-    '''
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(0, 0), 0.258620689655),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(0, 1), 0.258620689655),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(0, 2), 0.26724137931),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(1, 0), 0.258620689655),
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(1, 1), 0.258620689655),
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(1, 2), 0.26724137931),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(2, 0), 0.26724137931),
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(2, 1), 0.26724137931),
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(2, 2), 0.275862068966),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(2, 2), 0.275862068966),
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(2, 3), 0.275862068966),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(2, 4), 0.275862068966),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(2, 5), 0.275862068966),
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(3, 2), 0.301724137931),
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(3, 3), 0.301724137931),
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(3, 4), 0.301724137931),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(4, 3), 0.35775862069),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(4, 4), 0.353448275862),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(5, 4), 0.375),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(3, 5), 0.301724137931),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(4, 2), 0.379310344828),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(4, 3), 0.379310344828),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(4, 4), 0.375),
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(4, 5), 0.375),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(5, 5), 0.375),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(5, 6), 0.366379310345),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(6, 5), 0.383620689655),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(6, 6), 0.383620689655),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(6, 7), 0.379310344828),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 6), 0.387931034483),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 7), 0.387931034483),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(8, 7), 0.39224137931),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 8), 0.396551724138),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(8, 8), 0.39224137931),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(9, 8), 0.379310344828),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(8, 9), 0.375),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(9, 9), 0.375),
-
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(1, 8), 0.254310344828),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(2, 8), 0.262931034483),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(3, 8), 0.288793103448),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(4, 8), 0.344827586207),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(5, 8), 0.366379310345),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(6, 8), 0.379310344828),
-
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 7), 0.387931034483),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 6), 0.379310344828),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 5), 0.379310344828),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 4), 0.375),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 3), 0.375),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 2), 0.370689655172),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 1), 0.370689655172),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(5, 2), 0.400862068966),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(5, 3), 0.405172413793),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(5, 4), 0.400862068966),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(5, 5), 0.400862068966),
     '''
 
-    strategies = [
-        create_tuple(Strategies.IdenticalStrategy(), 0.189655172414),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswers(), 0.258620689655),
-        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 8), 0.396551724138),
-    ]
+    for i in range(0, 10):
+        for j in range(0, 10):
+            strategies.append(create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(i, j)))
 
     bsc = BestStrategiesCalculator(strategies)
-    bsc.determine_best_strategy(annotations_file_path, questions_file_path, corpus_file_path, debug=True)
-    bsc.show_results()
+    try:
+        bsc.determine_best_strategy(annotations_file_path, questions_file_path, corpus_file_path, debug=True)
+    except Exception:
+        print "\nXXXXXXXXXXXXXXX\nXXXXXXXXXXXXXXX\n"
+        traceback.print_exc(file=sys.stdout)
+        print "\nXXXXXXXXXXXXXXX\nXXXXXXXXXXXXXXX\n"
+    finally:
+        bsc.show_results()
+        bsc.dump_array_strategys()
 
+if __name__ == "__main__":
+    main()

@@ -11,7 +11,7 @@ class SimilarityStrategy(object):
 
     def __init__(self, description=None):
         if description is None:
-            self.description = self.__class__.__name__
+            self.description = self.__class__.__name__ + "()"
         else:
             self.description = description
 
@@ -57,3 +57,4 @@ class SimilarityStrategy(object):
         :return:
         """
         return answer
+

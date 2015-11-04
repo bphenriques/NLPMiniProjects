@@ -77,8 +77,9 @@ class RemoveStopWordsAndStemOnTriggersAndAnswersMED(SimilarityStrategy):
     _med_answers_min = 1
 
     def __init__(self, user_input_triggers_min_med, answers_min_med):
-        description = "%s(%s, %s)" %(self.__class__.__name__, str(user_input_triggers_min_med), str(answers_min_med))
-        SimilarityStrategy.__init__(self, description)
+        SimilarityStrategy.__init__(self)
+
+        self.add_arguments_description(user_input_triggers_min_med, answers_min_med)
         self._med_user_input_triggers_min = user_input_triggers_min_med
         self._med_answers_min = answers_min_med
 
@@ -109,8 +110,7 @@ class MegaStrategyFiltering(SimilarityStrategy):
     _med_answers_min = 1
 
     def __init__(self, tagger, user_input_triggers_min_med, answers_min_med, filter_tag_triggers=None, filter_tag_answers=None):
-        description = "%s(%s,%s)" %(self.__class__.__name__, str(filter_tag_triggers), str(filter_tag_answers))
-        SimilarityStrategy.__init__(self, description)
+        SimilarityStrategy.__init__(self)
 
         self._tagger = tagger
         self._med_user_input_triggers_min = user_input_triggers_min_med
@@ -121,6 +121,9 @@ class MegaStrategyFiltering(SimilarityStrategy):
 
         if filter_tag_answers is not None:
             self._tags_to_filter_answers = filter_tag_answers
+
+        self.add_arguments_description(user_input_triggers_min_med, answers_min_med, self._tags_to_filter_triggers, self._tags_to_filter_answers)
+
 
     def is_user_input_trigger_similar(self, user_input, trigger):
         user_input = self.normalize_user_input(user_input)

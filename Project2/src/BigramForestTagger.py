@@ -39,9 +39,9 @@ class BigramForestTagger:
         result = ""
         for el in list_pairs_token_tag:
             result += el[0] + " "
-        return resultt
+        return result
 
 if __name__ == '__main__':
     tagger = BigramForestTagger()
-    print tagger.tag_sentence(r"O Bruno sujou a careca!")
+    print tagger.tag_sentence(r"Onde nasceste, Stella?")
 

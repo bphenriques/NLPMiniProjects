@@ -128,10 +128,12 @@ def remove_stop_words(sentence, list_words_to_remove = nltk.corpus.stopwords.wor
 def filter_non_interrogative_sentence(sentence):
     split = [sentence]
 
-    if "." in sentence:
-        split = sentence.split(".")
-    elif "!" in sentence:
+    if "!" in sentence:
         split = sentence.split("!")
+    elif "..." in sentence:
+        return sentence
+    elif "." in sentence:
+        split = sentence.split(".")
     else:
         return sentence
 

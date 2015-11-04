@@ -135,7 +135,7 @@ class MegaStrategyFiltering(SimilarityStrategy):
 
         # filtering sentence by the tags
         user_input = self._tagger.construct_sentence(filter_tags(tagged_user_input, self._tags_to_filter_triggers))
-        tagged_trigger = self._tagger.construct_sentence(filter_tags(tagged_trigger, self._tags_to_filter_triggers))
+        trigger = self._tagger.construct_sentence(filter_tags(tagged_trigger, self._tags_to_filter_triggers))
 
         # removing stop words and steming
         user_input = tok_stem(remove_stop_words(user_input))
@@ -149,3 +149,23 @@ class MegaStrategyFiltering(SimilarityStrategy):
 
         return med(answer1, answer2) <= self._med_answers_min
 
+# ###########################################
+# ###########################################
+# ###########################################
+
+class MorphoJaccard(SimilarityStrategy):
+    __tagger = None
+    __threshold = 0
+    def __init__(self, tagger, threshold = 0.8):
+        SimilarityStrategy.__init__(self, )
+        self.__tagger = tagger
+        self.__threshold = threshold
+        self.add_arguments_description(threshold)
+
+    def is_user_input_trigger_similar(self, user_input, trigger):
+        s1 = self.normalize_user_input(user_input)
+        s2 = self.normalize_trigger(trigger)
+        return custom_jaccard(s1, s2, self.__tagger) >= self.__threshold
+
+    def are_answer_similar_enough(self, answer1, answer2):
+        return answer1 == answer2

@@ -149,10 +149,8 @@ def tok_stem(sentence):
         result.append(stemmer.stem(word))
     return " ".join(result)
 
-def dd_jaccard(sentence1, sentence2, weighttag = 0.5):
+def custom_jaccard(sentence1, sentence2, tagger, weighttag = 0.5):
 
-    #TODO: should be stored
-    tagger = BigramForestTagger()
     tagged_sentence1 = tagger.tag_sentence(sentence1)
     tagged_sentence2 = tagger.tag_sentence(sentence2)
 
@@ -212,7 +210,7 @@ if __name__ == '__main__':
     print extract_tags(a)
     print '\n'
     print jaccard_sentence(r"O Bruno sujou a careca!", r"A Bruna sujou a cabeleira!")
-    print dd_jaccard(r"O Bruno sujou a careca!", r"A Bruna sujou a cabeleira!")
+    print custom_jaccard(r"O Bruno sujou a careca!", r"A Bruna sujou a cabeleira!")
 
 
 

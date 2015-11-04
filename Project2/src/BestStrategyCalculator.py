@@ -65,9 +65,11 @@ if __name__ == "__main__":
     questions_file_path = "TestResources/AllCorpusQuestions.txt"
     corpus_file_path = "TestResources/PerguntasPosSistema.txt"
 
-    strategies = [
+    """
+    Values before removing non-interrogative sentences (an extra filter)
+
         create_tuple(Strategies.IdenticalStrategy(), 0.185345),
-        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggers(), 0.24569),
+        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggers(), 0.24569), #value before removing non-interrogative sentences
         #create_tuple(Strategies.RemoveStopWordsAndStemOnAnswers(), 0.25),
         create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswers(), 0.25),
         #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(1, 1), 0.25),
@@ -92,6 +94,21 @@ if __name__ == "__main__":
         #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(8, 7), 0.375),
         #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(7, 8), 0.375),
         #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(8, 8), 0.370689655172)
+
+    """
+
+    """ After removing non interrogative sentences from triggers """
+    strategies = [
+        create_tuple(Strategies.IdenticalStrategy(), 0.1896551),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswers(), 0.2370689),
+        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(2, 3), 0.275862068),
+        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(3, 2), 0.301724137),
+        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(2, 2), 0.301724137),
+        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(1, 2), 0.301724137),
+        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(2, 1), 0.293103448),
+        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(1, 1), 0.293103448),
+        #create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(3, 3), 0.301724137),
+        create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(4, 4), 0.383620689), # every combination from (3,4) until (5,5) = 0.383620689
     ]
 
     bsc = BestStrategiesCalculator(strategies)

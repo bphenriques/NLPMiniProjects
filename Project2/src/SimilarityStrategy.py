@@ -2,7 +2,7 @@
 
 import abc
 from RegexUtil import RegexUtil
-
+import SimilarityUtil
 
 class SimilarityStrategy(object):
     __metaclass__ = abc.ABCMeta
@@ -38,6 +38,8 @@ class SimilarityStrategy(object):
         :param user_input:
         :return:
         """
+
+        # no need to remove non interrogative sentences from the trigger
         return RegexUtil.normalize_string(user_input)
 
     def normalize_trigger(self, trigger):
@@ -46,7 +48,7 @@ class SimilarityStrategy(object):
         :param trigger:
         :return:
         """
-        return RegexUtil.normalize_string(trigger)
+        return RegexUtil.normalize_string(SimilarityUtil.filter_non_interrogative_sentence(trigger))
 
     def normalize_answer(self, answer):
         """

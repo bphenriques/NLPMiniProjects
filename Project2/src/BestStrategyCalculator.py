@@ -61,10 +61,10 @@ class BestStrategiesCalculator:
             return
 
         print "========================================================================"
-        print "================================ RESULTS ==============================="
+        print "======================== ACCURACY RESULTS =============================="
         print "="
         for strategy in self.__sorted_strategies:
-            print "= ", strategy[0].description, ": ", strategy[1]*100, "% accurate"
+            print "= ", strategy[0].description, ": ", strategy[1]*100, "%"
         print "="
         print "========================================================================"
 
@@ -77,24 +77,24 @@ class BestStrategiesCalculator:
         print "======================= ARRAY OF STRATEGIES ============================"
         print "="
 
-        i = 0
-        print "strategies = ["
         for strategy in self.__strategies:
-            if strategy[1] == 0.0:
-                continue
+            if strategy[1] != 0.0:
+                print "test_strategy(strategies, Strategies.%s, %s" %(strategy[0].description, str(strategy[1]) + ")")
 
-            print "    create_tuple(Strategies.%s, %s)," %(strategy[0].description, str(strategy[1]))
-            i += 1
-        print "]"
-
+        print "="
         print "========================================================================"
 
 
+def test_strategy(strategies, strategy, accuracy=0):
+    tp = (strategy, accuracy)
+    if not contains_strategy(tp, strategies):
+        strategies.append(tp)
 
-def create_tuple(strategy, accuracy=0.0):
-    return (strategy, accuracy)
-
-
+def contains_strategy(strategy, tuples_strategies):
+    for t in tuples_strategies:
+        if t[0].description == strategy[0].description:
+            return True
+    return False
 
 def main():
     annotations_file_path = "TestResources/AnotadoAll.txt"
@@ -107,23 +107,20 @@ def main():
     tagger.train()
 
     # Baseline
-    strategies.append(create_tuple(Strategies.IdenticalStrategy(), 0.185345))
+    test_strategy(strategies, Strategies.IdenticalStrategy(), 0.185345)
 
     # removing stop words and using stems
-    strategies.append(create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswers(), 0.258620689655))
+    test_strategy(strategies, Strategies.RemoveStopWordsAndStemOnTriggersAndAnswers(), 0.258620689655)
 
-    # filtering tags...
+    # using med
     for i in range(0, 10):
         for j in range(0, 10):
-            pass
-            #strategies.append(create_tuple(Strategies.MegaStrategyFiltering(tagger, i, j)))
+            test_strategy(strategies, Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(i, j))
 
-
-    # without filtering
+    # filtering grammatic categories
     for i in range(0, 10):
         for j in range(0, 10):
-            pass
-            #strategies.append(create_tuple(Strategies.RemoveStopWordsAndStemOnTriggersAndAnswersMED(i, j)))
+            test_strategy(strategies, Strategies.MegaStrategyFiltering(tagger, i, j))
 
     bsc = BestStrategiesCalculator(strategies)
     try:

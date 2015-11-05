@@ -45,9 +45,9 @@ class TestAnswerPicker(AnswerPicker):
         assert(len(self.get_answers("Question2")) == 2)
         answers = self.get_answers("Question2")
         assert answers is not None
-        answer = self._find_answer(answers, self._answer_strategy.normalize_answer("Response2"))
+        answer = self._find_answer(answers, "Response2")
         assert answer is not None
-        assert answer[0] == self._answer_strategy.normalize_answer("Response2")
+        assert answer[0] == "Response2"
         assert answer[1] == 2
 
     def test_sort(self):
@@ -65,13 +65,13 @@ class TestAnswerPicker(AnswerPicker):
 
         # Tests if the  answers stored are sorted from the most frequent to the least frequent
         answers = self.get_answers("TestQuestion2")
-        assert answers[0][0] == self._answer_strategy.normalize_answer("Response3")
-        assert answers[1][0] == self._answer_strategy.normalize_answer("Response2")
-        assert answers[2][0] == self._answer_strategy.normalize_answer("Response1")
-        assert answers[3][0] == self._answer_strategy.normalize_answer("Response5") or \
-               answers[3][0] == self._answer_strategy.normalize_answer("Response4")
-        assert answers[4][0] == self._answer_strategy.normalize_answer("Response5") or \
-               answers[4][0] == self._answer_strategy.normalize_answer("Response4")
+        assert answers[0][0] == "Response3"
+        assert answers[1][0] == "Response2"
+        assert answers[2][0] == "Response1"
+        assert answers[3][0] == "Response5" or \
+               answers[3][0] == "Response4"
+        assert answers[4][0] == "Response5" or \
+               answers[4][0] == "Response4"
 
     def test_get_answer(self):
         self.clear()
@@ -88,19 +88,19 @@ class TestAnswerPicker(AnswerPicker):
         self.process_user_input_answer("TestQuestion1", "TestQuestion1", "Response5")  # Response5 : 1
 
         # Response3 is most frequent: 4
-        assert self.get_answer("TestQuestion1") == self._answer_strategy.normalize_answer("Response3")
+        assert self.get_answer("TestQuestion1") == "Response3"
 
         # changing the leadership
         self.process_user_input_answer("TestQuestion1", "TestQuestion1", "Response2")  # Response2 : 4
         self.process_user_input_answer("TestQuestion1", "TestQuestion1", "Response2")  # Response2 : 5
 
         # Response2 is most frequent: 5
-        assert self.get_answer("TestQuestion1") == self._answer_strategy.normalize_answer("Response2")
+        assert self.get_answer("TestQuestion1") == "Response2"
 
         # Response3 and Response2 are 5 (draw)
         self.process_user_input_answer("TestQuestion1", "TestQuestion1", "Response3")  # Response3 : 5
-        assert self.get_answer("TestQuestion1") == self._answer_strategy.normalize_answer("Response2") or \
-               self.get_answer("TestQuestion1") == self._answer_strategy.normalize_answer("Response3")
+        assert self.get_answer("TestQuestion1") == "Response2" or \
+               self.get_answer("TestQuestion1") == "Response3"
 
     def test_normalizer(self):
         self.clear()

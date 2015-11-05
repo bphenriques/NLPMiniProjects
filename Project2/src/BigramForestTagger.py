@@ -43,8 +43,4 @@ class BigramForestTagger:
 
 if __name__ == '__main__':
     tagger = BigramForestTagger()
-    print tagger.tag_sentence(r"Onde nasceste, Stella?")
-    print tagger.tag_sentence(r"ai ui... eia! o")
-
-
-
+    print tagger.tag_sentence(u"Eles até saem de graça.")

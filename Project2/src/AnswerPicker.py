@@ -112,16 +112,16 @@ class AnswerPicker:
 
             # if already found a match, append to the list
             if user_input in self.__user_input_identical_trigger_found_flags:
-                self._put(user_input, self._answer_strategy.normalize_answer(answer))
+                self._put(user_input, answer)
             else: # if it is filled with similar stuff, delete because we already have a full match
                 self.__user_input_answers_dic[user_input] = []
-                self._put(user_input, self._answer_strategy.normalize_answer(answer))
+                self._put(user_input, answer)
 
             self.__user_input_identical_trigger_found_flags[user_input] = True
 
         elif user_input not in self.__user_input_identical_trigger_found_flags and \
                 self._trigger_strategy.is_user_input_trigger_similar(user_input, trigger):
-            self._put(user_input, self._answer_strategy.normalize_answer(answer))
+            self._put(user_input, answer)
 
 
 

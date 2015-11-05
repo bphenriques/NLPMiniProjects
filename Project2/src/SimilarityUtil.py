@@ -120,7 +120,7 @@ def med(sequence1, sequence2, c1=1, c2=1, c3=1):
 def remove_stop_words(sentence, list_words_to_remove = nltk.corpus.stopwords.words('portuguese')):
     result = []
     for word in sentence.split(" "):
-        if word not in list_words_to_remove:
+        if word.lower() not in list_words_to_remove:
             result.append(word)
     return " ".join(result)
 
@@ -179,6 +179,13 @@ def custom_jaccard(sentence1, sentence2, tagger, weighttag = 0.5):
 
     return (jaccarda + jaccardb) / jaccardlength
 
+def similar_yes_no(s1, s2, weight = 0.5):
+
+    if ('sim' in s1 and 'sim' in s2) or ('nao' in s1 and 'nao' in s2):
+        return (1 - weight) * jaccard(s1, s2) + weight
+    else:
+        return jaccard(s1, s2)
+
 
 def extract_tags(non_intersection):
     taglist = list()
@@ -197,7 +204,7 @@ def same_tag(tagged_word1, tagged_word2):
 def filter_tags(list_pairs_token_tag, tags_to_remove):
     result = []
     for el in list_pairs_token_tag:
-        if el[1] not in tags_to_remove:
+        if get_tag(el) not in tags_to_remove:
             result.append(el)
 
     return result

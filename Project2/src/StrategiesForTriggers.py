@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -
 
+from RegexUtil import RegexUtil
 from SimilarityStrategies import TriggerSimilarityStrategy
 from SimilarityUtil import *
 
@@ -10,7 +11,7 @@ from SimilarityUtil import *
 
 class IdenticalNormalized(TriggerSimilarityStrategy):
     def is_user_input_trigger_similar(self, user_input, trigger):
-        return self.normalize_user_input(user_input) == self.normalize_trigger(trigger)
+        return RegexUtil.normalize_string(user_input) == RegexUtil.normalize_string(filter_non_interrogative_sentence(trigger))
 
 # ###########################################
 # ###########################################
@@ -19,8 +20,8 @@ class IdenticalNormalized(TriggerSimilarityStrategy):
 
 class RemoveStopWordsAndStem(TriggerSimilarityStrategy):
     def is_user_input_trigger_similar(self, user_input, trigger):
-        user_input = tok_stem(remove_stop_words(self.normalize_user_input(user_input)))
-        trigger = tok_stem(remove_stop_words(self.normalize_trigger(trigger)))
+        user_input = RegexUtil.normalize_string(tok_stem(remove_stop_words(user_input)))
+        trigger = RegexUtil.normalize_string(filter_non_interrogative_sentence(tok_stem(remove_stop_words(trigger))))
 
         return user_input == trigger
 
@@ -40,8 +41,8 @@ class RemoveStopWordsAndStemMED(TriggerSimilarityStrategy):
         self._med_user_input_triggers_min = user_input_triggers_min_med
 
     def is_user_input_trigger_similar(self, user_input, trigger):
-        user_input = tok_stem(remove_stop_words(self.normalize_user_input(user_input)))
-        trigger = tok_stem(remove_stop_words(self.normalize_trigger(trigger)))
+        user_input = RegexUtil.normalize_string(tok_stem(remove_stop_words(user_input)))
+        trigger = RegexUtil.normalize_string(filter_non_interrogative_sentence(tok_stem(remove_stop_words(trigger))))
 
         return med(user_input, trigger) <= self._med_user_input_triggers_min
 
@@ -69,8 +70,7 @@ class MegaStrategyFiltering(TriggerSimilarityStrategy):
         self.add_arguments_description("tagger", user_input_triggers_min_med, self._tags_to_filter_triggers)
 
     def is_user_input_trigger_similar(self, user_input, trigger):
-        user_input = self.normalize_user_input(user_input)
-        trigger = self.normalize_trigger(trigger)
+        trigger = filter_non_interrogative_sentence(trigger)
 
         # tag sentence
         tagged_user_input = self._tagger.tag_sentence(user_input)
@@ -81,8 +81,8 @@ class MegaStrategyFiltering(TriggerSimilarityStrategy):
         trigger = self._tagger.construct_sentence(filter_tags(tagged_trigger, self._tags_to_filter_triggers))
 
         # removing stop words and steming
-        user_input = tok_stem(remove_stop_words(user_input))
-        trigger = tok_stem(remove_stop_words(self.normalize_user_input(trigger)))
+        user_input = RegexUtil.normalize_string(tok_stem(remove_stop_words(user_input)))
+        trigger = RegexUtil.normalize_string(tok_stem(remove_stop_words(trigger)))
 
         return med(user_input, trigger) <= self._med_user_input_triggers_min
 
@@ -102,8 +102,8 @@ class MorphoJaccard(TriggerSimilarityStrategy):
         self.add_arguments_description(threshold)
 
     def is_user_input_trigger_similar(self, user_input, trigger):
-        s1 = self.normalize_user_input(user_input)
-        s2 = self.normalize_trigger(trigger)
+        s1 = RegexUtil.normalize_string(user_input)
+        s2 = RegexUtil.normalize_string(filter_non_interrogative_sentence(trigger))
         return custom_jaccard(s1, s2, self.__tagger) >= self.__threshold
 
 
@@ -118,6 +118,6 @@ class Braccard(TriggerSimilarityStrategy):
         self.add_arguments_description(threshold)
 
     def is_user_input_trigger_similar(self, user_input, trigger):
-        s1 = self.normalize_user_input(user_input)
-        s2 = self.normalize_trigger(trigger)
+        s1 = RegexUtil.normalize_string(user_input)
+        s2 = RegexUtil.normalize_string(filter_non_interrogative_sentence(trigger))
         return custom_jaccard(s1, s2, self.__tagger) >= self.__threshold

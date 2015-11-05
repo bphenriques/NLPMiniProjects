@@ -38,12 +38,6 @@ class TriggerSimilarityStrategy(SimilarityStrategy):
     def is_user_input_trigger_similar(self, user_input, trigger):
         return
 
-    def normalize_trigger(self, trigger):
-        return RegexUtil.normalize_string(SimilarityUtil.filter_non_interrogative_sentence(trigger))
-
-    def normalize_user_input(self, user_input):
-        return RegexUtil.normalize_string(user_input)
-
     def is_user_input_trigger_identical(self, user_input, trigger):
         return RegexUtil.normalize_string(user_input) == RegexUtil.normalize_string(trigger)
 
@@ -56,9 +50,6 @@ class AnswerSimilarityStrategy(SimilarityStrategy):
     @abc.abstractmethod
     def are_answer_similar_enough(self, answer1, answer2):
         return
-
-    def normalize_answer(self, answer):
-        return answer
 
 
 

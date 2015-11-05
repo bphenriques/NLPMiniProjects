@@ -1,4 +1,3 @@
-A tua familia é numerosa?
 Aceitas tomar café?
 Achas que hoje vai estar calor?
 Amanhã encontramo-nos?
@@ -7,7 +6,6 @@ Andas na escola?
 Com quem vives?
 Como aprendeste a falar português?
 Como correu o dia?
-Como e que te chamas?
 Como está o tempo?
 Como estás?
 Como se chama a tua mãe?
@@ -17,9 +15,7 @@ Como vai o dia?
 Como é que te chamas?
 Conheces essas pessoas atrás de ti?
 Costumas ir ao cinema?
-Costumas passar por aqui?
 Costumas sair à noite?
-De onde vens?
 De onde é que vens?
 De onde és natural?
 De onde és?
@@ -28,7 +24,6 @@ De que tipo de músicas gostas?
 Do que é que tu mais gostas?
 Dás-me o teu contacto?
 E passatempos preferidos?
-Em que dia nasceste ?
 Em que local estudas?
 Em que países já estiveste?
 Em que trabalhas?
@@ -39,9 +34,6 @@ Estas ai sozinho?
 Estudas ou trabalhas?
 Estudas?
 Estudaste?
-Estudo informática. Gostas de informática?
-Estás bem?
-Estás bom?
 Falas inglês?
 Falas quantas línguas?
 Fazes algum desporto?
@@ -55,7 +47,6 @@ Gostas de estudar?
 Gostas de fazer desporto?
 Gostas de ficção científica?
 Gostas de informática?
-Gostas de jogar futebol?
 gostas de lasanha?
 Gostas de ler o quê?
 Gostas de ler?
@@ -75,25 +66,20 @@ Gostas do teu trabalho?
 Gostas mais de ler ou de ver filmes?
 Gostavas de ir ao Brasil?
 Gostavas de ter filhos? (gostei da resposta)
-Gosto do teu corte cabelo. Onde o fizeste?
-Jogas jogos de video ?
 Já foste ao Brasil?
 Já viajaste?
-Mais tarde queres ir ver o jogo de futebol?
 Moras aonde?
 Moras em Lisboa?
 Mudando de assunto, quais são os teus hobbies?
 Nasceste onde?
 No que trabalhas?
 não achas isso um pouco estranho?
-O meu nome é Pedro, qual é o teu?
 O que e que gostas de fazer nos tempos livres?
 O que estás a fazer?
 O que fazes aqui?
 O que fazes na vida?
 O que fazes no teu tempo livre?
 O que fazes nos tempos livres?
-O que fazes nos teus tempos livres?
 O que fazes?
 O que gostas de fazer nos tempos livres?
 O que gostas de fazer?
@@ -111,20 +97,16 @@ Olá Filipe, o que é que fazes?
 Olá! Como estás?
 Olá, como estás?
 Olá, como te chamas?
-Olá, tudo bem?
 Onde compras a roupa?
 Onde estudas?
 Onde estudaste?
 Onde moras?
-Onde nasceste?
 Onde te encontras?
 Onde trabalhas?
 Onde vais assim vestido?
 Onde vives?
-Onde é que compraste essa roupa?
 Onde é que estudaste?
 Onde é que moras?
-Onde é que trabalhas?
 Onde é que tu trabalhas?
 Para onde vais?
 Podes ajudar-me com isto?
@@ -132,7 +114,6 @@ Posso-te ver outra vez?
 Praticas desporto?
 Preciso de direcções para chegar a Lisboa, sabes me dar?
 Quais são os teu filmes favoritos?
-Quais são os teus livros favoritos?
 Quais é que são as tuas bandas favoritas?
 Quais é que são as tuas maiores qualidades?
 Quais é que são os teus hobbies?
@@ -141,24 +122,20 @@ Qual a tua serie de televisão favorita ?
 Qual cidade?
 Qual o dia do teu aniversario ?
 qual o prato que mais gostas?
-Qual o teu filme favorito ?
 Qual o teu nome completo?
 Qual é a melhor faculdade do país?
 Qual é a tua banda favorita?
 Qual é a tua comida preferida?
 Qual é a tua cor favorita?
-Qual é a tua cor preferida?
 Qual é a tua idade?
 Qual é a tua língua materna?
 Qual é a tua nacionalidade?
-Qual é a tua profissão?
 Qual é o teu apelido?
 Qual é o teu clube de futebol preferido?
 Qual é o teu desporto favorito?
 Qual é o teu filme favorito?
 Qual é o teu livro favorito?
 Qual é o teu nome?
-Qual é o teu número de telefone?
 Qual é o teu número de telemóvel?
 Qual é o teu tipo de música favorito?
 Qual é o teu trabalho?
@@ -175,9 +152,7 @@ Que género de música é que gostas?
 Que hobbies tens?
 Que horas são?
 Que idade tens?
-Que línguas falas?
 Que música gostas?
-Que país gostavas de visitar?
 Que séries gostas de ver?
 Que tipo de música gostas?
 Quem são as pessoas atrás de ti?
@@ -185,23 +160,19 @@ Quem são os teus pais?
 Quem é a tua família?
 Queres ajuda?
 Queres ir beber café?
-Queres ir comer um gelado?
 Queres ir comer uma sandes?
 Queres ir dar uma volta por Lisboa?
 Queres ir para outro lugar?
 Queres ir tomar um café?
-Queres uma goma?
 Sabes conduzir?
 Sabes cozinhar bem?
 Sabes dançar?
 Sabes falar inglês?
 Sabes que palácio está atrás de ti?
-Se fores sair avisas-me?
 Se és natural de Chicago tens outra nacionalidade além de seres Americano?
 Segues algum desporto?
 Sou bonito?
 Tens algum animal de estimação?
-Tens algum filme favorito?
 Tens algum hobby?
 Tens algum irmão ou irmã?
 Tens dupla nacionalidade?
@@ -211,7 +182,6 @@ Tens fome?
 Tens irmãos?
 Tens namorada?
 tens pais?
-Tens quantos anos?
 Tens que idade?
 Tens um chapéu-de-chuva?
 Tens um euro que me possas emprestar?
@@ -220,13 +190,8 @@ Trabalhas onde?
 Trabalhas?
 Tudo bem contigo?
 Tudo bem?
-Viste o jogo dos New York Knicks?
-Viste o último filme do Woody Allen?
 Vives sozinho ou com a tua família?
-Vives sozinho?
 És aluno do Técnico?
 És casado?
 És de onde?
-És estudante ou trabalhador?
-És estudante?
 És natural de onde?

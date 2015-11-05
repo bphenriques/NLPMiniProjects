@@ -25,10 +25,10 @@ class AnnotationCheckTests(AnnotationCheck):
         assert expected_value == self.evaluate_accuracy(self._answer_picker, questions_file, 20)
 
     def test_stats(self):
-        self.__aux_test_stats("TestResources/Perguntas.txt", (float(1)/3))
+        self.__aux_test_stats("TestResources/AnnotationsCheckTestsQuestionsSmall.txt", (float(1)/3))
 
     def see_stats(self):
-        print self.evaluate_accuracy(self._answer_picker, "TestResources/banana.txt", 20)
+        print self.evaluate_accuracy(self._answer_picker, "TestResources/AnnotationsCheckTestsQuestions.txt", 20)
 
 if __name__ == "__main__":
     annotation_check_tests = AnnotationCheckTests("TestResources/PerguntasPosSistema.txt", "TestResources/AnotadoAll.txt")

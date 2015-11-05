@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from Strategies import IdenticalStrategy
+import StrategiesForTriggers as st
+import StrategiesForAnswers as sa
 from RegexUtil import RegexUtil
 
 
@@ -16,17 +17,18 @@ class AnswerPicker:
     """
         Responsible for handling user_input, the corpus file and all possible answers.
     """
-    _similarity_strategy = None
+    _trigger_strategy = st.IdenticalNormalized()
+    _answer_strategy = sa.Identical()
 
     __user_input_answers_dic = {}
     __user_input_identical_trigger_found_flags = {}
 
     _file_reader = None
 
-    def __init__(self, file_reader, similarity_strategy=None):
+    def __init__(self, file_reader, trigger_strategy=None, answer_strategy=None):
         # pre-computing regex expressions
-        if similarity_strategy is None: self._similarity_strategy = IdenticalStrategy()
-        else: self._similarity_strategy = similarity_strategy
+        if trigger_strategy is not None: self._trigger_strategy = trigger_strategy
+        if answer_strategy is not None: self._answer_strategy = answer_strategy
 
         self._file_reader = file_reader
 
@@ -97,9 +99,6 @@ class AnswerPicker:
         :param answer:
         :return:
         """
-        # print "user_input: ", user_input
-        # print "\ttrigger: ", trigger
-        # print "\t\tanswer: ", answer
 
         if isinstance(user_input, str): user_input = user_input.decode("utf-8")
         if isinstance(trigger, str): trigger = trigger.decode("utf-8")
@@ -109,18 +108,20 @@ class AnswerPicker:
             self.__user_input_answers_dic[user_input] = []
 
         # if user input is literally identical
-        if self._similarity_strategy.is_user_input_trigger_identical(user_input, trigger):
-            #if already found a match, append to the list
+        if self._trigger_strategy.is_user_input_trigger_identical(user_input, trigger):
+
+            # if already found a match, append to the list
             if user_input in self.__user_input_identical_trigger_found_flags:
-                self._put(user_input, self._similarity_strategy.normalize_answer(answer))
-            else: #if it is filled with similar stuff, delete because we already have a full match
+                self._put(user_input, self._answer_strategy.normalize_answer(answer))
+            else: # if it is filled with similar stuff, delete because we already have a full match
                 self.__user_input_answers_dic[user_input] = []
-                self._put(user_input, self._similarity_strategy.normalize_answer(answer))
+                self._put(user_input, self._answer_strategy.normalize_answer(answer))
 
             self.__user_input_identical_trigger_found_flags[user_input] = True
+
         elif user_input not in self.__user_input_identical_trigger_found_flags and \
-                self._similarity_strategy.is_user_input_trigger_similar(user_input, trigger):
-            self._put(user_input, self._similarity_strategy.normalize_answer(answer))
+                self._trigger_strategy.is_user_input_trigger_similar(user_input, trigger):
+            self._put(user_input, self._answer_strategy.normalize_answer(answer))
 
 
 
@@ -144,6 +145,6 @@ class AnswerPicker:
     # util: find tuple with a given name
     def _find_answer(self, tup_list, name):
         for tup in tup_list:
-            if self._similarity_strategy.are_answer_similar_enough(tup[0], name):
+            if self._answer_strategy.are_answer_similar_enough(tup[0], name):
                 return tup
         return None

@@ -2,9 +2,10 @@
 
 from AnswerPicker import AnswerPicker
 from AnswerPicker import AnswerPickerAnswerResult
-from SimilarityStrategy import  SimilarityStrategy
+from SimilarityStrategies import  *
 from UserInputTriggerAnswerReader import UserInputTriggerAnswerReader
 from Tests import TestsUtil
+
 
 class TestAnswerPicker(AnswerPicker):
     def test_trigger_inexistent(self):
@@ -44,9 +45,9 @@ class TestAnswerPicker(AnswerPicker):
         assert(len(self.get_answers("Question2")) == 2)
         answers = self.get_answers("Question2")
         assert answers is not None
-        answer = self._find_answer(answers, self._similarity_strategy.normalize_answer("Response2"))
+        answer = self._find_answer(answers, self._answer_strategy.normalize_answer("Response2"))
         assert answer is not None
-        assert answer[0] == self._similarity_strategy.normalize_answer("Response2")
+        assert answer[0] == self._answer_strategy.normalize_answer("Response2")
         assert answer[1] == 2
 
     def test_sort(self):
@@ -64,13 +65,13 @@ class TestAnswerPicker(AnswerPicker):
 
         # Tests if the  answers stored are sorted from the most frequent to the least frequent
         answers = self.get_answers("TestQuestion2")
-        assert answers[0][0] == self._similarity_strategy.normalize_answer("Response3")
-        assert answers[1][0] == self._similarity_strategy.normalize_answer("Response2")
-        assert answers[2][0] == self._similarity_strategy.normalize_answer("Response1")
-        assert answers[3][0] == self._similarity_strategy.normalize_answer("Response5") or \
-               answers[3][0] == self._similarity_strategy.normalize_answer("Response4")
-        assert answers[4][0] == self._similarity_strategy.normalize_answer("Response5") or \
-               answers[4][0] == self._similarity_strategy.normalize_answer("Response4")
+        assert answers[0][0] == self._answer_strategy.normalize_answer("Response3")
+        assert answers[1][0] == self._answer_strategy.normalize_answer("Response2")
+        assert answers[2][0] == self._answer_strategy.normalize_answer("Response1")
+        assert answers[3][0] == self._answer_strategy.normalize_answer("Response5") or \
+               answers[3][0] == self._answer_strategy.normalize_answer("Response4")
+        assert answers[4][0] == self._answer_strategy.normalize_answer("Response5") or \
+               answers[4][0] == self._answer_strategy.normalize_answer("Response4")
 
     def test_get_answer(self):
         self.clear()
@@ -87,19 +88,19 @@ class TestAnswerPicker(AnswerPicker):
         self.process_user_input_answer("TestQuestion1", "TestQuestion1", "Response5")  # Response5 : 1
 
         # Response3 is most frequent: 4
-        assert self.get_answer("TestQuestion1") == self._similarity_strategy.normalize_answer("Response3")
+        assert self.get_answer("TestQuestion1") == self._answer_strategy.normalize_answer("Response3")
 
         # changing the leadership
         self.process_user_input_answer("TestQuestion1", "TestQuestion1", "Response2")  # Response2 : 4
         self.process_user_input_answer("TestQuestion1", "TestQuestion1", "Response2")  # Response2 : 5
 
         # Response2 is most frequent: 5
-        assert self.get_answer("TestQuestion1") == self._similarity_strategy.normalize_answer("Response2")
+        assert self.get_answer("TestQuestion1") == self._answer_strategy.normalize_answer("Response2")
 
         # Response3 and Response2 are 5 (draw)
         self.process_user_input_answer("TestQuestion1", "TestQuestion1", "Response3")  # Response3 : 5
-        assert self.get_answer("TestQuestion1") == self._similarity_strategy.normalize_answer("Response2") or \
-               self.get_answer("TestQuestion1") == self._similarity_strategy.normalize_answer("Response3")
+        assert self.get_answer("TestQuestion1") == self._answer_strategy.normalize_answer("Response2") or \
+               self.get_answer("TestQuestion1") == self._answer_strategy.normalize_answer("Response3")
 
     def test_normalizer(self):
         self.clear()
@@ -112,12 +113,12 @@ class TestAnswerPicker(AnswerPicker):
         self.process_user_input_answer("TestQuestion3", "Tést,Question3.", "Response6")
         self.process_user_input_answer("TestQuestion3", "Tést,QUESTION3.", "Response7")
         self.process_user_input_answer("TestQuestion3", "Tést,QUESTION3.\n", "Response8")
-        self.process_user_input_answer("TestQuestion3", "Tést!,QUESTION3.\n", "Response9")
-        self.process_user_input_answer("TestQuestion3", "Tést!,QU:ES;TI,ON?3.\n", "Response10")
-        self.process_user_input_answer("TestQuestion3", "Tést!,QU:ES;TI,ON?3.\n", "Response11")
-        self.process_user_input_answer("TestQuestion3", "Tést!,\"QU:ES;TI,O\"N?3.\r\n", "Response12")
-        self.process_user_input_answer("TestQuestion3", "Té)s(t!,\"QU:E(S;TI,O\"N?3.\n", "Response13")
-        self.process_user_input_answer("TestQuestion3", "Té)s(t!,\"QU:E(S;TÍ,Õ\"N?3.\n", "Response13")
+        self.process_user_input_answer("TestQuestion3", "Tést,QUESTION3.\n", "Response9")
+        self.process_user_input_answer("TestQuestion3", "Tést,QU:ES;TI,ON?!3.\n", "Response10")
+        self.process_user_input_answer("TestQuestion3", "Tést,QU:ES;TI,ON?!3.\n", "Response11")
+        self.process_user_input_answer("TestQuestion3", "Tést,\"QU:ES;TI,O\"N?!3.\r\n", "Response12")
+        self.process_user_input_answer("TestQuestion3", "Té)s(t,\"QU:E(S;TI,O\"N?!3.\n", "Response13")
+        self.process_user_input_answer("TestQuestion3", "Té)s(t,\"QU:E(S;TÍ,Õ\"N?!3.\n", "Response13")
 
         assert len(self.get_answers("TestQuestion3")) == 13
 
@@ -146,11 +147,10 @@ class TestAnswerPicker(AnswerPicker):
     def test_delete_similar_triggers_after_identical_trigger(self):
         self.clear()
 
-        self._similarity_strategy = StrategyTriggersAlwaysSimilar()
+        self._trigger_strategy = EverythingTrueTrigger()
 
         # Tailored made file
         self._file_reader.process_file("TestResources/Lite2ndPerguntasPosSistema.txt", self.process_user_input_answer)
-
         answers1 = self.get_answers("A tua familia é numerosa?")
         assert len(answers1) == 1
         assert self.get_answer("A tua familia é numerosa?") == u"Olha, eu estou apenas a começar a minha vida, de volta juntos."
@@ -170,7 +170,8 @@ class TestAnswerPicker(AnswerPicker):
     def test_similar_answers(self):
         self.clear()
 
-        self._similarity_strategy = StrategyEverythingIsSimilar()
+        self._trigger_strategy = EverythingTrueTrigger()
+        self._answer_strategy = EverythingTrueAnswer()
 
         # Tailored made file
         self._file_reader.process_file("TestResources/Lite2ndPerguntasPosSistema.txt", self.process_user_input_answer)
@@ -183,21 +184,14 @@ class TestAnswerPicker(AnswerPicker):
         assert self.get_answer("Aceitas tomar café?") == u"Não, obrigada."
 
 
-class StrategyTriggersAlwaysSimilar(SimilarityStrategy):
+class EverythingTrueTrigger(TriggerSimilarityStrategy):
     def is_user_input_trigger_similar(self, user_input, trigger):
         return True
 
-    def are_answer_similar_enough(self, answer1, answer2):
-        return answer1 == answer2
 
-
-class StrategyEverythingIsSimilar(SimilarityStrategy):
-    def is_user_input_trigger_similar(self, user_input, trigger):
-        return True
-
+class EverythingTrueAnswer(AnswerSimilarityStrategy):
     def are_answer_similar_enough(self, answer1, answer2):
         return True
-
 
 if __name__ == '__main__':
     questions_answer_reader = TestAnswerPicker(UserInputTriggerAnswerReader())

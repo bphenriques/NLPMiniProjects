@@ -18,5 +18,5 @@ if __name__ == "__main__":
 
     print ""
 
-    accuracy = myAvalia("TestResources/AnotadoAll.txt", "TestResources/Perguntas.txt", "TestResources/PerguntasPosSistema.txt")
-    print "Perguntas.txt accuracy is: ", accuracy
+    accuracy = myAvalia("TestResources/AnotadoAll.txt", "TestResources/AnnotationsCheckTestsQuestionsSmall.txt", "TestResources/PerguntasPosSistema.txt")
+    print "AnnotationsCheckTestsQuestionsSmall.txt accuracy is: ", accuracy

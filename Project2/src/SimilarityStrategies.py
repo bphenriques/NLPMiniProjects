@@ -18,14 +18,6 @@ class SimilarityStrategy(object):
 
         self.add_arguments_description()
 
-    @abc.abstractmethod
-    def is_user_input_trigger_similar(self, user_input, trigger):
-        return
-
-    @abc.abstractmethod
-    def are_answer_similar_enough(self, answer1, answer2):
-        return
-
     def add_arguments_description(self, *args):
         self.description = self.__class__.__name__ + "("
         for i in range(0, len(args)):
@@ -35,38 +27,41 @@ class SimilarityStrategy(object):
 
         self.description += ")"
 
-    def is_user_input_trigger_identical(self, user_input, trigger):
-        """
 
-        :param user_input:
-        :param trigger:
-        :return:
-        """
-        return self.normalize_user_input(user_input) == self.normalize_trigger(trigger)
+class TriggerSimilarityStrategy(SimilarityStrategy):
+    __metaclass__ = abc.ABCMeta
 
-    def normalize_user_input(self, user_input):
-        """
+    def __init__(self, description=None):
+        SimilarityStrategy.__init__(self, description)
 
-        :param user_input:
-        :return:
-        """
-
-        # no need to remove non interrogative sentences from the trigger
-        return RegexUtil.normalize_string(user_input)
+    @abc.abstractmethod
+    def is_user_input_trigger_similar(self, user_input, trigger):
+        return
 
     def normalize_trigger(self, trigger):
-        """
-
-        :param trigger:
-        :return:
-        """
         return RegexUtil.normalize_string(SimilarityUtil.filter_non_interrogative_sentence(trigger))
 
-    def normalize_answer(self, answer):
-        """
+    def normalize_user_input(self, user_input):
+        return RegexUtil.normalize_string(user_input)
 
-        :param answer:
-        :return:
-        """
+    def is_user_input_trigger_identical(self, user_input, trigger):
+        return RegexUtil.normalize_string(user_input) == RegexUtil.normalize_string(trigger)
+
+class AnswerSimilarityStrategy(SimilarityStrategy):
+    __metaclass__ = abc.ABCMeta
+
+    def __init__(self, description=None):
+        SimilarityStrategy.__init__(self, description)
+
+    @abc.abstractmethod
+    def are_answer_similar_enough(self, answer1, answer2):
+        return
+
+    def normalize_answer(self, answer):
         return answer
+
+
+
+
+
 

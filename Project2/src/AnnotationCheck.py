@@ -16,10 +16,8 @@ class AnnotationCheck:
     NEGATIVE_CHAR = 'n'
     MAYBE_CHAR = 'm'
 
-    _annotation_file_path = None
     _user_input_regex_prefix = "^[\s]*User Input" + "[\s]*" + "-" + "[\s]*"
     _answer_regex_prefix = "^[\s]*A" + "[\s]*" + "-" + "[\s]*"
-    _answer_regex_sufix = None
     _annotation_separator_regex = "[\s]*" + ":" + "[\s]*"
 
     def __init__(self, annotation_file_path):

@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -
 
 import nltk
-from BigramForestTagger import BigramForestTagger
 from nltk.tokenize import wordpunct_tokenize
 
 
@@ -63,10 +62,8 @@ def med_sentence(sentence1, sentence2, c1=1, c2=1, c3=1):
     :param c3: optional weight
     :return: integer, minimum edit distance
     """
-    sequence1 = wordpunct_tokenize(sentence1)
-    sequence2 = wordpunct_tokenize(sentence2)
 
-    return med(sequence1, sequence2, c1, c2, c3)
+    return med(wordpunct_tokenize(sentence1), wordpunct_tokenize(sentence2), c1, c2, c3)
 
 
 def med(sequence1, sequence2, c1=1, c2=1, c3=1):
@@ -82,24 +79,21 @@ def med(sequence1, sequence2, c1=1, c2=1, c3=1):
     """
     size1, size2 = len(sequence1), len(sequence2)
 
-    if size1 == 0:
-        return size2
-    if size2 == 0:
-        return size1
+    if size1 == 0: return size2
+    if size2 == 0: return size1
 
-    matrix_row_size = size1 + 1
-    matrix_col_size = size2 + 1
+    matrix_row_size, matrix_col_size = size1 + 1, size2 + 1
 
-    #init size
+    # init size
     matrix = [None] * matrix_row_size
     for i in range(matrix_row_size):
         matrix[i] = [None] * matrix_col_size
 
-    #init first row
+    # init first row
     for i in range(matrix_row_size):
         matrix[i][0] = i
 
-    #init first column
+    # init first column
     for j in range(matrix_col_size):
         matrix[0][j] = j
 
@@ -110,9 +104,9 @@ def med(sequence1, sequence2, c1=1, c2=1, c3=1):
             if element1 == element2:
                 matrix[i][j] = matrix[i-1][j-1]
             else:
-                matrix[i][j] = min(matrix[i-1][j] + c1,
-                                   matrix[i][j-1] + c2,
-                                   matrix[i-1][j-1] + c3)
+                matrix[i][j] = min(matrix[i-1][j] + c1, # delete
+                                   matrix[i][j-1] + c2, # insertion
+                                   matrix[i-1][j-1] + c3) # mismatch
 
     return matrix[matrix_row_size - 1][matrix_col_size - 1]
 
@@ -120,8 +114,9 @@ def med(sequence1, sequence2, c1=1, c2=1, c3=1):
 def remove_stop_words(sentence, list_words_to_remove = nltk.corpus.stopwords.words('portuguese')):
     result = []
     for word in sentence.split(" "):
-        if word.lower() not in list_words_to_remove:
-            result.append(word)
+        if word.lower() in list_words_to_remove:
+            continue
+        result.append(word)
     return " ".join(result)
 
 
@@ -149,12 +144,14 @@ def tok_stem(sentence):
         result.append(stemmer.stem(word))
     return " ".join(result)
 
-def custom_jaccard(sentence1, sentence2, tagger, weighttag = 0.5):
+def custom_jaccard(sentence1, sentence2, tagger, weighttag = 0.5): #  TODO BRINCAR COM ESTE VALOR
 
     tagged_sentence1 = tagger.tag_sentence(sentence1)
     tagged_sentence2 = tagger.tag_sentence(sentence2)
 
     s1, s2 = set(tagged_sentence1), set(tagged_sentence2)
+    if len(s1) == 0 and len(s2) == 0:
+        return 0
 
     intersection = s1.intersection(s2)
 
@@ -170,7 +167,7 @@ def custom_jaccard(sentence1, sentence2, tagger, weighttag = 0.5):
     jaccardlength = float((len(s1) + len(s2) - len(intersection)))
 
     jaccarda = float(len(intersection))
-    #dividing by the corresponding size
+    # dividing by the corresponding size
     jaccardb = weighttag * float(len(tag_intersection))
 
 
@@ -204,8 +201,9 @@ def same_tag(tagged_word1, tagged_word2):
 def filter_tags(list_pairs_token_tag, tags_to_remove):
     result = []
     for el in list_pairs_token_tag:
-        if get_tag(el) not in tags_to_remove:
-            result.append(el)
+        if get_tag(el) in tags_to_remove:
+            continue
+        result.append(el)
 
     return result
 

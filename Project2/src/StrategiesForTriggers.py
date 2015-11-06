@@ -32,8 +32,6 @@ class RemoveStopWordsAndStem(TriggerSimilarityStrategy):
 
 
 class RemoveStopWordsAndStemMED(TriggerSimilarityStrategy):
-    _med_user_input_triggers_min = 1
-
     def __init__(self, user_input_triggers_min_med):
         TriggerSimilarityStrategy.__init__(self)
 
@@ -53,11 +51,6 @@ class RemoveStopWordsAndStemMED(TriggerSimilarityStrategy):
 
 
 class MegaStrategyFiltering(TriggerSimilarityStrategy):
-    _tags_to_filter_triggers = ["n", "in", "prop", "art", "pron-pers", "pron-det", "pron-indp", "prp"]
-    _tagger = None
-
-    _med_user_input_triggers_min = 1
-
     def __init__(self, tagger, user_input_triggers_min_med, filter_tag_triggers=None):
         TriggerSimilarityStrategy.__init__(self)
 
@@ -66,6 +59,8 @@ class MegaStrategyFiltering(TriggerSimilarityStrategy):
 
         if filter_tag_triggers is not None:
             self._tags_to_filter_triggers = filter_tag_triggers
+        else:
+            self._tags_to_filter_triggers = ["n", "in", "prop", "art", "pron-pers", "pron-det", "pron-indp", "prp"]
 
         self.add_arguments_description("tagger", user_input_triggers_min_med, self._tags_to_filter_triggers)
 
@@ -92,11 +87,8 @@ class MegaStrategyFiltering(TriggerSimilarityStrategy):
 
 
 class MorphoJaccard(TriggerSimilarityStrategy):
-    __tagger = None
-    __threshold = 0
-
     def __init__(self, tagger, threshold = 0.8):
-        TriggerSimilarityStrategy.__init__(self, )
+        TriggerSimilarityStrategy.__init__(self)
         self.__tagger = tagger
         self.__threshold = threshold
         self.add_arguments_description(threshold)
@@ -108,11 +100,8 @@ class MorphoJaccard(TriggerSimilarityStrategy):
 
 
 class Braccard(TriggerSimilarityStrategy):
-    __tagger = None
-    __threshold = 0
-
     def __init__(self, tagger, threshold = 0.8):
-        TriggerSimilarityStrategy.__init__(self, )
+        TriggerSimilarityStrategy.__init__(self)
         self.__tagger = tagger
         self.__threshold = threshold
         self.add_arguments_description(threshold)

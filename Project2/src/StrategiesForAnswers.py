@@ -32,8 +32,6 @@ class RemoveStopWordsAndStem(AnswerSimilarityStrategy):
 
 # in short MegaStrategy
 class RemoveStopWordsAndStemMED(AnswerSimilarityStrategy):
-    _med_answers_min = 1
-
     def __init__(self, answers_min_med):
         AnswerSimilarityStrategy.__init__(self)
 
@@ -53,9 +51,6 @@ class RemoveStopWordsAndStemMED(AnswerSimilarityStrategy):
 
 # TODO BRACCARD COM STEM
 class Braccard(AnswerSimilarityStrategy):
-    __tagger = None
-    __threshold = 0
-
     def __init__(self, tagger, threshold = 0.8):
         AnswerSimilarityStrategy.__init__(self)
         self.__tagger = tagger
@@ -69,8 +64,6 @@ class Braccard(AnswerSimilarityStrategy):
 
 
 class Jaccard(AnswerSimilarityStrategy):
-    __threshold = 0
-
     def __init__(self, threshold = 0.8):
         AnswerSimilarityStrategy.__init__(self)
         self.__threshold = threshold
@@ -82,8 +75,6 @@ class Jaccard(AnswerSimilarityStrategy):
 
 
 class Dice(AnswerSimilarityStrategy):
-    __threshold = 0
-#falta stem
     def __init__(self, threshold = 0.8):
         AnswerSimilarityStrategy.__init__(self)
         self.__threshold = threshold
@@ -94,8 +85,6 @@ class Dice(AnswerSimilarityStrategy):
         return dice_sentence(s1, s2) >= self.__threshold
 
 class JaccardStem(AnswerSimilarityStrategy):
-    __threshold = 0
-
     def __init__(self, threshold = 0.8):
         AnswerSimilarityStrategy.__init__(self)
         self.__threshold = threshold
@@ -109,8 +98,6 @@ class JaccardStem(AnswerSimilarityStrategy):
 
 
 class DiceStem(AnswerSimilarityStrategy):
-    __threshold = 0
-
     def __init__(self, threshold = 0.8):
         AnswerSimilarityStrategy.__init__(self)
         self.__threshold = threshold
@@ -124,8 +111,6 @@ class DiceStem(AnswerSimilarityStrategy):
 
 
 class YesNoSimilar(AnswerSimilarityStrategy):
-    __threshold = 0
-
     def __init__(self, threshold = 0.8):
         AnswerSimilarityStrategy.__init__(self)
         self.__threshold = threshold

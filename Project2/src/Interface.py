@@ -30,6 +30,10 @@ def myAvalia(annotation_file, questions_file, corpus_file_path="TestResources/Pe
     # process corpus file
     file_reader = UserInputTriggerAnswerReader()
     answer_picker = AnswerPicker(file_reader, trigger_strategy, answer_strategy)
+
+    if answer_picker.number_matched_user_input() != 0:
+        print "@@@ NOT SUPPOSED TO HAPPEN @@@"
+
     file_reader.process_file(corpus_file_path, answer_picker.process_user_input_answer)
 
     # analyse annotation_file and return the accuracy

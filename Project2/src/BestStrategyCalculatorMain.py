@@ -3,15 +3,10 @@
 import StrategiesForAnswers as sa
 import StrategiesForTriggers as st
 import sys, traceback
+from BestStrategyCalculatorPrevious import add_already_calculated
 from BestStrategyCalculator import BestStrategiesCalculator
 from BigramForestTagger import BigramForestTagger
 
-
-# just keep adding and don't worry
-def add_already_calculated(bsc, tagger):
-    bsc.add_test(st.IdenticalNormalized(), sa.Identical(), 0.213197969543)
-    bsc.add_test(st.IdenticalNormalized(), sa.RemoveStopWordsAndStem(), 0.218274111675)
-    pass
 
 def add_all_combinations(bsc, triggers_strats, answers_strats):
     for trigger_strat in triggers_strats:
@@ -23,20 +18,16 @@ def get_trigger_strats(tagger):
     result = list()
     result.append(st.IdenticalNormalized())
     result.append(st.RemoveStopWordsAndStem())
-    for i in range(0, 5):
-        # break
+    for i in range(0, 10):
         result.append(st.RemoveStopWordsAndStemMED(i))
 
-    for i in range(0,5):
-        break
+    for i in range(0, 10):
         result.append(st.MegaStrategyFiltering(tagger, i))
 
-    for i in arange(0, 100, 0.25):
-        break
+    for i in arange(0, 1, 0.25):
         result.append(st.Braccard(tagger, i))
 
-    for i in arange(0, 100, 0.25):
-        break
+    for i in arange(0, 1, 0.25):
         result.append(st.MorphoJaccard(tagger, i))
 
     return result
@@ -46,27 +37,34 @@ def get_answer_strats(tagger):
     result = list()
     result.append(sa.Identical())
     result.append(sa.RemoveStopWordsAndStem())
-    for i in range(0, 5):
-        break
+    for i in range(0, 10):
         result.append(sa.RemoveStopWordsAndStemMED(i))
 
-    for i in arange(0, 100, 0.1):
-        break
-        result.append(sa.Braccard(i))
+    for i in arange(0, 1, 0.25):
+        result.append(sa.Braccard(tagger, i))
 
     for i in arange(0, 1, 0.25):
-        #break
         result.append(sa.Jaccard(i))
 
     for i in arange(0, 1, 0.25):
-        #break
         result.append(sa.Dice(i))
+
+    for i in arange(0, 1, 0.25):
+        result.append(sa.JaccardStem(i))
+
+    for i in arange(0, 1, 0.25):
+        result.append(sa.DiceStem(i))
+
+    for i in arange(0, 1, 0.25):
+        result.append(sa.YesNoSimilar(i))
+
     return result
 
 def arange(x, y, jump=0.1):
   while x < y:
     yield x
     x += jump
+
 
 def benchmark(annotations_file_path, questions_file_path, corpus_file_path, recalculate=False):
     tagger = BigramForestTagger()  # training corpus floresta
@@ -79,8 +77,6 @@ def benchmark(annotations_file_path, questions_file_path, corpus_file_path, reca
     # ADD TESTS HERE BELOW
     #####################################
 
-    bsc.add_test(st.IdenticalNormalized(), sa.Identical())
-
     # two possible ways to test:
     add_all_combinations(bsc, get_trigger_strats(tagger), get_answer_strats(tagger))
 
@@ -91,8 +87,6 @@ def benchmark(annotations_file_path, questions_file_path, corpus_file_path, reca
         traceback.print_exc(file=sys.stdout)
         print "\nXXXXXXXXXXXXXXX\nXXXXXXXXXXXXXXX\n"
     finally:
-        print ""
-        bsc.dump_array_strategies()
         print ""
         bsc.show_results()
 

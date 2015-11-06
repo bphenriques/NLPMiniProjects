@@ -2,13 +2,9 @@
 
 import abc
 from RegexUtil import RegexUtil
-import SimilarityUtil
-
 
 class SimilarityStrategy(object):
     __metaclass__ = abc.ABCMeta
-
-    description = ""
 
     def __init__(self, description=None):
         if description is None:

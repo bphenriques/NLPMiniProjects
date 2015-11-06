@@ -6,12 +6,10 @@ from nltk.corpus import floresta
 
 class BigramForestTagger:
 
-    __tagger = None
-    __is_trained = False
-    __corpus = None
-
     def __init__(self, tsents=floresta.tagged_sents()):
         self.__corpus = tsents
+        self.__is_trained = False
+        self.__tagger = None
 
     def train(self):
         print "Training corpus ..."

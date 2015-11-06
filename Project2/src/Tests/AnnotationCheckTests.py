@@ -11,13 +11,10 @@ class AnnotationCheckTests(AnnotationCheck):
     Test class for AnnotationCheck
     """
 
-    _file_reader = UserInputTriggerAnswerReader()
-    _answer_picker = None
-    _annotation_check = None
-
     def __init__(self, corpus_path, annotation_file_path):
         AnnotationCheck.__init__(self, annotation_file_path)
 
+        self._file_reader = UserInputTriggerAnswerReader()
         self._answer_picker = AnswerPicker(self._file_reader)
         self._file_reader.process_file(corpus_path, self._answer_picker.process_user_input_answer)
 

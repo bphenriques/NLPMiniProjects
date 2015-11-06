@@ -5,22 +5,26 @@ from Interface import myAvalia
 
 class BestStrategiesCalculator:
 
-    __strategies = []
-    __sorted_strategies = []
-
     def __init__(self):
-        pass
+        self.__strategies = list()
+        self.__strategies_map = {}
+        self.__sorted_strategies = list()
 
-    def add_test(self, trigger_strategy, answer_strategy, accuracy=0.0):
+    def add_test(self, trigger_strategy, answer_strategy, accuracy=None, just_add=False):
         tp = self._create_tuple(trigger_strategy, answer_strategy, accuracy)
 
-        if not self._contains_strategy(tp):
+        key = self.key(trigger_strategy, answer_strategy)
+        if key not in self.__strategies_map:
+            self.__strategies_map[key] = True # place holder
             self.__strategies.append(tp)
+
+    def key(self, trigger_strat, answer_strat):
+        return trigger_strat.description + "-" + answer_strat.description
 
     def determine_best_strategy(self, annotation_file, questions_file, corpus_file, debug=False):
         """
         For every strategy provided in the constructor, determines the program accuracy and stores the information sorted
-        in the variable __strategies
+        in the variable __strategies_map
 
         :param annotation_file: file_path to the annotation file
         :param questions_file: file_path to the questions file
@@ -36,18 +40,19 @@ class BestStrategiesCalculator:
                 answers_strat = tupl[1]
                 accuracy = tupl[2]
 
-                if accuracy == 0.0:
-                    if debug: print triggers_strat.description, "# AND #", answers_strat.description, "... ",
+                if accuracy is None:
+                    if debug: print "bsc.add_test(st." + triggers_strat.description + ", sa." + answers_strat.description + ", ",
                     accuracy = myAvalia(annotation_file, questions_file, corpus_file, trigger_strategy=triggers_strat, answer_strategy=answers_strat)
-                    if debug: print str(accuracy*100), "% "
+                    if debug: print str(accuracy) + ")"
 
                 result.append(self._create_tuple(triggers_strat, answers_strat, accuracy))
+
         except KeyboardInterrupt:
             print ".... Stopping....."
         finally:
             # sort
             self.__strategies = list(result)
-            self.__sorted_strategies = result
+            self.__sorted_strategies = list(result)
             self.__sorted_strategies.sort(key=lambda tup: tup[2], reverse=True)
 
     def show_results(self):
@@ -68,28 +73,6 @@ class BestStrategiesCalculator:
             print "= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
         print "="
         print "========================================================================"
-
-    def dump_array_strategies(self):
-        if len(self.__strategies) == 0:
-            print "Empty list of strategies"
-            return
-
-        print "========================================================================"
-        print "======================= ARRAY OF STRATEGIES ============================"
-        print "="
-
-        for strategy in self.__strategies:
-            if strategy[1] != 0.0:
-                print "bsc.add_test(st.%s, sa.%s, %s" %(strategy[0].description, strategy[1].description, str(strategy[2]) + ")")
-
-        print "="
-        print "========================================================================"
-
-    def _contains_strategy(self, strategy):
-        for t in self.__strategies:
-            if t[0].description == strategy[0].description and t[1].description == strategy[1].description:
-                return True
-        return False
 
     def _create_tuple(self, trigger_strategy, answer_strategy, accuracy):
         return (trigger_strategy, answer_strategy, accuracy)

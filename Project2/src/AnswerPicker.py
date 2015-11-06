@@ -17,20 +17,13 @@ class AnswerPicker:
     """
         Responsible for handling user_input, the corpus file and all possible answers.
     """
-    _trigger_strategy = st.IdenticalNormalized()
-    _answer_strategy = sa.Identical()
 
-    __user_input_answers_dic = {}
-    __user_input_identical_trigger_found_flags = {}
-
-    _file_reader = None
-
-    def __init__(self, file_reader, trigger_strategy=None, answer_strategy=None):
-        # pre-computing regex expressions
-        if trigger_strategy is not None: self._trigger_strategy = trigger_strategy
-        if answer_strategy is not None: self._answer_strategy = answer_strategy
-
+    def __init__(self, file_reader, trigger_strategy=st.IdenticalNormalized(), answer_strategy=sa.Identical()):
+        self.__user_input_answers_dic = {}
+        self.__user_input_identical_trigger_found_flags = {}
         self._file_reader = file_reader
+        self._trigger_strategy = trigger_strategy
+        self._answer_strategy = answer_strategy
 
     def dump_map(self):
         """
@@ -90,6 +83,7 @@ class AnswerPicker:
         Clears the internal map of user_inputs and answers
         """
         self.__user_input_answers_dic = {}
+        self.__user_input_identical_trigger_found_flags = {}
 
     def process_user_input_answer(self, user_input, trigger, answer):
         """
@@ -110,13 +104,11 @@ class AnswerPicker:
         # if user input is literally identical
         if self._trigger_strategy.is_user_input_trigger_identical(user_input, trigger):
 
-            # if already found a match, append to the list
-            if user_input in self.__user_input_identical_trigger_found_flags:
-                self._put(user_input, answer)
-            else: # if it is filled with similar stuff, delete because we already have a full match
+            # if it is filled with similar stuff, delete because we already have a full match
+            if user_input not in self.__user_input_identical_trigger_found_flags:
                 self.__user_input_answers_dic[user_input] = []
-                self._put(user_input, answer)
 
+            self._put(user_input, answer)
             self.__user_input_identical_trigger_found_flags[user_input] = True
 
         elif user_input not in self.__user_input_identical_trigger_found_flags and \
@@ -130,17 +122,14 @@ class AnswerPicker:
     def _put(self, user_input, answer):
         list_tuples = self.__user_input_answers_dic[user_input]
 
+        new_tuple = (answer, 1)
         tuple_found = self._find_answer(list_tuples, answer)
         if tuple_found is not None:
             new_tuple = (tuple_found[0], tuple_found[1] + 1)
             list_tuples.remove(tuple_found)
-            list_tuples.append(new_tuple)
-        else:
-            new_tuple = (answer, 1)
-            list_tuples.append(new_tuple)
 
-        # sort
-        list_tuples.sort(key=lambda tup: tup[1], reverse=True)
+        list_tuples.append(new_tuple)
+        list_tuples.sort(key=lambda tup: tup[1], reverse=True) #  sort
 
     # util: find tuple with a given name
     def _find_answer(self, tup_list, name):

@@ -91,7 +91,7 @@ class MorphoJaccard(TriggerSimilarityStrategy):
         TriggerSimilarityStrategy.__init__(self)
         self.__tagger = tagger
         self.__threshold = threshold
-        self.add_arguments_description(threshold)
+        self.add_arguments_description("tagger", threshold)
 
     def is_user_input_trigger_similar(self, user_input, trigger):
         s1 = RegexUtil.normalize_string(user_input)
@@ -104,7 +104,7 @@ class Braccard(TriggerSimilarityStrategy):
         TriggerSimilarityStrategy.__init__(self)
         self.__tagger = tagger
         self.__threshold = threshold
-        self.add_arguments_description(threshold)
+        self.add_arguments_description("tagger", threshold)
 
     def is_user_input_trigger_similar(self, user_input, trigger):
         s1 = RegexUtil.normalize_string(user_input)

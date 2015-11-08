@@ -16,18 +16,18 @@ def add_all_combinations(bsc, triggers_strats, answers_strats):
 
 def get_trigger_strats(tagger):
     result = list()
-    result.append(st.IdenticalNormalized())
-    result.append(st.RemoveStopWordsAndStem())
-    for i in range(0, 10):
-        result.append(st.RemoveStopWordsAndStemMED(i))
+    # result.append(st.IdenticalNormalized())
+    # result.append(st.RemoveStopWordsAndStem())
+    # for i in range(0, 10):
+    #     result.append(st.RemoveStopWordsAndStemMED(i))
 
     for i in range(0, 10):
         result.append(st.MegaStrategyFiltering(tagger, i))
 
-    for i in arange(0, 1, 0.25):
+    for i in arange(0.2, 1, 0.1):
         result.append(st.Braccard(tagger, i))
 
-    for i in arange(0, 1, 0.25):
+    for i in arange(0.2, 1, 0.1):
         result.append(st.MorphoJaccard(tagger, i))
 
     return result
@@ -40,22 +40,22 @@ def get_answer_strats(tagger):
     for i in range(0, 10):
         result.append(sa.RemoveStopWordsAndStemMED(i))
 
-    for i in arange(0, 1, 0.25):
+    for i in arange(0.2, 1, 0.1):
         result.append(sa.Braccard(tagger, i))
 
-    for i in arange(0, 1, 0.25):
+    for i in arange(0.2, 1, 0.1):
         result.append(sa.Jaccard(i))
 
-    for i in arange(0, 1, 0.25):
+    for i in arange(0.2, 1, 0.1):
         result.append(sa.Dice(i))
 
-    for i in arange(0, 1, 0.25):
+    for i in arange(0.2, 1, 0.1):
         result.append(sa.JaccardStem(i))
 
-    for i in arange(0, 1, 0.25):
+    for i in arange(0.2, 1, 0.1):
         result.append(sa.DiceStem(i))
 
-    for i in arange(0, 1, 0.25):
+    for i in arange(0.7, 1, 0.1):
         result.append(sa.YesNoSimilar(i))
 
     return result

@@ -62,7 +62,7 @@ class MegaStrategyFiltering(TriggerSimilarityStrategy):
         else:
             self._tags_to_filter_triggers = ["n", "in", "prop", "art", "pron-pers", "pron-det", "pron-indp", "prp"]
 
-        self.add_arguments_description("tagger", user_input_triggers_min_med, self._tags_to_filter_triggers)
+        self.add_arguments_description("tagger", user_input_triggers_min_med)
 
     def is_user_input_trigger_similar(self, user_input, trigger):
         trigger = filter_non_interrogative_sentence(trigger)

@@ -6,4 +6,4 @@ from SimilarityUtil import *
 
 # just keep adding and don't worry
 def add_already_calculated(bsc, tagger):
-    pass
+    bsc.add_test(st.IdenticalNormalized(), sa.Identical(),  0.203045685279)

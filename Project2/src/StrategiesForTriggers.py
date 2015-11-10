@@ -32,7 +32,9 @@ class RemoveStopWordsAndStemMED(TriggerSimilarityStrategy):
         return med(user_input, trigger) <= self._med_user_input_triggers_min
 
 
+# Applys extra filter on gramatical category
 class MegaStrategyFiltering(TriggerSimilarityStrategy):
+    # Measure is dice_sentence of jaccard_sentence
     def __init__(self, tagger, measure, threeshold, filter_tag_triggers=None):
         TriggerSimilarityStrategy.__init__(self)
 

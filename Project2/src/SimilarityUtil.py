@@ -149,7 +149,7 @@ def tok_stem(sentence):
         result.append(stemmer.stem(word))
     return " ".join(result)
 
-def custom_jaccard(sentence1, sentence2, tagger, weighttag = 0.5):
+def custom_jaccard(sentence1, sentence2, tagger, weighttag):
 
     tagged_sentence1 = tagger.tag_sentence(sentence1)
     tagged_sentence2 = tagger.tag_sentence(sentence2)
@@ -184,7 +184,7 @@ def custom_jaccard(sentence1, sentence2, tagger, weighttag = 0.5):
 
 def similar_yes_no(s1, s2, weight, weight_func):
     if ('sim' in s1 and 'sim' in s2) or ('nao' in s1 and 'nao' in s2):
-        return (1 - weight) * jaccard(s1, s2) + weight
+        return (1 - weight) * weight_func(s1, s2) + weight
     else:
         return weight_func(s1, s2)
 

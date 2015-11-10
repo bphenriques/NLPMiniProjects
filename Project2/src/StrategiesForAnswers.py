@@ -4,115 +4,101 @@ from SimilarityStrategies import AnswerSimilarityStrategy
 from SimilarityUtil import *
 from RegexUtil import RegexUtil
 
+###################################################
+###################################################
+###################################################
+
 
 class Identical(AnswerSimilarityStrategy):
     def are_answer_similar_enough(self, answer1, answer2):
         return answer1 == answer2
 
-
-class RemoveStopWordsAndStem(AnswerSimilarityStrategy):
-    def are_answer_similar_enough(self, answer1, answer2):
-        answer1 = RegexUtil.normalize_string(tok_stem(remove_stop_words(answer1)))
-        answer2 = RegexUtil.normalize_string(tok_stem(remove_stop_words(answer2)))
-
-        return answer1 == answer2
-
-
-# in short MegaStrategy
-class RemoveStopWordsAndStemMED(AnswerSimilarityStrategy):
-    def __init__(self, answers_min_med):
-        AnswerSimilarityStrategy.__init__(self)
-
-        self.add_arguments_description(answers_min_med)
-        self._med_answers_min = answers_min_med
-
-    def are_answer_similar_enough(self, answer1, answer2):
-        answer1 = RegexUtil.normalize_string(tok_stem(remove_stop_words(answer1)))
-        answer2 = RegexUtil.normalize_string(tok_stem(remove_stop_words(answer2)))
-
-        return med(answer1, answer2) <= self._med_answers_min
-
-
-class Braccard(AnswerSimilarityStrategy):
-    def __init__(self, tagger, threshold = 0.8):
-        AnswerSimilarityStrategy.__init__(self)
-        self.__tagger = tagger
-        self.__threshold = threshold
-        self.add_arguments_description("tagger", threshold)
-
-    def are_answer_similar_enough(self, answer1, answer2):
-        return custom_jaccard(answer1, answer2, self.__tagger) >= self.__threshold
-
-
-class BraccardFilter(AnswerSimilarityStrategy):
-    def __init__(self, tagger, threshold):
-        AnswerSimilarityStrategy.__init__(self)
-        self.__tagger = tagger
-        self.__threshold = threshold
-        self.add_arguments_description("tagger", threshold)
-
-    def are_answer_similar_enough(self, answer1, answer2):
-        s1, s2 = remove_stop_words(answer1), remove_stop_words(answer2)
-        return custom_jaccard(s1, s2, self.__tagger) >= self.__threshold
+###################################################
+###################################################
+###################################################
 
 
 class Jaccard(AnswerSimilarityStrategy):
-    def __init__(self, threshold):
+    def __init__(self, threshold, filter):
         AnswerSimilarityStrategy.__init__(self)
         self.__threshold = threshold
-        self.add_arguments_description(threshold)
+        self.__filter = filter
+        self.add_arguments_description(threshold, filter)
 
     def are_answer_similar_enough(self, answer1, answer2):
-        s1, s2 = RegexUtil.normalize_string(answer1), RegexUtil.normalize_string(answer2)
-        return jaccard_sentence(s1, s2) >= self.__threshold
+        if self.__filter:
+            answer1, answer2 = remove_stop_words(answer1), remove_stop_words(answer2)
+            answer1, answer2 = tok_stem(answer1), tok_stem(answer2)
+            answer1, answer2 = RegexUtil.normalize_string(answer1), RegexUtil.normalize_string(answer2)
+        else:
+            answer1, answer2 = RegexUtil.normalize_string(answer1), RegexUtil.normalize_string(answer2)
+        return jaccard_sentence(answer1, answer2) >= self.__threshold
 
 
 class Dice(AnswerSimilarityStrategy):
-    def __init__(self, threshold):
+    def __init__(self, threshold, filter):
         AnswerSimilarityStrategy.__init__(self)
         self.__threshold = threshold
-        self.add_arguments_description(threshold)
+        self.__filter = filter
+        self.add_arguments_description(threshold, filter)
 
     def are_answer_similar_enough(self, answer1, answer2):
-        s1, s2 = RegexUtil.normalize_string(answer1), RegexUtil.normalize_string(answer2)
-        return dice_sentence(s1, s2) >= self.__threshold
+        if self.__filter:
+            answer1, answer2 = remove_stop_words(answer1), remove_stop_words(answer2)
+            answer1, answer2 = tok_stem(answer1), tok_stem(answer2)
+            answer1, answer2 = RegexUtil.normalize_string(answer1), RegexUtil.normalize_string(answer2)
+        else:
+            answer1, answer2 = RegexUtil.normalize_string(answer1), RegexUtil.normalize_string(answer2)
+        return dice_sentence(answer1, answer2) >= self.__threshold
 
-class JaccardStem(AnswerSimilarityStrategy):
-    def __init__(self, threshold = 0.8):
+class MED(AnswerSimilarityStrategy):
+    def __init__(self, answers_min_med, filter):
         AnswerSimilarityStrategy.__init__(self)
-        self.__threshold = threshold
-        self.add_arguments_description(threshold)
+        self._med_answers_min = answers_min_med
+        self._filter = filter
+        self.add_arguments_description(answers_min_med, filter)
 
     def are_answer_similar_enough(self, answer1, answer2):
-        s1, s2 = remove_stop_words(answer1), remove_stop_words(answer2)
-        s1, s2 = tok_stem(s1), tok_stem(s2)
-        s1, s2 = RegexUtil.normalize_string(s1), RegexUtil.normalize_string(s2)
-        return jaccard_sentence(s1, s2) >= self.__threshold
+        if self._filter:
+            answer1 = RegexUtil.normalize_string(tok_stem(remove_stop_words(answer1)))
+            answer2 = RegexUtil.normalize_string(tok_stem(remove_stop_words(answer2)))
+        else:
+            answer1 = RegexUtil.normalize_string(answer1)
+            answer2 = RegexUtil.normalize_string(answer2)
 
+        return med_sentence(answer1, answer2) <= self._med_answers_min
 
-class DiceStem(AnswerSimilarityStrategy):
-    def __init__(self, threshold = 0.8):
+class Braccard(AnswerSimilarityStrategy):
+    def __init__(self, tagger, threshold, weight_tag, filter):
         AnswerSimilarityStrategy.__init__(self)
+        self.__tagger = tagger
         self.__threshold = threshold
-        self.add_arguments_description(threshold)
+        self.__weight_tag = weight_tag
+        self.__filter = filter
+        self.add_arguments_description("tagger", threshold, filter)
 
     def are_answer_similar_enough(self, answer1, answer2):
-        s1, s2 = remove_stop_words(answer1), remove_stop_words(answer2)
-        s1, s2 = tok_stem(s1), tok_stem(s2)
-        s1, s2 = RegexUtil.normalize_string(s1), RegexUtil.normalize_string(s2)
-        return dice_sentence(s1, s2) >= self.__threshold
+        if self.__filter:
+            answer1, answer2 = remove_stop_words(answer1), remove_stop_words(answer2)
+
+        return custom_jaccard(answer1, answer2, self.__tagger, self.__weight_tag) >= self.__threshold
 
 
 class YesNoSimilar(AnswerSimilarityStrategy):
-    def __init__(self, threshold, weight, measure):
+    def __init__(self, threshold, weight, measure, filter):
         AnswerSimilarityStrategy.__init__(self)
         self.__threshold = threshold
         self.__weight = weight
         self.__measure = measure
-        self.add_arguments_description(threshold, weight, measure.__name__)
+        self.__filter = filter
+        self.add_arguments_description(threshold, weight, measure.__name__, filter)
 
     def are_answer_similar_enough(self, answer1, answer2):
-        s1, s2 = remove_stop_words(answer1), remove_stop_words(answer2)
-        s1, s2 = tok_stem(s1), tok_stem(s2)
-        s1, s2 = RegexUtil.normalize_string(s1), RegexUtil.normalize_string(s2)
-        return similar_yes_no(s1, s2, self.__weight, self.__measure) >= self.__threshold
+        if self.__filter:
+            answer1, answer2 = remove_stop_words(answer1), remove_stop_words(answer2)
+            answer1, answer2 = tok_stem(answer1), tok_stem(answer2)
+            answer1, answer2 = RegexUtil.normalize_string(answer1), RegexUtil.normalize_string(answer2)
+        else:
+            answer1, answer2 = RegexUtil.normalize_string(answer1), RegexUtil.normalize_string(answer2)
+
+        return similar_yes_no(answer1, answer2, self.__weight, self.__measure) >= self.__threshold

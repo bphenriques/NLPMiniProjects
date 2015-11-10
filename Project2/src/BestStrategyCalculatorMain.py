@@ -14,28 +14,21 @@ def add_all_combinations(bsc, triggers_strats, answers_strats):
         for answer_strat in answers_strats:
             bsc.add_test(trigger_strat, answer_strat)
 
-
 def get_trigger_strats(tagger):
     result = list()
     result.append(st.IdenticalNormalized())
-    result.append(st.RemoveStopWordsAndStem())
 
-    for i in range(1, 10):
-        result.append(st.RemoveStopWordsAndStemMED(i))
-        result.append(st.MegaStrategyFiltering(tagger, jaccard_sentence, i))
+    # Bruno corre a True, tiago corre a False
+    for filter_value in [True, False]:
+        for i in arange(0.25, 0.75, 0.25):
+            result.append(st.Jaccard(tagger, i, filter=filter_value))
+            result.append(st.Dice(tagger, i, filter=filter_value))
 
-    for i in arange(0, 1, 0.25):
-        if i == 0:
-            continue
-        result.append(st.MegaStrategyFiltering(tagger, dice_sentence, i))
+            for j in arange(0.25, 0.75, 0.25):
+                result.append(st.Braccard(tagger, i, j, filter=filter_value))
 
-        for j in arange(0.0, 1, 0.25):
-            if j == 0:
-                continue
-            result.append(st.Braccard(tagger, i, j))
-            result.append(st.BraccardFilter(tagger, i, j))
-
-
+        for i in range(1, 10, 1):
+            result.append(st.MED(tagger, i, filter=filter_value))
 
     return result
 
@@ -43,23 +36,21 @@ def get_trigger_strats(tagger):
 def get_answer_strats(tagger):
     result = list()
     result.append(sa.Identical())
-    result.append(sa.RemoveStopWordsAndStem())
 
-    for i in range(1, 10):
-        result.append(sa.RemoveStopWordsAndStemMED(i))
+    for filter_value in [False, True]:
+        for i in arange(0.25, 0.75, 0.25):
+            result.append(sa.Jaccard(i, filter=filter_value))
+            result.append(sa.Dice(i, filter=filter_value))
 
-    for i in arange(0.0, 1, 0.25):
-        if i == 0:
-            continue
-        result.append(sa.Braccard(tagger, i))
-        result.append(sa.BraccardFilter(tagger, i))
-        result.append(sa.Jaccard(i))
-        result.append(sa.JaccardStem(i))
-        result.append(sa.Dice(i))
-        result.append(sa.DiceStem(i))
-        for weight in arange(0.5, 1, 0.125):
-            result.append(sa.YesNoSimilar(i, weight, measure=jaccard_sentence))
-            result.append(sa.YesNoSimilar(i, weight, measure=dice_sentence))
+            for j in arange(0.25, 0.75, 0.25):
+                result.append(sa.Braccard(tagger, i, j, filter=filter_value))
+
+            for weight in arange(0.5, 0.75, 0.25):
+                result.append(sa.YesNoSimilar(i, weight, measure=jaccard_sentence, filter=filter_value))
+                result.append(sa.YesNoSimilar(i, weight, measure=dice_sentence, filter=filter_value))
+
+        for i in range(1, 10, 1):
+            result.append(sa.MED(i, filter=filter_value))
 
     return result
 

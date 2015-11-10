@@ -56,7 +56,7 @@ def get_answer_strats(tagger):
 
 
 def arange(x, y, jump=0.1):
-  while x < y:
+  while x <= y:
     yield x
     x += jump
 

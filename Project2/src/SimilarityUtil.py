@@ -26,7 +26,10 @@ def jaccard(sequence1, sequence2):
     s1, s2 = set(sequence1), set(sequence2)
     intersection = s1.intersection(s2)
 
-    return float(len(intersection)) / float((len(s1) + len(s2) - len(intersection)))
+    aux = len(s1) + len(s2) - len(intersection)
+    if aux == 0: return 1
+
+    return float(len(intersection)) / float(aux)
 
 
 def dice(sequence1, sequence2):
@@ -37,6 +40,8 @@ def dice(sequence1, sequence2):
     :return: dice value
     """
     s1, s2 = set(sequence1), set(sequence2)
+    if len(s1) == 0 or len(s2) == 0: return 0
+
     intersection = s1.intersection(s2)
     return 2*(float(len(intersection)) / float((len(s1) + len(s2))))
 
@@ -144,7 +149,7 @@ def tok_stem(sentence):
         result.append(stemmer.stem(word))
     return " ".join(result)
 
-def custom_jaccard(sentence1, sentence2, tagger, weighttag = 0.5): #  TODO BRINCAR COM ESTE VALOR
+def custom_jaccard(sentence1, sentence2, tagger, weighttag = 0.5):
 
     tagged_sentence1 = tagger.tag_sentence(sentence1)
     tagged_sentence2 = tagger.tag_sentence(sentence2)
@@ -176,12 +181,12 @@ def custom_jaccard(sentence1, sentence2, tagger, weighttag = 0.5): #  TODO BRINC
 
     return (jaccarda + jaccardb) / jaccardlength
 
-def similar_yes_no(s1, s2, weight = 0.5):
 
+def similar_yes_no(s1, s2, weight, weight_func):
     if ('sim' in s1 and 'sim' in s2) or ('nao' in s1 and 'nao' in s2):
         return (1 - weight) * jaccard(s1, s2) + weight
     else:
-        return jaccard(s1, s2)
+        return weight_func(s1, s2)
 
 
 def extract_tags(non_intersection):
@@ -214,8 +219,9 @@ if __name__ == '__main__':
     b=[('A', 'n'), ('Bruna', 'n'), ('sujou', 'n'), ('a', u'prp'), ('cabeleira', 'n'), ('!', u'!')]
     print extract_tags(a)
     print '\n'
-    print jaccard_sentence(r"O Bruno sujou a careca!", r"A Bruna sujou a cabeleira!")
-    print custom_jaccard(r"O Bruno sujou a careca!", r"A Bruna sujou a cabeleira!")
+    print tok_stem(u"A MARIA É MUITO BONITA")
+
+    # print jaccard_sentence(r"O Bruno sujou a careca!", r"A Bruna sujou a cabeleira!")
 
 
 

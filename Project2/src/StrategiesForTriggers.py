@@ -4,18 +4,10 @@ from RegexUtil import RegexUtil
 from SimilarityStrategies import TriggerSimilarityStrategy
 from SimilarityUtil import *
 
-# ###########################################
-# ###########################################
-# ###########################################
-
 
 class IdenticalNormalized(TriggerSimilarityStrategy):
     def is_user_input_trigger_similar(self, user_input, trigger):
         return RegexUtil.normalize_string(user_input) == RegexUtil.normalize_string(filter_non_interrogative_sentence(trigger))
-
-# ###########################################
-# ###########################################
-# ###########################################
 
 
 class RemoveStopWordsAndStem(TriggerSimilarityStrategy):
@@ -24,11 +16,6 @@ class RemoveStopWordsAndStem(TriggerSimilarityStrategy):
         trigger = RegexUtil.normalize_string(filter_non_interrogative_sentence(tok_stem(remove_stop_words(trigger))))
 
         return user_input == trigger
-
-
-# ###########################################
-# ###########################################
-# ###########################################
 
 
 class RemoveStopWordsAndStemMED(TriggerSimilarityStrategy):
@@ -45,24 +32,20 @@ class RemoveStopWordsAndStemMED(TriggerSimilarityStrategy):
         return med(user_input, trigger) <= self._med_user_input_triggers_min
 
 
-# ###########################################
-# ###########################################
-# ###########################################
-
-
 class MegaStrategyFiltering(TriggerSimilarityStrategy):
-    def __init__(self, tagger, user_input_triggers_min_med, filter_tag_triggers=None):
+    def __init__(self, tagger, measure, threeshold, filter_tag_triggers=None):
         TriggerSimilarityStrategy.__init__(self)
 
         self._tagger = tagger
-        self._med_user_input_triggers_min = user_input_triggers_min_med
+        self._measure = measure
+        self._threeshold = threeshold
 
         if filter_tag_triggers is not None:
             self._tags_to_filter_triggers = filter_tag_triggers
         else:
             self._tags_to_filter_triggers = ["n", "in", "prop", "art", "pron-pers", "pron-det", "pron-indp", "prp"]
 
-        self.add_arguments_description("tagger", user_input_triggers_min_med)
+        self.add_arguments_description("tagger", measure.__name__, threeshold, "None")
 
     def is_user_input_trigger_similar(self, user_input, trigger):
         trigger = filter_non_interrogative_sentence(trigger)
@@ -79,34 +62,29 @@ class MegaStrategyFiltering(TriggerSimilarityStrategy):
         user_input = RegexUtil.normalize_string(tok_stem(remove_stop_words(user_input)))
         trigger = RegexUtil.normalize_string(tok_stem(remove_stop_words(trigger)))
 
-        return med(user_input, trigger) <= self._med_user_input_triggers_min
-
-# ###########################################
-# ###########################################
-# ###########################################
-
-
-class MorphoJaccard(TriggerSimilarityStrategy):
-    def __init__(self, tagger, threshold = 0.8):
-        TriggerSimilarityStrategy.__init__(self)
-        self.__tagger = tagger
-        self.__threshold = threshold
-        self.add_arguments_description("tagger", threshold)
-
-    def is_user_input_trigger_similar(self, user_input, trigger):
-        s1 = RegexUtil.normalize_string(user_input)
-        s2 = RegexUtil.normalize_string(filter_non_interrogative_sentence(trigger))
-        return custom_jaccard(s1, s2, self.__tagger) >= self.__threshold
+        return self._measure(user_input, trigger) <= self._threeshold
 
 
 class Braccard(TriggerSimilarityStrategy):
-    def __init__(self, tagger, threshold = 0.8):
+    def __init__(self, tagger, threshold, weight_tag):
         TriggerSimilarityStrategy.__init__(self)
         self.__tagger = tagger
         self.__threshold = threshold
+        self._weight_tag = weight_tag
+        self.add_arguments_description("tagger", threshold, weight_tag)
+
+    def is_user_input_trigger_similar(self, user_input, trigger):
+        return custom_jaccard(user_input, trigger, self.__tagger, self._weight_tag) >= self.__threshold
+
+
+class BraccardFilter(TriggerSimilarityStrategy):
+    def __init__(self, tagger, threshold, weight_tag):
+        TriggerSimilarityStrategy.__init__(self)
+        self.__tagger = tagger
+        self.__threshold = threshold
+        self._weight_tag = weight_tag
         self.add_arguments_description("tagger", threshold)
 
     def is_user_input_trigger_similar(self, user_input, trigger):
-        s1 = RegexUtil.normalize_string(user_input)
-        s2 = RegexUtil.normalize_string(filter_non_interrogative_sentence(trigger))
-        return custom_jaccard(s1, s2, self.__tagger) >= self.__threshold
+        s1, s2 = remove_stop_words(user_input), remove_stop_words(trigger)
+        return custom_jaccard(s1, s2, self.__tagger, self._weight_tag) >= self.__threshold

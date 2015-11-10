@@ -6,6 +6,7 @@ import sys, traceback
 from BestStrategyCalculatorPrevious import add_already_calculated
 from BestStrategyCalculator import BestStrategiesCalculator
 from BigramForestTagger import BigramForestTagger
+from SimilarityUtil import *
 
 
 def add_all_combinations(bsc, triggers_strats, answers_strats):
@@ -16,19 +17,25 @@ def add_all_combinations(bsc, triggers_strats, answers_strats):
 
 def get_trigger_strats(tagger):
     result = list()
-    # result.append(st.IdenticalNormalized())
-    # result.append(st.RemoveStopWordsAndStem())
-    # for i in range(0, 10):
-    #     result.append(st.RemoveStopWordsAndStemMED(i))
+    result.append(st.IdenticalNormalized())
+    result.append(st.RemoveStopWordsAndStem())
 
-    for i in range(0, 10):
-        result.append(st.MegaStrategyFiltering(tagger, i))
+    for i in range(1, 10):
+        result.append(st.RemoveStopWordsAndStemMED(i))
 
-    for i in arange(0.2, 1, 0.1):
-        result.append(st.Braccard(tagger, i))
+    for i in range(1, 10):
+        result.append(st.MegaStrategyFiltering(tagger, jaccard_sentence, i))
 
-    for i in arange(0.2, 1, 0.1):
-        result.append(st.MorphoJaccard(tagger, i))
+    for i in arange(0.1, 1, 0.1):
+        result.append(st.MegaStrategyFiltering(tagger, dice_sentence, i))
+
+    for i in arange(0.1, 1, 0.1):
+        for j in arange(0.1, 1, 0.1):
+            result.append(st.Braccard(tagger, i, j))
+
+    for i in arange(0.1, 1, 0.1):
+        for j in arange(0.1, 1, 0.1):
+            result.append(st.BraccardFilter(tagger, i, j))
 
     return result
 
@@ -37,28 +44,38 @@ def get_answer_strats(tagger):
     result = list()
     result.append(sa.Identical())
     result.append(sa.RemoveStopWordsAndStem())
-    for i in range(0, 10):
+
+    for i in range(1, 10):
         result.append(sa.RemoveStopWordsAndStemMED(i))
 
-    for i in arange(0.2, 1, 0.1):
+    for i in arange(0.1, 1, 0.1):
         result.append(sa.Braccard(tagger, i))
 
-    for i in arange(0.2, 1, 0.1):
+    for i in arange(0.1, 1, 0.1):
+        result.append(sa.BraccardFilter(tagger, i))
+
+    for i in arange(0.1, 1, 0.1):
         result.append(sa.Jaccard(i))
 
-    for i in arange(0.2, 1, 0.1):
-        result.append(sa.Dice(i))
-
-    for i in arange(0.2, 1, 0.1):
+    for i in arange(0.1, 1, 0.1):
         result.append(sa.JaccardStem(i))
 
-    for i in arange(0.2, 1, 0.1):
+    for i in arange(0.1, 1, 0.1):
+        result.append(sa.Dice(i))
+
+    for i in arange(0.1, 1, 0.1):
         result.append(sa.DiceStem(i))
 
-    for i in arange(0.7, 1, 0.1):
-        result.append(sa.YesNoSimilar(i))
+    for threeshold in arange(0.1, 1, 0.1):
+        for weight in arange(0.5, 1, 0.1):
+            result.append(sa.YesNoSimilar(threeshold, weight, measure=jaccard_sentence))
+
+    for threeshold in arange(0.1, 1, 0.1):
+        for weight in arange(0.5, 1, 0.1):
+            result.append(sa.YesNoSimilar(threeshold, weight, measure=dice_sentence))
 
     return result
+
 
 def arange(x, y, jump=0.1):
   while x < y:

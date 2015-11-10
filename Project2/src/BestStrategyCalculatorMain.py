@@ -22,20 +22,20 @@ def get_trigger_strats(tagger):
 
     for i in range(1, 10):
         result.append(st.RemoveStopWordsAndStemMED(i))
-
-    for i in range(1, 10):
         result.append(st.MegaStrategyFiltering(tagger, jaccard_sentence, i))
 
-    for i in arange(0.1, 1, 0.1):
+    for i in arange(0, 1, 0.25):
+        if i == 0:
+            continue
         result.append(st.MegaStrategyFiltering(tagger, dice_sentence, i))
 
-    for i in arange(0.1, 1, 0.1):
-        for j in arange(0.1, 1, 0.1):
+        for j in arange(0.0, 1, 0.25):
+            if j == 0:
+                continue
             result.append(st.Braccard(tagger, i, j))
-
-    for i in arange(0.1, 1, 0.1):
-        for j in arange(0.1, 1, 0.1):
             result.append(st.BraccardFilter(tagger, i, j))
+
+
 
     return result
 
@@ -48,31 +48,18 @@ def get_answer_strats(tagger):
     for i in range(1, 10):
         result.append(sa.RemoveStopWordsAndStemMED(i))
 
-    for i in arange(0.1, 1, 0.1):
+    for i in arange(0.0, 1, 0.25):
+        if i == 0:
+            continue
         result.append(sa.Braccard(tagger, i))
-
-    for i in arange(0.1, 1, 0.1):
         result.append(sa.BraccardFilter(tagger, i))
-
-    for i in arange(0.1, 1, 0.1):
         result.append(sa.Jaccard(i))
-
-    for i in arange(0.1, 1, 0.1):
         result.append(sa.JaccardStem(i))
-
-    for i in arange(0.1, 1, 0.1):
         result.append(sa.Dice(i))
-
-    for i in arange(0.1, 1, 0.1):
         result.append(sa.DiceStem(i))
-
-    for threeshold in arange(0.1, 1, 0.1):
-        for weight in arange(0.5, 1, 0.1):
-            result.append(sa.YesNoSimilar(threeshold, weight, measure=jaccard_sentence))
-
-    for threeshold in arange(0.1, 1, 0.1):
-        for weight in arange(0.5, 1, 0.1):
-            result.append(sa.YesNoSimilar(threeshold, weight, measure=dice_sentence))
+        for weight in arange(0.5, 1, 0.125):
+            result.append(sa.YesNoSimilar(i, weight, measure=jaccard_sentence))
+            result.append(sa.YesNoSimilar(i, weight, measure=dice_sentence))
 
     return result
 

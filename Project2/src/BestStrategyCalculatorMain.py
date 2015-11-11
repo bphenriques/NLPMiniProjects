@@ -19,7 +19,7 @@ def get_trigger_strats(tagger):
     result.append(st.IdenticalNormalized())
 
     # Bruno corre a True, tiago corre a False
-    for filter_value in [True, False]:
+    for filter_value in [True]:
         for i in arange(0.25, 0.75, 0.25):
             result.append(st.Jaccard(tagger, i, filter=filter_value))
             result.append(st.Dice(tagger, i, filter=filter_value))

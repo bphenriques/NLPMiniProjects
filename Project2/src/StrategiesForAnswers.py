@@ -75,7 +75,7 @@ class Braccard(AnswerSimilarityStrategy):
         self.__threshold = threshold
         self.__weight_tag = weight_tag
         self.__filter = filter
-        self.add_arguments_description("tagger", threshold, filter)
+        self.add_arguments_description("tagger", threshold, weight_tag, filter)
 
     def are_answer_similar_enough(self, answer1, answer2):
         if self.__filter:

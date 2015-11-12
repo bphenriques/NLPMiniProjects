@@ -3,7 +3,8 @@
 import StrategiesForAnswers as sa
 import StrategiesForTriggers as st
 import sys, traceback
-from BestStrategyCalculatorPrevious import add_already_calculated
+import BestStrategyCalculatorPreviousDevel
+import BestStrategyCalculatorPreviousTest
 from BestStrategyCalculator import BestStrategiesCalculator
 from BigramForestTagger import BigramForestTagger
 from SimilarityUtil import *
@@ -18,8 +19,7 @@ def get_trigger_strats(tagger):
     result = list()
     result.append(st.IdenticalNormalized())
 
-    # Bruno corre a True, tiago corre a False
-    for filter_value in [True]:
+    for filter_value in [False]:
         for i in arange(0.25, 0.75, 0.25):
             result.append(st.Jaccard(tagger, i, filter=filter_value))
             result.append(st.Dice(tagger, i, filter=filter_value))
@@ -61,12 +61,13 @@ def arange(x, y, jump=0.1):
     x += jump
 
 
-def benchmark(annotations_file_path, questions_file_path, corpus_file_path, recalculate=False):
+def benchmark(annotations_file_path, questions_file_path, corpus_file_path):
     tagger = BigramForestTagger()  # training corpus floresta
     tagger.train()
 
     bsc = BestStrategiesCalculator()
-    if not recalculate: add_already_calculated(bsc, tagger)  # append already calculated
+    # BestStrategyCalculatorPreviousDevel.add_already_calculated(bsc, tagger)
+    BestStrategyCalculatorPreviousTest.add_already_calculated(bsc, tagger)
 
     #####################################
     # ADD TESTS HERE BELOW
@@ -93,5 +94,5 @@ if __name__ == "__main__":
 
     corpus_file_path = "TestResources/PerguntasPosSistema.txt"
 
-    benchmark(annotations_file_path, development_input_file, corpus_file_path)
-    # benchmark(annotations_file_path, test_input_file, corpus_file_path, recalculate=True)
+    # benchmark(annotations_file_path, development_input_file, corpus_file_path)
+    benchmark(annotations_file_path, test_input_file, corpus_file_path)

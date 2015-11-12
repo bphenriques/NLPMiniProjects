@@ -19,7 +19,7 @@ def get_trigger_strats(tagger):
     result = list()
     result.append(st.IdenticalNormalized())
 
-    for filter_value in [False]:
+    for filter_value in [True]:
         for i in arange(0.25, 0.75, 0.25):
             result.append(st.Jaccard(tagger, i, filter=filter_value))
             result.append(st.Dice(tagger, i, filter=filter_value))
@@ -66,8 +66,8 @@ def benchmark(annotations_file_path, questions_file_path, corpus_file_path):
     tagger.train()
 
     bsc = BestStrategiesCalculator()
-    # BestStrategyCalculatorPreviousDevel.add_already_calculated(bsc, tagger)
-    BestStrategyCalculatorPreviousTest.add_already_calculated(bsc, tagger)
+    #BestStrategyCalculatorPreviousDevel.add_already_calculated(bsc, tagger)
+    #BestStrategyCalculatorPreviousTest.add_already_calculated(bsc, tagger)
 
     #####################################
     # ADD TESTS HERE BELOW
@@ -75,6 +75,16 @@ def benchmark(annotations_file_path, questions_file_path, corpus_file_path):
 
     # two possible ways to test:
     add_all_combinations(bsc, get_trigger_strats(tagger), get_answer_strats(tagger))
+    #bsc.add_test(st.Jaccard(tagger, 0.25, False), sa.Braccard(tagger, 0.25, 0.25, False))
+    #bsc.add_test(st.Jaccard(tagger, 0.25, False), sa.Braccard(tagger, 0.5, 0.5, True))
+    #bsc.add_test(st.Jaccard(tagger, 0.5, False), sa.MED(1, False))
+    #bsc.add_test(st.Braccard(tagger, 0.25, 0.25, True), sa.MED(1, False))
+    #bsc.add_test(st.Braccard(tagger, 0.25, 0.50, True), sa.YesNoSimilar(0.75, 0.5, dice_sentence, True))
+    #bsc.add_test(st.Jaccard(tagger, 0.5, False), sa.YesNoSimilar(0.75, 0.5, dice_sentence, True))
+    #bsc.add_test(st.MED(tagger, 2, False), sa.Jaccard(0.5, False))
+    #bsc.add_test(st.MED(tagger, 2, False), sa.Dice(0.75, True))
+
+
 
     try:
         bsc.determine_best_strategy(annotations_file_path, questions_file_path, corpus_file_path, debug=True)

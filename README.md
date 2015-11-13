@@ -2,8 +2,8 @@
 
 Mini projects done for Natural Linguistic programming in Instituto Superior Técnico, Tagus-park, Oeiras.
 There are two folders:
-- Project 1
-- Project 2
+- Project 1: QA system which used literal comparison between User Input and Triggers and between answers;
+- Project 2: Using Dice, Jaccard, MED and other strategies developed by us which led to better results.
 
 The project aims to, in the portuguese language, given a question deliver the most probable answer.
 

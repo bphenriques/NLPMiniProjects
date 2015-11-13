@@ -1,6 +1,6 @@
-# Neuro Linguistic Programming Mini Projects
+# Natural Language Processing Mini Projects
 
-Mini projects done for Natural Linguistic programming in Instituto Superior Técnico, Tagus-park, Oeiras.
+Mini projects done for Natural Language Processing in Instituto Superior Técnico, Tagus-park, Oeiras.
 There are two folders:
 - Project 1: QA system which used literal comparison between User Input and Triggers and between answers;
 - Project 2: Using Dice, Jaccard, MED and other strategies developed by us which led to better results.

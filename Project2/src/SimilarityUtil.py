@@ -17,7 +17,7 @@ def jaccard_sentence(sentence1, sentence2):
 
 def jaccard(sequence1, sequence2):
     """
-    Determines jaccard ratio of two lists
+    Determines Jaccard value of two lists
 
     :param sequence1: first list
     :param sequence2: second list
@@ -34,6 +34,7 @@ def jaccard(sequence1, sequence2):
 
 def dice(sequence1, sequence2):
     """
+    Determines the Dice value of two lists
 
     :param sequence1:
     :param sequence2:
@@ -48,6 +49,7 @@ def dice(sequence1, sequence2):
 
 def dice_sentence(sentence1, sentence2):
     """
+    Determines the Dice value of two sentences
 
     :param sentence1:
     :param sentence2:
@@ -58,7 +60,7 @@ def dice_sentence(sentence1, sentence2):
 
 def med_sentence(sentence1, sentence2, c1=1, c2=1, c3=1):
     """
-    Determines minimum edit distance of two sentences. No normalization is done
+    Determines minimum edit distance of two sentences.
 
     :param sentence1: first sentence
     :param sentence2: second sentence
@@ -109,14 +111,20 @@ def med(sequence1, sequence2, c1=1, c2=1, c3=1):
             if element1 == element2:
                 matrix[i][j] = matrix[i-1][j-1]
             else:
-                matrix[i][j] = min(matrix[i-1][j] + c1, # delete
-                                   matrix[i][j-1] + c2, # insertion
-                                   matrix[i-1][j-1] + c3) # mismatch
+                matrix[i][j] = min(matrix[i-1][j] + c1,
+                                   matrix[i][j-1] + c2,
+                                   matrix[i-1][j-1] + c3)
 
     return matrix[matrix_row_size - 1][matrix_col_size - 1]
 
 
 def remove_stop_words(sentence, list_words_to_remove = nltk.corpus.stopwords.words('portuguese')):
+    """
+    Remove stop words of a sentence
+    :param sentence:
+    :param list_words_to_remove: default is the list from nltk corpus for portuguese language.
+    :return: sentence with the stop words removed
+    """
     result = []
     for word in sentence.split(" "):
         if word.lower() in list_words_to_remove:
@@ -126,6 +134,13 @@ def remove_stop_words(sentence, list_words_to_remove = nltk.corpus.stopwords.wor
 
 
 def filter_non_interrogative_sentence(sentence):
+    """
+    Remove non-interrogative sentences so sentences like "Optimo. Vamos para la?" become "Vamos para la'"
+    It is assumed that interrogative sentence can end with "?" or "..."
+
+    :param sentence:
+    :return: sentence filtered
+    """
     split = [sentence]
 
     if "!" in sentence:
@@ -141,15 +156,29 @@ def filter_non_interrogative_sentence(sentence):
 
 
 def tok_stem(sentence):
+    """
+    Stem with all the words stemmed
+    :param sentence:
+    :return: Sentence with all the words stemmed
+    """
     result = []
     l = nltk.word_tokenize(sentence)
     stemmer = nltk.stem.RSLPStemmer()
-    # decode porque so alguns tem u'ola', encode para tirar os malditos u
+
     for word in l:
         result.append(stemmer.stem(word))
     return " ".join(result)
 
 def custom_jaccard(sentence1, sentence2, tagger, weighttag):
+    """
+    Custom version of jaccard with a morphological component
+
+    :param sentence1:
+    :param sentence2:
+    :param tagger: tagger
+    :param weighttag: weight of the tagging component
+    :return:
+    """
 
     tagged_sentence1 = tagger.tag_sentence(sentence1)
     tagged_sentence2 = tagger.tag_sentence(sentence2)
@@ -183,6 +212,16 @@ def custom_jaccard(sentence1, sentence2, tagger, weighttag):
 
 
 def similar_yes_no(s1, s2, weight, weight_func):
+    """
+    If s1 s2 contains both "sim" or "nao" then weight + (1-weight) * weight_func(s1,s2)
+    else returns weight_func(s1,s2)
+
+    :param s1:
+    :param s2:
+    :param weight: weight
+    :param weight_func: similarity weight function (jaccard_sentence or dice_sentence)
+    :return:
+    """
     if ('sim' in s1 and 'sim' in s2) or ('nao' in s1 and 'nao' in s2):
         return (1 - weight) * weight_func(s1, s2) + weight
     else:
@@ -197,13 +236,30 @@ def extract_tags(non_intersection):
 
 
 def get_tag(word):
+    """
+    Returns the tag of te tuple
+    :param word:
+    :return: the tag
+    """
     return word[1]
 
 def same_tag(tagged_word1, tagged_word2):
+    """
+    Checks if two tagged words contain the same tag
+    :param tagged_word1:
+    :param tagged_word2:
+    :return: true if both words contain same tag
+    """
     return tagged_word1[1] == tagged_word2[1]
 
 
 def filter_tags(list_pairs_token_tag, tags_to_remove):
+    """
+    Remove the words that have the tag contained in the list tags_to_remove
+    :param list_pairs_token_tag:
+    :param tags_to_remove:
+    :return: filtered sentence
+    """
     result = []
     for el in list_pairs_token_tag:
         if get_tag(el) in tags_to_remove:

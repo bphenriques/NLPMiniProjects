@@ -15,10 +15,21 @@ class AnswerPickerAnswerResult:
 
 class AnswerPicker:
     """
-        Responsible for handling user_input, the corpus file and all possible answers.
+    Responsible for handling user_input, the corpus file and all possible answers.
     """
 
-    def __init__(self, file_reader, trigger_strategy=st.IdenticalNormalized(), answer_strategy=sa.Identical()):
+    def __init__(self, file_reader, trigger_strategy=None, answer_strategy=None):
+        """
+        :param file_reader: Instance of UserInputTriggerAnswerReader
+        :param trigger_strategy: Instance of UserInputTriggerSimilarityStrategy
+        :param answer_strategy: Instance of AnswerSimilarityStrategy
+        """
+
+        if trigger_strategy is None:
+            trigger_strategy=st.IdenticalNormalized()
+        if answer_strategy is None:
+            answer_strategy = sa.Identical()
+
         self.__user_input_answers_dic = {}
         self.__user_input_identical_trigger_found_flags = {}
         self._file_reader = file_reader
@@ -87,6 +98,7 @@ class AnswerPicker:
 
     def process_user_input_answer(self, user_input, trigger, answer):
         """
+        Processes the user input, the trigger and the answer found in the file
 
         :param user_input:
         :param trigger:
@@ -108,6 +120,7 @@ class AnswerPicker:
             if user_input not in self.__user_input_identical_trigger_found_flags:
                 self.__user_input_answers_dic[user_input] = []
 
+            # put the identical trigger found and set the flag as true
             self._put(user_input, answer)
             self.__user_input_identical_trigger_found_flags[user_input] = True
 
@@ -116,23 +129,25 @@ class AnswerPicker:
             self._put(user_input, answer)
 
 
-
-    # Adds element to the map, if the key already exists, append the value to the existing ones and updates the count
-    # The list is always sorted by the most frequent to the least frequent
     def _put(self, user_input, answer):
+        # get list of tuples
         list_tuples = self.__user_input_answers_dic[user_input]
 
+        # default tuple
         new_tuple = (answer, 1)
         tuple_found = self._find_answer(list_tuples, answer)
+
+        # if tuple is found then, increment the value
         if tuple_found is not None:
             new_tuple = (tuple_found[0], tuple_found[1] + 1)
             list_tuples.remove(tuple_found)
 
+        # append the new tuple and sorte the list
         list_tuples.append(new_tuple)
         list_tuples.sort(key=lambda tup: tup[1], reverse=True) #  sort
 
-    # util: find tuple with a given name
     def _find_answer(self, tup_list, name):
+        # find the best tup given the strategy for finding similar answers
         for tup in tup_list:
             if self._answer_strategy.are_answer_similar_enough(tup[0], name):
                 return tup

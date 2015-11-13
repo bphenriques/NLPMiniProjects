@@ -9,11 +9,19 @@ INVALID_USER_INPUT = u"Frase incorrecta"
 TRIGGER_NOT_FOUND = u"Não sei responder"
 
 
-def sss(file_name, question):
+def sss(file_name, question, trigger_strategy=None, answer_strategy=None):
+    """
+    Returns the most appropriate answer for a question
+
+    :param file_name: corpus file
+    :param question: question
+    :param trigger_strategy:  optional. Strategy for comparing User Input and Trigger
+    :param answer_strategy:  optional. Strategy for comparing answers
+    :return: The most appropriate answer for the question
+    """
     # process corpus file
     file_reader = UserInputTriggerAnswerReader()
-    answer_picker = AnswerPicker(file_reader)
-
+    answer_picker = AnswerPicker(file_reader, trigger_strategy, answer_strategy)
     file_reader.process_file(file_name, answer_picker.process_user_input_answer)
 
     # getting the answer
@@ -27,13 +35,18 @@ def sss(file_name, question):
 
 
 def myAvalia(annotation_file, questions_file, corpus_file_path="TestResources/PerguntasPosSistema.txt", trigger_strategy=None, answer_strategy=None):
+    """
+    :param annotation_file: annotated file
+    :param questions_file: list of questions file path
+    :param corpus_file_path: corpus file path
+    :param trigger_strategy: optional. Strategy for comparing User Input and Trigger
+    :param answer_strategy: optional. Strategy for comparing answers
+    :return: accuracy of the system
+    """
+
     # process corpus file
     file_reader = UserInputTriggerAnswerReader()
     answer_picker = AnswerPicker(file_reader, trigger_strategy, answer_strategy)
-
-    if answer_picker.number_matched_user_input() != 0:
-        print "@@@ NOT SUPPOSED TO HAPPEN @@@"
-
     file_reader.process_file(corpus_file_path, answer_picker.process_user_input_answer)
 
     # analyse annotation_file and return the accuracy

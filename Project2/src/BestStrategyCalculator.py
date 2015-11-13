@@ -4,21 +4,30 @@ from Interface import myAvalia
 
 
 class BestStrategiesCalculator:
+    """
+    Test class for different combinations of AnswerSimilarityStrategy and TriggerSimilarityStrategy
+    """
 
     def __init__(self):
         self.__strategies = list()
         self.__strategies_map = {}
         self.__sorted_strategies = list()
 
-    def add_test(self, trigger_strategy, answer_strategy, accuracy=None, just_add=False):
+    def add_test(self, trigger_strategy, answer_strategy, accuracy=None):
+        """
+
+        :param trigger_strategy: Strategy for comparing user input and trigger
+        :param answer_strategy: Strategy for comparing two answers
+        :param accuracy: Default is None. Put value different than None to skip and use the value provided.
+        """
         tp = self._create_tuple(trigger_strategy, answer_strategy, accuracy)
 
-        key = self.key(trigger_strategy, answer_strategy)
+        key = self.__key(trigger_strategy, answer_strategy)
         if key not in self.__strategies_map:
             self.__strategies_map[key] = True # place holder
             self.__strategies.append(tp)
 
-    def key(self, trigger_strat, answer_strat):
+    def __key(self, trigger_strat, answer_strat):
         return trigger_strat.description + "-" + answer_strat.description
 
     def determine_best_strategy(self, annotation_file, questions_file, corpus_file, debug=False):
@@ -30,7 +39,6 @@ class BestStrategiesCalculator:
         :param questions_file: file_path to the questions file
         :param corpus_file: file_path to the corpus file
         :param debug: if true, prints the current strategy being used at a given instance
-        :return:
         """
         result = []
 

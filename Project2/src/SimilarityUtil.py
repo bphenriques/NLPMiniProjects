@@ -6,7 +6,7 @@ from nltk.tokenize import wordpunct_tokenize
 
 def jaccard_sentence(sentence1, sentence2):
     """
-    Determines jaccard ratio of two sentences
+    Determines jaccard value of two sentences
 
     :param sentence1:
     :param sentence2:
@@ -245,10 +245,10 @@ def get_tag(word):
 
 def same_tag(tagged_word1, tagged_word2):
     """
-    Checks if two tagged words contain the same tag
+    Checks if two tagged words have the same tag
     :param tagged_word1:
     :param tagged_word2:
-    :return: true if both words contain same tag
+    :return: true if both words have the same tag
     """
     return tagged_word1[1] == tagged_word2[1]
 

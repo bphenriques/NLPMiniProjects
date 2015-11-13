@@ -6,7 +6,7 @@ from AnswerPicker import AnswerPickerAnswerResult
 from UserInputTriggerAnswerReader import UserInputTriggerAnswerReader
 
 INVALID_USER_INPUT = u"Frase incorrecta"
-TRIGGER_NOT_FOUND = u"Não sei responder"
+TRIGGER_NOT_FOUND = u"Não percebi"
 
 
 def sss(file_name, question, trigger_strategy=None, answer_strategy=None):

@@ -19,7 +19,7 @@ class RegexUtil:
     @staticmethod
     def normalize_string(sentence):
         """
-        Remove diacritics, punctuation strip from - or white space, and lower case
+        Remove diacritics, punctuation strip from '-' or white space, and lower case
 
         :param sentence: input
         :return: sentence normalized
@@ -33,10 +33,10 @@ class RegexUtil:
     @staticmethod
     def custom_strip(sentence):
         """
-        Strips the input from string.whitespace or -
+        Strips the input from string.whitespace or '-'
 
         :param sentence: input
-        :return: input stripped from - or whitespace
+        :return: input stripped from '-' or whitespace
         """
         return sentence.strip("-" + string.whitespace)
 

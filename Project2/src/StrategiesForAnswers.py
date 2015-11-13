@@ -13,7 +13,7 @@ class Identical(AnswerSimilarityStrategy):
 class Jaccard(AnswerSimilarityStrategy):
     def __init__(self, threshold, filter):
         """
-        :param threshold: Braccard minimum value
+        :param threshold: Jaccard minimum value
         :param filter: Set to true to apply filter
         """
         AnswerSimilarityStrategy.__init__(self)

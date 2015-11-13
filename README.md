@@ -44,9 +44,9 @@ print ""
 accuracy = myAvalia(annotations_file_path, test_input_file, corpus_file_path) # 0.0857142857143
 print test_input_file, "accuracy is:", accuracy
 
-################################
+#######################################
 # Using custom strategies (project 2)
-###############################
+#######################################
 
 tagger = BigramForestTagger()  # training corpus floresta
 tagger.train()
@@ -96,6 +96,8 @@ Andas na escola?
 # Urls
 
 * [Natural Language Toolkit]
+* [Corpus Floresta examples]
+* [Corpus Floresta Symbols]
 * [Tiago Santos]
 * [Bruno Henriques]
 

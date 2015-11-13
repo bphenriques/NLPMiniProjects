@@ -67,7 +67,7 @@ def benchmark(annotations_file_path, questions_file_path, corpus_file_path):
 
     bsc = BestStrategiesCalculator()
     #BestStrategyCalculatorPreviousDevel.add_already_calculated(bsc, tagger)
-    #BestStrategyCalculatorPreviousTest.add_already_calculated(bsc, tagger)
+    BestStrategyCalculatorPreviousTest.add_already_calculated(bsc, tagger)
 
     #####################################
     # ADD TESTS HERE BELOW

@@ -31,7 +31,7 @@ corpus_file_path = "TestResources/PerguntasPosSistema.txt"
 
 question_1 = "A tua familia é numerosa?"
 print "Q: ", question_1
-print "R: ", sss(corpus_file_path, question_1) # Não sei responder
+print "R: ", sss(corpus_file_path, question_1) # Não percebi
 
 print ""
 

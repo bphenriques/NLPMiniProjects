@@ -99,5 +99,5 @@ if __name__ == "__main__":
 
     corpus_file_path = "TestResources/PerguntasPosSistema.txt"
 
-    benchmark(annotations_file_path, development_input_file, corpus_file_path, BestStrategyCalculatorPreviousDevel.add_already_calculated)
-    # benchmark(annotations_file_path, test_input_file, corpus_file_path, BestStrategyCalculatorPreviousTest.add_already_calculated)
+    # benchmark(annotations_file_path, development_input_file, corpus_file_path, BestStrategyCalculatorPreviousDevel.add_already_calculated)
+    benchmark(annotations_file_path, test_input_file, corpus_file_path, BestStrategyCalculatorPreviousTest.add_already_calculated)

@@ -11,10 +11,10 @@ The python version used for this project is 2.7.10
 
 ## Example usage
 
-A file in "Project1/src/example.py" shows an example of usage:
+A file in "Project2/src/example.py" contains an example of usage:
 
 ```sh
-$ cd NLPMiniProjects/Project1/src
+$ cd NLPMiniProjects/Project2/src
 $ python
 ```
 
